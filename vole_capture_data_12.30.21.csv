@@ -1,0 +1,1273 @@
+id as number,year,occasion,site,food_trt,helm_trt,date,sess,trap,tag,id,sex,ow,per,nip,preg,test,head,mass,ticks,ear_ed,saliva_sr,smear_bs,bloodspin_bc,bloodrna_br,fecalegg_fe,fecalrna_fr,deworm,fate,handler,notes
+1,2021,1,janakkala,supplement,deworm,5/14/2021,2,H4,226083,0001,M,1,NA,NA,NA,1,13.2,21.0,0,1,1,1,1,1,1,1,1,R,KF,"drug given before mouth swab, may affect RNA"
+NA,2021,1,hevonen,control,control,5/15/2021,4,B5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,R,KF,"dumped out of trap, assumed to be a vole - NO SAMPLES TAKEN"
+2,2021,1,asema,control,control,5/17/2021,1,E1,226001,0002,F,1,1,0,0,NA,14.2,22.5,0,1,1,1,1,1,1,1,0,R,JM,"mites, fleas"
+3,2021,1,asema,control,control,5/17/2021,2,G4,NA,0003,M,1,NA,NA,NA,1,15.4,20.5,1,1,1,1,1,1,1,1,0,DP,SK,"died during sampling, large blood sample taken"
+4,2021,1,asema,control,control,5/17/2021,2,I3,226033,0004,F,1,1,0,0,NA,14.6,21.5,1,1,1,1,1,1,1,1,0,R,JM,
+5,2021,1,talo,supplement,deworm,5/17/2021,2,I6,226061,0005,M,1,NA,NA,NA,1,13.6,20.5,0,1,1,1,1,1,1,1,1,R,SB,
+6,2021,1,talo,supplement,deworm,5/17/2021,4,A6,226058,0006,M,1,NA,NA,NA,1,14.0,19.5,1,1,1,1,1,1,1,1,1,R,SK,
+7,2021,1,ketunpesa,control,deworm,5/20/2021,1,F3,226020,0007,F,1,1,1,0,NA,13.7,23.5,2,1,1,1,1,1,1,1,1,R,SK,
+8,2021,1,ketunpesa,control,deworm,5/20/2021,2,J1,226006,0008,M,1,NA,NA,NA,1,14.4,25.5,0,1,1,1,1,1,1,1,1,R,JM,
+10,2021,1,ketunpesa,control,deworm,5/21/2021,3,H4,226002,0010,M,1,NA,NA,NA,1,14.1,22.0,0,1,1,1,1,1,1,1,1,R,JM,FR not fresh
+11,2021,1,ketunpesa,control,deworm,5/21/2021,3,K2,226042,0011,F,1,1,1,1,NA,14.4,21.5,0,1,1,1,1,1,1,1,1,R,JM,
+12,2021,1,ketunpesa,control,deworm,5/21/2021,3,B5,226008,0012,M,1,NA,NA,NA,1,14.1,21.0,1,1,1,1,1,1,1,1,1,R,SK,
+9,2021,1,kuoppa,supplement,control,5/21/2021,3,K4,226089,0009,M,1,NA,NA,NA,1,14.4,24.5,1,1,1,1,1,1,1,1,0,R,SK,
+13,2021,1,helmipollo,control,control,5/23/2021,1,J2,226094,0013,M,1,NA,NA,NA,1,13.5,24.0,2,1,1,1,1,1,1,1,0,R,JV,Some blood saliva on swab
+17,2021,1,helmipollo,control,control,5/23/2021,2,A2,226048,0017,F,1,1,1,0,NA,13.8,21.5,0,1,1,1,1,1,1,1,0,R,JM,FR not fresh
+16,2021,1,puro,supplement,deworm,5/23/2021,1,E1,226010,0016,M,1,NA,NA,NA,1,14.0,20.5,1,1,1,1,1,1,1,1,1,R,JV,
+18,2021,1,puro,supplement,deworm,5/23/2021,2,G3,226013,0018,M,1,NA,NA,NA,1,13.5,21.0,0,1,1,1,1,1,1,1,1,R,SK,FR not fresh
+14,2021,1,vaarinkorpi,supplement,control,5/23/2021,1,K5,226035,0014,F,1,1,1,0,NA,13.8,20.0,0,1,1,1,1,1,1,1,0,R,JM,Vaginal plug
+15,2021,1,vaarinkorpi,supplement,control,5/23/2021,1,A6,226095,0015,F,1,1,1,0,NA,12.8,17.0,0,1,1,1,1,1,1,1,0,R,SK,
+21,2021,1,puro,supplement,deworm,5/24/2021,3,E1,226060,0021,F,1,1,0,0,NA,13.4,19.0,0,1,1,1,1,1,1,1,1,R,SK,
+22,2021,1,puro,supplement,deworm,5/24/2021,3,K6,226076,0022,M,1,NA,NA,NA,1,13.7,20.5,0,1,1,1,1,1,1,1,1,R,JM,
+19,2021,1,vaarinkorpi,supplement,control,5/24/2021,3,F2,226039,0019,M,1,NA,NA,NA,1,13.7,22.0,0,1,1,1,1,1,1,1,0,R,JV,FR was old
+20,2021,1,vaarinkorpi,supplement,control,5/24/2021,3,H2,226069,0020,M,1,NA,NA,NA,1,14.1,22.5,0,1,1,1,1,1,1,1,0,R,JM,
+30,2021,2,hevonen,control,control,6/11/2021,1,D5,226030,0030,F,0,1,0,0,NA,12.0,11.0,4,1,1,1,1,1,1,1,0,R,SK,New fresh FR collected 6/12/21
+31,2021,2,hevonen,control,control,6/11/2021,1,A1,226017,0031,F,1,1,1,0,NA,14.0,28.5,1,1,1,1,1,1,1,1,0,R,SK,"Aggressive, sperm plug, bleeder, FE practive from trap"
+34,2021,2,hevonen,control,control,6/11/2021,2,D5,226029,0034,M,1,NA,NA,NA,1,14.7,26.5,0,1,1,1,1,1,1,1,0,R,JM,
+23,2021,2,janakkala,supplement,deworm,6/11/2021,1,A1,226032,0023,M,1,NA,NA,NA,0,14.0,23.5,3,1,1,1,1,1,1,1,1,R,JM,"bleeder, large aggressive male, testes not visible"
+24,2021,2,janakkala,supplement,deworm,6/11/2021,1,K1,226088,0024,F,1,1,1,1,NA,14.4,26.0,2,1,1,1,1,1,1,1,1,R,JM,"sperm plug, FR not fresh"
+25,2021,2,janakkala,supplement,deworm,6/11/2021,1,K4,226082,0025,M,1,NA,NA,NA,1,14.5,24.0,2,1,1,1,1,1,1,1,1,R,JM,
+26,2021,2,radio,supplement,control,6/11/2021,1,A3,226097,0026,F,0,1,0,0,NA,12.0,11.0,2,1,1,1,1,1,1,1,0,R,JV,"fecal practice from trap, PIT tag coming out, eartag: 086"
+27,2021,2,radio,supplement,control,6/11/2021,1,A3,226005,0027,M,1,NA,NA,NA,1,14.7,23.5,0,1,1,1,1,1,1,1,0,R,JV,
+28,2021,2,radio,supplement,control,6/11/2021,1,K2,226057,0028,M,0,NA,NA,NA,0,13.8,16.5,1,1,1,1,1,1,1,1,0,R,JV,
+29,2021,2,radio,supplement,control,6/11/2021,1,A2,226074,0029,M,1,NA,NA,NA,1,15.5,21.0,1,1,1,1,1,1,1,1,0,R,JV,bleeder
+32,2021,2,radio,supplement,control,6/11/2021,2,K2,226012,0032,F,0,1,0,0,NA,13.6,15.0,53,NA,1,1,1,1,1,1,0,R,JV,"TT0032 - 2 engorged ticks, microscope slides left in lab"
+33,2021,2,radio,supplement,control,6/11/2021,2,K1,226059,0033,F,0,1,0,0,NA,13.6,15.5,8,NA,1,1,1,1,1,1,0,R,JV,"TT0033 - 1 engorged tick, microscope slides left in lab"
+43,2021,2,hevonen,control,control,6/12/2021,3,K3,226016,0043,F,0,1,0,0,NA,13.8,10.5,8,1,1,1,1,1,1,1,0,R,JV,"large blood sample, FR not fresh"
+35,2021,2,janakkala,supplement,deworm,6/12/2021,3,I6,226062,0035,F,1,1,1,0,NA,14.1,26.5,0,1,1,1,1,1,1,1,1,R,JM,"did not swallow 1/2 deworm, FR not fresh"
+36,2021,2,janakkala,supplement,deworm,6/12/2021,3,K4,226096,0036,M,1,NA,NA,NA,1,13.6,23.5,2,1,1,1,1,1,1,1,1,R,SK,"ate a little bit of glue, FE small amount"
+37,2021,2,janakkala,supplement,deworm,6/12/2021,3,K3,226047,0037,F,0,1,0,0,NA,13.3,17.0,1,1,1,1,1,1,1,1,1,R,JM,FE small amount
+38,2021,2,janakkala,supplement,deworm,6/12/2021,3,A6,226072,0038,M,0,NA,NA,NA,0,12.8,16.5,12,1,1,1,1,1,1,1,1,R,JM,"TT0038, FE small amount, FR not fresh"
+44,2021,2,janakkala,supplement,deworm,6/12/2021,4,G4,226068,0044,M,1,NA,NA,NA,1,13.9,21.5,1,1,1,1,1,1,1,1,1,R,JM,FE small amount
+45,2021,2,janakkala,supplement,deworm,6/12/2021,4,I5,226014,0045,M,0,NA,NA,NA,0,12.0,9.5,1,0,0,0,1,1,1,0,1,R,JM,"too small for blood, FE small amount"
+39,2021,2,radio,supplement,control,6/12/2021,3,K1,226065,0039,M,1,NA,NA,NA,1,13.4,21.5,1,1,1,1,1,1,0,0,0,R,SK,"fecal practice from trap, No feces"
+40,2021,2,radio,supplement,control,6/12/2021,3,F5,226063,0040,M,0,NA,NA,NA,0,13.0,15.5,11,1,1,1,1,1,1,1,0,R,JV,TT0040 - 1 engorged adult + one larvae/nymph
+41,2021,2,radio,supplement,control,6/12/2021,3,K1,226071,0041,M,1,NA,NA,NA,1,14.5,24.0,10,1,1,1,1,1,1,1,0,R,SK,"bleeder, FE small amount"
+42,2021,2,radio,supplement,control,6/12/2021,3,K2,226028,0042,M,0,NA,NA,NA,1,13.4,14.0,1,1,1,1,1,1,1,1,0,R,JV,
+46,2021,2,radio,supplement,control,6/12/2021,4,A1,226067,0046,F,0,0,0,0,NA,13.6,18.5,8,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+47,2021,2,radio,supplement,control,6/12/2021,4,F5,226011,0047,F,0,1,0,0,NA,14.2,18.5,12,1,1,1,1,1,0,0,0,R,JV,
+48,2021,2,radio,supplement,control,6/12/2021,4,K1,226077,0048,M,0,NA,NA,NA,1,14.0,17.0,21,1,1,1,1,1,1,1,0,R,JV,HUGE ballz
+57,2021,2,asema,control,control,6/14/2021,1,C1,226023,0057,M,1,NA,NA,NA,1,13.8,22.0,9,1,1,1,1,1,1,1,0,R,SK,
+60,2021,2,asema,control,control,6/14/2021,2,C1,226056,0060,F,0,0,0,0,NA,12.5,15.5,0,1,1,1,1,1,1,1,0,R,JM,
+49,2021,2,kiirastuli,control,deworm,6/14/2021,1,K6,226064,0049,M,1,NA,NA,NA,1,13.4,23.0,1,1,1,1,1,1,1,1,1,R,JM,
+50,2021,2,kiirastuli,control,deworm,6/14/2021,1,A5,226044,0050,M,0,NA,NA,NA,1,12.6,18.0,12,1,1,1,1,1,1,1,1,R,SK,
+51,2021,2,kiirastuli,control,deworm,6/14/2021,1,C1,226081,0051,M,1,NA,NA,NA,1,13.3,25.5,4,1,1,1,1,1,1,1,1,R,SK,"blood on saliva swab, bitey"
+52,2021,2,talo,supplement,deworm,6/14/2021,1,E4,226022,0052,M,1,NA,NA,NA,1,14.5,25.0,0,1,1,1,1,1,1,1,1,R,JV,"bitey, multicap"
+53,2021,2,talo,supplement,deworm,6/14/2021,1,H3,226085,0053,F,0,1,0,0,NA,12.6,14.0,11,1,1,1,1,1,1,1,1,R,JM,"TT0053, 3 engorged nymphs, swab dirty"
+54,2021,2,talo,supplement,deworm,6/14/2021,1,J5,226026,0054,F,0,1,0,0,NA,13.2,21.0,9,1,1,1,1,1,1,1,1,R,JM,
+55,2021,2,talo,supplement,deworm,6/14/2021,1,E4,226058,0055,M,1,NA,NA,NA,1,14.4,22.5,8,NA,1,1,1,1,1,1,1,R,JV,"multicap, recapture, ED destroyed, TT0055, FE small amount"
+56,2021,2,talo,supplement,deworm,6/14/2021,1,E5,226051,0056,M,1,NA,NA,NA,1,14.7,21.5,5,1,1,1,1,1,1,1,1,R,JV,"didn't get all deworm, FR not fresh, almost died twice"
+NA,2021,2,talo,supplement,deworm,6/14/2021,1,A6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SK,"Trap malfunction, feces inside, collected for FEC practice"
+58,2021,2,talo,supplement,deworm,6/14/2021,2,C2,226019,0058,F,1,1,1,1,NA,14.7,29.5,0,1,1,1,1,1,1,1,1,R,JV,FR not fresh
+59,2021,2,talo,supplement,deworm,6/14/2021,2,A6,226031,0059,F,0,1,0,0,NA,13.2,20.5,13,1,1,1,1,1,1,1,1,R,SK,
+65,2021,2,asema,control,control,6/15/2021,3,C1,226091,0065,M,0,NA,NA,NA,1,14.2,17.5,2,1,1,1,1,1,1,1,0,R,JV,"engorged adult ticks on back - TT0065, FR not fresh"
+66,2021,2,asema,control,control,6/15/2021,4,B1,226086,0066,F,0,1,1,0,NA,14.0,22.5,1,1,1,1,1,1,1,1,0,R,JV,sperm plug
+61,2021,2,kiirastuli,control,deworm,6/15/2021,3,K2,226084,0061,M,1,NA,NA,NA,1,14.6,24.5,5,1,1,1,1,1,1,1,1,R,JM,
+62,2021,2,kiirastuli,control,deworm,6/15/2021,3,A5,226055,0062,F,1,1,0,1,NA,14.0,22.0,7,1,1,1,1,1,1,1,1,R,JV,
+63,2021,2,talo,supplement,deworm,6/15/2021,3,A6,226000,0063,M,1,NA,NA,NA,1,13.4,21.0,2,1,1,1,1,1,1,1,1,R,SK,"multicapture, FE small amount"
+64,2021,2,talo,supplement,deworm,6/15/2021,3,A6,226025,0064,M,1,NA,NA,NA,1,14.3,23.0,3,1,1,1,1,1,1,1,1,R,JM,"multicapture, FE small amount"
+70,2021,2,ketunpesa,control,deworm,6/18/2021,1,D3,226034,0070,M,0,NA,NA,NA,1,13.6,20.0,1,1,1,1,1,1,1,1,1,R,SK,
+71,2021,2,ketunpesa,control,deworm,6/18/2021,1,I4,226020,0071,F,1,1,1,0,NA,14.0,23.0,0,NA,1,1,1,1,1,1,1,R,JM,ED destroyed
+72,2021,2,ketunpesa,control,deworm,6/18/2021,1,K3,226009,0072,M,1,NA,NA,NA,1,14.7,25.5,0,1,1,1,1,1,1,1,1,R,JM,very squirmy
+73,2021,2,ketunpesa,control,deworm,6/18/2021,1,C4,226027,0073,M,0,NA,NA,NA,0,12.9,11.0,0,1,1,1,1,1,1,1,1,R,SK,
+74,2021,2,ketunpesa,control,deworm,6/18/2021,1,J1,226092,0074,F,0,0,0,0,NA,13.4,23.5,12,1,1,1,1,1,1,1,1,R,JM,TT0074
+NA,2021,2,ketunpesa,control,deworm,6/18/2021,1,D2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,AR,SK,"Escape at table, white bottom trap"
+68,2021,2,kuoppa,supplement,control,6/18/2021,1,K5,226043,0068,F,0,1,0,0,NA,13.9,19.0,5,1,1,1,1,1,1,0,0,R,SC/JV,FR destroyed/not collected
+69,2021,2,kuoppa,supplement,control,6/18/2021,1,G3,226040,0069,M,1,NA,NA,NA,1,15.6,28.0,1,1,1,1,1,1,1,1,0,R,SC/JV,small FE
+67,2021,2,mustikka,control,deworm,6/18/2021,1,J4,226015,0067,M,1,NA,NA,NA,1,14.2,26.5,4,1,1,1,1,1,1,1,1,R,JM,"bleeder, FE small amount"
+75,2021,2,mustikka,control,deworm,6/18/2021,2,E4,226007,0075,F,1,1,1,0,NA,13.8,22.0,3,1,1,1,1,1,1,1,1,R,JV,
+76,2021,2,mustikka,control,deworm,6/18/2021,2,C2,226098,0076,M,0,NA,NA,NA,1,13.6,18.5,12,1,1,1,1,1,1,1,1,R,JV,
+80,2021,2,ketunpesa,control,deworm,6/19/2021,3,J2,226078,0080,M,0,NA,NA,NA,1,12.8,14.5,1,1,1,1,1,1,1,1,1,R,SK,
+81,2021,2,ketunpesa,control,deworm,6/19/2021,3,F1,226093,0081,M,0,NA,NA,NA,1,12.8,18.5,5,1,1,1,1,1,1,1,1,R,SK,
+79,2021,2,kuoppa,supplement,control,6/19/2021,3,E1,226037,0079,M,0,NA,NA,NA,1,14.2,19.0,0,1,1,1,1,1,1,1,0,R,JV,
+82,2021,2,kuoppa,supplement,control,6/19/2021,4,G3,NA,0082,M,0,NA,NA,NA,1,15.0,22.5,2,1,1,1,1,1,1,0,NA,DP,SC/JV,"small FE, no feces in colon, died after blood sample, large BC"
+77,2021,2,mustikka,control,deworm,6/19/2021,3,J5,226046,0077,F,0,1,1,0,NA,14.0,25.0,1,1,1,1,1,1,1,1,1,R,JM,"spit out some deworm, FR not fresh"
+78,2021,2,mustikka,control,deworm,6/19/2021,3,G6,226066,0078,M,0,NA,NA,NA,1,13.4,19.0,4,1,1,1,1,1,1,1,1,R,JM,"TT0078 - nymph, wiggly"
+83,2021,2,helmipollo,control,control,6/21/2021,1,D1,226075,0083,F,0,1,0,0,NA,13.7,16.0,2,1,1,1,1,1,1,1,0,R,JV,"multicap (2 voles, 1 shrew), TT0083 - engorged nymph on shoulder, FE and FR collected 6/22 (session 3)"
+84,2021,2,helmipollo,control,control,6/21/2021,1,F4,226053,0084,M,0,NA,NA,NA,1,13.6,20.0,4,1,1,1,1,1,1,1,0,R,JM,"multicap (2 voles), FE small, more collected session 4 and combined with session 1 collection"
+85,2021,2,helmipollo,control,control,6/21/2021,1,D1,226036,0085,M,1,NA,NA,NA,1,15.0,23.0,0,1,1,1,1,1,1,1,0,R,JV,"multicap (2 voles, 1 shrew), more FE collected 6/22 (session 3) and combined with session 1 collection"
+86,2021,2,helmipollo,control,control,6/21/2021,1,F4,226099,0086,F,0,1,0,0,NA,13.2,18.5,2,1,1,1,1,1,1,1,0,R,JM,multicap (2 voles)
+87,2021,2,helmipollo,control,control,6/21/2021,1,G1,226080,0087,F,0,1,0,0,NA,13.2,15.5,4,1,1,1,1,1,1,1,0,R,JV,"TT0087 - engorged nymph from back, FE small, more collected session 4 and combined with session 1 collection"
+88,2021,2,helmipollo,control,control,6/21/2021,1,C5,226041,0088,M,0,NA,NA,NA,1,13.2,18.0,3,1,1,1,1,1,1,1,0,R,JM,
+89,2021,2,helmipollo,control,control,6/21/2021,1,C1,226038,0089,M,1,NA,NA,NA,1,14.1,22.0,2,1,1,1,1,1,1,1,0,AR,JV,control deworm given on 6/22 upon recapture
+90,2021,2,helmipollo,control,control,6/21/2021,1,J1,226094,0090,M,1,NA,NA,NA,1,13.7,23.5,1,NA,1,1,1,1,1,1,0,R,JM,wiggly
+91,2021,2,helmipollo,control,control,6/21/2021,1,E5,226054,0091,F,0,1,0,0,NA,12.6,13.0,6,1,1,1,1,1,1,1,0,R,JV,FR collected session 4
+101,2021,2,helmipollo,control,control,6/21/2021,2,A2,226079,0101,M,0,NA,NA,NA,1,12.5,16.5,0,1,1,1,1,1,1,1,0,R,JM,
+98,2021,2,puro,supplement,deworm,6/21/2021,1,H2,226070,0098,F,0,1,0,0,NA,13.1,20.0,6,1,1,1,1,1,1,1,1,R,SK,"TT0098 - 1 adult tick, small BC"
+99,2021,2,puro,supplement,deworm,6/21/2021,1,A3,226060,0099,F,1,1,1,0,NA,13.4,19.0,0,NA,1,1,1,1,1,1,1,R,JM,emaciated
+100,2021,2,puro,supplement,deworm,6/21/2021,1,B5,226004,0100,M,0,NA,NA,NA,1,13.6,19.5,2,1,1,1,1,1,1,1,1,R,JM,"FE really small, bleeder, in bad shape after processing, weak, unresponsive"
+92,2021,2,vaarinkorpi,supplement,control,6/21/2021,1,G5,226049,0092,F,0,1,0,0,NA,13.9,20.0,2,1,1,1,1,1,1,1,0,R,JV,blood coming from vagina
+93,2021,2,vaarinkorpi,supplement,control,6/21/2021,1,G2,226039,0093,M,1,NA,NA,NA,1,13.9,24.0,1,NA,1,1,1,1,1,1,0,R,SK,"FE collected session 4, small amount"
+94,2021,2,vaarinkorpi,supplement,control,6/21/2021,1,G2,226087,0094,F,0,1,0,0,NA,13.4,15.0,10,1,1,1,1,1,1,1,0,R,SK,"blood coming from vagina, sperm plug, FE small"
+95,2021,2,vaarinkorpi,supplement,control,6/21/2021,1,E2,226090,0095,M,1,NA,NA,NA,1,13.8,22.5,4,1,1,1,1,1,1,1,0,R,JV,"FE small, wiggly"
+96,2021,2,vaarinkorpi,supplement,control,6/21/2021,1,E6,226050,0096,M,1,NA,NA,NA,1,13.2,22.0,0,1,1,1,1,1,1,1,0,R,SK,BR0096 was centrifuged accidentally for a few minutes
+97,2021,2,vaarinkorpi,supplement,control,6/21/2021,1,B2,226021,0097,F,0,1,1,0,NA,12.9,21.5,17,1,1,1,1,1,1,1,0,R,JV,"TT0097 - 1 tick, wiggly; ED tube found under fridge (dried out)"
+NA,2021,2,vaarinkorpi,supplement,control,6/21/2021,1,E5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"feces in trap, no animal, door sticky"
+102,2021,2,vaarinkorpi,supplement,control,6/21/2021,2,G2,226069,0102,M,1,NA,NA,NA,1,13.7,24.5,0,NA,1,1,1,1,1,1,0,R,JV,FE small amount
+103,2021,2,vaarinkorpi,supplement,control,6/21/2021,2,A5,226095,0103,F,1,1,1,1,NA,15.5,29.0,1,NA,1,1,1,1,1,1,0,R,JV,FR not fresh
+104,2021,2,helmipollo,control,control,6/22/2021,3,C5,219979,0104,M,0,NA,NA,NA,1,12.6,14.0,1,1,1,1,1,1,1,1,0,R,JM,
+106,2021,2,puro,supplement,deworm,6/22/2021,3,E3,219971,0106,M,0,NA,NA,NA,1,13.2,18.5,0,1,1,1,1,1,1,1,1,R,SK,emaciated
+107,2021,2,puro,supplement,deworm,6/22/2021,4,C6,226024,0107,F,0,1,0,0,NA,13.0,15.5,12,1,1,1,1,1,1,1,1,R,JM,FR not fresh
+105,2021,2,vaarinkorpi,supplement,control,6/22/2021,3,K3,226035,0105,F,1,1,1,1,NA,14.2,25.5,0,NA,1,1,1,1,1,1,0,R,JV,FR not fresh
+NA,2021,3,hevonen,control,control,7/10/2021,0,B2,226030,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,JM,"trap open, but door partly closed, animal inside very decomposed"
+117,2021,3,hevonen,control,control,7/11/2021,1,D5,219986,0117,M,0,NA,NA,NA,1,14.0,20.0,2,1,1,1,1,1,0,0,0,R,JM,"slow bleeder, small BC, multicap"
+118,2021,3,hevonen,control,control,7/11/2021,1,D5,219934,0118,F,0,1,0,0,NA,12.7,24.5,0,1,1,1,1,1,1,1,0,R,JV,"vagina bloody, FE taken 7/12 session 3, squirmy, multicap"
+119,2021,3,hevonen,control,control,7/11/2021,1,J4,219936,0119,F,0,1,1,0,NA,13.6,22.5,4,1,1,1,1,1,1,1,0,R,JM,
+120,2021,3,hevonen,control,control,7/11/2021,1,J5,219991,0120,M,0,NA,NA,NA,1,13.2,15.0,1,1,1,1,1,1,1,1,0,R,JV,"FE small, more FE taken 7/12 session 3 (FE0120-2)"
+121,2021,3,hevonen,control,control,7/11/2021,1,I6,219965,0121,F,0,1,1,0,NA,13.3,22.0,0,1,1,1,1,1,1,1,0,R,JM,FR collected 7/12 session 3
+NA,2021,3,hevonen,control,control,7/11/2021,1,D5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,R,JM,3 neonates born in trap. Multicap
+134,2021,3,hevonen,control,control,7/11/2021,2,D5,219949,0134,M,0,NA,NA,NA,1,13.6,20.5,2,1,1,1,1,1,1,1,0,R,SK,
+135,2021,3,hevonen,control,control,7/11/2021,2,B5,219978,0135,M,0,NA,NA,NA,0,12.5,12.0,2,1,1,1,1,1,1,0,0,R,JV,FE small amount
+136,2021,3,hevonen,control,control,7/11/2021,2,G1,226016,0136,F,0,1,1,0,NA,13.1,22.0,0,NA,1,1,1,1,1,1,0,R,SK,FE taken 7/12 session 3
+137,2021,3,hevonen,control,control,7/11/2021,2,J5,219921,0137,M,0,NA,NA,NA,1,13.1,23.5,0,1,1,1,1,1,1,1,0,R,JV,FE small amount
+108,2021,3,janakkala,supplement,deworm,7/11/2021,1,F5,219972,0108,M,0,NA,NA,NA,0,12.3,11.5,0,1,1,1,1,1,1,1,1,R,JM,FR not fresh
+109,2021,3,janakkala,supplement,deworm,7/11/2021,1,A4,219973,0109,F,0,1,1,1,NA,13.9,34.0,0,1,1,1,1,1,1,1,1,R,JV,fresh FR collected 7/12
+110,2021,3,janakkala,supplement,deworm,7/11/2021,1,K1,219947,0110,F,0,1,0,0,NA,12.6,16.0,0,1,1,1,1,1,1,1,1,R,JM,
+111,2021,3,janakkala,supplement,deworm,7/11/2021,1,B3,219904,0111,M,0,NA,NA,NA,1,14.1,18.0,0,1,1,1,1,1,1,1,1,R,JV,
+112,2021,3,janakkala,supplement,deworm,7/11/2021,1,J2,219975,0112,F,0,1,1,1,NA,13.2,31.0,0,1,1,1,1,1,1,1,1,R,JM,
+113,2021,3,janakkala,supplement,deworm,7/11/2021,1,B2,219909,0113,F,0,1,1,1,NA,14.2,38.0,0,1,1,1,1,1,1,1,1,R,JV,didn't swallow all dewormer
+122,2021,3,janakkala,supplement,deworm,7/11/2021,2,E6,219941,0122,F,0,1,0,0,NA,12.4,12.5,0,1,1,1,1,1,1,1,1,R,JM,PIT tag recorded by Jasmine; sperm plug; multicapture; FE small amount
+123,2021,3,janakkala,supplement,deworm,7/11/2021,2,E6,219914,0123,M,0,NA,NA,NA,1,13.0,17.0,1,1,1,1,1,1,1,1,1,R,SK,TT collected from back (TT0123); Multicapture; FE small amount
+124,2021,3,janakkala,supplement,deworm,7/11/2021,2,A4,219929,0124,M,0,NA,NA,NA,1,13.9,19.0,0,1,1,1,1,1,1,1,1,R,JM,FE small amount
+125,2021,3,janakkala,supplement,deworm,7/11/2021,2,G1,226073,0125,F,0,1,0,0,NA,13.1,15.5,0,1,1,1,1,1,1,1,1,R,SK,FR not fresh
+126,2021,3,janakkala,supplement,deworm,7/11/2021,2,K3,219982,0126,M,0,NA,NA,NA,1,12.9,19.0,2,1,1,1,1,1,1,1,1,R,SK,TT collected (TT0126)
+127,2021,3,janakkala,supplement,deworm,7/11/2021,2,B2,226032,0127,M,1,NA,NA,NA,1,14.5,22.0,1,NA,1,1,1,1,1,1,1,R,JM,FE small amount
+128,2021,3,janakkala,supplement,deworm,7/11/2021,2,K5,219998,0128,F,0,1,1,1,NA,13.5,26.5,0,1,1,1,1,1,1,1,1,R,SK,
+129,2021,3,janakkala,supplement,deworm,7/11/2021,2,H5,226062,0129,F,1,1,1,1,NA,13.6,28.0,0,NA,1,1,1,1,1,1,1,R,JM,FR not fresh
+114,2021,3,radio,supplement,control,7/11/2021,1,G2,219961,0114,F,0,1,0,0,NA,13.2,20.0,0,1,1,1,1,1,1,1,0,R,SK,FE urine soaked; FR not fresh
+115,2021,3,radio,supplement,control,7/11/2021,1,E2,226045,0115,M,0,NA,NA,NA,1,13.0,16.5,0,1,1,1,1,1,1,1,0,R,SK,FR not fresh
+116,2021,3,radio,supplement,control,7/11/2021,1,E3,219946,0116,F,0,1,1,0,NA,12.8,22.0,0,1,1,1,1,1,1,1,0,R,SK,FR not fresh
+130,2021,3,radio,supplement,control,7/11/2021,2,J1,219964,0130,F,0,1,1,1,NA,13.2,27.0,0,1,1,1,1,1,1,1,0,R,JV,sperm plug
+131,2021,3,radio,supplement,control,7/11/2021,2,I5,226071,0131,M,1,NA,NA,NA,1,14.4,26.0,2,NA,1,1,1,1,1,1,0,R,JM,several wounds on face and cataract on eye
+132,2021,3,radio,supplement,control,7/11/2021,2,B5,219994,0132,M,0,NA,NA,NA,1,13.6,20.0,0,1,1,1,1,1,1,1,0,R,JV,FR collected 7/12/21 sess 4
+133,2021,3,radio,supplement,control,7/11/2021,2,F4,226011,0133,F,0,1,1,0,NA,13.6,27.0,0,NA,1,1,1,1,1,1,0,R,JM,
+149,2021,3,hevonen,control,control,7/12/2021,3,A1,226017,0149,F,1,1,1,1,NA,14.2,31.5,1,NA,1,1,1,1,1,1,0,R,JM,
+160,2021,3,hevonen,control,control,7/12/2021,4,J2,219919,0160,M,0,NA,NA,NA,1,13.4,22.5,3,1,1,1,1,1,1,1,0,R,JM,
+161,2021,3,hevonen,control,control,7/12/2021,4,K3,219923,0161,F,0,0,0,0,NA,12.9,11.5,2,1,1,1,1,1,0,0,0,R,JV,
+138,2021,3,janakkala,supplement,deworm,7/12/2021,3,K4,219940,0138,F,0,1,0,0,NA,12.7,14.5,0,1,1,1,1,1,1,1,1,R,SK,"swab dirty, FR not fresh"
+139,2021,3,janakkala,supplement,deworm,7/12/2021,3,I4,219962,0139,F,0,0,0,0,NA,12.4,12.5,0,1,1,1,1,1,0,1,1,R,JV,multicapture
+140,2021,3,janakkala,supplement,deworm,7/12/2021,3,I4,226047,0140,F,0,1,1,0,NA,13.5,24.0,0,NA,1,1,1,1,1,1,1,R,JV,"multicapture, sperm plug"
+141,2021,3,janakkala,supplement,deworm,7/12/2021,3,K3,219941,0141,M,0,NA,NA,NA,1,12.6,15.5,1,1,1,1,1,1,1,1,1,R,SK,"New animal (Ear taken), PIT tag recorded as 219941 by Mathilde, could potentially be 219951??; FR not fresh"
+142,2021,3,janakkala,supplement,deworm,7/12/2021,3,I1,226088,0142,F,1,1,1,1,NA,13.2,31.5,0,NA,1,1,1,1,1,1,1,R,JV,
+143,2021,3,janakkala,supplement,deworm,7/12/2021,3,A4,219930,0143,M,0,NA,NA,NA,1,14.0,23.5,0,1,1,1,1,1,1,1,1,R,SK,
+144,2021,3,janakkala,supplement,deworm,7/12/2021,3,C5,219938,0144,M,0,NA,NA,NA,0,12.6,11.5,0,1,1,1,1,1,1,1,1,R,JV,FE small amount; FR not fresh
+150,2021,3,janakkala,supplement,deworm,7/12/2021,4,K1,226068,0150,M,1,NA,NA,NA,1,14.4,22.0,0,NA,1,1,1,1,1,1,1,R,JV,multicapture; FE small amount
+151,2021,3,janakkala,supplement,deworm,7/12/2021,4,F5,219955,0151,M,0,NA,NA,NA,0,12.2,12.5,0,1,1,1,1,1,0,1,1,R,SK,
+152,2021,3,janakkala,supplement,deworm,7/12/2021,4,F5,219967,0152,F,0,0,0,0,NA,12.3,13.0,0,1,1,1,1,1,0,0,1,R,SK,
+153,2021,3,janakkala,supplement,deworm,7/12/2021,4,H3,226096,0153,M,1,NA,NA,NA,1,13.6,20.5,0,NA,1,1,1,1,1,1,1,R,JV,
+154,2021,3,janakkala,supplement,deworm,7/12/2021,4,A1,219924,0154,F,0,1,1,1,NA,13.4,33.5,0,1,1,1,1,1,1,1,1,R,SK,
+155,2021,3,janakkala,supplement,deworm,7/12/2021,4,C5,219980,0155,M,0,NA,NA,NA,1,13.2,19.0,2,1,1,1,1,1,1,1,1,R,JV,FE small amount; FR soaked in urine
+156,2021,3,janakkala,supplement,deworm,7/12/2021,4,E3,219903,0156,F,0,1,1,0,NA,13.0,20.5,0,1,1,1,1,1,1,1,1,R,SK,FR not fresh
+145,2021,3,radio,supplement,control,7/12/2021,3,I6,219996,0145,M,0,NA,NA,NA,1,14.0,20.5,3,1,1,1,1,1,1,1,0,R,JM,TT0145 collected
+146,2021,3,radio,supplement,control,7/12/2021,3,B1,219905,0146,F,0,1,0,0,NA,13.6,17.0,0,1,1,1,1,1,1,1,0,R,JM,
+147,2021,3,radio,supplement,control,7/12/2021,3,B2,219983,0147,M,0,NA,NA,NA,1,12.7,15.5,0,1,1,1,1,1,1,1,0,R,JM,
+148,2021,3,radio,supplement,control,7/12/2021,3,B5,219993,0148,F,0,1,1,1,NA,13.2,26.0,0,1,1,1,1,1,1,1,0,R,JM,
+157,2021,3,radio,supplement,control,7/12/2021,4,J4,219925,0157,F,0,0,0,0,NA,12.2,10.5,0,1,1,1,1,1,1,1,0,R,JV,FR small
+158,2021,3,radio,supplement,control,7/12/2021,4,A2,219932,0158,M,0,NA,NA,NA,1,13.2,22.0,0,1,1,1,1,1,1,1,0,R,SK,Right and left ear punch?
+159,2021,3,radio,supplement,control,7/12/2021,4,I6,219988,0159,F,0,1,1,0,NA,13.4,23.5,2,1,1,1,1,1,1,1,0,R,SK,
+172,2021,3,asema,control,control,7/14/2021,1,E6,219822,0172,M,0,NA,NA,NA,1,13.7,17.5,0,1,1,1,1,1,1,1,0,R,JM,
+173,2021,3,asema,control,control,7/14/2021,1,C1,226001,0173,F,1,1,1,0,NA,14.0,24.0,0,NA,1,1,1,1,1,1,0,R,JV,
+174,2021,3,asema,control,control,7/14/2021,1,E2,226023,0174,M,1,NA,NA,NA,1,14.2,20.5,0,NA,1,1,1,1,1,1,0,R,JV,
+175,2021,3,asema,control,control,7/14/2021,1,J5,219890,0175,M,0,NA,NA,NA,1,14.1,21.5,0,1,1,1,1,1,1,1,0,R,JM,
+176,2021,3,asema,control,control,7/14/2021,1,J1,219876,0176,M,0,NA,NA,NA,0,12.2,11.0,0,1,1,1,1,1,1,0,0,R,JM,FE collected 7/15
+177,2021,3,asema,control,control,7/14/2021,1,E1,226056,0177,F,0,1,1,1,NA,14.0,23.0,0,NA,1,1,1,1,1,1,0,R,JV,"sperm plug, fresh FR collected session 3 7/15"
+178,2021,3,asema,control,control,7/14/2021,1,G4,219862,0178,M,0,NA,NA,NA,0,12.6,13.0,1,1,1,1,1,1,1,1,0,R,JM,
+179,2021,3,asema,control,control,7/14/2021,1,K4,226033,0179,F,1,1,1,1,NA,14.2,29.5,0,NA,1,1,1,1,1,1,0,R,JV,"shrew dead in trap, sperm plug"
+180,2021,3,asema,control,control,7/14/2021,1,C2,219851,0180,F,0,0,0,0,NA,13.1,12.5,1,1,1,1,1,1,1,1,0,R,JV,
+181,2021,3,asema,control,control,7/14/2021,1,A2,219849,0181,M,0,NA,NA,NA,0,12.9,23.0,0,1,1,1,1,1,1,1,0,R,JM,"TT0181 collected, FR not fresh"
+182,2021,3,asema,control,control,7/14/2021,1,A6,219813,0182,F,0,1,1,0,NA,13.0,21.5,0,1,1,1,1,1,1,1,0,R,JM,
+185,2021,3,asema,control,control,7/14/2021,2,K3,226158,0185,M,0,NA,NA,NA,0,12.2,10.5,0,1,1,1,1,1,1,1,0,R,JM,FE collected 7/15/21
+186,2021,3,asema,control,control,7/14/2021,2,K6,226169,0186,F,0,1,1,1,NA,13.8,27.0,0,1,1,1,1,1,1,1,0,R,JM,
+162,2021,3,kiirastuli,control,deworm,7/14/2021,1,H3,219913,0162,F,0,1,1,1,NA,13.7,30.0,1,1,1,1,1,1,1,1,1,R,JV,
+163,2021,3,kiirastuli,control,deworm,7/14/2021,1,A6,226044,0163,M,0,NA,NA,NA,1,13.0,19.5,0,NA,1,1,1,1,1,1,1,R,JV,fresh FR collected 7/15
+164,2021,3,kiirastuli,control,deworm,7/14/2021,1,K2,226064,0164,M,1,NA,NA,NA,1,13.3,20.0,0,NA,1,1,1,1,1,1,1,R,JV,FE with urine
+183,2021,3,kiirastuli,control,deworm,7/14/2021,2,K2,219870,0183,F,0,1,0,0,NA,13.5,17.5,0,1,1,1,1,1,1,1,1,R,JM,
+165,2021,3,talo,supplement,deworm,7/14/2021,1,E5,226031,0165,F,0,1,1,1,NA,13.3,33.0,0,NA,1,1,1,1,1,1,1,R,SK,
+166,2021,3,talo,supplement,deworm,7/14/2021,1,H2,219838,0166,F,0,1,1,1,NA,12.7,28.0,0,1,1,1,1,1,1,1,1,R,JM,FE small amount
+167,2021,3,talo,supplement,deworm,7/14/2021,1,H1,226051,0167,M,1,NA,NA,NA,1,13.8,23.5,0,NA,1,1,1,1,1,1,1,R,SK,
+168,2021,3,talo,supplement,deworm,7/14/2021,1,D3,219889,0168,F,0,1,0,0,NA,12.6,15.0,1,1,1,1,1,1,1,1,1,R,JM,
+169,2021,3,talo,supplement,deworm,7/14/2021,1,F4,226085,0169,F,0,1,1,0,NA,13.5,26.5,0,1,1,1,1,1,1,1,1,R,SK,dirty swab
+170,2021,3,talo,supplement,deworm,7/14/2021,1,G6,219823,0170,M,0,NA,NA,NA,1,14.2,25.5,1,1,1,1,1,1,1,1,1,R,JM,
+171,2021,3,talo,supplement,deworm,7/14/2021,1,A5,219846,0171,M,0,NA,NA,NA,1,12.9,19.5,0,1,1,1,1,1,1,1,1,R,SK,
+184,2021,3,talo,supplement,deworm,7/14/2021,1,A6,226000,0184,M,1,NA,NA,NA,1,13.8,21.5,3,NA,1,1,1,1,1,1,1,R,SK,more FE collected 7/15 session 4
+189,2021,3,asema,control,control,7/15/2021,3,K3,219883,0189,M,0,NA,NA,NA,0,12.5,10.0,1,1,1,1,1,1,0,1,0,R,JM,TT0189 collected - 1 nymph; multicap
+190,2021,3,asema,control,control,7/15/2021,3,K3,219877,0190,M,0,NA,NA,NA,1,12.7,16.0,0,1,1,1,1,1,1,1,0,R,JM,multicap
+191,2021,3,asema,control,control,7/15/2021,3,A6,219809,0191,M,0,NA,NA,NA,1,13.6,14.0,1,1,1,1,1,1,1,0,0,R,JM,
+195,2021,3,asema,control,control,7/15/2021,4,K3,219833,0195,M,0,NA,NA,NA,1,13.8,21.5,2,1,1,1,1,1,1,1,0,R,JM,"lost a lot of blood, multicap, FE small amount"
+196,2021,3,asema,control,control,7/15/2021,4,D3,219931,0196,F,0,0,0,0,NA,13.6,14.5,1,1,1,1,1,1,1,1,0,R,JV,BR and BC small amount; FR not fresh
+187,2021,3,kiirastuli,control,deworm,7/15/2021,3,H3,219997,0187,F,0,1,1,1,NA,13.7,29.0,1,1,1,1,1,1,1,1,1,R,JV,
+188,2021,3,kiirastuli,control,deworm,7/15/2021,3,A2,226055,0188,F,1,1,1,1,NA,14.3,25.5,0,1,1,1,1,1,1,1,1,R,JV,bloody vagina
+192,2021,3,kiirastuli,control,deworm,7/15/2021,4,B4,219910,0192,M,0,NA,NA,NA,1,13.5,23.0,1,1,1,1,1,1,1,1,1,R,JV,
+193,2021,3,talo,supplement,deworm,7/15/2021,4,A5,219830,0193,F,0,0,0,0,NA,12.4,13.5,1,1,1,1,1,1,1,1,1,R,SK,
+194,2021,3,talo,supplement,deworm,7/15/2021,4,H4,219856,0194,F,0,1,1,0,NA,13.1,24.5,1,1,1,1,1,1,1,1,1,R,SK,TT0194 collected- 1 adult tick; sperm plug
+201,2021,3,ketunpesa,control,deworm,7/18/2021,1,B3,219912,0201,F,0,1,1,0,NA,13.2,23.0,1,1,1,1,1,1,1,1,1,R,JV,"sperm plug, fresh FR collected session 4"
+202,2021,3,ketunpesa,control,deworm,7/18/2021,1,J4,219800,0202,M,0,NA,NA,NA,0,11.8,8.5,0,1,1,0,0,0,1,1,1,R,JM,"too small for blood, FE small amount, FR not fresh"
+203,2021,3,ketunpesa,control,deworm,7/18/2021,1,H5,226020,0203,F,1,1,1,1,NA,14.1,29.5,0,NA,1,1,1,1,1,1,1,R,JM,bloody vagina
+204,2021,3,ketunpesa,control,deworm,7/18/2021,1,D2,219950,0204,F,0,1,1,0,NA,14.6,30.5,1,1,1,1,1,1,1,1,1,R,JV,
+206,2021,3,ketunpesa,control,deworm,7/18/2021,2,H4,219817,0206,M,0,NA,NA,NA,0,11.7,9.0,0,1,1,0,0,0,1,1,1,R,SK,"FE small amount, multicap"
+207,2021,3,ketunpesa,control,deworm,7/18/2021,2,H4,219886,0207,F,0,0,0,0,NA,11.7,8.5,0,1,1,0,0,0,1,1,1,R,JM,"FE small amount, multicap"
+209,2021,3,ketunpesa,control,deworm,7/18/2021,2,I4,219821,0209,M,0,NA,NA,NA,0,11.9,8.0,0,1,1,0,0,0,1,1,1,R,JM,"FE small amount, multicap"
+210,2021,3,ketunpesa,control,deworm,7/18/2021,2,J2,219835,0210,F,0,0,0,0,NA,11.8,9.5,0,1,1,0,0,0,1,1,1,R,SK,FE small amount
+211,2021,3,ketunpesa,control,deworm,7/18/2021,2,H4,219976,0211,F,0,0,0,0,NA,12.0,9.0,0,1,1,0,0,0,1,1,1,R,JV,"FE small amount, NOT multicap, found and processed after the other H4s were released; more FE collected session 4"
+200,2021,3,kuoppa,supplement,control,7/18/2021,1,H3,219850,0200,M,0,NA,NA,NA,1,14.2,24.5,0,1,1,1,1,1,1,1,0,R,SK,
+205,2021,3,kuoppa,supplement,control,7/18/2021,2,J3,219874,0205,F,0,1,1,1,NA,13.9,40.5,0,1,1,1,1,1,1,1,0,R,JV,FE small amount
+197,2021,3,mustikka,control,deworm,7/18/2021,1,B5,226007,0197,F,1,1,1,1,NA,13.4,26.5,2,NA,1,1,1,1,1,1,1,R,JM,
+198,2021,3,mustikka,control,deworm,7/18/2021,1,H5,219834,0198,M,0,NA,NA,NA,1,14.1,25.5,6,1,1,1,1,1,1,1,1,R,JV,
+199,2021,3,mustikka,control,deworm,7/18/2021,1,G6,219926,0199,M,0,NA,NA,NA,1,13.9,19.5,0,1,1,1,1,1,1,1,1,R,JM,
+208,2021,3,mustikka,control,deworm,7/18/2021,1,G5,219832,0208,M,0,NA,NA,NA,1,14.5,23.5,3,1,1,1,1,1,1,1,1,R,JV,
+218,2021,3,ketunpesa,control,deworm,7/19/2021,3,K2,226092,0218,F,0,1,1,1,NA,13.5,32.0,1,NA,1,1,1,1,1,1,1,R,JM,
+221,2021,3,ketunpesa,control,deworm,7/19/2021,4,E2,226078,0221,M,0,NA,NA,NA,1,13.2,20.0,0,NA,1,1,1,1,1,1,1,R,JM,TT0221 - 2 adult ticks on back
+214,2021,3,kuoppa,supplement,control,7/19/2021,3,H3,226037,0214,M,0,NA,NA,NA,1,13.8,22.0,1,NA,1,1,1,1,1,1,0,R,JV,
+215,2021,3,kuoppa,supplement,control,7/19/2021,3,C1,219860,0215,M,0,NA,NA,NA,0,12.9,17.0,1,1,1,1,1,1,1,0,0,R,JM,
+216,2021,3,kuoppa,supplement,control,7/19/2021,3,A2,219970,0216,M,0,NA,NA,NA,1,14.7,33.5,2,1,1,1,1,1,0,0,0,R,JV,
+217,2021,3,kuoppa,supplement,control,7/19/2021,3,A2,219916,0217,F,0,1,0,0,NA,12.5,13.0,0,1,1,1,1,1,0,1,0,R,JM,
+219,2021,3,kuoppa,supplement,control,7/19/2021,4,E3,226196,0219,F,0,1,0,0,NA,13.0,16.0,1,1,1,1,1,1,0,0,0,R,JV,
+220,2021,3,kuoppa,supplement,control,7/19/2021,4,E1,226189,0220,F,0,1,1,0,NA,13.7,31.0,0,1,1,1,1,1,1,1,0,R,JM,
+212,2021,3,mustikka,control,deworm,7/19/2021,3,B4,219894,0212,M,0,NA,NA,NA,1,13.3,23.0,0,1,1,1,1,1,1,1,1,R,SK,
+213,2021,3,mustikka,control,deworm,7/19/2021,3,J5,219875a,0213,F,0,1,1,0,NA,12.9,23.5,2,1,1,1,1,1,1,1,1,R,SK,
+222,2021,3,helmipollo,control,control,7/21/2021,1,J2,226094,0222,M,1,NA,NA,NA,1,14.1,27.5,0,NA,1,1,1,1,1,1,0,R,JM,
+223,2021,3,helmipollo,control,control,7/21/2021,1,G4,226127,0223,M,0,NA,NA,NA,0,11.6,10.0,0,1,1,1,1,1,1,1,0,R,SK,more FE collected 7/21 session 2
+224,2021,3,helmipollo,control,control,7/21/2021,1,B2,226079,0224,M,0,NA,NA,NA,1,12.9,14.5,0,NA,1,1,1,1,1,1,0,R,JM,
+225,2021,3,helmipollo,control,control,7/21/2021,1,G6,226099,0225,F,0,1,1,0,NA,13.2,26.0,0,NA,1,1,1,1,1,1,0,R,SK,
+226,2021,3,helmipollo,control,control,7/21/2021,1,F1,226075,0226,F,0,1,1,1,NA,13.2,24.0,0,NA,1,1,1,1,1,1,0,R,JM,"multicap with dead shrew; pit tag fell out, retagged with same tag"
+227,2021,3,helmipollo,control,control,7/21/2021,1,G1,226080,0227,F,0,1,1,0,NA,13.2,27.5,0,NA,1,1,1,1,1,1,0,R,JM,
+228,2021,3,helmipollo,control,control,7/21/2021,1,F4,226041,0228,M,0,NA,NA,NA,1,13.3,21.5,0,NA,1,1,1,1,1,1,0,R,SK,TT0228 collected - 1 large adult from back
+229,2021,3,helmipollo,control,control,7/21/2021,1,G3,226036,0229,M,1,NA,NA,NA,1,13.6,23.5,1,NA,1,1,1,1,1,1,0,R,JM,
+256,2021,3,helmipollo,control,control,7/21/2021,2,G3,226053,0256,M,0,NA,NA,NA,1,14.2,23.0,0,NA,1,1,1,1,1,1,0,R,JV,FE small amount; FE0256-2 collected 7/22 session 3
+247,2021,3,puro,supplement,deworm,7/21/2021,1,F4,219815,0247,M,0,NA,NA,NA,1,12.1,16.0,1,1,1,1,1,1,1,1,1,R,SK,multicap with shrew; more FE collected session 2
+248,2021,3,puro,supplement,deworm,7/21/2021,1,E3,226060,0248,F,1,1,1,1,NA,13.8,25.5,0,NA,1,1,1,1,1,1,1,R,JV,starting nipples; FR not fresh
+249,2021,3,puro,supplement,deworm,7/21/2021,1,G3,226140,0249,M,0,NA,NA,NA,1,14.4,23.0,0,1,1,1,1,1,1,1,1,R,JV,multicap
+250,2021,3,puro,supplement,deworm,7/21/2021,1,H5,219907,0250,F,0,1,0,0,NA,12.2,14.0,0,1,1,1,1,1,1,1,1,R,SK,
+251,2021,3,puro,supplement,deworm,7/21/2021,1,G3,226153,0251,F,0,1,1,1,NA,13.1,20.5,0,1,1,1,1,1,0,1,1,R,JV,FR small amount
+252,2021,3,puro,supplement,deworm,7/21/2021,1,I6,219819,0252,M,0,NA,NA,NA,1,12.5,16.5,0,1,1,1,1,1,1,1,1,R,SK,
+253,2021,3,puro,supplement,deworm,7/21/2021,1,A2,226105,0253,M,0,NA,NA,NA,1,13.5,18.5,0,1,1,1,1,1,1,1,1,R,JV,
+254,2021,3,puro,supplement,deworm,7/21/2021,1,A4,219958,0254,M,0,NA,NA,NA,1,12.5,17.0,0,1,1,1,1,1,1,1,1,R,SK,more FE and FR collected session 3 7/22
+264,2021,3,puro,supplement,deworm,7/21/2021,2,A2,219900,0264,F,0,1,1,0,NA,13.6,26.0,0,1,1,1,1,1,1,1,1,R,JM,FE small amount
+230,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,H2,226039,0230,M,1,NA,NA,NA,1,14.3,23.5,1,NA,1,1,1,1,1,0,0,R,JV,
+231,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,C5,219806,0231,F,0,1,0,0,NA,12.3,12.5,0,1,1,1,1,1,1,1,0,R,JM,multicap; vaginal plug; FE collected session 3 7/22
+232,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,H4,226049,0232,F,0,1,1,0,NA,13.5,18.5,0,NA,1,1,1,1,1,1,0,R,JV,
+233,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,C5,226052,0233,M,0,NA,NA,NA,1,12.7,21.0,0,1,1,1,1,1,1,1,0,R,JM,multicap
+234,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,F1,226087,0234,F,0,1,0,0,NA,14.4,24.0,0,NA,1,1,1,1,1,1,0,R,JV,multicap w/shrew (DT)
+235,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,B5,219880,0235,M,0,NA,NA,NA,1,12.5,15.5,0,1,1,1,1,1,1,1,0,R,JM,
+236,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,G2,226090,0236,M,1,NA,NA,NA,1,13.7,22.5,1,NA,1,1,1,1,1,1,0,R,JV,
+237,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,C2,226126,0237,M,0,NA,NA,NA,0,11.9,10.5,0,1,1,1,1,1,1,1,0,R,JM,FR collected session 3 7/22
+238,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,A5,226095,0238,F,1,1,1,1,NA,14.1,23.5,1,NA,1,1,1,1,1,1,0,R,JV,starting nipples
+239,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,A2,219867,0239,F,0,0,0,0,NA,11.8,11.0,0,1,1,1,1,1,1,1,0,R,JM,Fresh FR collected session 3 7/22
+240,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,A1,219872,0240,F,0,1,1,0,NA,14.1,24.0,0,1,1,1,1,1,1,1,0,R,JV,Fresh FR collected session 3 7/22
+241,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,D5,219837,0241,M,0,NA,NA,NA,0,12.6,13.5,0,1,1,1,1,1,1,1,0,R,JM,
+242,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,F1,226141,0242,F,0,1,1,1,NA,13.6,25.0,0,1,1,1,1,1,1,1,0,R,JV,"TT0242 - large adult, mid-back; FR soaked in urine; bloody vagina; lactating"
+243,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,E4,219808,0243,M,0,NA,NA,NA,0,12.5,13.5,0,1,1,1,1,1,1,1,0,R,JM,"FR0243-2 collected session 4, 7/22"
+244,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,G3,226131,0244,M,0,NA,NA,NA,1,13.4,19.0,1,1,1,1,1,1,1,1,0,R,JV,"TT0244 - 2 adults, left shoulder"
+245,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,G6,219863,0245,F,0,0,0,0,NA,12.2,12.0,0,1,1,1,1,1,1,1,0,R,JM,dirty swab; large blood sample; TT0245 - 1 adult upper-back
+246,2021,3,vaarinkorpi,supplement,control,7/21/2021,1,I5,226119,0246,F,0,1,1,1,NA,13.9,27.0,0,1,1,1,1,1,1,1,0,R,JV,
+255,2021,3,vaarinkorpi,supplement,control,7/21/2021,2,C5,226170,0255,M,0,NA,NA,NA,1,13.1,20.0,0,1,1,1,1,1,1,1,0,R,SK,"Originally recorded as PIT tag 226070 but this PIT tag was also recorded at site Puro. PIT tag 226170 was processed as a (monthly) recap during session 3-3 at Vaarinkorpi, but no previous occasion shows animal 226170 as a new animal, suggesting a recording error in this entry during session 2 (ie 226070 here should be 226170). PIT tag # for this entry changed to 226170 as other characteristics match the individual 226170 processed at session 3. Assumed that sample ID 0255 and 0273 are from the same individual. Multicap; FE small amount"
+257,2021,3,vaarinkorpi,supplement,control,7/21/2021,2,C5,226184,0257,M,0,NA,NA,NA,0,14.0,15.0,0,1,1,1,1,1,0,0,0,R,JV,multicap; TT0257 - 1 adult and 1 nymph from left shoulder
+258,2021,3,vaarinkorpi,supplement,control,7/21/2021,2,A2,226183,0258,F,0,1,1,1,NA,13.8,25.5,0,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+259,2021,3,vaarinkorpi,supplement,control,7/21/2021,2,I3,226185,0259,M,0,NA,NA,NA,0,12.4,13.0,0,1,1,1,1,1,1,1,0,R,SK,multicap; FE small amount
+260,2021,3,vaarinkorpi,supplement,control,7/21/2021,2,I3,226123,0260,F,0,0,0,0,NA,12.5,11.0,0,1,1,1,1,1,1,1,0,R,JV,multicap; FE small amount
+261,2021,3,vaarinkorpi,supplement,control,7/21/2021,2,A1,226139,0261,M,0,NA,NA,NA,1,13.3,20.5,1,1,1,1,1,1,1,1,0,R,SK,
+262,2021,3,vaarinkorpi,supplement,control,7/21/2021,2,D4,226124,0262,M,0,NA,NA,NA,1,13.4,17.5,0,1,1,1,1,1,1,1,0,R,JV,
+263,2021,3,vaarinkorpi,supplement,control,7/21/2021,2,F2,226171,0263,F,0,1,0,0,NA,11.8,11.5,1,1,1,1,1,1,1,1,0,R,SK,Fresh FR0263 collected session 4 7/22
+265,2021,3,helmipollo,control,control,7/22/2021,3,G3,219969,0265,M,0,NA,NA,NA,0,11.8,9.0,0,1,1,0,0,0,1,1,0,R,JM,
+266,2021,3,helmipollo,control,control,7/22/2021,3,D5,226054,0266,F,0,1,1,1,NA,13.5,30.5,0,NA,1,1,1,1,1,1,0,R,JM,
+278,2021,3,helmipollo,control,control,7/22/2021,4,G1,226118,0278,F,0,1,0,0,NA,12.3,16.5,1,1,1,1,1,1,1,0,0,R,SK,
+279,2021,3,helmipollo,control,control,7/22/2021,4,G3,226114,0279,F,0,0,0,0,NA,11.5,8.0,0,1,1,0,0,0,1,0,0,R,SK,FE small amount
+275,2021,3,puro,supplement,deworm,7/22/2021,3,B5,226115,0275,M,0,NA,NA,NA,1,12.7,17.5,0,1,1,1,1,1,1,1,1,R,JM,TT0275 - 1 adult tick; FR not fresh
+276,2021,3,puro,supplement,deworm,7/22/2021,3,D1,226150,0276,M,0,NA,NA,NA,1,14.2,22.0,1,1,1,1,1,1,1,1,1,R,SK,FE small amount
+277,2021,3,puro,supplement,deworm,7/22/2021,3,E3,219971,0277,M,0,NA,NA,NA,1,13.1,20.5,0,NA,1,1,1,1,1,1,1,R,SK,
+267,2021,3,vaarinkorpi,supplement,control,7/22/2021,3,G5,226175,0267,F,0,0,0,0,NA,12.7,12.0,0,1,1,1,1,1,0,0,0,R,JV,
+268,2021,3,vaarinkorpi,supplement,control,7/22/2021,3,B1,226122,0268,F,0,0,0,0,NA,11.8,10.0,1,1,1,1,1,1,1,1,0,R,JM,FE small amount
+269,2021,3,vaarinkorpi,supplement,control,7/22/2021,3,F5,226148,0269,F,0,1,0,0,NA,12.3,13.0,1,1,1,1,1,1,1,1,0,R,JV,FE small amount
+270,2021,3,vaarinkorpi,supplement,control,7/22/2021,3,A2,219920,0270,M,0,NA,NA,NA,0,12.2,11.5,0,1,1,1,1,1,1,1,0,R,JV,more FE collected session 4 7/22 (FE0270-2)
+271,2021,3,vaarinkorpi,supplement,control,7/22/2021,3,E6,226161,0271,M,0,NA,NA,NA,1,13.5,23.0,0,1,1,1,1,1,1,1,0,R,JM,dirty swab
+272,2021,3,vaarinkorpi,supplement,control,7/22/2021,3,I4,219927,0272,F,0,1,0,0,NA,12.6,12.0,0,1,1,1,1,1,1,1,0,R,JV,TT0272 - 1 adult on shoulder; FE small; starting nipples
+273,2021,3,vaarinkorpi,supplement,control,7/22/2021,3,K3,226035,0273,F,1,1,1,1,NA,14.0,25.0,1,NA,1,1,1,1,1,1,0,R,JM,Wound on shoulder (earlier botched PIT tag?)
+274,2021,3,vaarinkorpi,supplement,control,7/22/2021,3,G3,226170,0274,M,0,NA,NA,NA,1,13.3,19.5,0,NA,1,1,1,1,1,1,0,R,JV,Accidently processed as (monthly) recap due to recording error of PIT tag number in session 3-2. Assumed that sample ID 0255 and 0273 are from the same individual; FE small amount
+280,2021,3,vaarinkorpi,supplement,control,7/22/2021,4,A1,226107,0280,M,0,NA,NA,NA,0,11.6,9.5,1,1,1,0,0,0,0,0,0,R,JM,
+281,2021,3,vaarinkorpi,supplement,control,7/22/2021,4,B3,219959,0281,M,0,NA,NA,NA,0,12.6,12.5,0,1,1,1,1,1,1,1,0,R,JM,FR not fresh
+NA,2021,4,talo,supplement,deworm,8/4/2021,0,G3,226085,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,SK,"G line traps left closed 7/29/21; bodies dumped off grid, traps replaced, dirty traps retired; areas around traps scanned, no corpses found"
+NA,2021,4,talo,supplement,deworm,8/4/2021,0,G6,226051,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,SK,"G line traps left closed 7/29/21; bodies dumped off grid, traps replaced, dirty traps retired; areas around traps scanned, no corpses found"
+NA,2021,4,talo,supplement,deworm,8/4/2021,0,G5,219823,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,SK,"G line traps left closed 7/29/21; bodies dumped off grid, traps replaced, dirty traps retired; areas around traps scanned, no corpses found"
+282,2021,4,hevonen,control,control,8/9/2021,1,E2,219949,0282,M,0,NA,NA,NA,1,13.6,22.0,2,NA,1,1,1,1,1,1,0,R,SK,
+283,2021,4,hevonen,control,control,8/9/2021,1,E1,226168,0283,F,0,0,0,0,NA,11.9,10.0,0,1,1,1,1,1,1,1,0,R,JM,
+284,2021,4,hevonen,control,control,8/9/2021,1,K2,226106,0284,M,0,NA,NA,NA,0,12.4,14.5,1,1,1,1,1,1,1,1,0,R,JM,
+285,2021,4,hevonen,control,control,8/9/2021,1,J4,219936,0285,F,0,1,1,0,NA,13.5,20.5,2,NA,1,1,1,1,1,1,0,R,SK,
+286,2021,4,hevonen,control,control,8/9/2021,1,B2,226155,0286,M,0,NA,NA,NA,0,13.0,15.0,0,1,1,1,1,1,1,1,0,R,JM,multicap with shrew; more FE collected session 3 8/10 (FE0286-2)
+287,2021,4,hevonen,control,control,8/9/2021,1,A1,226017,0287,F,0,1,1,1,NA,14.0,29.5,7,NA,1,1,1,1,1,1,0,R,SK,
+288,2021,4,hevonen,control,control,8/9/2021,1,K3,226192,0288,F,0,0,0,0,NA,12.1,11.5,0,1,1,1,1,1,1,1,0,R,JM,FE small amount
+289,2021,4,hevonen,control,control,8/9/2021,1,I6,219878,0289,M,0,NA,NA,NA,1,14.3,23.0,0,1,1,1,1,1,1,1,0,S,JM,euthanized
+290,2021,4,hevonen,control,control,8/9/2021,1,J5,219919,0290,M,0,NA,NA,NA,1,13.4,24.0,2,NA,1,1,1,1,1,1,0,R,SK,
+291,2021,4,hevonen,control,control,8/9/2021,1,C4,219978,0291,M,0,NA,NA,NA,0,12.2,14.5,1,NA,1,1,1,1,1,1,0,R,SK,
+292,2021,4,hevonen,control,control,8/9/2021,1,H3,226103,0292,M,0,NA,NA,NA,0,12.4,12.0,3,1,1,1,1,1,1,1,0,R,JM,
+293,2021,4,hevonen,control,control,8/9/2021,1,B4,226191,0293,M,0,NA,NA,NA,0,13.0,15.0,0,1,1,1,1,1,1,1,0,S,JM,euthanized
+294,2021,4,hevonen,control,control,8/9/2021,1,J2,226147,0294,M,0,NA,NA,NA,1,13.6,23.0,2,1,1,1,1,1,1,1,0,R,SK,
+295,2021,4,hevonen,control,control,8/9/2021,1,B5,219712,0295,M,0,NA,NA,NA,1,12.7,13.5,0,1,1,1,1,1,1,1,0,R,SK,
+296,2021,4,hevonen,control,control,8/9/2021,1,C2,219704,0296,F,0,1,1,0,NA,13.2,20.0,0,1,1,1,1,1,1,1,0,S,JM,euthanized
+348,2021,4,hevonen,control,control,8/9/2021,2,G5,219986,0348,M,0,NA,NA,NA,1,13.8,19.0,6,NA,1,1,1,1,1,1,0,R,JM,
+349,2021,4,hevonen,control,control,8/9/2021,2,C2,219995,0349,M,0,NA,NA,NA,1,13.9,22.0,0,1,1,1,1,1,1,1,0,R,JV,
+350,2021,4,hevonen,control,control,8/9/2021,2,C1,219756,0350,F,0,0,0,0,NA,12.8,13.0,1,1,1,1,1,1,1,1,0,R,JM,
+351,2021,4,hevonen,control,control,8/9/2021,2,J3,219795,0351,F,0,0,0,0,NA,12.3,14.5,0,1,1,1,1,1,1,0,0,R,JV,
+352,2021,4,hevonen,control,control,8/9/2021,2,I6,219985,0352,M,0,NA,NA,NA,0,11.7,11.0,0,1,1,1,1,1,1,1,0,R,JM,FR collected session 3 8/10
+353,2021,4,hevonen,control,control,8/9/2021,2,J5,219911,0353,F,0,0,0,0,NA,11.6,11.5,0,1,1,1,1,1,1,1,0,R,JV,
+354,2021,4,hevonen,control,control,8/9/2021,2,D5,219943,0354,M,0,NA,NA,NA,0,12.4,12.5,0,1,1,1,1,1,1,1,0,R,JM,"FR not fresh; BC frozen for 10min at -80C before spin, serum very red but did separate to PM and PI"
+355,2021,4,hevonen,control,control,8/9/2021,2,J1,219968,0355,M,0,NA,NA,NA,0,11.9,12.5,0,1,1,1,1,1,1,1,0,R,JV,"more FE collected session 4 8/10 (FE0355-2); FR collected (not fresh) session 4 8/10; BC frozen for 10min at -80C before spin, serum very red but did separate to PM and PI "
+297,2021,4,janakkala,supplement,deworm,8/9/2021,1,B2,219909,0297,F,0,1,1,1,NA,14.1,29.0,0,NA,1,1,1,1,1,1,1,R,JV,
+298,2021,4,janakkala,supplement,deworm,8/9/2021,1,E6,226149,0298,M,0,NA,NA,NA,0,12.0,12.0,0,1,1,1,1,1,0,0,1,DP,SK,multicap with 2 voles; non-responsive after processing
+299,2021,4,janakkala,supplement,deworm,8/9/2021,1,H3,226047,0299,F,0,1,1,1,NA,13.6,27.0,2,NA,1,1,1,1,1,1,1,R,JV,
+300,2021,4,janakkala,supplement,deworm,8/9/2021,1,E6,219701,0300,F,0,0,0,0,NA,12.1,12.5,0,1,1,1,1,1,0,0,1,R,SK,multicap with 2 voles
+301,2021,4,janakkala,supplement,deworm,8/9/2021,1,C2,219798,0301,F,0,1,1,1,NA,13.5,26.5,0,1,1,1,1,1,1,1,1,R,JV,
+302,2021,4,janakkala,supplement,deworm,8/9/2021,1,C4,226129,0302,F,0,1,1,0,NA,13.0,24.0,0,1,1,1,1,1,1,1,1,S,SK,euthanized
+303,2021,4,janakkala,supplement,deworm,8/9/2021,1,A4,219759,0303,M,0,NA,NA,NA,0,13.1,16.5,0,1,1,1,1,1,1,1,1,S,JV,euthanized
+304,2021,4,janakkala,supplement,deworm,8/9/2021,1,A5,226128,0304,M,0,NA,NA,NA,0,12.4,12.5,2,1,1,1,1,1,1,1,1,R,JV,
+305,2021,4,janakkala,supplement,deworm,8/9/2021,1,G1,226154,0305,F,0,0,0,0,NA,13.2,12.0,4,1,1,1,1,1,1,1,1,R,JV,
+306,2021,4,janakkala,supplement,deworm,8/9/2021,1,E1,219720,0306,M,0,NA,NA,NA,0,13.0,14.5,3,1,1,1,1,1,1,1,1,R,JV,gland in eye fully out of eye socket after blood was taken
+307,2021,4,janakkala,supplement,deworm,8/9/2021,1,D2,219716,0307,M,0,NA,NA,NA,0,13.5,14.0,1,1,1,1,1,1,1,1,1,R,JV,
+308,2021,4,janakkala,supplement,deworm,8/9/2021,1,A6,219761,0308,F,0,1,0,0,NA,13.0,13.0,0,1,1,1,1,1,1,1,1,R,JV,
+309,2021,4,janakkala,supplement,deworm,8/9/2021,1,A2,219757,0309,F,0,0,0,0,NA,12.7,13.5,0,1,1,1,1,1,1,1,1,R,JV,
+310,2021,4,janakkala,supplement,deworm,8/9/2021,1,I3,226096,0310,M,0,NA,NA,NA,1,14.0,21.0,2,NA,1,1,1,1,1,1,1,R,JV,
+311,2021,4,janakkala,supplement,deworm,8/9/2021,1,E5,219903,0311,F,0,1,1,1,NA,14.0,22.5,2,NA,1,1,1,1,1,1,1,R,JV,"lactating, sperm plug"
+312,2021,4,janakkala,supplement,deworm,8/9/2021,1,K3,219982,0312,M,0,NA,NA,NA,1,13.0,17.5,0,NA,1,1,1,1,1,1,1,R,JV,
+313,2021,4,janakkala,supplement,deworm,8/9/2021,1,J2,219975,0313,F,0,1,1,1,NA,13.8,23.0,0,NA,1,1,1,1,1,1,1,R,JV,bloody vagina
+314,2021,4,janakkala,supplement,deworm,8/9/2021,1,H1,226068,0314,M,0,NA,NA,NA,1,14.1,25.5,1,NA,1,1,1,1,1,1,1,R,JV,
+NA,2021,4,janakkala,supplement,deworm,8/9/2021,1,E6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,AR,NA,multicap with 2 voles; escaped at trap E6 before processing
+330,2021,4,janakkala,supplement,deworm,8/9/2021,2,B3,219706,0330,F,0,1,0,0,NA,12.7,15.0,1,1,1,1,1,1,1,1,1,R,SK,FE small amount
+331,2021,4,janakkala,supplement,deworm,8/9/2021,2,K1,219947,0331,F,0,1,1,0,NA,13.4,22.0,0,NA,1,1,1,1,1,1,1,R,JM,
+332,2021,4,janakkala,supplement,deworm,8/9/2021,2,I5,219783,0332,F,0,1,0,0,NA,11.9,12.0,1,1,1,1,1,1,1,1,1,R,SK,
+333,2021,4,janakkala,supplement,deworm,8/9/2021,2,E1,219729,0333,M,0,NA,NA,NA,0,11.6,10.5,1,1,1,1,1,1,1,1,1,R,JM,multicap with vole; FE small amount
+334,2021,4,janakkala,supplement,deworm,8/9/2021,2,I2,219786,0334,F,0,1,1,0,NA,12.6,18.5,0,1,1,1,1,1,1,1,1,R,SK,
+335,2021,4,janakkala,supplement,deworm,8/9/2021,2,E1,219775,0335,F,0,0,0,0,NA,12.1,10.5,0,1,1,1,1,1,1,1,1,R,JM,multicap with vole; FE small amount
+336,2021,4,janakkala,supplement,deworm,8/9/2021,2,C4,219790,0336,M,0,NA,NA,NA,1,13.0,15.5,1,1,1,1,1,1,1,1,1,R,SK,
+337,2021,4,janakkala,supplement,deworm,8/9/2021,2,I1,226088,0337,F,0,1,1,1,NA,13.7,34.5,1,NA,1,1,1,1,1,1,1,R,JM,
+338,2021,4,janakkala,supplement,deworm,8/9/2021,2,I4,219742,0338,F,0,0,0,0,NA,12.7,15.5,0,1,1,1,1,1,1,1,1,S,SK,
+339,2021,4,janakkala,supplement,deworm,8/9/2021,2,H1,226073,0339,F,0,1,1,0,NA,13.5,22.0,0,NA,1,1,1,1,1,1,1,R,JM,sperm plug
+340,2021,4,janakkala,supplement,deworm,8/9/2021,2,A5,219980,0340,M,0,NA,NA,NA,1,13.9,21.0,0,NA,1,1,1,1,1,1,1,R,JM,FR with urine; tag originally written as 219890 (a vole in Asema) but I believe the correct tag is actually 219980
+341,2021,4,janakkala,supplement,deworm,8/9/2021,2,K5,219769,0341,F,0,0,0,0,NA,12.4,13.0,1,1,1,1,1,1,1,0,1,R,SK,
+342,2021,4,janakkala,supplement,deworm,8/9/2021,2,E6,226062,0342,F,0,1,1,1,NA,13.8,31.5,0,NA,1,1,1,1,1,1,1,R,JM,FE small amount
+343,2021,4,janakkala,supplement,deworm,8/9/2021,2,I3,219773,0343,F,0,1,1,0,NA,13.3,22.0,1,1,1,1,1,1,1,1,1,R,SK,FR not fresh
+315,2021,4,radio,supplement,control,8/9/2021,1,I2,219764,0315,M,0,NA,NA,NA,0,11.0,7.0,0,1,1,0,0,0,1,1,0,R,JM,multicap with vole
+316,2021,4,radio,supplement,control,8/9/2021,1,I6,219996,0316,M,0,NA,NA,NA,1,14.4,27.0,9,NA,1,1,1,1,1,1,0,R,JV,multicap with vole; FE small amount
+317,2021,4,radio,supplement,control,8/9/2021,1,I6,219794,0317,M,0,NA,NA,NA,1,14.7,25.0,2,1,1,1,1,1,1,1,0,S,JV,multicap with vole; euthanized
+318,2021,4,radio,supplement,control,8/9/2021,1,I2,219964,0318,F,0,1,1,1,NA,13.2,33.5,0,NA,1,1,1,1,1,1,0,R,JM,multicap with vole
+319,2021,4,radio,supplement,control,8/9/2021,1,I4,219731,0319,M,0,NA,NA,NA,0,12.6,14.5,0,1,1,1,1,1,1,1,0,R,JM,
+320,2021,4,radio,supplement,control,8/9/2021,1,F4,226011,0320,F,0,1,1,1,NA,14.1,32.5,0,NA,1,1,1,1,1,1,0,R,JV,
+321,2021,4,radio,supplement,control,8/9/2021,1,K2,219719,0321,F,0,0,0,0,NA,12.5,10.5,1,1,1,1,1,1,1,1,0,R,JV,
+322,2021,4,radio,supplement,control,8/9/2021,1,K5,219713,0322,M,0,NA,NA,NA,1,13.4,18.5,0,1,1,1,1,1,1,1,0,S,JV,blood on saliva swab; FR not fresh; euthanized
+323,2021,4,radio,supplement,control,8/9/2021,1,B5,219778,0323,M,0,NA,NA,NA,1,14.2,20.0,0,1,1,1,1,1,1,1,0,R,JM,
+324,2021,4,radio,supplement,control,8/9/2021,1,J4,219771,0324,M,0,NA,NA,NA,0,12.7,13.5,1,1,1,1,1,1,1,1,0,R,JV,"FR not fresh, small amount"
+325,2021,4,radio,supplement,control,8/9/2021,1,A6,219728,0325,F,0,0,0,0,NA,13.6,23.5,1,1,1,1,1,1,1,1,0,S,JM,"large blood sample, euthanized"
+326,2021,4,radio,supplement,control,8/9/2021,1,G4,219782,0326,M,0,NA,NA,NA,1,13.6,19.0,1,1,1,1,1,1,1,1,0,R,JV,
+327,2021,4,radio,supplement,control,8/9/2021,1,B3,219788,0327,F,0,0,0,0,NA,12.5,14.5,1,1,1,1,1,1,1,1,0,R,JM,
+328,2021,4,radio,supplement,control,8/9/2021,1,G1,219858,0328,F,0,0,0,0,NA,12.6,13.0,1,1,1,1,1,1,1,1,0,R,JV,
+329,2021,4,radio,supplement,control,8/9/2021,1,A2,219709x,0329,M,0,NA,NA,NA,0,12.5,12.5,0,1,1,1,1,1,1,1,0,R,JM,"This pit tag is wrong, 219709 was captured at Talo 4 times. Not sure who this is"
+344,2021,4,radio,supplement,control,8/9/2021,2,I6,219988,0344,F,0,1,1,1,NA,13.6,31.0,0,NA,1,1,1,1,1,1,0,R,JV,
+345,2021,4,radio,supplement,control,8/9/2021,2,D5,219715,0345,M,0,NA,NA,NA,0,13.0,17.0,0,1,1,1,1,1,1,1,0,R,JM,
+346,2021,4,radio,supplement,control,8/9/2021,2,G1,226045,0346,M,0,NA,NA,NA,1,13.3,20.5,0,NA,1,1,1,1,1,1,0,R,JV,
+347,2021,4,radio,supplement,control,8/9/2021,2,K2,219762,0347,M,0,NA,NA,NA,1,13.7,18.5,0,1,1,1,1,1,1,1,0,R,JM,
+370,2021,4,hevonen,control,control,8/10/2021,3,J5,219991,0370,M,0,NA,NA,NA,1,12.5,15.5,0,NA,1,1,1,1,1,1,0,R,SK,
+371,2021,4,hevonen,control,control,8/10/2021,3,I6,219879,0371,F,0,0,0,0,NA,12.0,12.5,1,1,1,1,1,1,1,1,0,R,JV,
+372,2021,4,hevonen,control,control,8/10/2021,3,H5,219840,0372,M,0,NA,NA,NA,0,13.2,14.0,0,1,1,1,1,1,1,1,0,R,JV,FR small amount
+373,2021,4,hevonen,control,control,8/10/2021,3,A1,219824,0373,M,0,NA,NA,NA,0,13.4,15.5,1,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+374,2021,4,hevonen,control,control,8/10/2021,3,B4,219844,0374,M,0,NA,NA,NA,0,12.3,13.5,3,1,1,1,1,1,1,1,0,R,SK,
+375,2021,4,hevonen,control,control,8/10/2021,3,D5,219865,0375,F,0,0,0,0,NA,12.1,13.5,0,1,1,1,1,1,1,1,0,R,SK,
+376,2021,4,hevonen,control,control,8/10/2021,3,A6,219852,0376,F,0,0,0,0,NA,12.4,13.5,2,1,1,1,1,1,1,1,0,R,JV,FE small amount
+377,2021,4,hevonen,control,control,8/10/2021,3,E1,219898,0377,F,0,0,0,0,NA,11.5,12.0,1,1,1,1,1,1,1,1,0,R,SK,FE small amount
+382,2021,4,hevonen,control,control,8/10/2021,3,K2,219805,0382,M,0,NA,NA,NA,0,12.8,12.5,1,1,1,1,1,1,1,1,0,R,JV,
+390,2021,4,hevonen,control,control,8/10/2021,4,J1,219888,0390,M,0,NA,NA,NA,0,12.8,13.5,1,1,1,1,1,1,1,1,0,R,JM,FR not fresh
+356,2021,4,janakkala,supplement,deworm,8/10/2021,3,K4,219885,0356,F,0,0,0,0,NA,12.2,11.5,0,1,1,1,1,1,1,1,1,R,JM,
+357,2021,4,janakkala,supplement,deworm,8/10/2021,3,E1,219942,0357,F,0,0,0,0,NA,12.1,10.5,0,1,1,1,1,1,1,1,1,R,JV,multicap with vole; FE small amount
+358,2021,4,janakkala,supplement,deworm,8/10/2021,3,A5,219702,0358,F,0,1,1,0,NA,14.2,27.0,0,1,1,1,1,1,1,1,1,R,JV,multicap with vole
+359,2021,4,janakkala,supplement,deworm,8/10/2021,3,E6,219818,0359,M,0,NA,NA,NA,0,12.3,12.5,2,1,1,1,1,1,0,1,1,R,JM,multicap with vole
+360,2021,4,janakkala,supplement,deworm,8/10/2021,3,A4,219869,0360,F,0,0,0,0,NA,12.5,14.0,0,1,1,1,1,1,1,1,1,R,JM,FE small amount
+361,2021,4,janakkala,supplement,deworm,8/10/2021,3,F4,219929,0361,M,0,NA,NA,NA,1,14.1,23.5,1,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+362,2021,4,janakkala,supplement,deworm,8/10/2021,3,C4,219980,0362,M,0,NA,NA,NA,1,13.6,21.5,0,NA,1,1,1,1,1,1,1,R,JV,
+363,2021,4,janakkala,supplement,deworm,8/10/2021,3,C5,219828,0363,M,0,NA,NA,NA,0,11.9,11.5,1,1,1,1,1,1,1,1,1,R,JM,FR not fresh
+364,2021,4,janakkala,supplement,deworm,8/10/2021,3,E5,219974,0364,M,0,NA,NA,NA,0,12.9,12.5,0,1,1,1,1,1,1,1,1,R,JV,FR not fresh
+365,2021,4,janakkala,supplement,deworm,8/10/2021,3,C2,219882,0365,F,0,0,0,0,NA,12.2,11.0,0,1,1,1,1,1,1,1,1,R,JM,
+378,2021,4,janakkala,supplement,deworm,8/10/2021,4,E6,219871,0378,M,0,NA,NA,NA,0,12.3,11.5,2,1,1,1,1,1,1,1,1,R,JV,multicap with vole; TT0378 - 1 nymph tick
+379,2021,4,janakkala,supplement,deworm,8/10/2021,4,A5,226162,0379,M,0,NA,NA,NA,0,12.8,13.5,0,1,1,1,1,1,1,1,1,R,JV,multicap with 2 voles; FE small amount
+380,2021,4,janakkala,supplement,deworm,8/10/2021,4,I2,226132,0380,M,0,NA,NA,NA,1,13.7,20.0,1,1,1,1,1,1,0,1,1,R,JM,
+381,2021,4,janakkala,supplement,deworm,8/10/2021,4,A5,226110,0381,M,0,NA,NA,NA,0,12.7,9.0,0,1,1,0,0,0,1,0,1,R,JV,multicap with 2 voles; FE small amount
+383,2021,4,janakkala,supplement,deworm,8/10/2021,4,B5,219811,0383,F,0,0,0,0,NA,12.3,13.0,0,1,1,1,1,1,1,1,1,R,JM,
+384,2021,4,janakkala,supplement,deworm,8/10/2021,4,I4,226143,0384,M,0,NA,NA,NA,0,13.3,15.0,0,1,1,1,1,1,1,0,1,R,JV,FE small amount
+366,2021,4,radio,supplement,control,8/10/2021,3,K1,219842,0366,M,0,NA,NA,NA,0,12.4,12.0,1,1,1,1,1,1,1,1,0,R,JM,FE very small
+367,2021,4,radio,supplement,control,8/10/2021,3,B5,219993,0367,F,0,1,1,0,NA,13.0,22.0,1,NA,1,1,1,1,1,1,0,R,SK,
+368,2021,4,radio,supplement,control,8/10/2021,3,B1,219789,0368,F,0,0,0,0,NA,10.9,7.0,0,1,1,0,0,0,1,1,0,R,SK,
+369,2021,4,radio,supplement,control,8/10/2021,3,G1,219864,0369,F,0,1,1,0,NA,13.9,21.5,0,1,1,1,1,1,1,1,0,R,JM,sperm plug
+385,2021,4,radio,supplement,control,8/10/2021,4,I4,226101,0385,M,0,NA,NA,NA,0,13.6,15.0,0,1,1,1,1,1,1,1,0,R,JM,
+386,2021,4,radio,supplement,control,8/10/2021,4,B2,219855,0386,M,0,NA,NA,NA,0,12.5,12.5,0,1,1,1,1,1,1,1,0,R,JM,
+387,2021,4,radio,supplement,control,8/10/2021,4,C2,226130,0387,M,0,NA,NA,NA,1,14.0,22.0,0,1,1,1,1,1,1,1,0,R,JM,
+388,2021,4,radio,supplement,control,8/10/2021,4,K2,226142,0388,M,0,NA,NA,NA,1,14.2,17.5,1,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+389,2021,4,radio,supplement,control,8/10/2021,4,C3,219946,0389,F,0,1,1,1,NA,13.6,30.5,0,NA,1,1,1,1,1,1,0,R,JM,
+NA,2021,4,radio,supplement,control,8/10/2021,4,G1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,AR,JM,vole escaped when botoom of trap slipped out
+NA,2021,4,radio,supplement,control,8/10/2021,4,I6,NA,NA,F,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,JM,eaten by weasel in trap; no tag
+412,2021,4,asema,control,control,8/12/2021,1,C1,219768,0412,F,0,1,0,0,NA,13.3,18.0,0,1,1,1,1,1,1,1,0,S,JM,multicap with vole; FE small amount; euthanized
+413,2021,4,asema,control,control,8/12/2021,1,A2,219868,0413,F,0,0,0,0,NA,11.7,11.0,0,1,1,1,1,1,1,1,0,R,SK,multicap with vole; more FE collected session 3 8/13
+414,2021,4,asema,control,control,8/12/2021,1,A2,219801,0414,M,0,NA,NA,NA,0,12.8,14.0,1,1,1,1,1,1,0,1,0,R,SK,multicap with vole
+415,2021,4,asema,control,control,8/12/2021,1,C1,226001,0415,F,0,1,1,1,NA,14.1,26.0,0,NA,1,1,1,1,1,1,0,R,JM,multicap with vole; FE small amount
+416,2021,4,asema,control,control,8/12/2021,1,J4,219825,0416,F,0,0,0,0,NA,12.3,12.0,36,1,1,1,1,1,1,1,0,R,SK,TT0416 from back of ear
+417,2021,4,asema,control,control,8/12/2021,1,A6,219809,0417,M,0,NA,NA,NA,0,12.8,17.5,1,NA,1,1,1,1,1,1,0,R,JM,TT0417 from back of neck
+418,2021,4,asema,control,control,8/12/2021,1,I4,226169,0418,F,0,1,1,0,NA,13.6,22.0,0,NA,1,1,1,1,1,1,0,R,JM,
+419,2021,4,asema,control,control,8/12/2021,1,E2,219859,0419,M,0,NA,NA,NA,0,12.1,12.5,31,1,1,1,1,1,1,1,0,R,SK,
+420,2021,4,asema,control,control,8/12/2021,1,E1,226056,0420,F,0,1,1,0,NA,13.6,20.5,0,NA,1,1,1,1,1,1,0,R,JM,FR not fresh
+421,2021,4,asema,control,control,8/12/2021,1,F2,219802,0421,F,0,0,0,0,NA,12.2,11.0,5,1,1,1,1,1,1,1,0,R,SK,"more FE collected, FR collected session 3 8/13"
+423,2021,4,asema,control,control,8/12/2021,1,K2,219890,0423,M,0,NA,NA,NA,1,12.5,19.0,0,NA,1,1,1,1,1,1,0,R,JM,
+424,2021,4,asema,control,control,8/12/2021,1,A1,219896,0424,M,0,NA,NA,NA,1,12.9,17.5,13,1,1,1,1,1,1,1,0,S,SK,euthanized
+425,2021,4,asema,control,control,8/12/2021,1,K4,226023,0425,M,0,NA,NA,NA,1,13.8,22.0,1,NA,1,1,1,1,1,1,0,R,JM,multicap with 2 shrews
+433,2021,4,asema,control,control,8/12/2021,2,A1,NA,0433,M,0,NA,NA,NA,0,13.2,14.5,1,1,1,1,1,1,1,1,0,S,JV,euthanized
+391,2021,4,kiirastuli,control,deworm,8/12/2021,1,K6,219836,0391,M,0,NA,NA,NA,1,14.0,18.5,1,1,1,1,1,1,1,1,1,S,JV,multicap with vole; FE small amount
+392,2021,4,kiirastuli,control,deworm,8/12/2021,1,K3,219870,0392,F,0,1,1,0,NA,13.6,22.0,0,NA,1,1,1,1,1,1,1,R,JM,multicap with dead shrew
+393,2021,4,kiirastuli,control,deworm,8/12/2021,1,K6,219873,0393,F,0,1,1,0,NA,13.6,18.5,0,1,1,1,1,1,1,1,1,R,JV,multicap with vole; bloody vagina; more FE collected session 2 8/12
+394,2021,4,kiirastuli,control,deworm,8/12/2021,1,J3,219997,0394,F,0,1,1,1,NA,13.8,24.5,0,NA,1,1,1,1,1,1,1,R,JM,
+426,2021,4,kiirastuli,control,deworm,8/12/2021,2,E6,219810,0426,M,0,NA,NA,NA,0,13.0,15.0,6,1,1,1,1,1,1,1,1,R,JM,FE very small
+427,2021,4,kiirastuli,control,deworm,8/12/2021,2,K6,226044,0427,M,0,NA,NA,NA,1,12.7,19.5,2,NA,1,1,1,1,1,1,1,R,SK,TT0427
+395,2021,4,talo,supplement,deworm,8/12/2021,1,D1,219889,0395,F,0,1,1,0,NA,12.9,22.0,0,NA,1,1,1,1,1,1,1,R,SK,
+396,2021,4,talo,supplement,deworm,8/12/2021,1,G5,219897,0396,M,0,NA,NA,NA,0,12.7,13.0,0,1,1,1,1,1,0,0,1,DP,JV,multicap with 2 voles; dirty swab; suffocated in bag after processing
+397,2021,4,talo,supplement,deworm,8/12/2021,1,G5,219884,0397,F,0,1,0,0,NA,12.9,12.5,0,1,1,1,1,1,0,1,1,DP,JV,multicap with 2 voles; suffocated in bag after processing
+398,2021,4,talo,supplement,deworm,8/12/2021,1,D4,226000,0398,M,0,NA,NA,NA,1,13.4,23.5,1,NA,1,1,1,1,1,1,1,R,SK,
+399,2021,4,talo,supplement,deworm,8/12/2021,1,B5,226031,0399,F,0,1,1,1,NA,13.5,25.0,0,NA,1,1,1,1,1,1,1,R,SK,
+400,2021,4,talo,supplement,deworm,8/12/2021,1,G5,219881,0400,M,0,NA,NA,NA,1,13.4,16.5,0,1,1,1,1,1,0,1,1,DP,JV,multicap with 2 voles; suffocated in bag after processing
+401,2021,4,talo,supplement,deworm,8/12/2021,1,G4,219797,0401,M,0,NA,NA,NA,0,12.5,16.0,2,1,1,1,1,1,1,1,1,R,SK,FE and FR small amount
+402,2021,4,talo,supplement,deworm,8/12/2021,1,H3,219901,0402,F,0,0,0,0,NA,13.5,14.0,0,1,1,1,1,1,1,1,1,R,JV,multicap with vole; more FE collected session 3 8/13
+403,2021,4,talo,supplement,deworm,8/12/2021,1,G1,219838,0403,F,0,0,1,0,NA,12.5,19.5,0,NA,1,1,1,1,1,1,1,R,SK,TT0403 adult tick from back
+404,2021,4,talo,supplement,deworm,8/12/2021,1,F3,219751,0404,F,0,0,0,0,NA,12.4,12.0,0,1,1,1,1,1,1,1,1,R,SK,
+405,2021,4,talo,supplement,deworm,8/12/2021,1,H3,219827,0405,F,0,1,0,0,NA,13.0,12.5,8,1,1,1,1,1,1,1,1,R,JV,multicap with vole; FE and FR collected session 3 8/13; FR not fresh
+406,2021,4,talo,supplement,deworm,8/12/2021,1,C3,219829,0406,M,0,NA,NA,NA,0,12.6,14.0,0,1,1,1,1,1,1,1,1,R,SK,FE small amount
+407,2021,4,talo,supplement,deworm,8/12/2021,1,E4,219831,0407,F,0,0,0,0,NA,13.1,13.5,0,1,1,1,1,1,1,1,1,R,JV,multicap with shrew; FE collected session 3 8/13
+408,2021,4,talo,supplement,deworm,8/12/2021,1,K4,219814,0408,F,0,0,0,0,NA,12.6,16.0,0,1,1,1,1,1,1,1,1,S,SK,multicap with 2 shrews; FE small amount
+409,2021,4,talo,supplement,deworm,8/12/2021,1,K6,219857,0409,F,0,0,0,0,NA,12.2,13.0,1,1,1,1,1,1,1,1,1,R,JV,
+410,2021,4,talo,supplement,deworm,8/12/2021,1,H1,219722,0410,M,0,NA,NA,NA,0,12.5,14.5,0,1,1,1,1,1,1,1,1,R,SK,
+411,2021,4,talo,supplement,deworm,8/12/2021,1,C1,219892,0411,F,0,1,1,1,NA,13.7,25.0,0,1,1,1,1,1,1,1,1,R,JV,perfect circle in ear (previously tagged?); FR not fresh
+422,2021,4,talo,supplement,deworm,8/12/2021,1,F2,219792,0422,F,0,0,0,0,NA,13.3,14.0,1,1,1,1,1,1,1,1,1,R,SK,TT0422 1 nymph collected
+428,2021,4,talo,supplement,deworm,8/12/2021,2,G4,219856,0428,F,0,1,1,0,NA,13.5,26.0,0,NA,1,1,1,1,1,1,1,R,JM,
+429,2021,4,talo,supplement,deworm,8/12/2021,2,G1,219891,0429,F,0,0,0,0,NA,13.3,14.0,1,1,1,1,1,1,1,1,1,R,JV,FE small amount
+430,2021,4,talo,supplement,deworm,8/12/2021,2,A2,219893,0430,F,0,0,0,0,NA,13.2,14.5,0,1,1,1,1,1,1,1,1,R,JM,TT0430 nymph from back
+431,2021,4,talo,supplement,deworm,8/12/2021,2,K3,226100,0431,F,0,1,1,1,NA,13.7,29.0,1,1,1,1,1,1,1,1,1,R,JV,lactating
+432,2021,4,talo,supplement,deworm,8/12/2021,2,D5,226181,0432,M,0,NA,NA,NA,0,13.1,13.5,2,1,1,1,1,1,1,1,1,R,JM,
+443,2021,4,asema,control,control,8/13/2021,3,K3,219944,0443,F,0,0,0,0,NA,12.2,10.5,2,1,1,1,1,1,1,1,0,R,JM,
+444,2021,4,asema,control,control,8/13/2021,3,C1,219752,0444,M,0,NA,NA,NA,1,12.8,18.5,4,1,1,1,1,1,1,1,0,R,SK,"TT0444 adult, 2 nymphs from back; FR with urine"
+445,2021,4,asema,control,control,8/13/2021,3,A6,219813,0445,F,0,1,1,0,NA,13.4,21.5,1,NA,1,1,1,1,1,1,0,R,JM,
+446,2021,4,asema,control,control,8/13/2021,3,K1,219987,0446,M,0,NA,NA,NA,1,12.9,18.0,0,1,1,1,1,1,1,1,0,R,SK,FE small amount
+447,2021,4,asema,control,control,8/13/2021,3,K6,219917,0447,M,0,NA,NA,NA,0,12.6,14.0,0,1,1,1,1,1,1,1,0,R,JM,multicap with shrew
+453,2021,4,asema,control,control,8/13/2021,4,A1,226091,0453,M,1,NA,NA,NA,1,13.6,22.0,1,NA,1,1,1,1,1,1,0,R,JV,large bump under ear
+454,2021,4,asema,control,control,8/13/2021,4,A2,219966,0454,M,0,NA,NA,NA,0,12.2,13.5,0,1,1,1,1,1,1,1,0,R,JM,multicap with vole; TT0454 nymph
+455,2021,4,asema,control,control,8/13/2021,4,B5,219918,0455,F,0,0,0,0,NA,12.2,14.0,0,1,1,1,1,1,1,0,0,R,JM,FE small-ish
+456,2021,4,asema,control,control,8/13/2021,4,A6,219908,0456,F,0,1,0,0,NA,12.4,11.5,0,1,1,1,1,1,1,1,0,R,JV,
+434,2021,4,kiirastuli,control,deworm,8/13/2021,3,C1,226104,0434,F,0,0,0,0,NA,12.8,14.5,3,1,1,1,1,1,1,1,1,R,JM,FR not fresh
+435,2021,4,kiirastuli,control,deworm,8/13/2021,3,G2,226178,0435,M,0,NA,NA,NA,0,13.8,17.0,2,1,1,1,1,1,1,1,1,R,JM,"TT0435 two engorged larvae, 1 engorged nymph from neck; FR not fresh"
+436,2021,4,talo,supplement,deworm,8/13/2021,3,K2,226112,0436,F,0,0,0,0,NA,12.7,13.5,0,1,1,1,1,1,1,1,1,R,JV,
+437,2021,4,talo,supplement,deworm,8/13/2021,3,G1,219846,0437,M,0,NA,NA,NA,1,13.1,19.5,0,NA,1,1,1,1,1,1,1,R,SK,
+438,2021,4,talo,supplement,deworm,8/13/2021,3,A4,226179,0438,F,0,1,1,1,NA,13.9,23.5,0,1,1,1,1,1,1,1,1,R,JV,mucus secreting from vagina
+439,2021,4,talo,supplement,deworm,8/13/2021,3,A6,226180,0439,M,0,NA,NA,NA,1,12.7,17.5,0,1,1,1,1,1,1,1,1,R,SK,
+440,2021,4,talo,supplement,deworm,8/13/2021,3,E6,226133,0440,F,0,0,0,0,NA,12.8,14.0,1,1,1,1,1,1,1,1,1,R,JV,
+441,2021,4,talo,supplement,deworm,8/13/2021,3,C6,226138,0441,M,0,NA,NA,NA,0,12.9,17.0,0,1,1,1,1,1,1,1,1,R,SK,
+442,2021,4,talo,supplement,deworm,8/13/2021,3,D3,226134,0442,M,0,NA,NA,NA,0,13.1,13.0,2,1,1,1,1,1,1,1,1,R,JV,FR not fresh
+448,2021,4,talo,supplement,deworm,8/13/2021,4,C2,226187,0448,F,0,0,0,0,NA,11.7,9.0,0,1,1,0,0,0,1,0,1,R,JM,FE small amount
+449,2021,4,talo,supplement,deworm,8/13/2021,4,K4,219960,0449,M,0,NA,NA,NA,0,13.4,14.0,3,1,1,1,1,1,1,1,1,R,JV,FR not fresh
+450,2021,4,talo,supplement,deworm,8/13/2021,4,D4,226188,0450,F,0,0,0,0,NA,13.2,14.5,0,1,1,1,1,1,1,1,1,R,JM,
+451,2021,4,talo,supplement,deworm,8/13/2021,4,A6,219990,0451,F,0,0,0,0,NA,12.6,14.5,0,1,1,1,1,1,1,1,1,R,JV,FR not fresh
+452,2021,4,talo,supplement,deworm,8/13/2021,4,B3,219939,0452,F,0,0,0,0,NA,12.2,11.5,1,1,1,1,1,1,1,1,1,R,JV,TT0452 1 nymph collected; FR not fresh
+471,2021,4,ketunpesa,control,deworm,8/16/2021,1,H2,219906,0471,F,0,0,0,0,NA,12.2,9.5,0,1,1,0,0,0,1,1,1,R,JV,fresh FR collected session 4 8/17
+472,2021,4,ketunpesa,control,deworm,8/16/2021,1,J1,226092,0472,F,0,1,1,1,NA,13.5,28.0,0,NA,1,1,1,1,1,1,1,R,SK,
+473,2021,4,ketunpesa,control,deworm,8/16/2021,1,D2,226186,0473,M,0,NA,NA,NA,1,13.0,13.5,4,1,1,1,1,1,1,1,1,R,JV,more FE collected session 3 8/17
+474,2021,4,ketunpesa,control,deworm,8/16/2021,1,H5,226093,0474,M,0,NA,NA,NA,1,12.7,18.5,1,NA,1,1,1,1,1,1,1,R,SK,
+475,2021,4,ketunpesa,control,deworm,8/16/2021,1,A2,226145,0475,M,0,NA,NA,NA,1,13.7,16.5,4,1,1,1,1,1,1,1,1,S,JV,euthanized
+476,2021,4,ketunpesa,control,deworm,8/16/2021,1,F2,226020,0476,F,0,1,1,1,NA,14.0,26.0,0,NA,1,1,1,1,1,1,1,R,SK,
+477,2021,4,ketunpesa,control,deworm,8/16/2021,1,B4,219912,0477,F,0,1,1,1,NA,13.2,27.5,1,NA,1,1,1,1,1,1,1,R,SK,
+482,2021,4,ketunpesa,control,deworm,8/16/2021,2,G2,226078,0482,M,0,NA,NA,NA,1,13.1,20.0,0,NA,1,1,1,1,1,1,1,R,JM,
+483,2021,4,ketunpesa,control,deworm,8/16/2021,2,J3,219800,0483,M,0,NA,NA,NA,0,13.5,15.5,3,NA,1,1,1,1,1,1,1,R,JV,fresh FR collected session 3 8/17
+465,2021,4,kuoppa,supplement,control,8/16/2021,1,A3,226163,0465,F,0,0,0,0,NA,12.3,12.0,1,1,1,1,1,1,0,1,0,S,JM,multicap with vole; euthanized
+466,2021,4,kuoppa,supplement,control,8/16/2021,1,A2,219916,0466,F,0,1,1,1,NA,13.6,20.0,0,NA,1,1,1,1,1,1,0,R,JV,FR not fresh
+467,2021,4,kuoppa,supplement,control,8/16/2021,1,E1,226189,0467,F,0,1,1,1,NA,13.9,28.5,2,NA,1,1,1,1,1,1,0,R,JV,
+468,2021,4,kuoppa,supplement,control,8/16/2021,1,A3,226197,0468,M,0,NA,NA,NA,0,12.6,12.0,0,1,1,1,1,1,1,1,0,R,JM,multicap with vole; large blood sample
+469,2021,4,kuoppa,supplement,control,8/16/2021,1,G1,226172,0469,M,0,NA,NA,NA,0,12.4,11.5,2,1,1,1,1,1,1,1,0,R,JM,
+470,2021,4,kuoppa,supplement,control,8/16/2021,1,D1,219928,0470,M,0,NA,NA,NA,0,13.0,14.5,0,1,1,1,1,1,1,1,0,R,JV,
+481,2021,4,kuoppa,supplement,control,8/16/2021,2,F1,219945,0481,M,0,NA,NA,NA,1,13.4,19.0,1,1,1,1,1,1,1,1,0,R,JV,
+457,2021,4,mustikka,control,deworm,8/16/2021,1,F1,226193,0457,M,0,NA,NA,NA,0,11.9,9.0,0,1,1,0,0,0,1,1,1,R,JM,multicap with dead shrew
+458,2021,4,mustikka,control,deworm,8/16/2021,1,F4,226007,0458,F,1,1,1,1,NA,13.5,31.5,2,NA,1,1,1,1,0,1,1,R,SK,multicap with vole; FR collected session 3 8/17
+459,2021,4,mustikka,control,deworm,8/16/2021,1,I5,226199,0459,M,0,NA,NA,NA,1,12.7,17.5,2,1,1,1,1,1,1,1,1,R,JM,
+460,2021,4,mustikka,control,deworm,8/16/2021,1,F4,219926,0460,M,0,NA,NA,NA,1,13.4,19.5,0,NA,1,1,1,1,1,1,1,R,SK,multicap with vole; more FE collected session 2 8/16
+461,2021,4,mustikka,control,deworm,8/16/2021,1,E4,219834,0461,M,1,NA,NA,NA,1,14.2,25.0,0,NA,1,1,1,1,1,1,1,R,SK,
+462,2021,4,mustikka,control,deworm,8/16/2021,1,J4,226116,0462,M,0,NA,NA,NA,1,12.8,16.0,0,1,1,1,1,1,1,1,1,S,JM,euthanized
+463,2021,4,mustikka,control,deworm,8/16/2021,1,J1,226194,0463,M,0,NA,NA,NA,0,12.2,13.0,2,1,1,1,1,1,1,1,1,R,JM,TT0463 from back of neck; fresh FR collected session 2 8/16
+464,2021,4,mustikka,control,deworm,8/16/2021,1,E1,226165,0464,F,0,0,0,0,NA,11.0,7.0,0,1,1,0,0,0,1,1,1,R,SK,
+478,2021,4,mustikka,control,deworm,8/16/2021,2,B1,226125,0478,M,0,NA,NA,NA,0,12.6,13.0,4,1,1,1,1,1,1,1,1,R,JM,urine in FR
+479,2021,4,mustikka,control,deworm,8/16/2021,2,J1,226136,0479,M,0,NA,NA,NA,0,12.8,14.0,3,1,1,1,1,1,1,1,1,R,JM,TT0479 nymph from neck
+480,2021,4,mustikka,control,deworm,8/16/2021,2,H2,219745,0480,M,0,NA,NA,NA,0,12.2,11.0,0,1,1,1,1,1,1,1,1,R,JV,FR0480 collected session 3 8/17
+489,2021,4,ketunpesa,control,deworm,8/17/2021,3,D3,219952,0489,M,0,NA,NA,NA,1,13.9,17.5,0,1,1,1,1,1,1,1,1,R,JM,FR not fresh
+490,2021,4,ketunpesa,control,deworm,8/17/2021,3,H4,219948,0490,M,0,NA,NA,NA,1,14.9,18.0,5,1,1,1,1,1,1,1,1,R,JV,multicap with vole; FE small amount
+491,2021,4,ketunpesa,control,deworm,8/17/2021,3,H4,219963,0491,F,0,0,0,0,NA,12.9,10.0,1,1,1,1,1,1,0,1,1,R,JV,multicap with vole; FR small amount
+492,2021,4,ketunpesa,control,deworm,8/17/2021,3,I1,219902,0492,M,0,NA,NA,NA,0,12.6,12.5,3,1,1,1,1,1,1,1,1,R,JM,
+493,2021,4,ketunpesa,control,deworm,8/17/2021,3,H1,219999,0493,M,0,NA,NA,NA,1,13.4,19.0,2,1,1,1,1,1,1,1,1,R,JV,
+494,2021,4,ketunpesa,control,deworm,8/17/2021,4,G5,219753,0494,M,0,NA,NA,NA,0,12.6,12.5,2,1,1,1,1,1,0,0,1,R,JM,multicap with vole
+495,2021,4,ketunpesa,control,deworm,8/17/2021,4,F2,219733,0495,F,0,0,0,0,NA,12.7,10.5,0,1,1,1,1,1,1,1,1,R,JV,FR not fresh
+496,2021,4,ketunpesa,control,deworm,8/17/2021,4,G5,219765,0496,M,0,NA,NA,NA,0,12.4,12.5,0,1,1,1,1,1,0,0,1,R,JM,
+497,2021,4,ketunpesa,control,deworm,8/17/2021,4,K1,219740,0497,F,0,0,0,0,NA,12.1,10.0,3,1,1,1,1,1,1,0,1,R,JM,
+486,2021,4,kuoppa,supplement,control,8/17/2021,3,C5,219977,0486,M,0,NA,NA,NA,1,14.0,19.5,1,1,1,1,1,1,1,1,0,R,JM,
+487,2021,4,kuoppa,supplement,control,8/17/2021,3,G1,219915,0487,F,0,1,0,0,NA,12.9,17.0,1,1,1,1,1,1,1,1,0,R,SK,
+488,2021,4,kuoppa,supplement,control,8/17/2021,3,K5,219984,0488,F,0,0,0,0,NA,12.8,12.5,0,1,1,1,1,1,1,1,0,R,SK,
+484,2021,4,mustikka,control,deworm,8/17/2021,3,A4,219957,0484,M,0,NA,NA,NA,0,12.9,13.5,8,1,1,1,1,1,1,1,1,R,JV,dirty SR swab
+485,2021,4,mustikka,control,deworm,8/17/2021,3,H1,219954,0485,M,0,NA,NA,NA,0,11.4,8.0,0,1,1,0,0,0,1,1,1,R,JV,FR not fresh
+498,2021,4,helmipollo,control,control,8/19/2021,1,I5,219839,0498,F,0,0,0,0,NA,11.4,9.0,0,1,1,0,0,0,0,1,0,R,JV,multicap with vole
+499,2021,4,helmipollo,control,control,8/19/2021,1,A2,219737,0499,M,0,NA,NA,NA,0,12.9,16.0,1,1,1,1,1,1,1,1,0,R,JM,multicap with shrew
+500,2021,4,helmipollo,control,control,8/19/2021,1,I5,226099,0500,F,0,1,1,1,NA,13.7,22.5,0,NA,1,1,1,1,1,1,0,R,JV,multicap with vole
+501,2021,4,helmipollo,control,control,8/19/2021,1,A3,219956,0501,F,0,1,1,1,NA,14.2,42.0,0,1,1,1,1,1,1,1,0,R,JM,
+502,2021,4,helmipollo,control,control,8/19/2021,1,A4,226041,0502,M,0,NA,NA,NA,1,14.0,23.5,2,NA,1,1,1,1,1,1,0,R,JV,
+503,2021,4,helmipollo,control,control,8/19/2021,1,E1,219933,0503,M,0,NA,NA,NA,0,13.2,18.5,0,1,1,1,1,1,1,1,0,R,JM,
+504,2021,4,helmipollo,control,control,8/19/2021,1,K1,226080,0504,F,0,1,1,1,NA,13.9,25.5,0,NA,1,1,1,1,1,1,0,R,JV,
+505,2021,4,helmipollo,control,control,8/19/2021,1,D2,219899,0505,F,0,0,0,0,NA,11.8,13.5,0,1,1,1,1,1,1,1,0,R,JM,
+506,2021,4,helmipollo,control,control,8/19/2021,1,G2,219724,0506,M,0,NA,NA,NA,1,13.5,15.5,1,1,1,1,1,1,1,1,0,S,JV,FR not fresh; euthanized
+507,2021,4,helmipollo,control,control,8/19/2021,1,I2,219774,0507,F,0,0,0,0,NA,11.7,10.5,0,1,1,1,1,1,1,1,0,R,JM,
+529,2021,4,helmipollo,control,control,8/19/2021,2,A3,226053,0529,M,0,NA,NA,NA,1,14.1,21.0,2,NA,1,1,1,1,0,1,0,R,JM,multicap with vole
+530,2021,4,helmipollo,control,control,8/19/2021,2,G5,226146,0530,M,0,NA,NA,NA,0,11.7,9.0,0,1,1,0,0,0,1,0,0,R,SK,
+531,2021,4,helmipollo,control,control,8/19/2021,2,A3,226036,0531,M,0,NA,NA,NA,1,13.9,21.5,1,NA,1,1,1,1,0,1,0,R,JM,multicap with vole; FR small
+532,2021,4,helmipollo,control,control,8/19/2021,2,K1,226190,0532,M,0,NA,NA,NA,0,12.1,14.0,0,1,1,1,1,1,1,0,0,R,SK,
+521,2021,4,puro,supplement,deworm,8/19/2021,1,D1,219732,0521,M,0,NA,NA,NA,1,13.2,16.0,2,1,1,1,1,1,1,1,1,R,JV,FE small amount
+522,2021,4,puro,supplement,deworm,8/19/2021,1,G2,219815,0522,M,0,NA,NA,NA,1,12.5,17.0,1,NA,1,1,1,1,1,1,1,R,SK,multicap with 2 voles; more FE collected session 3 8/20
+523,2021,4,puro,supplement,deworm,8/19/2021,1,I6,219907,0523,F,0,1,1,1,NA,12.2,22.0,2,NA,1,1,1,1,1,1,1,R,SK,
+524,2021,4,puro,supplement,deworm,8/19/2021,1,D1,219708,0524,M,0,NA,NA,NA,0,13.2,13.5,0,1,1,1,1,1,0,0,1,R,JV,multicap with 2 voles
+525,2021,4,puro,supplement,deworm,8/19/2021,1,D1,219776,0525,F,0,0,0,0,NA,13.5,13.5,1,1,1,1,1,1,1,1,1,R,JV,multicap with 2 voles; TT0525 from back of left ear
+526,2021,4,puro,supplement,deworm,8/19/2021,1,B1,226060,0526,F,0,1,1,0,NA,13.5,22.5,0,NA,1,1,1,1,1,1,1,R,SK,
+527,2021,4,puro,supplement,deworm,8/19/2021,1,F4,226105,0527,M,0,NA,NA,NA,1,13.2,22.0,1,NA,1,1,1,1,1,1,1,R,SK,
+528,2021,4,puro,supplement,deworm,8/19/2021,1,A6,219705,0528,M,0,NA,NA,NA,1,13.0,17.5,0,1,1,1,1,1,1,1,1,S,JV,FR not fresh; euthanized
+540,2021,4,puro,supplement,deworm,8/19/2021,2,A4,219738,0540,F,0,1,1,0,NA,13.4,19.0,0,1,1,1,1,1,1,1,1,R,JM,urine in FR
+541,2021,4,puro,supplement,deworm,8/19/2021,2,B1,219744,0541,M,0,NA,NA,NA,0,13.3,14.5,1,1,1,1,1,1,1,1,1,R,JM,FR not fresh
+508,2021,4,vaarinkorpi,supplement,control,8/19/2021,1,G2,226087,0508,F,0,1,1,1,NA,14.5,28.5,0,NA,1,0,0,0,0,1,NA,R,JM,"multicap with vole; FR small amount; bloody vagina; gave birth, stopped processing"
+509,2021,4,vaarinkorpi,supplement,control,8/19/2021,1,G2,219793,0509,M,0,NA,NA,NA,0,13.4,14.5,0,NA,1,1,1,1,1,1,0,R,JM,multicap with vole
+510,2021,4,vaarinkorpi,supplement,control,8/19/2021,1,A5,226095,0510,F,0,1,1,1,NA,13.4,28.0,1,NA,1,1,1,1,1,1,0,R,SK,multicap with shrew; lot of blood lost
+511,2021,4,vaarinkorpi,supplement,control,8/19/2021,1,C1,219872,0511,F,0,1,1,1,NA,13.9,24.5,1,NA,1,1,1,1,1,1,0,R,SK,
+512,2021,4,vaarinkorpi,supplement,control,8/19/2021,1,A4,219799,0512,F,0,0,0,0,NA,12.7,13.5,1,1,1,1,1,1,1,1,0,R,JM,
+513,2021,4,vaarinkorpi,supplement,control,8/19/2021,1,I5,226049,0513,F,0,1,1,0,NA,13.4,20.0,2,NA,1,1,1,1,1,1,0,R,SK,eye gland removed
+514,2021,4,vaarinkorpi,supplement,control,8/19/2021,1,F1,219787,0514,M,0,NA,NA,NA,0,13.3,16.5,2,1,1,1,1,1,1,1,0,S,JM,TT0514 engorged nymph from cheek; large blood sample; euthanized
+515,2021,4,vaarinkorpi,supplement,control,8/19/2021,1,H2,219734,0515,M,0,NA,NA,NA,0,12.1,9.5,0,1,1,0,0,0,1,1,0,R,JM,
+516,2021,4,vaarinkorpi,supplement,control,8/19/2021,1,K2,226090,0516,M,0,NA,NA,NA,1,13.6,24.0,3,NA,1,1,1,1,1,1,0,R,SK,
+517,2021,4,vaarinkorpi,supplement,control,8/19/2021,1,A1,219743,0517,M,0,NA,NA,NA,0,12.6,13.0,0,1,1,1,1,1,1,1,0,R,JM,multicap with vole; FE small amount
+518,2021,4,vaarinkorpi,supplement,control,8/19/2021,1,E4,226141,0518,F,0,1,1,1,NA,13.1,30.0,0,NA,1,1,1,1,1,1,0,R,SK,
+519,2021,4,vaarinkorpi,supplement,control,8/19/2021,1,A1,219723,0519,M,0,NA,NA,NA,0,12.6,12.5,1,1,1,1,1,1,1,1,0,R,JM,multicap with vole; urine in FR; FE small amount
+520,2021,4,vaarinkorpi,supplement,control,8/19/2021,1,B1,219853,0520,F,0,1,1,0,NA,13.7,23.5,0,1,1,1,1,1,1,1,0,S,SK,euthanized
+508,2021,4,vaarinkorpi,supplement,control,8/19/2021,2,G2,226087,0508,F,0,1,1,1,NA,NA,27.5,0,NA,NA,1,1,1,1,1,0,R,SK,picked up where JM left off in session 1
+533,2021,4,vaarinkorpi,supplement,control,8/19/2021,2,A4,219989,0533,M,0,NA,NA,NA,0,12.8,13.0,0,1,1,1,1,1,1,1,0,R,JV,multicap with vole; large hard scab on lower lip (picture taken); FE and FR collected session 3 8/20
+534,2021,4,vaarinkorpi,supplement,control,8/19/2021,2,A2,219922,0534,M,0,NA,NA,NA,0,13.2,13.5,2,1,1,1,1,1,1,1,0,R,JV,multicap with vole; FE small amount
+535,2021,4,vaarinkorpi,supplement,control,8/19/2021,2,A3,226139,0535,M,0,NA,NA,NA,1,13.6,20.0,2,NA,1,1,1,1,1,1,0,R,SK,
+536,2021,4,vaarinkorpi,supplement,control,8/19/2021,2,C3,219953,0536,M,0,NA,NA,NA,0,13.1,15.5,3,1,1,1,1,1,1,1,0,R,JV,
+537,2021,4,vaarinkorpi,supplement,control,8/19/2021,2,A1,219726,0537,M,0,NA,NA,NA,1,13.1,17.5,2,1,1,1,1,1,1,1,0,R,SK,
+538,2021,4,vaarinkorpi,supplement,control,8/19/2021,2,E2,226173,0538,M,0,NA,NA,NA,0,12.0,8.5,0,1,1,0,0,0,1,1,0,R,JV,
+539,2021,4,vaarinkorpi,supplement,control,8/19/2021,2,I2,219758,0539,F,0,0,0,0,NA,11.7,9.0,0,1,1,0,0,0,1,1,0,R,SK,more FE collected and FR collected session 4 8/20
+542,2021,4,helmipollo,control,control,8/20/2021,3,F4,219779,0542,M,0,NA,NA,NA,0,11.6,10.0,1,1,1,1,1,1,1,1,0,R,SK,
+543,2021,4,helmipollo,control,control,8/20/2021,3,E1,226079,0543,M,0,NA,NA,NA,1,13.3,18.5,1,NA,1,1,1,1,1,1,0,R,JV,
+544,2021,4,helmipollo,control,control,8/20/2021,3,A6,226120,0544,M,0,NA,NA,NA,0,12.7,15.5,3,1,1,1,1,1,1,1,0,R,JV,
+545,2021,4,helmipollo,control,control,8/20/2021,3,K1,219937,0545,F,0,0,0,0,NA,12.1,11.0,0,1,1,1,1,1,1,1,0,R,SK,
+557,2021,4,helmipollo,control,control,8/20/2021,4,G5,219803,0557,F,0,0,0,0,NA,12.2,10.5,1,1,1,1,1,1,1,1,0,R,JV,TTO557 engorged adult from base of tail; FR not fresh
+558,2021,4,helmipollo,control,control,8/20/2021,4,A3,219848,0558,M,0,NA,NA,NA,0,12.6,15.5,7,1,1,1,1,1,1,1,0,S,SK,TT0558 3 engorged larvae; euthanized
+559,2021,4,helmipollo,control,control,8/20/2021,4,K1,226159,0559,F,0,0,0,0,NA,12.1,12.5,0,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+555,2021,4,puro,supplement,deworm,8/20/2021,3,F4,219847,0555,F,0,0,0,0,NA,12.5,12.5,0,1,1,1,1,1,1,1,1,R,JV,
+556,2021,4,puro,supplement,deworm,8/20/2021,3,E1,226156,0556,F,0,1,1,1,NA,12.8,24.0,0,1,1,1,1,1,1,1,1,R,SK,
+565,2021,4,puro,supplement,deworm,8/20/2021,4,J5,226166,0565,F,0,0,0,0,NA,11.6,8.5,0,1,1,0,0,0,1,1,1,R,JV,FR not fresh
+546,2021,4,vaarinkorpi,supplement,control,8/20/2021,3,C6,219711,0546,M,0,NA,NA,NA,0,12.7,13.0,0,1,1,1,1,1,1,1,0,R,JV,multicap with vole; FE small amount
+547,2021,4,vaarinkorpi,supplement,control,8/20/2021,3,A3,219981,0547,F,0,1,1,0,NA,13.6,22.5,0,1,1,1,1,1,0,1,0,R,SK,multicap with vole; vaginal discharge or afterbirth
+548,2021,4,vaarinkorpi,supplement,control,8/20/2021,3,C6,219755,0548,F,0,0,0,0,NA,12.8,15.0,4,1,1,1,1,1,1,1,0,R,JV,multicap with vole
+549,2021,4,vaarinkorpi,supplement,control,8/20/2021,3,I2,226035,0549,F,0,1,1,0,NA,13.7,26.0,0,NA,1,1,1,1,1,1,0,S,SK,"trap cut her back, exposed muscle, PIT tag still intact; euthanized"
+550,2021,4,vaarinkorpi,supplement,control,8/20/2021,3,A2,226117,0550,M,0,NA,NA,NA,1,12.5,13.0,0,1,1,1,1,1,1,1,0,R,JV,
+551,2021,4,vaarinkorpi,supplement,control,8/20/2021,3,B2,219992,0551,M,0,NA,NA,NA,1,13.7,17.0,1,1,1,1,1,1,1,1,0,R,JV,TT0551 inside left ear; large blood sample
+552,2021,4,vaarinkorpi,supplement,control,8/20/2021,3,K2,226102,0552,F,0,1,1,1,NA,14.4,26.5,0,1,1,1,1,1,1,1,0,R,JV,
+553,2021,4,vaarinkorpi,supplement,control,8/20/2021,3,I6,226170,0553,M,0,NA,NA,NA,1,13.3,21.5,1,NA,1,1,1,1,1,1,0,R,SK,
+554,2021,4,vaarinkorpi,supplement,control,8/20/2021,3,I1,226113,0554,M,0,NA,NA,NA,0,12.0,9.0,0,1,1,0,0,0,1,1,0,R,JV,
+560,2021,4,vaarinkorpi,supplement,control,8/20/2021,4,H2,226108,0560,M,0,NA,NA,NA,0,11.8,9.5,0,1,1,0,0,0,1,1,0,R,SK,
+562,2021,4,vaarinkorpi,supplement,control,8/20/2021,4,C5,219887,0562,M,0,NA,NA,NA,0,12.5,14.5,6,1,1,1,1,1,1,1,0,R,SK,TT0562 engorged larvae from ear; FR not fresh
+563,2021,4,vaarinkorpi,supplement,control,8/20/2021,4,C2,219826,0563,F,0,0,0,0,NA,12.4,13.0,5,1,1,1,1,1,1,1,0,R,JV,
+564,2021,4,vaarinkorpi,supplement,control,8/20/2021,4,A5,219895,0564,M,0,NA,NA,NA,0,12.7,13.5,1,1,1,1,1,1,1,1,0,R,JV,
+NA,2021,5,asema,control,control,9/1/2021,0,NA,219825,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,S,JS,sacrificed during field course
+NA,2021,5,asema,control,control,9/1/2021,0,NA,219917,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,S,JS,sacrificed during field course
+566,2021,5,janakkala,supplement,deworm,9/4/2021,1,C1,219798,0566,F,0,1,1,0,NA,13.0,19.5,2,NA,1,1,1,1,1,1,1,R,JV,multicap w/ shrew
+567,2021,5,janakkala,supplement,deworm,9/4/2021,1,A4,226251,0567,M,0,NA,NA,NA,0,12.6,13.5,0,1,1,1,1,1,0,1,1,R,JV,"multicap w/ vole, FE collected 5-3"
+568,2021,5,janakkala,supplement,deworm,9/4/2021,1,A4,226708,0568,F,0,0,0,0,NA,13.0,13.0,0,1,1,1,1,1,1,1,1,R,JV,"multicap w/ vole, FE collected 5-3"
+569,2021,5,janakkala,supplement,deworm,9/4/2021,1,B2,226736,0569,F,0,0,0,0,NA,13.0,14.0,1,1,1,1,1,1,1,1,1,R,JV,multicap w/ shrew
+570,2021,5,janakkala,supplement,deworm,9/4/2021,1,B2,226754,0570,F,0,0,0,0,NA,11.1,11.5,1,1,1,1,1,1,0,1,1,R,SK,"multi w/ vole + shrew, FR small, no FE"
+571,2021,5,janakkala,supplement,deworm,9/4/2021,1,A4,226771,0571,M,0,NA,NA,NA,0,12.8,13.5,2,1,1,1,1,1,1,1,1,R,JV,"multi w/ 2 voles, tick on right shoulder TT collected"
+572,2021,5,janakkala,supplement,deworm,9/4/2021,1,B1,226745,0572,F,0,0,0,0,NA,11.6,11.5,2,1,1,1,1,1,0,0,1,R,SK,"multicap w/ vole, FR, FE not collected"
+573,2021,5,janakkala,supplement,deworm,9/4/2021,1,H4,226787,0573,M,0,NA,NA,NA,0,12.5,9.5,0,1,1,NA,NA,NA,1,1,1,DP,JV,"multicap w/ vole, DP 5-3 too cold"
+574,2021,5,janakkala,supplement,deworm,9/4/2021,1,B1,NA,0574,F,0,0,0,0,NA,12.0,11.0,1,1,1,1,1,1,0,0,NA,DP,SK,"multicap w/ vole, slow breather, euthanized, body collected, too cold"
+575,2021,5,janakkala,supplement,deworm,9/4/2021,1,H4,226714,0575,M,0,NA,NA,NA,0,12.9,13.5,1,1,1,1,1,1,0,1,1,R,JV,"multicap w/ vole, FE not collected"
+576,2021,5,janakkala,supplement,deworm,9/4/2021,1,I3,226773,0576,M,0,NA,NA,NA,0,12.6,11.0,1,1,1,1,1,1,0,0,1,R,JV,FR + FE not collected
+577,2021,5,janakkala,supplement,deworm,9/4/2021,1,K2,226765,0577,F,0,0,0,0,NA,13.3,14.0,0,1,1,1,1,1,0,1,1,R,JV,"multicap w/ vole, FE0577 collected 5-4"
+578,2021,5,janakkala,supplement,deworm,9/4/2021,1,E1,219720,0578,M,0,NA,NA,NA,0,12.4,18.5,1,NA,1,1,1,1,1,1,1,R,SK,multicap w/ vole
+579,2021,5,janakkala,supplement,deworm,9/4/2021,1,K2,226746,0579,F,0,0,0,0,NA,12.5,13.0,0,1,1,1,1,1,1,1,1,R,JV,"multicap w/ vole, more FE collected 5-3"
+580,2021,5,janakkala,supplement,deworm,9/4/2021,1,E1,219775,0580,F,0,0,0,0,NA,12.2,13.0,3,NA,1,1,1,1,1,1,1,R,SK,"multicap w/ vole, FE small amount"
+581,2021,5,janakkala,supplement,deworm,9/4/2021,1,I3,226739,0581,M,0,NA,NA,NA,0,13.1,15.0,0,1,1,1,1,1,1,1,1,R,JV,
+582,2021,5,janakkala,supplement,deworm,9/4/2021,1,J1,226756,0582,F,0,0,0,0,NA,12.2,13.0,0,1,1,1,1,1,1,1,1,R,SK,more FE collected 5-3
+583,2021,5,janakkala,supplement,deworm,9/4/2021,1,K4,226751,0583,F,0,0,0,0,NA,12.5,13.5,2,1,1,1,1,1,1,1,1,R,SK,
+584,2021,5,janakkala,supplement,deworm,9/4/2021,1,B4,226747,0584,F,0,0,0,0,NA,12.8,13.5,0,1,1,1,1,1,1,1,1,R,JV,
+585,2021,5,janakkala,supplement,deworm,9/4/2021,1,I1,226720,0585,M,0,NA,NA,NA,0,12.9,12.0,0,1,1,1,1,1,1,1,1,R,JV,FR soaked in urine
+586,2021,5,janakkala,supplement,deworm,9/4/2021,1,H1,226790,0586,M,0,NA,NA,NA,0,12.3,13.0,0,1,1,1,1,1,1,1,1,R,SK,
+587,2021,5,janakkala,supplement,deworm,9/4/2021,1,E4,226799,0587,F,0,0,0,0,NA,12.3,11.5,7,1,1,1,1,1,1,1,1,R,JV,
+587,2021,5,janakkala,supplement,deworm,9/4/2021,1,J2,219975,0597,F,0,1,1,0,NA,13.5,20.0,0,NA,1,1,1,1,1,1,1,R,SK,
+588,2021,5,janakkala,supplement,deworm,9/4/2021,1,I2,226785,0588,F,0,0,0,0,NA,12.2,13.0,0,1,1,1,1,1,1,1,1,R,SK,
+589,2021,5,janakkala,supplement,deworm,9/4/2021,1,E5,226715,0589,M,0,NA,NA,NA,0,12.5,13.5,0,1,1,1,1,1,1,1,1,R,JV,"TT collected, tick on left hip"
+590,2021,5,janakkala,supplement,deworm,9/4/2021,1,E2,219716,0590,M,0,NA,NA,NA,0,12.3,12.5,0,NA,1,1,1,1,1,1,1,R,SK,multicap w/ shrew
+591,2021,5,janakkala,supplement,deworm,9/4/2021,1,E3,219903,0591,F,0,1,1,0,NA,13.3,17.5,0,NA,1,1,1,1,1,1,1,R,JV,
+592,2021,5,janakkala,supplement,deworm,9/4/2021,1,D5,219701,0592,F,0,0,0,0,NA,12.7,14.0,0,NA,1,1,1,1,1,1,1,R,JV,
+593,2021,5,janakkala,supplement,deworm,9/4/2021,1,F5,226062,0593,F,0,1,1,0,NA,13.3,23.5,0,NA,1,1,1,1,1,1,1,R,SK,"mass 23.5, fresh FR collected 5-4"
+594,2021,5,janakkala,supplement,deworm,9/4/2021,1,A6,219811,0594,F,0,0,0,0,NA,13.4,13.5,0,NA,1,1,1,1,1,1,1,R,JV,
+595,2021,5,janakkala,supplement,deworm,9/4/2021,1,A5,219761,0595,F,0,0,0,0,NA,12.7,13.5,2,NA,1,1,1,1,1,1,1,R,SK,
+596,2021,5,janakkala,supplement,deworm,9/4/2021,1,A1,219909,0596,M,0,NA,NA,NA,0,13.1,25.0,0,NA,1,1,1,1,1,1,1,R,JV,large blood sample taken
+NA,2021,5,janakkala,supplement,deworm,9/4/2021,1,H3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,JV,body collected
+NA,2021,5,janakkala,supplement,deworm,9/4/2021,1,A3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,BN,"too cold, body collected"
+NA,2021,5,janakkala,supplement,deworm,9/4/2021,1,C6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,BN,too cold body collected
+NA,2021,5,janakkala,supplement,deworm,9/4/2021,1,J2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,SK,multicap w/ vole
+624,2021,5,janakkala,supplement,deworm,9/4/2021,2,I3,219935,0624,F,0,0,0,0,NA,12.4,10.5,0,1,1,1,1,1,1,1,1,R,JV,"multicap w/ 2 voles, FE small"
+625,2021,5,janakkala,supplement,deworm,9/4/2021,2,A5,226162,0625,M,0,NA,NA,NA,0,12.3,14.5,0,NA,1,1,1,1,1,1,1,R,SK,"multi w/ vole, small FE"
+626,2021,5,janakkala,supplement,deworm,9/4/2021,2,J4,226702,0626,M,0,NA,NA,NA,0,12.3,14.5,4,1,1,1,1,1,1,1,1,R,SK,mass=14.5
+627,2021,5,janakkala,supplement,deworm,9/4/2021,2,J1,219791,0627,F,0,0,0,0,NA,12.2,12.5,1,1,1,1,1,1,1,1,1,R,JV,fresh FR collected 5-3
+628,2021,5,janakkala,supplement,deworm,9/4/2021,2,J2,226710,0628,F,0,0,0,0,NA,12.1,11.5,0,1,1,1,1,1,1,1,1,R,SK,mass=11.5
+629,2021,5,janakkala,supplement,deworm,9/4/2021,2,K5,226786,0629,M,0,NA,NA,NA,0,12.5,12.5,3,1,1,1,1,1,1,1,1,R,SK,"ticks removed snout + ear, FR collected, more FE collected 5-3"
+630,2021,5,janakkala,supplement,deworm,9/4/2021,2,C1,226211,0630,M,0,NA,NA,NA,0,12.5,15.0,0,1,1,1,1,1,1,1,1,R,JV,
+631,2021,5,janakkala,supplement,deworm,9/4/2021,2,K4,226763,0631,M,0,NA,NA,NA,0,11.6,10.5,2,1,1,1,1,1,1,1,1,R,SK,
+632,2021,5,janakkala,supplement,deworm,9/4/2021,2,E3,226241,0632,M,0,NA,NA,NA,0,12.7,12.5,0,1,1,1,1,1,1,1,1,R,JV,
+633,2021,5,janakkala,supplement,deworm,9/4/2021,2,B5,226711,0633,M,0,NA,NA,NA,0,11.7,9.0,1,1,1,0,0,0,1,1,1,R,SK,
+634,2021,5,janakkala,supplement,deworm,9/4/2021,2,C6,219727,0634,F,0,0,0,0,NA,12.2,8.5,0,1,1,0,0,0,1,1,1,R,JV,FR collected 5-3
+635,2021,5,janakkala,supplement,deworm,9/4/2021,2,K2,219514,0635,M,0,NA,NA,NA,0,11.9,11.5,0,1,1,1,1,1,1,1,1,R,SK,
+636,2021,5,janakkala,supplement,deworm,9/4/2021,2,I6,226238,0636,F,0,0,0,0,NA,12.3,10.0,0,1,1,1,1,1,1,1,1,R,JV,FR not fresh
+NA,2021,5,janakkala,supplement,deworm,9/4/2021,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,AR,BN,
+598,2021,5,radio,supplement,control,9/4/2021,1,I2,219816,0598,M,0,NA,NA,NA,0,11.6,10.0,0,1,1,1,1,1,1,1,0,R,SK,"mutlicap  w/ vole, FE0598-2 collected 5-3"
+599,2021,5,radio,supplement,control,9/4/2021,1,G2,226157,0599,M,0,NA,NA,NA,0,12.7,11.0,2,1,1,1,1,1,1,1,0,R,JV,multicap w/ 2 voles
+600,2021,5,radio,supplement,control,9/4/2021,1,I2,219843,0600,F,0,0,0,0,NA,11.5,9.0,0,1,1,0,0,0,1,1,0,R,SK,"multicap w/ vole, FE FR collected 5-3, FR not fresh"
+601,2021,5,radio,supplement,control,9/4/2021,1,I6,219820,0601,F,0,0,0,0,NA,12.9,14.0,0,1,1,1,1,1,1,1,0,R,SK,"multicap w/ vole, FE small"
+602,2021,5,radio,supplement,control,9/4/2021,1,C3,226182,0602,M,0,NA,NA,NA,0,12.2,11.0,0,1,1,1,1,1,0,1,0,R,JV,multicap w/ vole
+603,2021,5,radio,supplement,control,9/4/2021,1,I6,226152,0603,F,0,0,0,0,NA,13.1,14.0,1,1,1,1,1,1,1,1,0,R,JV,"mutlicap w/ vole, FE small amount"
+604,2021,5,radio,supplement,control,9/4/2021,1,C3,219946,0604,F,0,1,1,0,NA,13.2,24.5,1,NA,1,1,1,1,1,1,0,R,SK,
+605,2021,5,radio,supplement,control,9/4/2021,1,K2,226142,0605,M,0,NA,NA,NA,0,13.6,13.0,0,NA,1,1,1,1,0,1,0,R,JV,"multicap w/ vole, no FE"
+606,2021,5,radio,supplement,control,9/4/2021,1,K2,219719,0606,F,0,0,0,0,NA,12.3,13.5,0,NA,1,1,1,1,1,1,0,R,SK,multicap w/ vole
+607,2021,5,radio,supplement,control,9/4/2021,1,G2,226003,0607,F,0,0,0,0,NA,11.6,9.5,2,1,1,0,0,0,0,1,0,R,SK,"dirty swab, no FE"
+608,2021,5,radio,supplement,control,9/4/2021,1,J3,219538,0608,F,0,0,0,0,NA,12.0,11.5,7,1,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, FE small amount"
+609,2021,5,radio,supplement,control,9/4/2021,1,J3,219567,0609,F,0,0,0,0,NA,12.9,13.5,0,1,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, FE0609 collected 5-3"
+610,2021,5,radio,supplement,control,9/4/2021,1,G2,226726,0610,M,0,NA,NA,NA,0,11.9,11.5,1,1,1,1,1,1,1,1,0,R,SK,"fresh FR0610 collected 503, FE0610-2 collected 5-3"
+611,2021,5,radio,supplement,control,9/4/2021,1,A3,219788,0611,F,0,0,0,0,NA,12.4,13.0,0,NA,1,1,1,1,1,1,0,R,JV,FE0611-2 collected 5-4
+612,2021,5,radio,supplement,control,9/4/2021,1,B1,219535,0612,M,0,NA,NA,NA,0,12.2,11.0,1,1,1,1,1,1,1,1,0,R,SK,FR not fresh
+613,2021,5,radio,supplement,control,9/4/2021,1,F5,219715,0613,M,0,NA,NA,NA,1,12.8,15.0,2,NA,1,1,1,1,1,1,0,R,JV,FR not fresh
+614,2021,5,radio,supplement,control,9/4/2021,1,B4,226766,0614,M,0,NA,NA,NA,0,12.1,11.0,0,1,1,1,1,1,1,1,0,R,SK,FR not fresh
+615,2021,5,radio,supplement,control,9/4/2021,1,I1,219964,0615,F,0,1,1,0,NA,13.1,21.0,0,NA,1,1,1,1,1,1,0,R,JV,
+616,2021,5,radio,supplement,control,9/4/2021,1,K1,219571,0616,F,0,1,1,0,NA,12.6,16.0,1,1,1,1,1,1,1,1,0,R,SK,
+617,2021,5,radio,supplement,control,9/4/2021,1,C6,219568,0617,M,0,NA,NA,NA,0,12.7,16.0,2,1,1,1,1,1,1,1,0,R,JV,
+618,2021,5,radio,supplement,control,9/4/2021,1,K3,219554,0618,F,0,0,0,0,NA,11.9,11.0,2,1,1,1,1,1,1,1,0,R,SK,
+619,2021,5,radio,supplement,control,9/4/2021,1,D1,226744,0619,F,0,0,0,0,NA,13.1,13.0,0,1,1,1,1,1,1,1,0,R,JV,"FR not fresh, FE small amount"
+620,2021,5,radio,supplement,control,9/4/2021,1,E1,226749,0620,M,0,NA,NA,NA,0,12.7,12.5,3,1,1,1,1,1,1,1,0,R,SK,FR not fresh
+621,2021,5,radio,supplement,control,9/4/2021,1,J5,219508,0621,F,0,1,1,0,NA,13.2,20.5,1,1,1,1,1,1,1,1,0,S,JV,euthanized
+622,2021,5,radio,supplement,control,9/4/2021,1,G1,219598,0622,F,0,0,0,0,NA,11.0,11.5,4,1,1,1,1,1,1,1,0,R,SK,
+623,2021,5,radio,supplement,control,9/4/2021,1,J1,226225,0623,F,0,1,1,0,NA,13.0,17.0,0,1,1,1,1,1,1,1,0,R,JV,"multicap w/ shrew, FR not fresh"
+NA,2021,5,radio,supplement,control,9/4/2021,1,F4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,SC,body collected
+NA,2021,5,radio,supplement,control,9/4/2021,1,B5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,BN,body collected
+637,2021,5,radio,supplement,control,9/4/2021,2,C3,226259,0637,F,0,0,0,0,NA,12.3,10.5,0,1,1,1,1,1,0,0,0,R,SK,"multicap w/ 2 coles, no FE, FR"
+638,2021,5,radio,supplement,control,9/4/2021,2,G4,226011,0638,F,0,1,1,0,NA,13.8,25.0,1,NA,1,1,1,1,1,1,0,R,JV,
+639,2021,5,radio,supplement,control,9/4/2021,2,B1,226242,0639,F,0,0,0,0,NA,12.4,13.5,1,1,1,1,1,1,1,1,0,R,SK,
+640,2021,5,radio,supplement,control,9/4/2021,2,C6,219560,0640,F,0,1,1,0,NA,13.0,14.0,2,NA,1,1,1,1,1,1,0,R,JV,
+641,2021,5,radio,supplement,control,9/4/2021,2,C3,226268,0641,M,0,NA,NA,NA,0,11.8,10.5,0,1,1,1,1,1,1,1,0,R,SK,multicap w/ 2 voles
+642,2021,5,radio,supplement,control,9/4/2021,2,A3,226229,0642,M,0,NA,NA,NA,1,13.4,12.5,0,1,1,1,1,1,1,1,0,R,JV,
+643,2021,5,radio,supplement,control,9/4/2021,2,I1,219767,0643,F,0,0,0,0,NA,11.6,9.0,2,1,1,0,0,0,1,1,0,R,SK,
+644,2021,5,radio,supplement,control,9/4/2021,2,J1,226298,0644,F,0,0,0,0,NA,11.9,9.0,5,1,1,0,0,0,1,1,0,R,SK,
+645,2021,5,radio,supplement,control,9/4/2021,2,C1,226201,0645,M,0,NA,NA,NA,0,11.9,11.5,0,1,1,1,1,1,1,0,0,R,JV,no FR
+646,2021,5,radio,supplement,control,9/4/2021,2,K6,226267,0646,M,0,NA,NA,NA,0,12.6,12.0,2,1,1,1,1,1,1,1,0,R,JV,
+647,2021,5,radio,supplement,control,9/4/2021,2,G2,226223,0647,M,0,NA,NA,NA,0,12.1,11.0,0,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+648,2021,5,janakkala,supplement,deworm,9/5/2021,3,C6,226250,0648,M,0,NA,NA,NA,0,12.1,8.0,1,1,1,0,0,0,0,0,1,DP,JV,"multicap w/ vole, dirty swab, too cold"
+649,2021,5,janakkala,supplement,deworm,9/5/2021,3,C6,226274,0649,M,0,NA,NA,NA,0,12.1,8.5,0,1,1,0,0,0,0,0,1,DP,JV,"multicap w/ vole, dirty swab too cold"
+650,2021,5,janakkala,supplement,deworm,9/5/2021,3,K1,226236,0650,F,0,0,0,0,NA,13.1,16.0,1,1,1,1,1,1,1,0,1,R,JV,no FR
+651,2021,5,janakkala,supplement,deworm,9/5/2021,3,J2,226294,0651,M,0,NA,NA,NA,1,13.0,15.5,1,1,1,1,1,1,0,1,1,R,JV,no FE
+652,2021,5,janakkala,supplement,deworm,9/5/2021,3,F5,219818,0652,M,0,NA,NA,NA,0,12.6,12.5,0,1,1,1,1,1,1,1,1,R,JV,"recap (monthly), ED mistakenly taken"
+653,2021,5,janakkala,supplement,deworm,9/5/2021,3,E1,219882,0653,F,0,0,0,0,NA,12.7,14.0,0,NA,1,1,1,1,1,1,1,R,JV,
+661,2021,5,janakkala,supplement,deworm,9/5/2021,4,B4,219702,0661,F,0,1,1,0,NA,13.6,26.0,1,NA,1,1,1,1,1,1,1,R,SK,multicap w/ vole
+662,2021,5,janakkala,supplement,deworm,9/5/2021,4,A6,226128,0662,F,0,0,0,0,NA,12.3,13.5,0,NA,1,1,1,1,1,0,1,R,SK,
+654,2021,5,radio,supplement,control,9/5/2021,3,A2,219661,0654,F,0,0,0,0,NA,11.9,12.5,0,1,1,1,1,1,1,1,0,R,SK,
+655,2021,5,radio,supplement,control,9/5/2021,3,I5,219628,0655,M,0,NA,NA,NA,0,12.3,12.5,3,1,1,1,1,1,0,0,0,R,SK,multicap w. vole
+656,2021,5,radio,supplement,control,9/5/2021,3,I1,219610,0656,F,0,0,0,0,NA,11.8,9.0,5,1,1,NA,NA,NA,1,1,0,R,SK,"multicap w. vole, FE small"
+657,2021,5,radio,supplement,control,9/5/2021,3,I1,219683,0657,F,0,0,0,0,NA,11.5,9.0,12,1,1,NA,NA,NA,1,1,0,R,SK,multicap w/ vole
+658,2021,5,radio,supplement,control,9/5/2021,3,K4,219689,0658,M,0,NA,NA,NA,0,12.3,14.0,0,1,1,1,1,1,1,1,0,R,BN,
+659,2021,5,radio,supplement,control,9/5/2021,3,A3,219642,0659,M,0,NA,NA,NA,0,13.0,15.0,1,1,1,1,1,1,1,1,0,R,BN,
+660,2021,5,radio,supplement,control,9/5/2021,3,K1,219679,0660,F,0,0,0,0,NA,11.7,9.5,0,1,1,NA,NA,NA,1,1,0,R,BN,
+663,2021,5,radio,supplement,control,9/5/2021,4,A3,226282,0663,M,0,NA,NA,NA,0,12.6,16.0,2,1,1,1,1,1,1,1,0,R,SK,"TT0663 adult from cheek, FR not fresh"
+683,2021,5,asema,control,control,9/7/2021,1,C2,219868,0683,F,0,0,0,0,NA,11.8,14.0,1,NA,1,1,1,1,1,1,0,R,SK,multicap w/ 2 dead shrews
+684,2021,5,asema,control,control,9/7/2021,1,E1,219752,0684,M,0,NA,NA,NA,1,13.2,19.0,0,NA,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+685,2021,5,asema,control,control,9/7/2021,1,E1,226748,0685,M,0,NA,NA,NA,0,12.4,11.5,2,1,1,1,1,1,0,1,0,R,JV,"multicap w/ vole, FE not collected"
+686,2021,5,asema,control,control,9/7/2021,1,A6,219809,0686,M,0,NA,NA,NA,0,12.6,15.5,1,NA,1,1,1,1,1,1,0,R,SK,Tag originally written as 219819 on datasheet (a vole on Janakkala) but I believe the correct tag was actually 219809
+687,2021,5,asema,control,control,9/7/2021,1,I5,219659,0687,M,0,NA,NA,NA,0,12.5,13.5,0,1,1,1,1,1,1,1,0,R,JV,
+688,2021,5,asema,control,control,9/7/2021,1,A1,226091,0688,M,0,NA,NA,NA,0,13.3,19.5,2,NA,1,1,1,1,1,1,0,R,SK,multicap w/ shrew
+689,2021,5,asema,control,control,9/7/2021,1,A2,226775,0689,M,0,NA,NA,NA,0,12.6,14.0,1,1,1,1,1,1,1,1,0,R,JV,
+690,2021,5,asema,control,control,9/7/2021,1,G1,226056,0690,F,0,1,1,0,NA,13.2,23.0,1,NA,1,1,1,1,1,1,0,R,SK,1 adult tick on back TT0690
+691,2021,5,asema,control,control,9/7/2021,1,A4,226729,0691,F,0,0,0,0,NA,12.4,10.0,0,1,1,1,1,1,1,1,0,R,JV,
+692,2021,5,asema,control,control,9/7/2021,1,H3,226792,0692,F,0,0,0,0,NA,12.7,16.5,2,1,1,1,1,1,1,1,0,R,SK,
+693,2021,5,asema,control,control,9/7/2021,1,A5,226797,0693,M,0,NA,NA,NA,0,12.8,12.5,9,1,1,1,1,1,1,1,0,R,JV,
+694,2021,5,asema,control,control,9/7/2021,1,J1,226770,0694,F,0,0,0,0,NA,11.9,11.5,1,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+695,2021,5,asema,control,control,9/7/2021,2,K3,219666,0695,M,0,NA,NA,NA,0,12.4,15.0,1,1,1,1,1,1,1,1,0,R,SK,FE small
+696,2021,5,asema,control,control,9/7/2021,2,A1,226783,0696,M,0,NA,NA,NA,0,13.4,19.0,0,1,1,1,1,1,1,1,0,R,SK,FR not fresh 
+664,2021,5,hevonen,control,control,9/7/2021,1,B2,219640,0664,F,0,0,0,0,NA,13.0,19.5,0,1,1,1,1,1,1,1,0,S,JV,multicap w/ vole & shrew
+665,2021,5,hevonen,control,control,9/7/2021,1,D1 ,219824,0665,M,0,NA,NA,NA,0,12.9,18.0,0,NA,1,1,1,1,1,1,0,R,SK,multicap w/ 2 voles
+666,2021,5,hevonen,control,control,9/7/2021,1,D1,219638,0666,F,0,0,0,0,NA,12.6,14.0,1,1,1,1,1,1,1,1,0,R,JV,multicap w/ 2 voles
+667,2021,5,hevonen,control,control,9/7/2021,1,D1,226155,0667,M,0,NA,NA,NA,0,12.9,16.0,0,NA,1,1,1,1,1,1,0,R,SK,"mutlicap w/2 voles, more FE collected 5-3"
+668,2021,5,hevonen,control,control,9/7/2021,1,G6,219712,0668,M,0,NA,NA,NA,0,12.6,16.0,1,NA,1,1,1,1,1,1,0,R,SK,multicap w/ vole
+669,2021,5,hevonen,control,control,9/7/2021,1,A5,219660,0669,M,0,NA,NA,NA,0,12.7,14.5,3,1,1,1,1,1,0,0,0,R,JV,"multicap w/ vole, FR +FE not collected"
+670,2021,5,hevonen,control,control,9/7/2021,1,G6,219620,0670,F,0,0,0,0,NA,12.6,13.5,2,1,1,1,1,1,1,1,0,R,JV,"mutlicap w/ vole , FR & FE collected 5-3"
+671,2021,5,hevonen,control,control,9/7/2021,1,A5,219844,0671,M,0,NA,NA,NA,0,12.3,14.0,0,NA,1,1,1,1,1,1,0,R,SK,FE0671-2 collected 5-3
+672,2021,5,hevonen,control,control,9/7/2021,1,A2,219656,0672,F,0,0,0,0,NA,14.2,20.0,1,1,1,1,1,1,1,1,0,R,JV,
+673,2021,5,hevonen,control,control,9/7/2021,1,I3,219795,0673,F,0,0,0,0,NA,12.2,15.5,5,NA,1,1,1,1,1,1,0,R,SK,
+674,2021,5,hevonen,control,control,9/7/2021,1,J4,219614,0674,F,0,0,0,0,NA,12.1,12.5,3,1,1,1,1,1,1,1,0,R,JV,
+675,2021,5,hevonen,control,control,9/7/2021,1,I6,219840,0675,M,0,NA,NA,NA,0,12.8,15.0,1,NA,1,1,1,1,1,1,0,R,SK,
+676,2021,5,hevonen,control,control,9/7/2021,1,I2,226103,0676,M,0,NA,NA,NA,0,12.5,13.5,1,NA,1,1,1,1,1,1,0,R,SK,
+677,2021,5,hevonen,control,control,9/7/2021,1,A3,219645,0677,M,0,NA,NA,NA,0,13.1,16.0,0,1,1,1,1,1,1,1,0,R,JV,
+678,2021,5,hevonen,control,control,9/7/2021,1,J2,226106,0678,M,0,NA,NA,NA,0,12.4,14.0,1,NA,1,1,1,1,1,1,0,R,SK,
+679,2021,5,hevonen,control,control,9/7/2021,1,C2,219756,0679,F,0,0,0,0,NA,12.6,14.0,0,NA,1,1,1,1,1,1,0,R,JV,
+680,2021,5,hevonen,control,control,9/7/2021,1,D5,219865,0680,F,0,0,0,0,NA,12.5,16.0,0,NA,1,1,1,1,1,1,0,R,SK,
+681,2021,5,hevonen,control,control,9/7/2021,1,B4,219852,0681,F,0,0,0,0,NA,12.7,14.0,0,NA,1,1,1,1,1,1,0,R,JV,"multicap w/ shrew, fresh FR collected 5-3"
+682,2021,5,hevonen,control,control,9/7/2021,1,K3,226192,0682,F,0,0,0,0,NA,12.3,12.0,1,NA,1,1,1,1,1,1,0,R,SK,
+NA,2021,5,hevonen,control,control,9/7/2021,1,F3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,SC,no tag
+NA,2021,5,hevonen,control,control,9/7/2021,1,B2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,JV,multicap w/ shrew & vole
+NA,2021,5,hevonen,control,control,9/7/2021,1,G5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,BN,
+NA,2021,5,hevonen,control,control,9/7/2021,1,G4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,BN,
+697,2021,5,hevonen,control,control,9/7/2021,2,D1,226717,0697,F,0,0,0,0,NA,12.6,16.0,2,1,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, large blood sample"
+698,2021,5,hevonen,control,control,9/7/2021,2,F3,226727,0698,M,0,NA,NA,NA,0,12.5,14.5,0,1,1,1,1,1,1,1,0,R,JV,fresh FR collected 5-3
+709,2021,5,asema,control,control,9/8/2021,3,K2,226738,0709,M,0,NA,NA,NA,0,12.6,12.5,0,1,1,1,1,1,1,1,0,R,JV,
+714,2021,5,asema,control,control,9/8/2021,3,D3,226760,0714,F,0,1,1,0,NA,14.0,19.5,2,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+710,2021,5,asema,control,control,9/8/2021,3,A2,219966,0710,M,0,NA,NA,NA,0,11.9,12.0,0,NA,1,1,1,1,1,1,0,R,SK,
+711,2021,5,asema,control,control,9/8/2021,3,I6,226772,0711,F,0,0,0,0,NA,12.9,15.5,0,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+712,2021,5,asema,control,control,9/8/2021,3,A6,219809,0712,M,0,NA,NA,NA,0,12.8,15.5,0,NA,1,1,1,1,1,1,0,R,SK,
+713,2021,5,asema,control,control,9/8/2021,3,A4,226757,0713,M,0,NA,NA,NA,0,12.4,12.0,0,1,1,1,1,1,1,0,0,R,SK,FR not collected
+699,2021,5,hevonen,control,control,9/8/2021,3,A1,226781,0699,M,0,NA,NA,NA,0,12.3,15.5,0,1,1,1,1,1,1,1,0,R,SK,"multicap w/ 2 voles, FE small"
+700,2021,5,hevonen,control,control,9/8/2021,3,G1,219898,0700,F,0,0,0,0,NA,12.6,14.0,0,NA,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+701,2021,5,hevonen,control,control,9/8/2021,3,G1,226168,0701,F,0,0,0,0,NA,12.6,14.0,3,NA,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+702,2021,5,hevonen,control,control,9/8/2021,3,B1,226733,0702,M,0,NA,NA,NA,0,12.5,17.5,0,1,1,1,1,1,1,1,0,R,SK,
+703,2021,5,hevonen,control,control,9/8/2021,3,I6,219879,0703,F,0,0,0,0,NA,12.6,14.0,0,NA,1,1,1,1,1,1,0,R,JV,
+704,2021,5,hevonen,control,control,9/8/2021,3,A6,219692,0704,M,0,NA,NA,NA,0,12.6,14.5,0,1,1,1,1,1,1,1,0,R,SK,
+705,2021,5,hevonen,control,control,9/8/2021,3,D5,226147,0705,M,0,NA,NA,NA,1,13.9,24.0,0,NA,1,1,1,1,1,1,0,R,JV,
+706,2021,5,hevonen,control,control,9/8/2021,3,A4,219978,0706,M,0,NA,NA,NA,0,12.6,14.5,0,NA,1,1,1,1,1,1,0,R,SK,
+707,2021,5,hevonen,control,control,9/8/2021,3,J5,219991,0707,M,0,NA,NA,NA,0,13.3,17.5,0,NA,1,1,1,1,1,1,0,R,JV,multicap w/ 2 shrews
+708,2021,5,hevonen,control,control,9/8/2021,3,E1,219949,0708,M,0,NA,NA,NA,0,13.0,21.5,2,NA,1,1,1,1,1,1,0,R,JV,large blood sample
+755,2021,5,kiirastuli,control,deworm,9/11/2021,1,H1,226701,0755,F,0,0,0,0,NA,13.0,13.0,1,1,1,1,1,1,0,0,1,R,JV,no FE + FR
+756,2021,5,kiirastuli,control,deworm,9/11/2021,1,J2,219870,0756,F,0,1,1,0,NA,13.0,19.5,0,NA,1,1,1,1,1,1,1,R,SK,
+757,2021,5,kiirastuli,control,deworm,9/11/2021,1,G5,226734,0757,F,0,0,0,0,NA,12.2,12.5,2,1,1,1,1,1,1,1,1,R,JV,TT collected from left side of body
+758,2021,5,kiirastuli,control,deworm,9/11/2021,1,G6,219875,0758,F,0,1,0,0,NA,13.1,18.5,0,NA,1,1,1,1,1,1,1,R,SK,
+759,2021,5,kiirastuli,control,deworm,9/11/2021,1,D5,226778,0759,M,0,NA,NA,NA,0,13.0,12.5,3,1,1,1,1,1,1,1,1,R,JV,
+760,2021,5,kiirastuli,control,deworm,9/11/2021,1,C1,226104,0760,F,0,0,0,0,NA,12.1,13.0,0,NA,1,1,1,1,1,1,1,R,SK,
+761,2021,5,kiirastuli,control,deworm,9/11/2021,1,C6,226707,0761,M,0,NA,NA,NA,1,13.3,15.5,1,1,1,1,1,1,1,1,1,S,NM,"euthanized 5-3, bleeder, tag could be 226767 either 6 or 0"
+NA,2021,5,kiirastuli,control,deworm,9/11/2021,1,K6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,NM,
+766,2021,5,kiirastuli,control,deworm,9/11/2021,2,E6,219873,0766,F,0,0,0,0,NA,12.8,18.5,1,NA,1,1,1,1,1,1,1,R,SK,
+715,2021,5,mustikka,control,deworm,9/11/2021,1,C5,226759,0715,M,0,NA,NA,NA,0,13.4,16.0,1,1,1,1,1,1,1,1,1,R,JV,"multicap w/ vole, FE+FR collected 5-3, FR not fresh"
+716,2021,5,mustikka,control,deworm,9/11/2021,1,J4,219926,0716,M,0,NA,NA,NA,0,13.6,20.0,0,NA,1,1,1,1,1,1,1,R,SK,
+717,2021,5,mustikka,control,deworm,9/11/2021,1,C5,226712,0717,M,0,NA,NA,NA,0,12.4,15.5,1,1,1,1,1,1,1,1,1,R,JV,"multicap w/ vole, more FE collected 5-2"
+718,2021,5,mustikka,control,deworm,9/11/2021,1,H1,226136,0718,M,0,NA,NA,NA,1,12.6,16.0,0,NA,1,1,1,1,1,1,1,R,SK,FR not fresh
+719,2021,5,mustikka,control,deworm,9/11/2021,1,K4,219644,0719,F,0,1,1,0,NA,12.7,18.5,1,1,1,1,1,1,1,1,1,S,JV,
+720,2021,5,mustikka,control,deworm,9/11/2021,1,G1,226194,0720,M,0,NA,NA,NA,1,11.7,15.5,0,NA,1,1,1,1,1,1,1,R,SK,fresh FR collected 5-2
+721,2021,5,mustikka,control,deworm,9/11/2021,1,A5,219785,0721,F,0,0,0,0,NA,12.5,13.0,6,1,1,1,1,1,1,1,1,R,JV,TT collected behind left ear
+722,2021,5,mustikka,control,deworm,9/11/2021,1,D1,226125,0722,M,0,NA,NA,NA,0,12.7,16.5,0,NA,1,1,1,1,1,1,1,R,SK,
+723,2021,5,mustikka,control,deworm,9/11/2021,1,C3,219812,0723,M,0,NA,NA,NA,0,13.4,15.5,9,1,1,1,1,1,1,1,1,R,JV,large blood sample taken
+724,2021,5,mustikka,control,deworm,9/11/2021,1,J3,219663,0724,F,0,0,0,0,NA,12.6,12.5,5,1,1,1,1,1,1,1,1,R,SK,
+725,2021,5,mustikka,control,deworm,9/11/2021,1,B3,226788,0725,F,0,0,0,0,NA,12.7,17.5,1,1,1,1,1,1,1,1,1,R,SK,
+726,2021,5,mustikka,control,deworm,9/11/2021,1,C4,219772,0726,M,0,NA,NA,NA,0,14.5,17.5,7,1,1,1,1,1,1,1,1,R,JV,
+727,2021,5,mustikka,control,deworm,9/11/2021,1,G5,226723,0727,M,0,NA,NA,NA,0,12.4,15.5,7,1,1,1,1,1,1,1,1,R,SK,
+728,2021,5,talo,supplement,deworm,9/11/2021,1,C6,219841,0728,M,0,NA,NA,NA,0,13.0,15.5,0,1,1,1,1,1,0,0,1,R,JV,"multicap w/ 2 voles, FR + FE not collected"
+729,2021,5,talo,supplement,deworm,9/11/2021,1,A5,226180,0729,M,0,NA,NA,NA,0,12.8,17.5,0,NA,1,1,1,1,1,1,1,R,SK,multicap w/ vole
+730,2021,5,talo,supplement,deworm,9/11/2021,1,C6,219854,0730,M,0,NA,NA,NA,0,12.8,13.0,0,1,1,1,1,1,1,1,1,R,JV,"multicap w/ 2 voles, FR+FE collected 5-4"
+731,2021,5,talo,supplement,deworm,9/11/2021,1,A5,NA,0731,F,0,1,0,0,NA,13.6,23.5,2,1,1,1,1,1,0,0,1,S,SK,"multicap w/ vole, taken for euthanasia, died before it could be processed"
+732,2021,5,talo,supplement,deworm,9/11/2021,1,C6,219735,0732,F,0,0,0,0,NA,13.4,15.0,2,1,1,1,1,1,1,1,1,R,JV,"multicap w/ 2 voles, FE collected S5-2"
+733,2021,5,talo,supplement,deworm,9/11/2021,1,H1,219770,0733,M,0,NA,NA,NA,1,12.4,14.5,2,1,1,1,1,1,1,1,1,R,SK,"multicap w/ vole, blood on SR swab"
+734,2021,5,talo,supplement,deworm,9/11/2021,1,D1,219707,0734,F,0,0,0,0,NA,12.6,12.5,0,1,1,1,1,1,1,1,1,R,JV,"multicap w/ vole, more FE collected 5-3"
+735,2021,5,talo,supplement,deworm,9/11/2021,1,D1,219861,0735,F,0,0,0,0,NA,13.0,12.5,0,1,1,1,1,1,1,1,1,R,JV,"multicap w/ vole, more FE collected 5-3"
+736,2021,5,talo,supplement,deworm,9/11/2021,1,H1,219718,0736,F,0,0,0,0,NA,12.5,16.5,0,1,1,1,1,1,1,1,1,R,SK,multicap w/ vole
+737,2021,5,talo,supplement,deworm,9/11/2021,1,G1,219845,0737,M,0,NA,NA,NA,0,13.3,15.5,7,1,1,1,1,1,1,1,1,S,JV,"taken for euthanasia, died before it could be processed"
+738,2021,5,talo,supplement,deworm,9/11/2021,1,A4,226179,0738,F,0,1,1,0,NA,13.2,18.5,0,NA,1,1,1,1,1,1,1,R,SK,multicap w/ shrew
+739,2021,5,talo,supplement,deworm,9/11/2021,1,D3,219709,0739,M,0,NA,NA,NA,0,12.9,12.0,1,1,1,1,1,1,1,1,1,R,JV,
+740,2021,5,talo,supplement,deworm,9/11/2021,1,C1,219889,0740,F,0,1,0,0,NA,12.9,18.5,2,NA,1,1,1,1,1,1,1,R,SK,FR collected S5-2
+741,2021,5,talo,supplement,deworm,9/11/2021,1,A2,219725,0741,F,0,0,0,0,NA,12.8,14.0,1,1,1,1,1,1,1,1,1,R,JV,"multicap w/ vole, FE+FR collected 5-4"
+742,2021,5,talo,supplement,deworm,9/11/2021,1,A2,226187,0742,F,0,0,0,0,NA,12.2,13.5,1,NA,1,1,1,1,1,1,1,R,SK,"multicap w/ vole, FE collected 5-3"
+743,2021,5,talo,supplement,deworm,9/11/2021,1,G2,219792,0743,F,0,0,0,0,NA,12.5,12.5,0,NA,1,1,1,1,1,1,1,R,SK,
+744,2021,5,talo,supplement,deworm,9/11/2021,1,C2,219807,0744,M,0,NA,NA,NA,0,12.5,14.5,2,1,1,1,1,1,1,0,1,R,JV,FR not collected
+745,2021,5,talo,supplement,deworm,9/11/2021,1,E3,219751,0745,F,0,0,0,0,NA,12.3,13.5,1,NA,1,1,1,1,1,1,1,R,SK,
+746,2021,5,talo,supplement,deworm,9/11/2021,1,C3,219710,0746,M,0,NA,NA,NA,0,12.5,14.0,0,1,1,1,1,1,1,1,1,R,JV,
+747,2021,5,talo,supplement,deworm,9/11/2021,1,H5,226112,0747,F,0,0,0,0,NA,12.3,14.5,0,NA,1,1,1,1,1,1,1,R,SK,"FR small amount, more FR collected 5-3"
+748,2021,5,talo,supplement,deworm,9/11/2021,1,G4,219717,0748,M,0,NA,NA,NA,0,12.6,13.5,2,1,1,1,1,1,1,1,1,R,JV,
+749,2021,5,talo,supplement,deworm,9/11/2021,1,F5,219797,0749,M,0,NA,NA,NA,0,12.3,15.5,0,NA,1,1,1,1,1,0,1,R,SK,FR not fresh
+750,2021,5,talo,supplement,deworm,9/11/2021,1,F2,219901,0750,F,0,0,0,0,NA,12.7,13.3,0,NA,1,1,1,1,1,1,1,R,SK,FR collected 5-2
+751,2021,5,talo,supplement,deworm,9/11/2021,1,F1,226776,0751,F,0,0,0,0,NA,12.6,13.0,2,1,1,1,1,1,1,NA,1,R,JV,
+752,2021,5,talo,supplement,deworm,9/11/2021,1,H2,219763,0752,F,0,1,1,0,NA,12.5,14.5,0,1,1,1,1,1,1,1,1,R,SK,
+753,2021,5,talo,supplement,deworm,9/11/2021,1,K4,226769,0753,F,0,0,0,0,NA,12.4,13.5,0,1,1,1,1,1,1,1,1,R,JV,
+754,2021,5,talo,supplement,deworm,9/11/2021,1,J3,219700,0754,M,0,NA,NA,NA,0,12.2,13.0,2,1,1,1,1,1,1,1,1,R,SK,FR collected 5-3
+NA,2021,5,talo,supplement,deworm,9/11/2021,1,K6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,NM,
+NA,2021,5,talo,supplement,deworm,9/11/2021,1,I4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,NM,
+762,2021,5,talo,supplement,deworm,9/11/2021,2,A4,226230,0762,M,0,NA,NA,NA,0,13.1,12.0,4,1,1,1,1,1,1,1,1,R,JV,"multicap w/ 2 voles, FR, FE collected 5-3"
+763,2021,5,talo,supplement,deworm,9/11/2021,2,C6,226281,0763,M,0,NA,NA,NA,0,12.4,15.5,2,1,1,1,1,1,1,1,1,S,SK,"FR collected 504, euthanizied 5-4"
+764,2021,5,talo,supplement,deworm,9/11/2021,2,A4,226234,0764,F,0,0,0,0,NA,12.4,12.0,3,1,1,1,1,1,0,0,1,R,JV,"multicap w/ 2 voles, FE, FR not collected"
+765,2021,5,talo,supplement,deworm,9/11/2021,2,F5,226134,0765,M,0,NA,NA,NA,0,13.7,12.0,2,NA,1,1,1,1,0,0,1,R,JV,FE/FR not collected
+782,2021,5,kiirastuli,control,deworm,9/12/2021,3,I1,226247,0782,M,0,NA,NA,NA,0,13.0,14.0,5,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+783,2021,5,kiirastuli,control,deworm,9/12/2021,3,F3,219997,0783,M,0,NA,NA,NA,1,13.5,23.0,3,NA,1,1,1,1,1,1,1,R,NM,
+784,2021,5,kiirastuli,control,deworm,9/12/2021,3,A1,226044,0784,M,0,NA,NA,NA,1,13.3,19.5,0,NA,1,1,1,1,1,1,1,R,JV,
+767,2021,5,mustikka,control,deworm,9/12/2021,3,E6,226737,0767,M,0,NA,NA,NA,1,12.9,18.0,0,1,1,1,1,1,1,1,1,R,JV,
+768,2021,5,mustikka,control,deworm,9/12/2021,3,K1,219745,0768,F,0,0,0,0,NA,13.5,14.0,5,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+769,2021,5,talo,supplement,deworm,9/12/2021,3,A4,226271,0769,F,0,0,0,0,NA,12.6,13.5,3,1,1,1,1,1,0,1,1,R,JV,"multicap w/ vole, FE not collected"
+770,2021,5,talo,supplement,deworm,9/12/2021,3,E5,226031,0770,M,0,NA,NA,NA,0,12.8,24.5,0,NA,1,1,1,1,1,1,1,R,SK,large blood sample taken
+771,2021,5,talo,supplement,deworm,9/12/2021,3,C3,226209,0771,F,0,0,0,0,NA,13.3,14.5,5,1,1,1,1,1,1,1,1,R,JV,
+772,2021,5,talo,supplement,deworm,9/12/2021,3,A6,226138,0772,M,0,NA,NA,NA,1,12.5,18.0,1,NA,1,1,1,1,1,1,1,R,SK,
+773,2021,5,talo,supplement,deworm,9/12/2021,3,F5,226293,0773,M,0,NA,NA,NA,1,12.7,17.5,0,1,1,1,1,1,1,1,1,R,JV,
+774,2021,5,talo,supplement,deworm,9/12/2021,3,J4,219960,0774,M,0,NA,NA,NA,0,12.6,15.0,1,NA,1,1,1,1,1,1,1,R,SK,
+775,2021,5,talo,supplement,deworm,9/12/2021,3,A5,226289,0775,M,0,NA,NA,NA,1,13.6,15.0,1,1,1,1,1,1,1,1,1,R,JV,
+776,2021,5,talo,supplement,deworm,9/12/2021,3,J2,219856,0776,F,0,1,0,0,NA,12.9,21.5,1,NA,1,1,1,1,1,1,1,R,SK,
+777,2021,5,talo,supplement,deworm,9/12/2021,3,C6,226296,0777,M,0,NA,NA,NA,0,12.7,19.0,2,1,1,1,1,1,1,1,1,R,JV,
+778,2021,5,talo,supplement,deworm,9/12/2021,3,K3,226277,0778,M,0,NA,NA,NA,0,12.3,13.5,2,1,1,1,1,1,1,1,1,R,JV,TT collected from middle of back
+779,2021,5,talo,supplement,deworm,9/12/2021,3,I4,226258,0779,F,0,0,0,0,NA,13.2,15.0,4,1,1,1,1,1,1,1,1,S,JV,"euthanized 5-4, FE+FR collected 5-4"
+780,2021,5,talo,supplement,deworm,9/12/2021,3,G2,219615,0780,M,0,NA,NA,NA,0,12.7,13.5,7,1,1,1,1,1,1,1,1,R,JV,FE small
+781,2021,5,talo,supplement,deworm,9/12/2021,3,J1,226283,0781,M,0,NA,NA,NA,1,13.9,19.5,0,1,1,1,1,1,1,1,1,R,JV,bleeder
+NA,2021,5,talo,supplement,deworm,9/12/2021,3,A6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,SC,killed by weasel
+785,2021,5,talo,supplement,deworm,9/12/2021,4,I6,226272,0785,F,0,0,0,0,NA,12.8,13.0,2,1,1,1,1,1,1,1,1,R,JV,
+786,2021,5,talo,supplement,deworm,9/12/2021,4,A5,219990,0786,F,0,1,0,1,NA,13.0,18.5,0,NA,1,1,1,1,1,1,1,R,JV,
+NA,2021,5,puro,supplement,deworm,9/13/2021,0,E4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"trap  left closed, vole inside, no tag"
+800,2021,5,ketunpesa,control,deworm,9/14/2021,1,F1,219733,0800,F,0,1,0,0,NA,12.8,15.0,0,NA,1,1,1,1,1,1,1,R,JV,multicap w/ vole
+801,2021,5,ketunpesa,control,deworm,9/14/2021,1,F1,219906,0801,M,0,NA,NA,NA,1,12.2,13.0,1,NA,1,1,1,1,1,1,1,R,SK,"multicap w/ vole, FE small"
+802,2021,5,ketunpesa,control,deworm,9/14/2021,1,I3,219765,0802,M,0,NA,NA,NA,1,12.6,14.0,1,NA,1,1,1,1,1,1,1,R,JV,
+803,2021,5,ketunpesa,control,deworm,9/14/2021,1,D3,NA,0803,M,0,NA,NA,NA,0,12.2,12.5,8,1,1,1,1,1,1,1,NA,DP,SK,slow breathing to start
+804,2021,5,ketunpesa,control,deworm,9/14/2021,1,F2,219753,0804,M,0,NA,NA,NA,0,12.8,15.5,0,NA,1,1,1,1,1,1,1,R,JV,
+805,2021,5,ketunpesa,control,deworm,9/14/2021,1,I5,219963,0805,M,0,NA,NA,NA,0,13.4,14.0,0,NA,1,1,1,1,1,1,1,R,JV,
+806,2021,5,ketunpesa,control,deworm,9/14/2021,1,K2,226226,0806,F,0,0,0,0,NA,12.3,13.5,1,1,1,1,1,1,1,1,1,R,SK,
+807,2021,5,ketunpesa,control,deworm,9/14/2021,1,K3,219800,0807,M,0,NA,NA,NA,0,13.5,16.0,1,NA,1,1,1,1,1,1,1,R,JV,
+808,2021,5,ketunpesa,control,deworm,9/14/2021,1,I1,219902,0808,M,0,NA,NA,NA,0,12.1,13.5,0,NA,1,1,1,0,1,1,NA,DT,SK,died waiting to be processed
+809,2021,5,ketunpesa,control,deworm,9/14/2021,1,A4,226186,0809,M,0,NA,NA,NA,1,13.3,14.5,2,NA,1,1,1,1,1,1,1,R,JV,
+829,2021,5,ketunpesa,control,deworm,9/14/2021,2,A2,226791,0829,M,0,NA,NA,NA,0,12.7,17.5,1,1,1,1,1,1,1,1,1,R,JV,dirty swab
+787,2021,5,kuoppa,supplement,control,9/14/2021,1,A4,226218,0787,M,0,NA,NA,NA,0,11.3,8.5,0,1,1,0,0,0,1,1,0,R,JV,multicap w/ vole
+788,2021,5,kuoppa,supplement,control,9/14/2021,1,K4,226224,0788,M,0,NA,NA,NA,1,12.5,15.0,2,1,1,1,1,1,1,1,0,S,SK,"multicap w/ vole, euthanized 5-4, FE/FR collected 5-2"
+789,2021,5,kuoppa,supplement,control,9/14/2021,1,A4,226200,0789,F,0,1,1,0,NA,13.3,16.0,0,1,1,1,1,1,0,0,0,R,JV,multicap w/ vole
+790,2021,5,kuoppa,supplement,control,9/14/2021,1,K4,219984,0790,F,0,1,0,0,NA,12.6,13.5,1,NA,1,1,1,1,0,1,0,R,SK,multicap w/ vole
+791,2021,5,kuoppa,supplement,control,9/14/2021,1,D5,226284,0791,F,0,0,0,0,NA,12.8,12.5,3,1,1,1,1,1,1,1,0,R,JV ,"mutlicap w/ vole, FE collected 5-3"
+792,2021,5,kuoppa,supplement,control,9/14/2021,1,E2,226280,0792,M,0,NA,NA,NA,1,12.7,14.0,1,1,1,1,1,1,1,1,0,R,SK,"multicap w/ vole, FE small"
+793,2021,5,kuoppa,supplement,control,9/14/2021,1,D5,226210,0793,F,0,0,0,0,NA,12.2,14.0,1,1,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, left eye white after processing, more FE collected 5-3"
+794,2021,5,kuoppa,supplement,control,9/14/2021,1,E2,226207,0794,M,0,NA,NA,NA,1,12.5,14.5,1,1,1,1,1,1,1,1,0,R,SK,
+795,2021,5,kuoppa,supplement,control,9/14/2021,1,D1,226189,0795,F,0,1,1,1,NA,13.9,28.0,4,NA,1,1,1,1,1,1,0,R,SK,
+796,2021,5,kuoppa,supplement,control,9/14/2021,1,K5,226252,0796,M,0,NA,NA,NA,0,12.9,13.5,0,1,1,1,1,1,1,1,0,R,JV,
+797,2021,5,kuoppa,supplement,control,9/14/2021,1,G1,226172,0797,M,0,NA,NA,NA,0,12.2,12.0,3,NA,1,1,1,1,1,1,0,R,SK,
+798,2021,5,kuoppa,supplement,control,9/14/2021,1,E6,226278,0798,M,0,NA,NA,NA,0,12.4,12.5,1,1,1,1,1,1,1,1,0,R,JV,
+799,2021,5,kuoppa,supplement,control,9/14/2021,1,A1,226253,0799,F,0,1,1,1,NA,13.2,22.0,0,1,1,1,1,1,1,1,0,R,JV,
+827,2021,5,kuoppa,supplement,control,9/14/2021,2,C6,226144,0827,M,0,NA,NA,NA,0,12.5,14.5,1,1,1,1,1,1,1,1,0,R,JV,
+828,2021,5,kuoppa,supplement,control,9/14/2021,2,J2,226767,0828,F,0,0,0,0,NA,13.3,17.5,3,1,1,1,1,1,1,1,0,R,JV,
+NA,2021,5,puro,supplement,deworm,9/14/2021,1,B1,219900,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,NM,
+NA,2021,5,puro,supplement,deworm,9/14/2021,1,A6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,NM,
+NA,2021,5,puro,supplement,deworm,9/14/2021,1,J5,219907,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,SK,
+810,2021,5,puro,supplement,deworm,9/14/2021,1,E3,226254,0810,M,0,NA,NA,NA,0,13.0,11.0,4,1,1,1,1,1,1,1,1,DP,JV,too cold
+811,2021,5,puro,supplement,deworm,9/14/2021,1,E1,226105,0811,M,0,NA,NA,NA,1,12.7,18.5,3,NA,1,1,1,1,1,1,1,R,SK,
+813,2021,5,puro,supplement,deworm,9/14/2021,1,A4,219738,0813,F,0,1,1,0,NA,13.5,17.0,0,NA,1,1,1,1,1,1,1,R,SK,
+812,2021,5,puro,supplement,deworm,9/14/2021,1,D1,226279,0812,F,0,0,0,0,NA,12.7,11.0,5,1,1,1,1,1,1,1,1,R,JV,
+814,2021,5,puro,supplement,deworm,9/14/2021,1,C1,219708,0814,M,0,NA,NA,NA,0,12.2,12.0,1,NA,1,1,1,1,1,1,1,DP,SK,too cold
+815,2021,5,puro,supplement,deworm,9/14/2021,1,E6,226233,0815,M,0,NA,NA,NA,0,12.8,15.5,4,1,1,1,1,1,1,1,1,R,JV,FR collected 5-3
+816,2021,5,puro,supplement,deworm,9/14/2021,1,K2,219815,0816,M,0,NA,NA,NA,0,12.2,16.5,0,NA,1,1,1,1,1,1,1,R,SK,multicap w/ shrew
+817,2021,5,puro,supplement,deworm,9/14/2021,1,G1,226295,0817,M,0,NA,NA,NA,1,12.9,13.0,9,1,1,1,1,1,1,1,1,R,JV,
+818,2021,5,puro,supplement,deworm,9/14/2021,1,J3,226205,0818,M,0,NA,NA,NA,0,12.3,13.5,4,1,1,1,1,1,1,0,1,R,SK,
+819,2021,5,puro,supplement,deworm,9/14/2021,1,F3,226255,0819,M,0,NA,NA,NA,0,12.8,16.0,5,1,1,1,1,1,1,1,1,R,JV,
+820,2021,5,puro,supplement,deworm,9/14/2021,1,E2,226288,0820,M,0,NA,NA,NA,1,12.8,17.0,0,1,1,1,1,1,1,1,1,R,SK,
+822,2021,5,puro,supplement,deworm,9/14/2021,1,H2,226722,0822,F,0,0,0,0,NA,12.6,11.5,2,1,1,1,1,1,1,1,1,R,SK,
+821,2021,5,puro,supplement,deworm,9/14/2021,1,G3,NA,0821,M,0,NA,NA,NA,0,12.9,12.0,1,1,1,1,1,1,1,0,NA,DP,JV,slow breathing to start
+824,2021,5,puro,supplement,deworm,9/14/2021,1,C3,226287,0824,M,0,NA,NA,NA,0,12.3,12.0,6,1,1,1,1,1,1,1,1,R,SK,
+823,2021,5,puro,supplement,deworm,9/14/2021,1,A5,226232,0823,M,0,NA,NA,NA,0,12.4,11.5,1,1,1,1,1,1,1,1,1,R,JV,
+825,2021,5,puro,supplement,deworm,9/14/2021,1,K1,226264,0825,F,0,0,0,0,NA,12.4,12.0,1,1,1,1,1,1,1,1,1,R,JV,
+826,2021,5,puro,supplement,deworm,9/14/2021,1,I6,219819,0826,M,0,NA,NA,NA,1,13.7,15.0,0,1,1,1,1,1,1,1,1,R,JV,recap (extra ED taken)
+830,2021,5,puro,supplement,deworm,9/14/2021,2,C4,219698,0830,M,0,NA,NA,NA,0,12.1,14.0,9,1,1,1,1,1,1,1,1,R,SK,eye infection
+831,2021,5,puro,supplement,deworm,9/14/2021,2,I6,226206,0831,F,0,0,0,0,NA,12.2,10.0,0,1,1,1,1,1,1,1,1,R,JV,
+832,2021,5,puro,supplement,deworm,9/14/2021,2,D3,219681,0832,M,0,NA,NA,NA,1,12.4,14.5,12,1,1,1,1,1,1,1,1,R,SK,FE small
+NA,2021,5,ketunpesa,control,deworm,9/15/2021,3,I3,219765,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,NM,
+NA,2021,5,ketunpesa,control,deworm,9/15/2021,3,I1,219765,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,NM,
+837,2021,5,ketunpesa,control,deworm,9/15/2021,3,C1,226262,0837,M,0,NA,NA,NA,0,12.6,13.5,1,1,1,1,1,1,1,1,1,R,JV,
+838,2021,5,ketunpesa,control,deworm,9/15/2021,3,A5,226219,0838,F,0,0,0,0,NA,12.4,13.5,25,1,1,1,1,1,1,1,1,R,SK,
+840,2021,5,ketunpesa,control,deworm,9/15/2021,3,I6,219653,0840,M,0,NA,NA,NA,0,13.2,17.0,4,1,1,1,1,1,1,1,1,R,JV,
+839,2021,5,ketunpesa,control,deworm,9/15/2021,3,B4,226239,0839,F,0,1,1,0,NA,13.0,20.5,1,1,1,1,1,1,1,1,1,S,SK,
+841,2021,5,ketunpesa,control,deworm,9/15/2021,3,K4,226237,0841,F,0,0,0,0,NA,12.4,13.0,9,1,1,1,1,1,1,1,1,R,SK,
+842,2021,5,ketunpesa,control,deworm,9/15/2021,3,A1,219631,0842,M,0,NA,NA,NA,0,12.7,13.5,0,1,1,1,1,1,1,1,1,R,JV,
+NA,2021,5,kuoppa,supplement,control,9/15/2021,3,"A1, C5, H3, G5",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"tipped, dirty (pred, wind?)"
+NA,2021,5,kuoppa,supplement,control,9/15/2021,3,"I6, K6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"tipped, clean"
+NA,2021,5,kuoppa,supplement,control,9/15/2021,3,HI,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NM,vole escaped when trap checked/picked up
+833,2021,5,kuoppa,supplement,control,9/15/2021,3,A6,219691,0833,F,0,0,0,0,NA,12.9,14.0,1,1,1,1,1,1,1,1,0,R,JV,
+834,2021,5,kuoppa,supplement,control,9/15/2021,3,B2,219649,0834,F,0,0,0,0,NA,12.6,12.0,0,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+835,2021,5,kuoppa,supplement,control,9/15/2021,3,B3,226197,0835,M,0,NA,NA,NA,0,12.1,13.0,1,NA,1,1,1,1,1,1,0,R,SK,
+836,2021,5,kuoppa,supplement,control,9/15/2021,3,D1,219657,0836,M,0,NA,NA,NA,0,12.8,13.0,6,1,1,1,1,1,1,1,0,R,JV,
+849,2021,5,kuoppa,supplement,control,9/15/2021,4,A5,226256,0849,M,0,NA,NA,NA,0,12.0,9.0,0,1,1,0,0,0,1,0,0,R,JV,FR not collected
+843,2021,5,puro,supplement,deworm,9/15/2021,3,D1,226245,0843,M,0,NA,NA,NA,1,13.2,15.0,0,1,1,1,1,1,1,1,1,R,JV,
+844,2021,5,puro,supplement,deworm,9/15/2021,3,E6,219776,0844,F,0,0,0,0,NA,12.7,13.0,8,NA,1,1,1,1,1,1,1,R,SK,
+845,2021,5,puro,supplement,deworm,9/15/2021,3,B1,226266,0845,F,0,0,0,0,NA,13.7,19.5,0,1,1,1,1,1,1,1,1,S,JV,bleeder
+846,2021,5,puro,supplement,deworm,9/15/2021,3,G1,219732,0846,M,0,NA,NA,NA,1,12.1,15.5,1,NA,1,1,1,1,1,1,1,R,SK,
+847,2021,5,puro,supplement,deworm,9/15/2021,3,A6,226297,0847,F,0,0,0,0,NA,12.8,10.5,3,1,1,1,1,1,1,1,1,R,JV,
+848,2021,5,puro,supplement,deworm,9/15/2021,3,J5,226240,0848,F,0,0,0,0,NA,12.4,8.0,0,1,1,0,0,0,1,1,1,R,JV,FR not fresh
+850,2021,5,helmipollo,control,control,9/17/2021,1,K1,219671,0850,F,0,0,0,0,NA,12.5,16.0,0,1,1,1,1,1,1,1,0,S,JV,multicap w/ vole
+851,2021,5,helmipollo,control,control,9/17/2021,1,K1,219774,0851,F,0,0,0,0,NA,11.8,14.5,0,NA,1,1,1,1,1,1,0,R,SK,multicap w/ vole
+852,2021,5,helmipollo,control,control,9/17/2021,1,A4,226202,0852,M,0,NA,NA,NA,0,12.8,12.0,0,1,1,1,1,1,1,1,0,R,JV,slow breathing to start
+853,2021,5,helmipollo,control,control,9/17/2021,1,C4,226120,0853,M,0,NA,NA,NA,1,12.3,14.5,1,NA,1,1,1,1,1,1,0,R,SK,
+854,2021,5,helmipollo,control,control,9/17/2021,1,D1,219627,0854,F,0,1,0,0,NA,12.5,14.0,0,1,1,1,1,1,1,1,0,R,SK,
+855,2021,5,helmipollo,control,control,9/17/2021,1,J5,219607,0855,M,0,NA,NA,NA,1,12.4,15.0,0,1,1,1,1,1,1,1,0,R,JV,
+856,2021,5,helmipollo,control,control,9/17/2021,1,D2,219662,0856,M,0,NA,NA,NA,1,13.2,14.5,1,1,1,1,1,1,1,1,0,DP,JV,"bleeder, found in handling bag on grid 5-2"
+858,2021,5,helmipollo,control,control,9/17/2021,1,J1,226190,0858,M,0,NA,NA,NA,0,11.5,14.5,0,NA,1,1,1,1,1,1,0,R,SK,
+857,2021,5,helmipollo,control,control,9/17/2021,1,G3,226273,0857,M,0,NA,NA,NA,1,12.9,11.0,0,1,1,1,1,1,1,1,0,R,JV,
+859,2021,5,helmipollo,control,control,9/17/2021,1,G5,219803,0859,F,0,0,0,0,NA,12.6,14.0,0,NA,1,1,1,1,1,1,0,R,SK,
+860,2021,5,helmipollo,control,control,9/17/2021,1,D5,226146,0860,M,0,NA,NA,NA,1,13.0,13.0,1,NA,1,1,1,1,1,1,0,R,JV,
+861,2021,5,helmipollo,control,control,9/17/2021,1,E1,226118,0861,F,0,0,0,0,NA,12.8,20.0,0,NA,1,1,1,1,1,1,0,R,SK,
+862,2021,5,helmipollo,control,control,9/17/2021,1,B2,219737,0862,M,0,NA,NA,NA,0,13.5,17.0,1,NA,1,1,1,1,1,1,0,R,JV,
+863,2021,5,helmipollo,control,control,9/17/2021,1,J3,226080,0863,F,0,1,1,0,NA,12.7,18.5,0,NA,1,1,1,1,1,1,0,R,SK,
+894,2021,5,helmipollo,control,control,9/17/2021,2,A5,226719,0894,M,0,NA,NA,NA,1,12.9,14.5,0,1,1,1,1,1,1,1,0,R,JV,
+895,2021,5,helmipollo,control,control,9/17/2021,2,H4,219839,0895,F,0,0,0,0,NA,12.4,14.0,0,NA,1,1,1,1,1,1,0,R,JV,
+864,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,K3,219651,0864,M,0,NA,NA,NA,1,13.4,17.5,0,1,1,1,1,1,1,1,0,S,JV,"multicap w/ vole, bleeder"
+865,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,K3,219652,0865,F,0,0,0,0,NA,13.0,16.5,1,1,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, FE+FR collected 5-3"
+866,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,C1,226269,0866,F,0,0,0,0,NA,12.5,15.5,0,1,1,1,1,1,1,1,0,R,SK,"multicap w/ 2 voles, FE small"
+NA,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,C1,219743,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,SK,multicap w/ 2 voles
+867,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,A5,219895,0867,F,0,0,0,0,NA,12.8,13.0,0,NA,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, more FE collected 5-4"
+868,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,C1,219603,0868,M,0,NA,NA,NA,0,12.2,13.5,1,1,1,1,1,1,0,0,0,R,SK,multicap w/ 2 voles
+869,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,A5,219601,0869,F,0,1,0,0,NA,12.6,14.0,7,1,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+870,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,A6,219604,0870,F,0,0,0,0,NA,12.1,10.5,0,1,1,1,1,1,1,1,0,R,SK,"multicap w/ vole, FE collected 5-3"
+871,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,E6,219887,0871,M,0,NA,NA,NA,0,13.0,14.0,2,NA,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, FE small"
+872,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,A6,219623,0872,F,0,0,0,0,NA,11.9,11.0,4,1,1,1,1,1,1,1,0,R,SK,multicap w/ vole
+873,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,E6,219682,0873,M,0,NA,NA,NA,0,13.4,14.0,8,1,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, large blood sample taken"
+NA,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,C6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,SK,weasel in trap
+874,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,E3,219726,0874,M,0,NA,NA,NA,1,12.5,16.0,1,NA,1,1,1,1,1,1,0,R,SK,
+875,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,E4,219685,0875,M,0,NA,NA,NA,1,12.9,13.0,4,1,1,1,1,1,1,1,0,R,JV,
+876,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,H2,219793,0876,M,0,NA,NA,NA,1,12.3,14.5,1,NA,1,1,1,1,1,1,0,R,SK,
+877,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,B4,226095,0877,F,0,1,1,0,NA,13.0,22.0,0,NA,1,1,1,1,1,1,0,R,SK,large blood sample taken
+878,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,D3,219696,0878,F,0,0,0,0,NA,12.4,12.0,4,1,1,1,0,1,1,1,0,R,JV,"BC contaminated with Trizol, thrown out, BS also contaminated"
+880,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,B1,226764,0880,F,0,0,0,0,NA,13.0,16.0,0,1,1,1,1,1,1,1,0,R,JV,
+879,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,A2,226117,0879,M,0,NA,NA,NA,0,12.2,14.5,0,NA,1,1,1,1,1,1,0,R,SK,
+881,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,B2,219655,0881,F,0,0,0,0,NA,12.3,12.0,0,1,1,1,1,1,1,1,0,R,JV,
+882,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,G5,226141,0882,F,0,1,1,0,NA,12.7,19.0,0,NA,1,1,1,1,1,1,0,R,SK,
+883,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,B5,226740,0883,M,0,NA,NA,NA,0,12.4,12.0,1,1,1,1,1,1,1,1,0,R,JV,
+884,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,K1,226087,0884,F,0,1,0,0,NA,13.4,20.0,0,NA,1,1,1,1,1,1,0,R,SK,multicap w/ vole
+885,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,K1,219648,0885,M,0,NA,NA,NA,1,12.7,13.0,0,1,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+886,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,K4,226090,0886,M,0,NA,NA,NA,0,13.4,21.0,0,NA,1,1,1,1,1,1,0,R,SK,
+887,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,H1,226753,0887,M,0,NA,NA,NA,1,13.4,13.5,1,1,1,1,1,1,1,1,0,R,JV,
+888,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,K2,219758,0888,F,0,0,0,0,NA,12.4,13.5,1,NA,1,1,1,1,1,1,0,R,SK,FR collected 5-4
+889,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,J5,219635,0889,F,0,0,0,0,NA,12.2,11.0,2,1,1,1,1,1,1,1,0,R,JV,
+890,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,H5,226741,0890,F,0,0,0,0,NA,11.7,9.0,2,1,1,NA,NA,NA,1,0,0,R,SK,
+891,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,K6,219609,0891,F,0,0,0,0,NA,13.1,15.5,1,1,1,1,1,1,1,1,0,R,JV,
+892,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,F1,219634,0892,M,0,NA,NA,NA,1,12.6,13.5,2,1,1,1,1,1,1,1,0,R,JV,
+893,2021,5,vaarinkorpi,supplement,control,9/17/2021,1,F5,226709,0893,M,0,NA,NA,NA,0,12.1,13.0,13,1,1,1,1,1,1,1,0,R,SK,
+896,2021,5,vaarinkorpi,supplement,control,9/17/2021,2,H5,226243,0896,M,0,NA,NA,NA,1,12.4,11.5,1,1,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+897,2021,5,vaarinkorpi,supplement,control,9/17/2021,2,E4,219981,0897,F,0,1,1,0,NA,13.4,22.5,0,NA,1,1,1,1,1,1,0,R,SK,"bleeder, large blood sample taken"
+898,2021,5,vaarinkorpi,supplement,control,9/17/2021,2,H5,226795,0898,M,0,NA,NA,NA,1,11.6,9.0,0,1,1,NA,NA,NA,1,1,0,R,JV,"multicap w/ vole, more FE 5-3"
+899,2021,5,vaarinkorpi,supplement,control,9/17/2021,2,C5,226216,0899,M,0,NA,NA,NA,0,12.1,13.5,0,1,1,1,1,1,1,1,0,R,SK,
+900,2021,5,vaarinkorpi,supplement,control,9/17/2021,2,D3,226777,0900,F,0,0,0,0,NA,13.1,13.5,2,1,1,1,1,1,1,1,0,R,JV,
+901,2021,5,vaarinkorpi,supplement,control,9/17/2021,2,A5,226213,0901,M,0,NA,NA,NA,1,13.3,16.5,1,1,1,1,1,1,1,1,0,R,JV,
+902,2021,5,vaarinkorpi,supplement,control,9/17/2021,2,F5,219746,0902,F,0,0,0,0,NA,11.8,10.0,2,1,1,1,1,1,1,1,0,R,SK,
+903,2021,5,helmipollo,control,control,9/18/2021,3,F2,226249,0903,M,0,NA,NA,NA,1,12.4,12.0,1,1,1,1,1,1,1,1,0,R,JV,dirty swab
+904,2021,5,vaarinkorpi,supplement,control,9/18/2021,3,B1,219826,0904,F,0,0,0,0,NA,12.8,12.0,1,NA,1,1,1,1,0,1,0,R,JV,"multicap w/ vole, FR small, no FE"
+905,2021,5,vaarinkorpi,supplement,control,9/18/2021,3,A5,219799,0905,F,0,0,0,0,NA,12.3,15.0,0,NA,1,1,1,1,1,1,0,R,SK,
+906,2021,5,vaarinkorpi,supplement,control,9/18/2021,3,B1,226276,0906,M,0,NA,NA,NA,1,13.1,15.5,0,1,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, dirty swab"
+907,2021,5,vaarinkorpi,supplement,control,9/18/2021,3,K4,226170,0907,M,0,NA,NA,NA,1,12.8,17.5,0,NA,1,1,1,1,1,1,0,R,SK,
+908,2021,5,vaarinkorpi,supplement,control,9/18/2021,3,B2,226768,0908,M,0,NA,NA,NA,1,12.8,14.0,0,1,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+909,2021,5,vaarinkorpi,supplement,control,9/18/2021,3,A1,226217,0909,M,0,NA,NA,NA,0,13.1,14.0,0,1,1,1,1,1,1,1,0,R,JV,
+910,2021,5,vaarinkorpi,supplement,control,9/18/2021,3,I6,226758,0910,M,0,NA,NA,NA,0,12.8,15.5,6,1,1,1,1,1,1,1,0,R,SK,
+911,2021,5,vaarinkorpi,supplement,control,9/18/2021,3,C1,226246,0911,F,0,0,0,0,NA,13.0,14.5,1,1,1,1,1,1,1,1,0,R,JV,
+NA,2021,6,hevonen,control,control,10/3/2021,1,J2,226222,NA,NA,NA,NA,NA,NA,NA,NA,13.5,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,
+NA,2021,6,hevonen,control,control,10/3/2021,1,F2,219949,NA,NA,NA,NA,NA,NA,NA,NA,21,NA,NA,NA,NA,NA,NA,NA,NA,0,R,NM,
+NA,2021,6,hevonen,control,control,10/3/2021,1,A6,219852,NA,NA,NA,NA,NA,NA,NA,NA,14.5,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,multicap w/ shrew
+NA,2021,6,hevonen,control,control,10/3/2021,1,C1,219756,NA,NA,NA,NA,NA,NA,NA,NA,15.5,NA,NA,NA,NA,NA,NA,NA,NA,0,R,NM,
+NA,2021,6,hevonen,control,control,10/3/2021,1,E6,219865,NA,NA,NA,NA,NA,NA,NA,NA,13.5,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,multicap w/ 2 voles
+NA,2021,6,hevonen,control,control,10/3/2021,1,E1,219638,NA,NA,NA,NA,NA,NA,NA,NA,14.5,NA,NA,NA,NA,NA,NA,NA,NA,0,R,NM,
+NA,2021,6,hevonen,control,control,10/3/2021,1,E6,219712,NA,NA,NA,NA,NA,NA,NA,NA,13.5,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,multicap w/ 2 voles
+NA,2021,6,hevonen,control,control,10/3/2021,1,D1,219824,NA,NA,NA,NA,NA,NA,NA,NA,17.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,NM,
+NA,2021,6,hevonen,control,control,10/3/2021,1,E6,219620,NA,NA,NA,NA,NA,NA,NA,NA,13.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,multicap w/ 2 voles
+NA,2021,6,hevonen,control,control,10/3/2021,1,B3,219656,NA,NA,NA,NA,NA,NA,NA,NA,21.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,
+NA,2021,6,hevonen,control,control,10/3/2021,1,A4,219645,NA,NA,NA,NA,NA,NA,NA,NA,15.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,NM,
+NA,2021,6,hevonen,control,control,10/3/2021,1,K6,219879,NA,NA,NA,NA,NA,NA,NA,NA,15.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,
+NA,2021,6,hevonen,control,control,10/3/2021,1,K5,219795,NA,NA,NA,NA,NA,NA,NA,NA,14.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,
+NA,2021,6,hevonen,control,control,10/3/2021,1,C3,226155,NA,NA,NA,NA,NA,NA,NA,NA,16.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,NM,
+NA,2021,6,hevonen,control,control,10/3/2021,1,A2,226717,NA,NA,NA,NA,NA,NA,NA,NA,15.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,
+NA,2021,6,hevonen,control,control,10/3/2021,1,I1,226106,NA,NA,NA,NA,NA,NA,NA,NA,15.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,NM,scanned sheet missing
+NA,2021,6,hevonen,control,control,10/3/2021,1,I6,219840,NA,NA,NA,NA,NA,NA,NA,NA,15.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,scanned sheet missing
+912,2021,6,radio,supplement,control,10/3/2021,1,H3,226257,0912,F,0,0,0,0,NA,12.8,14.0,0,1,1,1,1,1,0,0,0,R,JV,multicap w/ vole  
+913,2021,6,radio,supplement,control,10/3/2021,1,H3,219567,0913,F,0,0,0,0,NA,12.6,13.5,1,NA,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, FE small"
+914,2021,6,radio,supplement,control,10/3/2021,1,G1,226286,0914,M,0,NA,NA,NA,1,12.6,14.0,4,1,1,1,1,1,0,0,0,R,JV,multicap w/ vole
+915,2021,6,radio,supplement,control,10/3/2021,1,G1,219858,0915,F,0,0,0,0,NA,13.0,15.5,1,NA,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+916,2021,6,radio,supplement,control,10/3/2021,1,B1,226282,0916,M,0,NA,NA,NA,0,13.1,14.5,0,NA,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, FR small, FE collected 6-2"
+917,2021,6,radio,supplement,control,10/3/2021,1,B1,226260,0917,M,0,NA,NA,NA,1,12.7,15.0,0,1,1,1,1,1,0,1,0,R,JV,"multicap w/ vole, FR small"
+918,2021,6,radio,supplement,control,10/3/2021,1,A3,226229,0918,M,0,NA,NA,NA,0,13.0,14.5,0,NA,1,1,1,1,0,1,0,R,JV,"multicap w/ vole, bleeder"
+919,2021,6,radio,supplement,control,10/3/2021,1,A3,219788,0919,F,0,0,0,0,NA,12.6,14.5,0,NA,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, FE, FR collected 6-2, FR not fresh"
+920,2021,6,radio,supplement,control,10/3/2021,1,F5,219715,0920,M,0,NA,NA,NA,1,13.1,18.0,1,NA,1,1,1,1,1,1,0,R,JV,bleeder
+921,2021,6,radio,supplement,control,10/3/2021,1,F1,219932,0921,M,0,NA,NA,NA,0,13.3,19.5,0,NA,1,1,1,1,1,1,0,R,JV,bleeder
+922,2021,6,radio,supplement,control,10/3/2021,1,F4,226011,0922,F,0,0,0,0,NA,13.9,22.0,0,NA,1,1,1,1,1,1,0,R,JV,bleeder
+923,2021,6,radio,supplement,control,10/3/2021,1,E3,226259,0923,F,0,0,0,0,NA,12.9,14.5,1,NA,1,1,1,1,1,1,0,R,JV,
+924,2021,6,radio,supplement,control,10/3/2021,1,J1,226726,0924,F,0,0,0,0,NA,12.9,13.0,4,NA,1,1,1,1,1,1,0,R,JV,multicap w/ shrew
+925,2021,6,radio,supplement,control,10/3/2021,1,K1,219964,0925,M,0,NA,NA,NA,0,13.6,21.5,2,NA,1,1,1,1,1,1,0,R,JV,small BR
+926,2021,6,radio,supplement,control,10/3/2021,1,H5,226208,0926,M,0,NA,NA,NA,0,12.8,14.0,0,1,1,1,1,1,1,1,0,R,JV,bleeder
+927,2021,6,radio,supplement,control,10/3/2021,1,G4,226228,0927,M,0,NA,NA,NA,0,12.3,13.0,1,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+928,2021,6,radio,supplement,control,10/3/2021,1,A1,226204,0928,M,0,NA,NA,NA,0,12.8,16.5,0,1,1,1,1,1,1,1,0,R,NM,
+929,2021,6,radio,supplement,control,10/3/2021,1,J4,226275,0929,F,0,0,0,0,NA,13.2,14.0,0,1,1,1,1,1,1,1,0,R,JV,
+930,2021,6,radio,supplement,control,10/3/2021,1,B5,226285,0930,M,0,NA,NA,NA,1,12.7,16.0,1,1,1,1,1,1,1,1,0,R,NM,
+931,2021,6,radio,supplement,control,10/3/2021,1,K4,226290,0931,M,0,NA,NA,NA,0,12.9,13.5,0,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+NA,2021,6,radio,supplement,control,10/3/2021,2,G1,226223,NA,NA,NA,NA,NA,NA,NA,NA,13.5,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,multicap w/ vole
+NA,2021,6,radio,supplement,control,10/3/2021,2,G1,226265,NA,NA,NA,NA,NA,NA,NA,NA,16.5,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,multicap w/ vole
+NA,2021,6,radio,supplement,control,10/3/2021,2,B4,219946,NA,NA,NA,NA,NA,NA,NA,NA,21.5,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,
+NA,2021,6,radio,supplement,control,10/3/2021,2,B5,226299,NA,NA,NA,NA,NA,NA,NA,NA,16.5,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,
+NA,2021,6,radio,supplement,control,10/3/2021,2,F5,219739,NA,NA,NA,NA,NA,NA,NA,NA,16.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,
+NA,2021,6,radio,supplement,control,10/3/2021,2,J5,226215,NA,NA,NA,NA,NA,NA,NA,NA,14.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,
+NA,2021,6,radio,supplement,control,10/3/2021,2,J3,226292,NA,NA,NA,NA,NA,NA,NA,NA,12.5,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,
+932,2021,6,hevonen,control,control,10/4/2021,3,A1,219695,0932,M,0,NA,NA,NA,0,12.7,15.5,0,1,1,1,1,1,0,0,0,R,JV,"multicap w/ vole (1 of 2), bleeder, scan missing"
+933,2021,6,hevonen,control,control,10/4/2021,3,I1,219898,0933,F,0,0,0,0,NA,13.8,17.0,0,NA,1,1,1,1,1,0,0,R,NM,multicap w/ vole (1 of 2)
+934,2021,6,hevonen,control,control,10/4/2021,3,A1,226781,0934,M,0,NA,NA,NA,0,13.4,14.5,0,NA,1,1,1,1,0,0,0,R,JV,multicap w/ vole (2 of 2)
+935,2021,6,hevonen,control,control,10/4/2021,3,I1,226168,0935,F,0,0,0,0,NA,12.6,15.0,0,NA,1,1,1,1,0,0,0,R,NM,multicap w/ vole (2 of 2)
+937,2021,6,hevonen,control,control,10/4/2021,3,E1,219638,0937,F,0,0,0,0,NA,13.6,14.5,0,NA,1,1,1,1,1,0,NA,R,JV,multicap w/ vole (1 of 2)
+936,2021,6,hevonen,control,control,10/4/2021,3,B2,219664,0936,M,0,NA,NA,NA,1,12.7,17.0,0,1,1,1,1,1,1,0,0,R,NM,multicap w/ vole (1 of 2)
+938,2021,6,hevonen,control,control,10/4/2021,3,E1,219824,0938,M,0,NA,NA,NA,1,13.3,17.0,1,NA,1,1,1,1,1,1,NA,R,JV,"multicap w/ vole (2 of 2), bleeder"
+939,2021,6,hevonen,control,control,10/4/2021,3,B2,219656,0939,M,0,NA,NA,NA,0,13.5,20.0,0,NA,1,1,1,1,1,1,NA,R,NM,"multicap w/ vole (2 of 2), bleeder"
+940,2021,6,hevonen,control,control,10/4/2021,3,K1,226721,0940,M,0,NA,NA,NA,0,13.2,17.0,3,1,1,1,1,1,1,1,0,R,JV,FR soaked in urine
+941,2021,6,hevonen,control,control,10/4/2021,3,C2,219756,0941,F,0,0,0,0,NA,12.7,15.5,1,NA,1,1,1,1,1,1,NA,R,NM,
+942,2021,6,hevonen,control,control,10/4/2021,3,A4,219645,0942,M,0,NA,NA,NA,0,13.0,15.0,0,NA,1,1,1,1,1,1,NA,R,JV,
+943,2021,6,hevonen,control,control,10/4/2021,3,C1,226155,0943,M,0,NA,NA,NA,0,12.6,16.0,0,NA,1,1,1,1,1,1,NA,R,NM,
+944,2021,6,hevonen,control,control,10/4/2021,3,H1,226106,0944,M,0,NA,NA,NA,0,13.3,15.0,1,NA,1,1,1,1,1,1,NA,R,JV,
+945,2021,6,hevonen,control,control,10/4/2021,3,G4,219852,0945,F,0,0,0,0,NA,12.5,14.5,0,NA,1,1,1,1,1,1,NA,R,NM,
+946,2021,6,hevonen,control,control,10/4/2021,3,G3,226222,0946,M,0,NA,NA,NA,0,12.8,13.5,5,1,1,1,1,1,1,1,NA,R,JV,dirty swab
+947,2021,6,hevonen,control,control,10/4/2021,3,I2,219949,0947,M,0,NA,NA,NA,0,13.5,21.0,1,NA,1,1,1,1,1,1,NA,R,NM,
+948,2021,6,hevonen,control,control,10/4/2021,3,I6,219620,0948,F,0,0,0,0,NA,13.3,13.0,2,NA,1,1,1,1,1,1,NA,R,JV,
+949,2021,6,hevonen,control,control,10/4/2021,3,G6,219840,0949,M,0,NA,NA,NA,0,12.5,15.0,0,NA,1,1,1,1,0,0,NA,R,NM,multicap w/ vole (1 of 2)
+950,2021,6,hevonen,control,control,10/4/2021,3,K4,219795,0950,F,0,0,0,0,NA,12.7,14.0,3,NA,1,1,1,1,1,1,NA,R,JV,
+951,2021,6,hevonen,control,control,10/4/2021,3,G6,219865,0951,F,0,0,0,0,NA,12.6,13.5,0,NA,1,1,1,1,0,0,NA,R,NM,multicap w/ vole (2 of 2)
+952,2021,6,hevonen,control,control,10/4/2021,3,J5,219991,0952,M,0,NA,NA,NA,0,13.5,16.5,5,NA,1,1,1,1,1,1,0,R,JV,
+953,2021,6,hevonen,control,control,10/4/2021,3,K5,219879,0953,F,0,0,0,0,NA,12.7,15.0,0,NA,1,1,1,1,1,1,NA,R,NM,
+956,2021,6,hevonen,control,control,10/4/2021,4,E6,219712,0956,M,0,NA,NA,NA,0,13.0,NA,1,1,1,0,1,1,1,1,NA,R,JV,FR not fresh
+954,2021,6,radio,supplement,control,10/4/2021,3,C5,226299,0954,F,0,0,0,0,NA,12.8,15,2,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+955,2021,6,radio,supplement,control,10/4/2021,3,I6,219820,0955,F,0,0,0,0,NA,13.1,14.5,0,NA,1,1,1,1,1,1,0,R,JV,"FR not fresh, accidently centrifuged BR for 6 min"
+973,2021,6,asema,control,control,10/6/2021,1,D1,226091,0973,M,0,NA,NA,NA,1,13.7,20.5,NA,NA,1,1,1,1,0,0,0,R,JV,multicap w/ vole
+974,2021,6,asema,control,control,10/6/2021,1,D1,226748,0974,F,0,0,0,0,NA,12.7,15.0,NA,NA,1,1,1,1,0,0,0,R,JV,multicap w/ vole
+975,2021,6,asema,control,control,10/6/2021,1,G3,219659,0975,M,0,NA,NA,NA,0,13.1,16.5,NA,NA,1,1,1,1,1,1,0,R,JV,FR not fresh
+976,2021,6,asema,control,control,10/6/2021,1,H1,226001,0976,F,0,1,1,0,NA,14.1,27.5,NA,NA,1,1,1,1,1,1,0,R,JV,
+977,2021,6,asema,control,control,10/6/2021,1,F3,226792,0977,F,0,0,0,0,NA,13.1,17.5,NA,NA,1,1,1,1,1,1,0,R,JV,
+978,2021,6,asema,control,control,10/6/2021,1,G6,226772,0978,F,0,0,0,0,NA,13.0,18.0,NA,NA,1,1,1,1,1,1,0,R,JV,
+979,2021,6,asema,control,control,10/6/2021,1,K3,226770,0979,F,0,0,0,0,NA,12.5,13.5,NA,NA,1,1,1,1,1,1,0,R,JV,"FR not fresh, accidentally processed a second time (sampes 0979 and 0996 from the same occasion)"
+980,2021,6,asema,control,control,10/6/2021,1,A2,226729,0980,F,0,0,0,0,NA,12.4,13.5,NA,NA,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+981,2021,6,asema,control,control,10/6/2021,1,A2,226725,0981,F,0,0,0,0,NA,12.8,13.5,NA,1,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+982,2021,6,asema,control,control,10/6/2021,1,G2,226730,0982,F,0,0,0,0,NA,12.9,15.0,NA,1,1,1,1,1,1,1,0,R,JV,"left ear gone, lots of scar tissue behind missing ear"
+983,2021,6,asema,control,control,10/6/2021,1,G1,226706,0983,M,0,NA,NA,NA,0,13.2,17.5,NA,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+984,2021,6,asema,control,control,10/6/2021,1,C2,226700,0984,M,0,NA,NA,NA,0,12.6,13.0,NA,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+994,2021,6,asema,control,control,10/6/2021,3,E6,226798,0994,M,0,NA,NA,NA,1,13.3,18.5,NA,1,1,1,1,1,1,1,0,R,JV, FR not fresh
+995,2021,6,asema,control,control,10/6/2021,3,K3,226755,0995,M,0,NA,NA,NA,0,12.4,15.5,NA,1,1,1,1,1,0,0,0,R,NM,multicap w/ vole
+996,2021,6,asema,control,control,10/6/2021,3,K3,226770,0996,F,0,0,0,0,NA,12.5,14.0,NA,NA,1,1,1,1,0,0,0,R,NM,"multicap w/ vole, accidentally processed a second time (sampes 0979 and 0996 from the same occasion)"
+997,2021,6,asema,control,control,10/6/2021,3,H3,226752,0997,M,0,NA,NA,NA,1,13.1,15.0,NA,1,1,1,1,1,1,1,0,R,JV,
+998,2021,6,asema,control,control,10/6/2021,3,I5,226731,0998,M,0,NA,NA,NA,0,9.4,5.5,NA,1,0,NA,NA,NA,1,1,0,R,NM,"No SR, mouth too small for swab, very smol boi"
+999,2021,6,asema,control,control,10/6/2021,3,A2,226718,0999,F,0,0,0,0,NA,12.7,14.5,NA,1,1,1,1,1,1,1,0,R,JV,FR not fresh
+957,2021,6,janakkala,supplement,deworm,10/6/2021,1,C1,226211,0957,F,0,0,0,0,NA,13.0,17.0,NA,NA,1,1,1,1,0,0,1,DP,JV,multicap w/ vole
+958,2021,6,janakkala,supplement,deworm,10/6/2021,1,C1,219798,0958,F,0,1,0,1,NA,13.3,22.0,NA,NA,1,1,1,1,0,0,1,R,JV,multicap w/ vole
+959,2021,6,janakkala,supplement,deworm,10/6/2021,1,K6,226702,0959,M,0,NA,NA,NA,0,12.9,15.0,NA,NA,1,1,1,1,1,1,1,R,JV,
+960,2021,6,janakkala,supplement,deworm,10/6/2021,1,J2,226746,0960,F,0,0,0,0,NA,12.2,12.5,NA,NA,1,1,1,1,1,1,1,R,JV,
+961,2021,6,janakkala,supplement,deworm,10/6/2021,1,K1,219514,0961,M,0,NA,NA,NA,1,12.6,13.5,NA,NA,1,1,1,1,1,1,1,R,JV,
+962,2021,6,janakkala,supplement,deworm,10/6/2021,1,B4,226747,0962,F,0,0,0,0,NA,14.6,15.5,NA,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+963,2021,6,janakkala,supplement,deworm,10/6/2021,1,D4,226799,0963,F,0,0,0,0,NA,12.9,14.5,NA,NA,1,1,1,1,1,1,1,R,JV,
+964,2021,6,janakkala,supplement,deworm,10/6/2021,1,E6,219871,0964,M,0,NA,NA,NA,0,12.7,15.5,NA,NA,1,1,1,1,1,1,1,R,JV,
+965,2021,6,janakkala,supplement,deworm,10/6/2021,1,G1,219882,0965,F,0,0,0,0,NA,13.1,15.0,NA,NA,1,1,1,1,1,1,1,R,JV,"FR not fresh, bleeder"
+966,2021,6,janakkala,supplement,deworm,10/6/2021,1,F1,219775,0966,F,0,0,0,0,NA,12.9,18.0,NA,NA,1,1,1,1,1,1,1,R,JV,
+967,2021,6,janakkala,supplement,deworm,10/6/2021,1,B2,226162,0967,F,0,0,0,0,NA,12.8,13.5,NA,NA,1,1,1,1,1,1,1,R,JV,multicap w/ vole
+968,2021,6,janakkala,supplement,deworm,10/6/2021,1,B2,219761,0968,F,0,0,0,0,NA,13.3,14.0,NA,NA,1,1,1,1,1,1,1,R,JV,"multicap w/ vole, FR small"
+969,2021,6,janakkala,supplement,deworm,10/6/2021,1,A4,226713,0969,F,0,0,0,0,NA,13.0,13.0,NA,1,1,1,1,1,1,1,1,R,JV,
+970,2021,6,janakkala,supplement,deworm,10/6/2021,1,A2,226716,0970,F,0,0,0,0,NA,13.0,15.5,NA,1,1,1,1,1,1,1,1,R,JV,"dirty swab, FR not fresh"
+971,2021,6,janakkala,supplement,deworm,10/6/2021,1,E3,226784,0971,F,0,0,0,0,NA,12.8,13.0,NA,1,1,1,1,1,1,1,1,R,JV,dirty swab
+972,2021,6,janakkala,supplement,deworm,10/6/2021,1,F4,226732,0972,M,0,NA,NA,NA,1,12.2,12.5,NA,1,1,1,1,1,1,1,1,R,JV,FR not fresh
+NA,2021,6,janakkala,supplement,deworm,10/6/2021,2,H1,226735,NA,NA,NA,NA,NA,NA,NA,NA,16.0,NA,NA,NA,NA,NA,NA,NA,NA,1,R,JV,New
+NA,2021,6,janakkala,supplement,deworm,10/6/2021,2,H3,226728,NA,NA,NA,NA,NA,NA,NA,NA,15.5,NA,NA,NA,NA,NA,NA,NA,NA,1,R,JV,New
+NA,2021,6,janakkala,supplement,deworm,10/6/2021,2,F1,219716,NA,NA,NA,NA,NA,NA,NA,NA,13.0,NA,NA,NA,NA,NA,NA,NA,NA,1,R,JV,
+NA,2021,6,janakkala,supplement,deworm,10/6/2021,2,H5,219818,NA,NA,NA,NA,NA,NA,NA,NA,14.0,NA,NA,NA,NA,NA,NA,NA,NA,1,R,JV,
+985,2021,6,janakkala,supplement,deworm,10/7/2021,3,C6,226794,0985,F,0,0,0,0,NA,13.0,14.0,NA,1,1,1,1,1,0,0,1,R,JV,multicap w/ vole
+986,2021,6,janakkala,supplement,deworm,10/7/2021,3,J1,226765,0986,F,0,0,0,0,NA,13.0,16.0,NA,NA,1,1,1,1,1,1,1,R,NM,FR not fresh
+987,2021,6,janakkala,supplement,deworm,10/7/2021,3,C6,219790,0987,M,0,NA,NA,NA,0,13.3,15.0,NA,NA,1,1,1,1,0,0,1,R,JV,multicap w/ vole
+988,2021,6,janakkala,supplement,deworm,10/7/2021,3,I2,226728,0988,M,0,NA,NA,NA,0,12.7,15.5,NA,NA,1,1,1,1,1,1,NA,R,NM,
+989,2021,6,janakkala,supplement,deworm,10/7/2021,3,H3,226714,0989,M,0,NA,NA,NA,0,13.3,14.0,NA,NA,1,1,1,1,1,1,1,R,JV,
+990,2021,6,janakkala,supplement,deworm,10/7/2021,3,I3,226786,0990,M,0,NA,NA,NA,0,12.5,15.0,NA,NA,1,1,1,1,1,1,1,R,NM,
+991,2021,6,janakkala,supplement,deworm,10/7/2021,3,H1,226241,0991,M,0,NA,NA,NA,0,13.2,13.0,NA,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+992,2021,6,janakkala,supplement,deworm,10/7/2021,3,B4,226743,0992,F,0,0,0,0,NA,12.5,14.5,NA,1,1,1,1,1,1,1,1,R,NM,
+993,2021,6,janakkala,supplement,deworm,10/7/2021,3,K3,226780,0993,M,0,NA,NA,NA,0,12.8,15.5,NA,1,1,1,1,1,1,1,1,R,JV,
+NA,2021,6,janakkala,supplement,deworm,10/7/2021,4,D1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,New
+NA,2021,6,janakkala,supplement,deworm,10/7/2021,4,E6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,New
+NA,2021,6,kiirastuli,control,deworm,10/10/2021,1,C5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"trap open, feces on door"
+1001,2021,6,kiirastuli,control,deworm,10/10/2021,1,H5,219873,1001,M,0,NA,NA,NA,0,13.2,17.5,NA,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+1000,2021,6,kiirastuli,control,deworm,10/10/2021,1,K6,226701,1000,F,0,0,0,0,NA,12.1,15.5,NA,NA,1,1,1,1,1,1,1,R,NM,FR not fresh
+1002,2021,6,kiirastuli,control,deworm,10/10/2021,1,A1,226104,1002,F,0,0,0,0,NA,13.0,15.5,NA,NA,1,1,1,1,1,1,1,R,JV,
+1003,2021,6,kiirastuli,control,deworm,10/10/2021,1,J5,219870,1003,F,0,0,0,0,NA,13.4,21.5,NA,NA,1,1,1,1,1,1,1,R,NM,dirty swab
+1004,2021,6,kiirastuli,control,deworm,10/10/2021,1,G1,226761,1004,M,0,NA,NA,NA,0,12.9,16.5,NA,1,1,1,1,1,1,1,1,R,JV,dirty swab
+1005,2021,6,kiirastuli,control,deworm,10/10/2021,1,A4,226244,1005,M,0,NA,NA,NA,0,12.6,17.0,NA,NA,1,1,1,1,1,1,1,R,NM,
+1006,2021,6,kiirastuli,control,deworm,10/10/2021,1,J2,226203,1006,F,0,0,0,0,NA,12.9,14.0,NA,1,1,1,1,1,1,1,1,R,JV,
+1040,2021,6,kiirastuli,control,deworm,10/11/2021,3,C5,226227,1040,M,0,NA,NA,NA,0,13.2,14.0,NA,1,1,1,1,1,1,1,1,R,JV,FR not fresh
+NA,2021,6,kiirastuli,control,deworm,10/10/2021,2,E6,226227,NA,NA,NA,NA,NA,NA,NA,NA,15.0,NA,NA,NA,NA,NA,NA,NA,NA,1,R,JV,new
+1028,2021,6,mustikka,control,deworm,10/10/2021,1,A3,219812,1028,M,0,NA,NA,NA,0,14.5,15.0,NA,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+1029,2021,6,mustikka,control,deworm,10/10/2021,1,B3,226788,1029,F,0,0,0,0,NA,12.7,14.5,NA,NA,1,1,1,1,1,1,1,R,NM,
+1030,2021,6,mustikka,control,deworm,10/10/2021,1,A2,226125,1030,M,0,NA,NA,NA,0,12.9,15.0,NA,NA,1,1,1,1,1,1,1,R,JV,
+1031,2021,6,mustikka,control,deworm,10/10/2021,1,A4,219772,1031,M,0,NA,NA,NA,0,12.4,17.5,NA,NA,1,1,1,1,1,1,1,R,NM,FR not fresh
+1032,2021,6,mustikka,control,deworm,10/10/2021,1,B5,226759,1032,M,0,NA,NA,NA,0,12.9,16.0,NA,NA,1,1,1,1,1,1,1,R,JV,
+1033,2021,6,mustikka,control,deworm,10/10/2021,1,J4,219663,1033,F,0,0,0,0,NA,12.9,14.0,NA,NA,1,1,1,1,1,1,1,R,NM,
+1034,2021,6,mustikka,control,deworm,10/10/2021,1,C6,226712,1034,M,0,NA,NA,NA,0,12.7,15.0,NA,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+1036,2021,6,mustikka,control,deworm,10/10/2021,1,J2,219745,1036,M,0,NA,NA,NA,0,13.3,15.0,NA,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+1035,2021,6,mustikka,control,deworm,10/10/2021,1,G1,226194,1035,M,0,NA,NA,NA,1,12.2,15.0,NA,NA,1,1,1,1,1,1,1,R,NM,FR not fresh
+1037,2021,6,mustikka,control,deworm,10/10/2021,1,H1,226136,1037,M,0,NA,NA,NA,0,12.9,14.5,NA,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+1038,2021,6,mustikka,control,deworm,10/10/2021,1,J1,226291,1038,M,0,NA,NA,NA,0,12.2,18.0,NA,1,1,1,1,1,1,1,1,R,NM,
+1039,2021,6,mustikka,control,deworm,10/10/2021,1,I5,226270,1039,F,0,0,0,0,NA,13.0,16.5,NA,1,1,1,1,1,1,1,1,R,JV,
+1055,2021,6,mustikka,control,deworm,10/10/2021,3,G6,226737,1055,M,0,NA,NA,NA,1,12.3,18.0,NA,NA,1,1,1,1,1,1,1,R,NM,
+1007,2021,6,talo,supplement,deworm,10/10/2021,1,F5,226293,1007,M,0,NA,NA,NA,0,13.4,16.0,NA,NA,1,1,1,1,1,1,1,R,JV,
+1008,2021,6,talo,supplement,deworm,10/10/2021,1,D3,219892,1008,F,0,1,0,0,NA,13.2,23.5,NA,NA,1,1,1,1,1,1,1,R,NM,
+1009,2021,6,talo,supplement,deworm,10/10/2021,1,G1,219889,1009,F,0,0,0,0,NA,14.0,21.0,NA,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+1010,2021,6,talo,supplement,deworm,10/10/2021,1,F4,226134,1010,M,0,NA,NA,NA,0,12.6,14.0,NA,NA,1,1,1,1,1,1,1,R,NM,
+1011,2021,6,talo,supplement,deworm,10/10/2021,1,F2,219901,1011,F,0,0,0,0,NA,13.4,15.5,NA,NA,1,1,1,1,1,1,1,R,JV,
+1012,2021,6,talo,supplement,deworm,10/10/2021,1,I5,219960,1012,M,0,NA,NA,NA,0,12.9,15.5,NA,NA,1,1,1,1,1,1,1,R,NM,FR not fresh
+1013,2021,6,talo,supplement,deworm,10/10/2021,1,H1,226776,1013,F,0,0,0,0,NA,12.8,14.0,NA,NA,1,1,1,1,1,1,1,R,JV,
+1014,2021,6,talo,supplement,deworm,10/10/2021,1,G2,219861,1014,F,0,0,0,0,NA,13.1,14.5,NA,NA,1,1,1,1,1,1,1,R,NM,FR not fresh
+1015,2021,6,talo,supplement,deworm,10/10/2021,1,C6,219854,1015,M,0,NA,NA,NA,0,13.2,14.0,NA,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+1016,2021,6,talo,supplement,deworm,10/10/2021,1,B5,226180,1016,M,0,NA,NA,NA,0,13.0,18.0,NA,NA,1,1,1,1,1,1,1,R,NM,
+1017,2021,6,talo,supplement,deworm,10/10/2021,1,E6,226296,1017,M,0,NA,NA,NA,0,13.6,17.0,NA,NA,1,1,1,1,0,0,1,R,JV,multicap w/ vole
+1019,2021,6,talo,supplement,deworm,10/10/2021,1,A6,219990,1019,F,0,0,0,0,NA,12.9,17.0,NA,NA,1,1,1,1,0,0,1,R,NM,multicap w/ vole
+1018,2021,6,talo,supplement,deworm,10/10/2021,1,E6,226138,1018,M,0,NA,NA,NA,0,13.3,16.0,NA,NA,1,1,1,1,1,1,1,R,JV,multicap w/ vole
+1021,2021,6,talo,supplement,deworm,10/10/2021,1,A6,226181,1021,M,0,NA,NA,NA,1,12.8,15.5,NA,NA,1,1,1,1,1,0,1,R,NM,multicap w/ vole
+1020,2021,6,talo,supplement,deworm,10/10/2021,1,E4,226209,1020,F,0,0,0,0,NA,13.3,16.5,NA,NA,1,1,1,1,1,1,1,R,JV,"multicap w/ vole, dirty swab"
+1022,2021,6,talo,supplement,deworm,10/10/2021,1,C1,219725,1022,F,0,0,0,0,NA,12.1,13.5,NA,NA,1,1,1,1,0,0,1,R,NM,multicap w/ vole
+1023,2021,6,talo,supplement,deworm,10/10/2021,1,I6,226214,1023,M,0,NA,NA,NA,0,12.4,13.0,NA,1,1,1,1,1,0,1,1,R,JV,"multicap w/ vole, FR small amount"
+1024,2021,6,talo,supplement,deworm,10/10/2021,1,C1,219807,1024,M,0,NA,NA,NA,0,12.2,14.5,NA,NA,1,1,1,1,1,1,1,R,NM,FR collected 6-4
+1025,2021,6,talo,supplement,deworm,10/10/2021,1,I6,226112,1025,F,0,0,0,0,NA,12.6,14.0,NA,1,1,1,1,1,0,0,1,R,JV,"multicap w/ vole, monthly recap"
+1026,2021,6,talo,supplement,deworm,10/10/2021,1,J3,226769,1026,M,0,NA,NA,NA,0,13.0,13.0,NA,NA,1,1,1,1,1,1,1,R,JV,
+1027,2021,6,talo,supplement,deworm,10/10/2021,1,F3,219717,1027,M,0,NA,NA,NA,0,12.5,15.0,NA,NA,1,1,1,1,1,0,1,R,NM,
+NA,2021,6,talo,supplement,deworm,10/10/2021,1,F3,226277,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,AR,BN,
+NA,2021,6,talo,supplement,deworm,10/10/2021,1,J3,219856,NA,NA,NA,NA,NA,NA,NA,NA,23.0,NA,NA,NA,NA,NA,NA,NA,NA,1,R,JV,multicap w/ vole
+NA,2021,6,talo,supplement,deworm,10/10/2021,1,G4,226261,NA,NA,NA,NA,NA,NA,NA,NA,16.0,NA,NA,NA,NA,NA,NA,NA,NA,1,R,NM,new
+NA,2021,6,talo,supplement,deworm,10/10/2021,1,K5,226212,NA,NA,NA,NA,NA,NA,NA,NA,13.0,NA,NA,NA,NA,NA,NA,NA,NA,1,R,JV,new
+NA,2021,6,talo,supplement,deworm,10/10/2021,1,K6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DP,NM,
+NA,2021,6,talo,supplement,deworm,10/10/2021,1,E4,226231,NA,NA,NA,NA,NA,NA,NA,NA,13.0,NA,NA,NA,NA,NA,NA,NA,NA,1,R,JV,"multicap w/ vole, new"
+NA,2021,6,talo,supplement,deworm,10/10/2021,2,C3,226187,NA,NA,NA,NA,NA,NA,NA,NA,15.0,NA,NA,NA,NA,NA,NA,NA,NA,1,R,JV,
+1054,2021,6,mustikka,control,deworm,10/11/2021,3,C4,219926,1054,M,0,NA,NA,NA,0,13.9,19.0,NA,NA,1,1,1,1,1,1,1,R,JV,
+1057,2021,6,mustikka,control,deworm,10/11/2021,3,J5,219624,1057,M,0,NA,NA,NA,0,12.2,15.5,NA,1,1,1,1,1,1,1,1,R,NM,
+1056,2021,6,mustikka,control,deworm,10/11/2021,3,B3,226705,1056,F,0,0,0,0,NA,12.4,14.0,NA,1,1,1,1,1,1,1,1,R,JV,
+1041,2021,6,talo,supplement,deworm,10/11/2021,3,G4,226261,1041,M,0,NA,NA,NA,0,13.4,15.5,NA,1,1,1,1,1,1,1,NA,R,JV,
+1042,2021,6,talo,supplement,deworm,10/11/2021,3,J5,226272,1042,F,0,0,0,0,NA,12.1,13.5,NA,NA,1,1,1,1,1,1,1,R,NM,
+1044,2021,6,talo,supplement,deworm,10/11/2021,3,G1,219770,1044,M,0,NA,NA,NA,0,12.9,14.5,NA,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+1043,2021,6,talo,supplement,deworm,10/11/2021,3,K5,226212,1043,F,0,0,0,0,NA,12.5,14.5,NA,1,1,1,1,1,0,1,NA,R,NM,
+1045,2021,6,talo,supplement,deworm,10/11/2021,3,A6,226289,1045,M,0,NA,NA,NA,0,13.1,15.5,NA,NA,1,1,1,1,NA,1,1,R,JV,"multicap w/ vole, FR small"
+1047,2021,6,talo,supplement,deworm,10/11/2021,3,E4,226231,1047,M,0,NA,NA,NA,0,12.1,13.0,NA,1,1,1,1,1,NA,NA,NA,R,NM,multicap w/ vole
+1046,2021,6,talo,supplement,deworm,10/11/2021,3,A6,226188,1046,F,0,0,0,0,NA,13.1,15.0,NA,NA,1,1,1,1,1,1,1,R,JV,multicap w/ vole
+1048,2021,6,talo,supplement,deworm,10/11/2021,3,E4,219709,1048,M,0,NA,NA,NA,0,12.5,13.5,NA,NA,1,1,1,1,0,0,1,R,NM,multicap w/ vole
+1049,2021,6,talo,supplement,deworm,10/11/2021,3,C1,226220,1049,F,0,0,0,0,NA,13.7,18.8,NA,1,1,1,1,1,1,0,1,R,JV,
+1050,2021,6,talo,supplement,deworm,10/11/2021,3,G5,219697,1050,M,0,NA,NA,NA,0,11.8,12.5,NA,1,1,1,1,1,1,1,1,R,NM,
+1051,2021,6,talo,supplement,deworm,10/11/2021,3,J2,226235,1051,M,0,NA,NA,NA,0,13.0,15.0,NA,1,1,1,1,1,1,1,1,R,JV,
+1053,2021,6,talo,supplement,deworm,10/11/2021,3,K1,226263,1053,M,0,NA,NA,NA,0,12.4,16.0,NA,1,1,1,1,1,1,1,1,R,NM,
+1052,2021,6,talo,supplement,deworm,10/11/2021,3,F3,226704,1052,M,0,NA,NA,NA,0,12.8,17.0,NA,1,1,1,1,1,1,1,1,R,JV,
+NA,2021,6,talo,supplement,deworm,10/11/2021,4,J1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,R,NM,
+1069,2021,6,ketunpesa,control,deworm,10/13/2021,1,D4,219753,1069,M,0,NA,NA,NA,0,13.5,17.5,NA,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+1068,2021,6,ketunpesa,control,deworm,10/13/2021,1,D1,226262,1068,M,0,NA,NA,NA,1,12.8,15.0,NA,NA,1,1,1,1,1,1,1,R,NM,
+1071,2021,6,ketunpesa,control,deworm,10/13/2021,1,K2,226226,1071,F,0,0,0,0,NA,13.0,15.0,NA,NA,1,1,1,1,1,1,1,R,JV,
+1070,2021,6,ketunpesa,control,deworm,10/13/2021,1,C1,219631,1070,M,0,NA,NA,NA,0,12.8,17.0,NA,NA,1,1,1,1,1,1,1,R,NM,
+1072,2021,6,ketunpesa,control,deworm,10/13/2021,1,E1,226186,1072,M,0,NA,NA,NA,0,13.3,14.5,NA,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+1073,2021,6,ketunpesa,control,deworm,10/13/2021,1,A1,226791,1073,M,0,NA,NA,NA,0,12.7,18.0,NA,NA,1,1,1,1,1,1,1,R,NM,
+1074,2021,6,ketunpesa,control,deworm,10/13/2021,1,K5,219800,1074,M,0,NA,NA,NA,0,13.4,15.0,NA,NA,1,1,1,1,1,1,1,R,JV,"multicap w/ vole, FR, FE collected 6-3"
+1075,2021,6,ketunpesa,control,deworm,10/13/2021,1,K1,219637,1075,F,0,0,0,0,NA,12.3,15.5,NA,1,1,1,1,1,1,1,1,R,NM,
+1076,2021,6,ketunpesa,control,deworm,10/13/2021,1,K5,219680,1076,F,0,0,0,0,NA,12.9,16.5,NA,1,1,1,1,1,0,0,1,R,JV,multicap w/ vole
+1077,2021,6,ketunpesa,control,deworm,10/13/2021,1,K3,219796,1077,M,0,NA,NA,NA,0,12.4,17.0,NA,1,1,1,1,1,1,1,1,R,NM,
+1078,2021,6,ketunpesa,control,deworm,10/13/2021,1,A5,219678,1078,F,0,0,0,0,NA,13.0,13.5,NA,1,1,1,1,1,1,1,1,R,JV,
+NA,2021,6,ketunpesa,control,deworm,10/13/2021,1,A6,219647,NA,NA,NA,NA,NA,NA,NA,NA,14.0,NA,NA,NA,NA,NA,NA,NA,NA,1,R,NM,new
+1058,2021,6,kuoppa,supplement,control,10/13/2021,1,A3,219977,1058,M,0,NA,NA,NA,0,13.9,22.0,NA,NA,1,1,1,1,1,1,0,R,JV,
+1059,2021,6,kuoppa,supplement,control,10/13/2021,1,J2,226189,1059,F,0,0,0,0,NA,13.5,23.0,NA,NA,1,1,1,1,1,1,0,R,NM,
+1060,2021,6,kuoppa,supplement,control,10/13/2021,1,D2,226197,1060,M,0,NA,NA,NA,0,12.6,15.0,NA,NA,1,1,1,1,1,1,0,R,JV,
+1061,2021,6,kuoppa,supplement,control,10/13/2021,1,D3,226280,1061,M,0,NA,NA,NA,0,12.9,15.5,NA,NA,1,1,1,1,1,1,0,R,NM,bleeder
+1062,2021,6,kuoppa,supplement,control,10/13/2021,1,B5,219691,1062,F,0,NA,NA,NA,0,13.0,14.5,NA,NA,1,1,1,1,1,1,0,R,JV,FR not fresh
+1063,2021,6,kuoppa,supplement,control,10/13/2021,1,E6,226703,1063,M,0,NA,NA,NA,0,12.2,13.5,NA,1,1,1,1,1,1,1,0,R,NM,"multicap w/ vole, FE collected 6-3"
+1064,2021,6,kuoppa,supplement,control,10/13/2021,1,E2,219784,1064,M,0,NA,NA,NA,0,13.0,15.5,NA,1,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+1065,2021,6,kuoppa,supplement,control,10/13/2021,1,E6,226210,1065,F,0,0,0,0,NA,12.7,14.5,NA,NA,1,1,1,1,0,0,0,R,NM,multicap w/ vole
+1066,2021,6,kuoppa,supplement,control,10/13/2021,1,E2,219750,1066,F,0,0,0,0,NA,12.6,14.5,NA,1,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, FR collected 6-3, FR not fresh"
+1067,2021,6,kuoppa,supplement,control,10/13/2021,1,E1,219777,1067,M,0,NA,NA,NA,0,12.8,19.5,NA,1,1,1,1,1,1,1,0,R,NM,
+NA,2021,6,kuoppa,supplement,control,10/13/2021,1,C5,219703,NA,NA,NA,NA,NA,NA,NA,NA,12.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,new
+NA,2021,6,kuoppa,supplement,control,10/13/2021,1,D4,219643,NA,NA,NA,NA,NA,NA,NA,NA,23.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,NM,new
+NA,2021,6,kuoppa,supplement,control,10/13/2021,1,I2,219605,NA,NA,NA,NA,NA,NA,NA,NA,13.5,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,new
+NA,2021,6,kuoppa,supplement,control,10/13/2021,1,G1,219721,NA,NA,NA,NA,NA,NA,NA,NA,15.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,new
+NA,2021,6,kuoppa,supplement,control,10/13/2021,1,K1,219748,NA,NA,NA,NA,NA,NA,NA,NA,14.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,NM,new
+NA,2021,6,kuoppa,supplement,control,10/13/2021,1,J1,219741,NA,NA,NA,NA,NA,NA,NA,NA,14.5,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,new
+NA,2021,6,kuoppa,supplement,control,10/13/2021,1,B2,219730,NA,NA,NA,NA,NA,NA,NA,NA,9.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,NM,new
+NA,2021,6,kuoppa,supplement,control,10/13/2021,1,G5,219754,NA,NA,NA,NA,NA,NA,NA,NA,15.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,new
+NA,2021,6,kuoppa,supplement,control,10/13/2021,1,A5,219668,NA,NA,NA,NA,NA,NA,NA,NA,14.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,NM,new
+NA,2021,6,kuoppa,supplement,control,10/13/2021,1,K6,219608,NA,NA,NA,NA,NA,NA,NA,NA,15.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,new
+NA,2021,6,kuoppa,supplement,control,10/13/2021,2,D2,219649,NA,NA,NA,NA,NA,NA,NA,NA,13.5,NA,NA,NA,NA,NA,NA,NA,NA,1,R,JV,"deworm given, monthly recap"
+1079,2021,6,puro,supplement,deworm,10/13/2021,1,A6,219738,1079,F,0,0,0,0,NA,13.8,15.5,NA,NA,1,1,1,1,1,1,1,R,JV,"multicap w/ voles, FR collected 6-3 not fresh"
+1080,2021,6,puro,supplement,deworm,10/13/2021,1,I6,226206,1080,F,0,0,0,0,NA,12.3,12.5,NA,NA,1,1,1,1,1,1,1,R,NM,
+1081,2021,6,puro,supplement,deworm,10/13/2021,1,A6,226233,1081,M,0,NA,NA,NA,1,13.5,16.5,NA,NA,1,1,1,1,0,0,1,R,JV,"multicap w/ vole, bleeder"
+1082,2021,6,puro,supplement,deworm,10/13/2021,1,A2,219760,1082,M,0,NA,NA,NA,0,12.1,13.5,NA,1,1,1,1,1,0,0,1,R,NM,multicap w/ vole
+1083,2021,6,puro,supplement,deworm,10/13/2021,1,G3,219622,1083,F,0,0,0,0,NA,12.3,11.0,NA,1,1,1,1,1,0,0,1,R,JV,"multicap w/ vole, slow breather"
+1085,2021,6,puro,supplement,deworm,10/13/2021,1,A2,219780,1085,F,0,0,0,0,NA,12.6,12.5,NA,1,1,1,1,1,0,0,1,R,NM,multicap w/ vole
+1084,2021,6,puro,supplement,deworm,10/13/2021,1,G3,219636,1084,F,0,0,0,0,NA,12.6,13.5,NA,1,1,1,1,1,1,1,1,DP,JV,"multicap w/ vole, FR + FE collected 6-3, FR not fresh"
+1086,2021,6,puro,supplement,deworm,10/13/2021,1,K1,226295,1086,M,0,NA,NA,NA,0,13.1,14.5,NA,NA,1,1,1,1,1,1,1,R,JV,"multicap w/ vole, FR+FE collected, FR not fresh"
+1087,2021,6,puro,supplement,deworm,10/13/2021,1,K1,219815,1087,M,0,NA,NA,NA,0,12.6,17.5,NA,NA,1,1,1,1,1,1,1,R,NM,"multicap w/ vole, FE+FR collected 6-3"
+1088,2021,6,puro,supplement,deworm,10/13/2021,1,C1,219654,1088,F,0,0,0,0,NA,13.4,16.0,NA,1,1,1,1,1,1,1,1,R,JV,
+1089,2021,6,puro,supplement,deworm,10/13/2021,1,K2,226264,1089,F,0,0,0,0,NA,12.1,12.0,NA,NA,1,1,1,1,1,1,1,R,NM,FR not fresh
+1090,2021,6,puro,supplement,deworm,10/13/2021,1,D1,226205,1090,M,0,NA,NA,NA,0,12.5,15.0,NA,NA,1,1,1,1,1,1,1,R,NM,
+1091,2021,6,puro,supplement,deworm,10/13/2021,1,E6,219686,1091,M,0,NA,NA,NA,0,12.4,13.5,NA,1,1,1,1,1,1,1,1,R,JV,FR not fresh
+1092,2021,6,puro,supplement,deworm,10/13/2021,1,H5,219747,1092,M,0,NA,NA,NA,0,12.6,15.0,NA,1,1,1,1,1,1,1,1,R,NM,
+1093,2021,6,puro,supplement,deworm,10/13/2021,1,D2,219676,1093,M,0,NA,NA,NA,0,12.0,12.5,NA,1,1,1,1,1,1,1,1,R,NM,
+1094,2021,6,puro,supplement,deworm,10/13/2021,1,K6,219673,1094,F,0,0,0,0,NA,13.1,14.5,NA,1,1,1,1,1,1,1,1,R,JV,
+1095,2021,6,puro,supplement,deworm,10/13/2021,1,E1,219669,1095,M,0,NA,NA,NA,0,13.4,16.0,NA,1,1,1,1,1,1,1,1,R,JV,bleeder
+1096,2021,6,puro,supplement,deworm,10/13/2021,1,A1,219687,1096,M,0,NA,NA,NA,0,12.5,16.5,NA,1,1,1,1,1,1,1,1,R,NM,
+1097,2021,6,puro,supplement,deworm,10/13/2021,1,C1,219619,1097,F,0,0,0,0,NA,12.2,13.5,NA,1,1,1,1,1,1,1,1,R,JV,
+NA,2021,6,puro,supplement,deworm,10/13/2021,1,A3,219612,NA,NA,NA,NA,NA,NA,NA,NA,15.5,NA,NA,NA,NA,NA,NA,NA,NA,1,R,NM,new
+1109,2021,6,ketunpesa,control,deworm,10/14/2021,3,K5,219667,1109,M,0,NA,NA,NA,0,12.9,15.0,NA,1,1,1,1,1,0,0,1,R,JV,multicap w/ vole
+1098,2021,6,kuoppa,supplement,control,10/14/2021,3,F4,219754,1098,F,0,0,0,0,NA,12.9,15.0,NA,1,1,1,1,1,1,1,NA,R,JV,FR not fresh
+1099,2021,6,kuoppa,supplement,control,10/14/2021,3,D3,219649,1099,F,0,0,0,0,NA,12.0,13.5,NA,1,1,1,1,1,1,1,NA,R,NM,FR not fresh
+1100,2021,6,kuoppa,supplement,control,10/14/2021,3,E6,226284,1100,F,0,0,0,0,NA,12.2,14.0,NA,NA,1,1,1,1,1,1,0,R,JV,
+1101,2021,6,kuoppa,supplement,control,10/14/2021,3,D5,219643,1101,M,0,NA,NA,NA,1,13.0,23.0,NA,1,1,1,1,1,1,1,NA,R,NM,bleeder
+1103,2021,6,kuoppa,supplement,control,10/14/2021,3,B2,219730,1103,F,0,0,0,0,NA,12.6,12.0,NA,1,1,1,1,1,1,1,NA,R,JV,FR not fresh
+1102,2021,6,kuoppa,supplement,control,10/14/2021,3,I2,219741,1102,M,0,NA,NA,NA,0,12.9,14.5,NA,1,1,1,1,1,1,1,NA,R,NM,
+1104,2021,6,kuoppa,supplement,control,10/14/2021,3,G1,219721,1104,M,0,NA,NA,NA,0,13.3,15.0,NA,1,1,1,1,1,1,1,NA,R,NM,
+1105,2021,6,kuoppa,supplement,control,10/14/2021,3,C5,219703,1105,F,0,0,0,0,NA,12.5,12.0,NA,1,1,1,1,1,1,1,NA,R,JV,"FR not fresh, bleeder"
+1106,2021,6,kuoppa,supplement,control,10/14/2021,3,K5,226767,1106,F,0,0,0,0,NA,12.9,18.0,NA,NA,1,1,1,1,1,1,0,R,NM,
+1107,2021,6,kuoppa,supplement,control,10/14/2021,3,K4,219618,1107,F,0,0,0,0,NA,13.2,14.0,NA,1,1,1,1,1,1,1,0,R,JV,
+1108,2021,6,kuoppa,supplement,control,10/14/2021,3,H1,219617,1108,F,0,0,0,0,NA,12.7,13.5,NA,1,1,1,1,1,1,1,0,R,NM,
+NA,2021,6,kuoppa,supplement,control,10/14/2021,4,K1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,R,JV,new
+1110,2021,6,puro,supplement,deworm,10/14/2021,3,K1,219732,1110,M,0,NA,NA,NA,0,12.4,15.0,NA,NA,1,1,1,1,1,1,1,R,NM,
+1111,2021,6,puro,supplement,deworm,10/14/2021,3,F3,226255,1111,M,0,NA,NA,NA,0,13.0,13.0,NA,NA,1,1,1,1,1,1,1,DP,JV,
+1112,2021,6,puro,supplement,deworm,10/14/2021,3,A1,226105,1112,M,0,NA,NA,NA,0,13.1,19.0,NA,NA,1,1,1,1,1,1,1,R,NM,bleeder
+1113,2021,6,puro,supplement,deworm,10/14/2021,3,B3,219681,1113,M,0,NA,NA,NA,0,13.0,15.5,NA,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+1115,2021,6,puro,supplement,deworm,10/14/2021,3,J2,226722,1115,F,0,0,0,0,NA,12.8,13.5,NA,NA,1,1,1,1,1,1,1,R,JV,FR not fresh
+1114,2021,6,puro,supplement,deworm,10/14/2021,3,A3,226150,1114,M,0,NA,NA,NA,0,12.9,19.5,NA,NA,1,1,1,1,1,1,1,R,NM,bleeder
+1116,2021,6,puro,supplement,deworm,10/14/2021,3,J4,219693,1116,M,0,NA,NA,NA,0,12.8,12.5,NA,NA,1,1,1,1,1,1,1,DP,JV,FE not fresh
+1117,2021,6,puro,supplement,deworm,10/14/2021,3,E1,226156,1117,F,0,0,0,0,NA,12.9,17.5,NA,NA,1,1,1,1,0,0,1,R,NM,multicap w/ 3 voles
+1118,2021,6,puro,supplement,deworm,10/14/2021,3,E1,219606,1118,F,0,0,0,0,NA,13.0,15.0,NA,1,1,1,1,1,0,0,1,R,JV,"multicap w/ 3 voles, dirty swab"
+1119,2021,6,puro,supplement,deworm,10/14/2021,3,E1,219670,1119,F,0,0,0,0,NA,12.5,12.0,NA,1,1,1,1,1,0,0,1,R,NM,"multicap w/ 3 voles, bleeder"
+1120,2021,6,puro,supplement,deworm,10/14/2021,3,B5,219621,1120,F,0,0,0,0,NA,12.9,13.5,NA,1,1,1,1,1,1,1,1,R,JV,FR not fresh
+1121,2021,6,puro,supplement,deworm,10/14/2021,3,I6,NA,1121,M,0,NA,NA,NA,1,12.8,13.5,NA,1,1,1,1,1,1,1,NA,DP,NM,
+1122,2021,6,puro,supplement,deworm,10/14/2021,3,G1,219630,1122,F,0,0,0,0,NA,13.0,15.0,NA,1,1,1,1,1,1,1,1,R,JV,FE not fresh
+1123,2021,6,puro,supplement,deworm,10/14/2021,3,G3,219629,1123,M,0,NA,NA,NA,0,11.9,12.5,NA,1,1,1,1,1,1,1,1,R,NM,
+1124,2021,6,puro,supplement,deworm,10/14/2021,3,E5,219684,1124,M,0,NA,NA,NA,0,13.0,16.0,NA,1,1,1,1,1,1,1,1,R,JV,FR not fresh
+1125,2021,6,puro,supplement,deworm,10/14/2021,3,E6,219632,1125,F,0,0,0,0,NA,13.0,13.0,NA,1,1,1,1,1,1,1,1,R,JV,"slow breather, FR not fresh"
+NA,2021,6,puro,supplement,deworm,10/14/2021,4,A1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,R,SD,new
+NA,2021,6,puro,supplement,deworm,10/14/2021,4,A4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,R,SD,new
+1126,2021,6,helmipollo,control,control,10/16/2021,1,H3,219839,1126,F,0,0,0,0,NA,13.0,15.5,NA,NA,1,1,1,1,1,1,0,R,JV,FR not fresh
+1127,2021,6,helmipollo,control,control,10/16/2021,1,J5,219607,1127,M,0,NA,NA,NA,1,12.2,15.0,NA,NA,1,1,1,1,1,1,0,R,NM,bleeder
+1128,2021,6,helmipollo,control,control,10/16/2021,1,A5,226719,1128,F,0,0,0,0,NA,12.8,15.0,NA,NA,1,1,1,1,1,1,0,R,JV,
+1129,2021,6,helmipollo,control,control,10/16/2021,1,E1,226080,1129,F,0,1,1,0,NA,13.0,21.5,NA,NA,1,1,1,1,1,1,0,R,NM,
+1130,2021,6,helmipollo,control,control,10/16/2021,1,C4,226120,1130,F,0,0,0,0,NA,12.8,14.0,NA,NA,1,1,1,1,1,1,0,R,JV,
+1131,2021,6,helmipollo,control,control,10/16/2021,1,F4,226146,1131,M,0,NA,NA,NA,0,12.9,14.5,NA,NA,1,1,1,1,1,1,0,R,NM,
+1132,2021,6,helmipollo,control,control,10/16/2021,1,E3,226273,1132,M,0,NA,NA,NA,0,13.7,14.0,NA,NA,1,1,1,1,1,1,0,R,JV,bleeder
+NA,2021,6,helmipollo,control,control,10/16/2021,1,A1,219737,NA,NA,NA,NA,NA,NA,NA,NA,16.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,"multicap w/ vole, slow breather, new"
+NA,2021,6,helmipollo,control,control,10/16/2021,1,A1,219627,NA,NA,NA,NA,NA,NA,NA,NA,16.5,NA,NA,NA,NA,NA,NA,NA,NA,0,R,NM,"multicap w/ vole, new"
+NA,2021,6,helmipollo,control,control,10/16/2021,1,A6,219611,NA,NA,NA,NA,NA,NA,NA,NA,17.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,"multicap w/ shrew, new"
+NA,2021,6,helmipollo,control,control,10/16/2021,1,B3,219672,NA,NA,NA,NA,NA,NA,NA,NA,15.0,NA,NA,NA,NA,NA,NA,NA,NA,0,R,JV,new
+1133,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,H3,226243,1133,M,0,NA,NA,NA,0,12.5,12.0,NA,NA,1,1,1,1,1,1,0,R,JV,
+1134,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,B2,219826,1134,F,0,0,0,0,NA,12.5,12.0,NA,NA,1,1,1,1,1,1,0,R,NM,
+1135,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,A6,219674,1135,F,0,0,0,0,NA,12.8,14.0,NA,NA,1,1,1,1,1,1,0,R,JV,
+1136,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,A4,219799,1136,F,0,0,0,0,NA,12.5,13.5,NA,NA,1,1,1,1,1,1,0,R,NM,FR not fresh
+1137,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,A5,219895,1137,M,0,NA,NA,NA,0,13.1,14.5,NA,NA,1,1,1,1,1,1,0,R,JV,bleeder
+1138,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,G5,226141,1138,F,0,1,0,0,NA,12.8,19.5,NA,NA,1,1,1,1,1,1,0,R,NM,bleeder
+1139,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,F1,219634,1139,M,0,NA,NA,NA,0,12.9,14.0,NA,NA,1,1,1,1,1,1,0,R,JV,"bleeder, FR not fresh"
+1140,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,K1,219648,1140,M,0,NA,NA,NA,0,12.3,14.0,NA,NA,1,1,1,1,1,1,0,R,NM,"multicap w/ vole, FE/FE collected 6-3, FR not fresh"
+1141,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,E6,226758,1141,M,0,NA,NA,NA,0,13.1,14.5,NA,NA,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+1142,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,F3,219793,1142,M,0,NA,NA,NA,0,12.8,15.0,NA,NA,1,1,1,1,0,0,0,R,JV,multiicap w/ vole
+1143,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,K1,226087,1143,F,0,0,0,0,NA,13.2,18.5,NA,NA,1,1,1,1,1,0,0,R,NM,multicap w/ vole
+1144,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,E6,219682,1144,F,0,0,0,0,NA,12.9,14.5,NA,NA,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, bleeder, FR/FE collected 6-3"
+1145,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,C6,219626,1145,M,0,NA,NA,NA,0,11.6,12.5,NA,1,1,1,1,1,0,0,0,R,NM,multicap w/ 2 voles
+1146,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,F3,219758,1146,F,0,0,0,0,NA,13.0,14.0,NA,NA,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, FR/FE 1146 collected 6-3"
+1147,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,A2,226276,1147,M,0,NA,NA,NA,0,13.0,14.5,NA,NA,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+1148,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,C6,219623,1148,F,0,0,0,0,NA,12.0,12.5,NA,NA,1,1,1,1,1,1,0,R,NM,"multicap w/ 2 voles, FR/FE collected 6-3"
+1150,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,C6,226095,1150,F,0,0,0,0,NA,13.3,19.0,NA,NA,1,1,1,1,0,0,0,R,NM,bleeder
+1149,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,A2,226117,1149,M,0,NA,NA,NA,0,12.9,14.0,NA,NA,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+1151,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,I6,219600,1151,M,0,NA,NA,NA,0,12.1,12.5,NA,1,1,1,1,1,1,1,0,R,NM,
+1152,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,K6,219616,1152,F,0,0,0,0,NA,12.8,17.5,NA,1,1,1,1,1,1,1,0,R,JV,
+1153,2021,6,vaarinkorpi,supplement,control,10/16/2021,1,K3,219658,1153,F,0,0,0,0,NA,12.9,13.5,NA,1,1,1,1,1,1,1,0,R,JV,
+1154,2021,6,helmipollo,control,control,10/17/2021,3,B3,219672,1154,F,0,0,0,0,NA,12.7,14.0,NA,1,1,1,1,1,1,1,NA,R,JV,
+1155,2021,6,helmipollo,control,control,10/17/2021,3,H1,219699,1155,F,0,0,0,0,NA,12.6,14.5,NA,1,1,1,1,1,1,1,0,R,NM,
+1156,2021,6,helmipollo,control,control,10/17/2021,3,C1,219627,1156,F,0,0,0,0,NA,13.1,16.5,NA,1,1,1,1,1,0,1,0,R,JV,"multicap w/ vole, FR small amount"
+1157,2021,6,helmipollo,control,control,10/17/2021,3,G5,219690,1157,M,0,NA,NA,NA,0,14.4,23.0,NA,1,1,1,1,1,1,1,0,R,NM,
+1158,2021,6,helmipollo,control,control,10/17/2021,3,C1,219737,1158,M,0,NA,NA,NA,0,13.5,16.5,NA,1,1,1,1,1,1,1,NA,R,JV,multicap w/ vole
+1160,2021,6,helmipollo,control,control,10/17/2021,3,K5,219639,1160,M,0,NA,NA,NA,0,13.1,20.0,NA,1,1,1,1,1,1,1,0,R,JV,multicap w/ vole
+1159,2021,6,helmipollo,control,control,10/17/2021,3,A1,219665,1159,M,0,NA,NA,NA,0,12.4,14.0,NA,1,1,1,1,1,1,1,0,R,NM,
+1161,2021,6,helmipollo,control,control,10/17/2021,3,A1,219611,1161,F,0,0,0,0,NA,12.6,17.0,NA,1,1,1,1,1,1,1,NA,R,NM,
+1162,2021,6,vaarinkorpi,supplement,control,10/17/2021,3,D2,226216,1162,M,0,NA,NA,NA,0,12.7,13.5,NA,1,1,1,1,1,1,1,0,R,JV,"recap but ED collected, bleeder"
+1163,2021,6,vaarinkorpi,supplement,control,10/17/2021,3,G4,226709,1163,M,0,NA,NA,NA,0,12.3,13.5,NA,NA,1,1,1,1,1,1,0,R,NM,
+1165,2021,6,vaarinkorpi,supplement,control,10/17/2021,3,F1,219675,1165,M,0,NA,NA,NA,0,12.7,11.5,NA,1,1,1,1,1,1,1,0,DT,JV,"samples collected, but found dead in trap after processing, might be DP"
+1164,2021,6,vaarinkorpi,supplement,control,10/17/2021,3,G3,226777,1164,F,0,0,0,0,NA,12.4,14.0,NA,NA,1,1,1,1,1,1,0,R,NM,
+1166,2021,6,vaarinkorpi,supplement,control,10/17/2021,3,D5,219646,1166,M,0,NA,NA,NA,0,12.7,15.0,NA,1,1,1,1,1,1,1,0,R,NM,
+1167,2021,6,vaarinkorpi,supplement,control,10/17/2021,3,A1,219677,1167,M,0,NA,NA,NA,0,13.3,19.5,NA,1,1,1,1,1,1,1,0,R,JV,
+1168,2021,6,vaarinkorpi,supplement,control,10/17/2021,3,C1,226246,1168,F,0,0,0,0,NA,13.0,16.5,NA,NA,1,1,1,1,1,1,0,R,NM,
+1169,2021,6,vaarinkorpi,supplement,control,10/17/2021,3,K6,219633,1169,M,0,NA,NA,NA,0,12.7,13.5,NA,1,1,1,1,1,1,1,0,R,JV,"multicap w/ vole, bleeder"
+NA,2021,NA,janakkala,supplement,deworm,11/4/2021,NA,D3,226713,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,SD,"Trap left set, found when supplementing"
+NA,2021,NA,kuoppa,supplement,control,11/10/2021,NA,A3,219730,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,SD,"Trap left set, found when supplementing"
+NA,2021,NA,kuoppa,supplement,control,11/10/2021,NA,A3,219977,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,DT,SD,"Trap left set, found when supplementing"
