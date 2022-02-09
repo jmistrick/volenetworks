@@ -149,10 +149,18 @@ for(i in 1:length(nets_list)){
         #and there is no easy way to pull the number of occasions (6) from nets_list
     #it used to be: length(igraph_list[[1]][[1]]) == for each of the 6 trapping occasions - but that's really complicated
     
-    inet <- graph.adjacency(nets_list[[i]][[2]][,,j], weighted=NULL, mode="undirected") 
-      #make a network from the adj matrix for a given occasion (j) - however, all animals ever on the grid are in that matrix
-    tag <- nets_list[[i]][[3]]$ids #pull the tag numbers for all the animals on that grid
-    occ <- rep(j,length(nets_list[[i]][[3]]$ids)) #this puts j==occasion # in a column for all animals
+    ongrid <- nets_list[[i]][[3]][,c(1,(j+1))] #this pulls tag ids & the correct column of the netwindows df
+    ongrid <- ongrid %>% filter(.[,2] == 1) #filter for only animals on the grid
+    ids <- as.vector(ongrid$ids)
+    
+    adjmat <- nets_list[[i]][[2]][,,j] #pull the adjmatrix for the given occasion (includes all animals)
+    
+    adjmat <- adjmat[ids,ids] #subset the adjmatrix for only the animals on the grid that month
+    
+    inet <- graph.adjacency(adjmat, weighted=NULL, mode="undirected") 
+      #make a network from the subset adj matrix for a given occasion (j)
+    tag <- ids #pull the tag numbers for all the animals on that grid
+    occ <- rep(j,length(ids)) #this puts j==occasion # in a column for all animals
     
     #network metrics to calculate
     site[[j]] <- data.frame(tag,occ)
@@ -170,29 +178,21 @@ for(i in 1:length(nets_list)){
     site[[j]]$netdens <- igraph::edge_density(inet, loops=FALSE) #network density
     #site[[j]]$avgdeg <- mean(site[[j]]$deg) #calculate average degree for a site/occasion
     
-    site[[j]]$mod <- igraph::modularity(edge.betweenness.community(inet))
+    site[[j]]$components <- rep(igraph::count_components(inet), length(ids))
     
-    # count_components will give you the number of components but needs igraph as input (not what I have here)
+    site[[j]]$netsize <- rep(igraph::gorder(inet), length(ids))
     
-    #right now, each occasion has rows for every animal ever captured on the grid
-      #ie lots of non-data data is stored for animals that weren't capture on that occasion
-    #need to subset each occasion down to only the animals that were actually captured that month
-    #nets_list$[SITE NAME]$netwindows has the info on who is in which netwindow
-    #need the column of $netwindows that corresponds with occasion (column 1 = id)
+    #calculate modularity
+    if( all(adjmat == 0) ) { site[[j]]$n.clust <- rep(NaN, length(ids)) } 
+    else {
+      eb <- edge.betweenness.community(inet)
+      site[[j]]$n.clust <- rep(length(eb), length(ids)) #number of clusters (not necessarily number of components)
+    }
     
-    ongrid <- nets_list[[i]][[3]][,(j+1)] #this pulls the correct column of the netwindows df
-    site[[j]]$ongrid <- ongrid #add a column with 1/0 on grid that occasion or not
-    
-    #igraph::gorder(inet) would give number of nodes, but since inet is actually all the animals ever on the grid...
-      #this instead returns network size summing across all occasions, I actually want the number of 'ongrid' animals each month
-    site[[j]]$netsize <- sum(ongrid == "1")
-    
-    #filter each site,occasion to only have the animals that were on the grid that month
-    temp <- filter(site[[j]], ongrid=="1")
-    site[[j]] <- temp
-    #remove the ongrid column
-    temp <- select(site[[j]], -ongrid)
-    site[[j]] <- temp
+    if( all(adjmat == 0) ) { site[[j]]$mod <- rep(NaN, length(ids)) } 
+    else {
+      site[[j]]$mod <- rep(modularity(eb), length(ids)) #values -1 to 1, 0 means heterogeneous connections, positive values indicate modular structure
+    }
 
     
   }
