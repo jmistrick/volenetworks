@@ -171,16 +171,16 @@ for(i in 1:length(nets_list)){
     #betweeness is how often you're on the shortest path between others
     #site[[j]]$close <- igraph::closeness(inet) #not good for disconnected graphs
     #closeness measures normalized path length from you to all others in network
-    site[[j]]$clust.node <- igraph::transitivity(inet, type="local") #type="local" for each node ="global" for whole network
-    site[[j]]$clust.net <- igraph::transitivity(inet, type="global")
+    # site[[j]]$clust.node <- igraph::transitivity(inet, type="local") #type="local" for each node ="global" for whole network
+      #node-level clustering sends a warning for networks with multiple components
+    site[[j]]$clust.net <- rep(igraph::transitivity(inet, type="global"), length(ids))
       #transitivity (clustering coef) is ratio of closed triplets to possible triplets
         #tightly connected communities have high transitivity
-    site[[j]]$netdens <- igraph::edge_density(inet, loops=FALSE) #network density
+    site[[j]]$netdens <- rep(igraph::edge_density(inet, loops=FALSE), length(ids)) #network density
     #site[[j]]$avgdeg <- mean(site[[j]]$deg) #calculate average degree for a site/occasion
-    
     site[[j]]$components <- rep(igraph::count_components(inet), length(ids))
-    
     site[[j]]$netsize <- rep(igraph::gorder(inet), length(ids))
+    site[[j]]$edgect <- rep(igraph::gsize(inet), length(ids))
     
     #calculate modularity
     if( all(adjmat == 0) ) { site[[j]]$n.clust <- rep(NaN, length(ids)) } 
@@ -305,6 +305,10 @@ grid_trts <- grid_trts %>%
 #join the grid_trts to net_mets_summary
 net_mets_summary <- net_mets_summary %>% 
   left_join(y=grid_trts, by = "site")
+
+##########################################################################################################
+############################### net_mets_summary is now complete and useful ##############################
+##########################################################################################################
 
 
 
