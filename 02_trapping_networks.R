@@ -165,19 +165,19 @@ for(i in 1:length(nets_list)){
     #network metrics to calculate
     site[[j]] <- data.frame(tag,occ)
     site[[j]]$deg <- igraph::degree(inet)
-    #site[[j]]$eig <- igraph::eigen_centrality(inet)$vector
-    #eigenvector centrality takes into account second-order connections (ie, friends of friends)
+    # site[[j]]$eig <- igraph::eigen_centrality(inet)$vector
+      #eigenvector centrality takes into account second-order connections (ie, friends of friends)
     site[[j]]$betw <- igraph::betweenness(inet)
-    #betweeness is how often you're on the shortest path between others
-    #site[[j]]$close <- igraph::closeness(inet) #not good for disconnected graphs
-    #closeness measures normalized path length from you to all others in network
+      #betweeness is how often you're on the shortest path between others
+    # site[[j]]$close <- igraph::closeness(inet) #not good for disconnected graphs
+      #closeness measures normalized path length from you to all others in network
     # site[[j]]$clust.node <- igraph::transitivity(inet, type="local") #type="local" for each node ="global" for whole network
       #node-level clustering sends a warning for networks with multiple components
     site[[j]]$clust.net <- rep(igraph::transitivity(inet, type="global"), length(ids))
       #transitivity (clustering coef) is ratio of closed triplets to possible triplets
         #tightly connected communities have high transitivity
     site[[j]]$netdens <- rep(igraph::edge_density(inet, loops=FALSE), length(ids)) #network density
-    #site[[j]]$avgdeg <- mean(site[[j]]$deg) #calculate average degree for a site/occasion
+    # site[[j]]$avgdeg <- mean(site[[j]]$deg) #calculate average degree for a site/occasion
     site[[j]]$components <- rep(igraph::count_components(inet), length(ids))
     site[[j]]$netsize <- rep(igraph::gorder(inet), length(ids))
     site[[j]]$edgect <- rep(igraph::gsize(inet), length(ids))
@@ -309,6 +309,73 @@ net_mets_summary <- net_mets_summary %>%
 ##########################################################################################################
 ############################### net_mets_summary is now complete and useful ##############################
 ##########################################################################################################
+
+
+
+
+
+
+########################################################################################################
+####################### here is some trial code for some network permutations ##########################
+#######################################################################################################
+
+
+### subset the net_mets_summary down to just network level metrics so I can permute nets from it
+
+net_mets_perm <- net_mets_summary %>% 
+  distinct(site, occ, .keep_all = TRUE) %>%
+  select(-tag, -deg, -betw, -n.clust)
+
+# g <- erdos.renyi.game(n=22, p.or.m=40, type = "gnm", directed=FALSE, loops=FALSE)
+#g is an igraph object
+# plot.igraph(g)
+
+
+
+
+#define the conditions
+nperm = 10000
+out <- list()
+rep <- seq(from=1, to=nperm)
+clust <- vector(mode="integer", length=nperm)
+mod <- vector(mode="integer", length=nperm)
+out[[1]] <- data.frame(rep, clust, mod)
+
+for(i in 1:nperm){
+  
+  g <- erdos.renyi.game(n=29, p.or.m=57, type = "gnm", directed=FALSE, loops=FALSE)
+  
+  #global clustering
+  out[[1]][i,2] <- igraph::transitivity(g, type="global")
+  #network level modularity
+  eb <- edge.betweenness.community(g)
+  # eb
+  # length(eb) #number of clusters
+  out[[1]][i,3] <- modularity(eb) #modularity of the network
+  
+} 
+
+out.df <- do.call(rbind.data.frame, out)
+
+obs <- net_mets_perm$clust.net[net_mets_perm$site=="vaarinkorpi" & net_mets_perm$occ=="oct"]
+
+out.df %>% ggplot(aes(x=clust)) +
+  geom_density(fill="dodgerblue", alpha=0.5) +
+  geom_vline(xintercept=obs, size=1.5, color="red")
+
+
+obs <- net_mets_perm$mod[net_mets_perm$site=="vaarinkorpi" & net_mets_perm$occ=="oct"]
+
+out.df %>% ggplot(aes(x=mod)) +
+  geom_density(fill="dodgerblue", alpha=0.5) +
+  geom_vline(xintercept=obs, size=1.5, color="red")
+
+
+######################################### end trial code ###############################################
+
+
+
+
 
 
 
