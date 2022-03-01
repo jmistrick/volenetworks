@@ -125,6 +125,8 @@ for(i in 1:length(nets_list)){
 #######################################################################################################
 
 
+################ AWWW FUCK WAIT -- March 1 2022 -- all these networks are WEIGHTED - 
+################  so if there were multiple times in 48hr that two voles overlapped, they have degree>1
 
 
 ###########################################################################################################
@@ -157,7 +159,15 @@ for(i in 1:length(nets_list)){
     
     adjmat <- adjmat[ids,ids] #subset the adjmatrix for only the animals on the grid that month
     
-    inet <- graph.adjacency(adjmat, weighted=NULL, mode="undirected") 
+    # inet <- graph.adjacency(adjmat, weighted=NULL, mode="undirected")
+    ############## (march 1 2022) THIS CODE IS THE PROBLEM ^ by saying weighted=NULL, I have told igraph to interpret 
+        ###### matrix elements as the number of edges between each pair of individuals, NOT a weighted number of interactions
+        ###### therefore, my networks are actually drawing multiple edges between two nodes if they overlapped more than once 
+        ###### in a netwindow - what I was thinking was going on was that I was getting a binary edge if they ever overlapped
+    
+    inet <- graph.adjacency(adjmat > 1, weighted=NULL, mode="undirected") 
+    #this code will make a binary network where there is only one edge between 2 voles, even if they overlapped multiple times in 48hr
+    
       #make a network from the subset adj matrix for a given occasion (j)
     tag <- ids #pull the tag numbers for all the animals on that grid
     occ <- rep(j,length(ids)) #this puts j==occasion # in a column for all animals
@@ -385,6 +395,8 @@ obs <- net_mets_perm$clust.net[net_mets_perm$site=="vaarinkorpi" & net_mets_perm
 ######################################### end trial code ###############################################
 #######################################################################################################
 
+
+
 ## 2.28.22 NEW! trial code to get ^^ running in a loop ###
 
 ### subset the net_mets_summary down to just network level metrics so I can permute nets from it
@@ -396,12 +408,6 @@ net_mets_perm <- net_mets_summary %>%
 #permutations won't work if edgect = 0 - remove any entries with no edges in that net
 net_mets_perm <- net_mets_perm %>% filter(edgect != 0)
 
-###################################################################################################
-##something is up with asema in june - too many edges for number of nodes, possibly an issue with the fact that the 
-##networks are unweighted and therefore multiple interactions between two voles = piled edges
-
-net_mets_perm <- filter(net_mets_perm, !(site == "asema" & occ == "june"))
-###################################################################################################
 
 #define the conditions
 nperm = 100
