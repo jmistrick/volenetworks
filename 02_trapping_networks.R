@@ -330,20 +330,21 @@ net_mets_perm <- net_mets_summary %>%
 #g is an igraph object
 # plot.igraph(g)
 
-
-
-
 #define the conditions
-nperm = 10000
+nperm = 100
+
+#make a list to store the output
 out <- list()
 rep <- seq(from=1, to=nperm)
 clust <- vector(mode="integer", length=nperm)
 mod <- vector(mode="integer", length=nperm)
+#out[[1]] is a df with three columns: rep, clust, mod
 out[[1]] <- data.frame(rep, clust, mod)
 
 for(i in 1:nperm){
   
-  g <- erdos.renyi.game(n=29, p.or.m=57, type = "gnm", directed=FALSE, loops=FALSE)
+  #generate an erdos-renyi graph with n nodes and p.or.m edges
+  g <- erdos.renyi.game(n=46, p.or.m=235, type = "gnm", directed=FALSE, loops=FALSE)
   
   #global clustering
   out[[1]][i,2] <- igraph::transitivity(g, type="global")
@@ -355,23 +356,129 @@ for(i in 1:nperm){
   
 } 
 
+#write output to a df
 out.df <- do.call(rbind.data.frame, out)
 
-obs <- net_mets_perm$clust.net[net_mets_perm$site=="vaarinkorpi" & net_mets_perm$occ=="oct"]
-
+#pull observed clustering for given month, site
+obs <- net_mets_perm$clust.net[net_mets_perm$site=="vaarinkorpi" & net_mets_perm$occ=="sept"]
+#plot permutation distribution of clustering values vs observed clustering
 out.df %>% ggplot(aes(x=clust)) +
   geom_density(fill="dodgerblue", alpha=0.5) +
   geom_vline(xintercept=obs, size=1.5, color="red")
 
-
-obs <- net_mets_perm$mod[net_mets_perm$site=="vaarinkorpi" & net_mets_perm$occ=="oct"]
-
+#pull observed network modularity for given month, site
+obs <- net_mets_perm$mod[net_mets_perm$site=="vaarinkorpi" & net_mets_perm$occ=="sept"]
+#plot permutation distribution of modularity values vs observed modularity
 out.df %>% ggplot(aes(x=mod)) +
   geom_density(fill="dodgerblue", alpha=0.5) +
   geom_vline(xintercept=obs, size=1.5, color="red")
 
+##### calculating a z-score
 
+mu <- mean(out.df$clust)
+sd <- sd(out.df$clust)
+obs <- net_mets_perm$clust.net[net_mets_perm$site=="vaarinkorpi" & net_mets_perm$occ=="sept"]
+
+(obs-mu)/sd
+
+#######################################################################################################
 ######################################### end trial code ###############################################
+#######################################################################################################
+
+## 2.28.22 NEW! trial code to get ^^ running in a loop ###
+
+### subset the net_mets_summary down to just network level metrics so I can permute nets from it
+
+net_mets_perm <- net_mets_summary %>% 
+  distinct(site, occ, .keep_all = TRUE) %>%
+  select(-tag, -deg, -betw, -n.clust)
+
+#permutations won't work if edgect = 0 - remove any entries with no edges in that net
+net_mets_perm <- net_mets_perm %>% filter(edgect != 0)
+
+###################################################################################################
+##something is up with asema in june - too many edges for number of nodes, possibly an issue with the fact that the 
+##networks are unweighted and therefore multiple interactions between two voles = piled edges
+
+net_mets_perm <- filter(net_mets_perm, !(site == "asema" & occ == "june"))
+###################################################################################################
+
+#define the conditions
+nperm = 100
+
+#make a list to store the output
+netdens <- vector(mode="integer", length=nperm)
+clust <- vector(mode="integer", length=nperm)
+mod <- vector(mode="integer", length=nperm)
+#out is a df with three columns: rep, clust, mod
+out <- data.frame(netdens, clust, mod)
+
+for(j in 1:nrow(net_mets_perm)){
+  
+  print(j)
+  
+  nodes <- net_mets_perm$netsize[j]
+  edges <- net_mets_perm$edgect[j]
+  
+  for(i in 1:nperm){
+    
+    #generate an erdos-renyi graph with n nodes and p.or.m edges
+    g <- erdos.renyi.game(n = nodes, p.or.m = edges, type = "gnm", directed=FALSE, loops=FALSE)
+    
+    # #network density
+    # out$netdens[i] <- igraph::edge_density(g, loops=FALSE)
+    
+    #global clustering
+    out$clust[i] <- igraph::transitivity(g, type="global")
+
+    #network level modularity
+    eb <- edge.betweenness.community(g)
+    # eb
+    # length(eb) #number of clusters
+    out$mod[i] <- modularity(eb) #modularity of the network
+    
+  }
+  
+  # #zscore for network density
+  # obs <- net_mets_perm$netdens[j]
+  # mu <- mean(out$netdens)
+  # sd <- sd(out$netdens)
+  # net_mets_perm$z.netdens[j] = (obs-mu)/sd
+  
+  #zscore for network clustering
+  obs <- net_mets_perm$clust.net[j]
+  mu <- mean(out$clust)
+  sd <- sd(out$clust)
+  net_mets_perm$z.clust[j] = (obs-mu)/sd
+
+  #zscore for network modularity
+  obs <- net_mets_perm$mod[j]
+  mu <- mean(out$mod)
+  sd <- sd(out$mod)
+  net_mets_perm$z.mod[j] = (obs-mu)/sd
+   
+  
+}
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+###################################################################################################################
+
+
+
+
+
+
 
 
 
