@@ -121,12 +121,12 @@ for(i in 1:length(nets_list)){
 ## nets_list[[1]][[1]] is array of edge lists for all network windows at site 1 (asema)
 ## nets_list[[1]][[1]][,,1] is just the edge list for asema during network window 1 (May)
 
+## ALL OF THESE ARE WEIGHTED - if two voles overlapped 4 times in June, they will have an edge count of 4
+
 ###########################################   END   ###################################################
 #######################################################################################################
 
 
-################ AWWW FUCK WAIT -- March 1 2022 -- all these networks are WEIGHTED - 
-################  so if there were multiple times in 48hr that two voles overlapped, they have degree>1
 
 
 ###########################################################################################################
@@ -159,25 +159,19 @@ for(i in 1:length(nets_list)){
     
     adjmat <- adjmat[ids,ids] #subset the adjmatrix for only the animals on the grid that month
     
-    # inet <- graph.adjacency(adjmat, weighted=NULL, mode="undirected")
-    ############## (march 1 2022) THIS CODE IS THE PROBLEM ^ by saying weighted=NULL, I have told igraph to interpret 
-        ###### matrix elements as the number of edges between each pair of individuals, NOT a weighted number of interactions
-        ###### therefore, my networks are actually drawing multiple edges between two nodes if they overlapped more than once 
-        ###### in a netwindow - what I was thinking was going on was that I was getting a binary edge if they ever overlapped
-    
-    inet <- graph.adjacency(adjmat > 1, weighted=NULL, mode="undirected") 
+    inet <- graph.adjacency(adjmat >= 1, mode="undirected", weighted=NULL) 
     #this code will make a binary network where there is only one edge between 2 voles, even if they overlapped multiple times in 48hr
     
       #make a network from the subset adj matrix for a given occasion (j)
     tag <- ids #pull the tag numbers for all the animals on that grid
-    occ <- rep(j,length(ids)) #this puts j==occasion # in a column for all animals
+    month <- rep(j,length(ids)) #this puts j==occasion # in a column for all animals
     
     #network metrics to calculate
-    site[[j]] <- data.frame(tag,occ)
-    site[[j]]$deg <- igraph::degree(inet)
+    site[[j]] <- data.frame(tag,month)
+    site[[j]]$deg <- igraph::degree(inet) #this is binary degree (number of individuals overlapped with)
     # site[[j]]$eig <- igraph::eigen_centrality(inet)$vector
       #eigenvector centrality takes into account second-order connections (ie, friends of friends)
-    site[[j]]$betw <- igraph::betweenness(inet)
+    site[[j]]$norm.betw <- igraph::betweenness(inet, normalized = TRUE) #normalized to compare nets of different sizes
       #betweeness is how often you're on the shortest path between others
     # site[[j]]$close <- igraph::closeness(inet) #not good for disconnected graphs
       #closeness measures normalized path length from you to all others in network
@@ -188,9 +182,9 @@ for(i in 1:length(nets_list)){
         #tightly connected communities have high transitivity
     site[[j]]$netdens <- rep(igraph::edge_density(inet, loops=FALSE), length(ids)) #network density
     # site[[j]]$avgdeg <- mean(site[[j]]$deg) #calculate average degree for a site/occasion
-    site[[j]]$components <- rep(igraph::count_components(inet), length(ids))
-    site[[j]]$netsize <- rep(igraph::gorder(inet), length(ids))
-    site[[j]]$edgect <- rep(igraph::gsize(inet), length(ids))
+    site[[j]]$n.component <- rep(igraph::count_components(inet), length(ids))
+    site[[j]]$n.node <- rep(igraph::gorder(inet), length(ids))
+    site[[j]]$n.edge <- rep(igraph::gsize(inet), length(ids))
     
     #calculate modularity
     if( all(adjmat == 0) ) { site[[j]]$n.clust <- rep(NaN, length(ids)) } 
@@ -241,13 +235,6 @@ for(i in 1:length(net_mets_list)){
 ########################################################################################################
 
 
-
-
-
-
-
-
-
 ############## condense net_mets_list to make it easier to use for analysis #######################
 
 #collate results
@@ -281,8 +268,8 @@ names(net_mets_list_summary) <- names(cmr_list)
 
 #change the numeric occasions to actual month words
 for(i in 1:length(net_mets_list_summary)){
-  net_mets_list_summary[[i]]$occ <- as.factor(net_mets_list_summary[[i]]$occ)
-  net_mets_list_summary[[i]]$occ <-  net_mets_list_summary[[i]]$occ %>%
+  net_mets_list_summary[[i]]$month <- as.factor(net_mets_list_summary[[i]]$month)
+  net_mets_list_summary[[i]]$month <-  net_mets_list_summary[[i]]$month %>%
     recode_factor("1" = "may", "2" = "june", "3" = "july", "4" = "aug", "5" = "sept", "6" = "oct")
 }
 
@@ -325,71 +312,183 @@ net_mets_summary <- net_mets_summary %>%
 
 
 
+
+
+
+
+#### 3.15.22 trying sumthin - centralization scores
+
+centralization.list <- list()
+
+#calculate z scores for modularity and clustering based on configuration model as null 
+for(i in 1:length(nets_list)){
+  
+  #12 sites
+  print(i)
+  tmp <- list()
+  
+  for(j in 1:6){
+    
+    ongrid <- nets_list[[i]][[3]][,c(1,(j+1))] #this pulls tag ids & the correct column of the netwindows df
+    ongrid <- ongrid %>% filter(.[,2] == 1) #filter for only animals on the grid
+    ids <- as.vector(ongrid$ids)
+    
+    adjmat <- nets_list[[i]][[2]][,,j] #pull the adjmatrix for the given occasion (includes all animals)
+    
+    adjmat <- adjmat[ids,ids] #subset the adjmatrix for only the animals on the grid that month
+    
+    inet <- graph.adjacency(adjmat >= 1, mode="undirected", weighted=NULL) 
+    #this code will make a binary network where there is only one edge between 2 voles, even if they overlapped multiple times in 48hr
+    
+    tmp[[j]] <- igraph::centr_betw(inet, directed=FALSE, normalized=TRUE)
+      ##tmp is a list with three elements:
+        ##the centrality score for each node, the graph centrality, and the theoretical max centrality
+    
+    tmp[[j]] <- tmp[[j]][-c(1,3)]
+    
+    
+    # df <- tmp[[j]][-c(1,3)] 
+    #   #remove [1] the 'res' item - this is the individual node-level centrality measures
+    #   #remove [3] the 'theoretical max' item
+    # 
+    # #make it a df not a list of 1 element
+    # df <- as.data.frame(do.call(rbind, df))
+    # 
+    # site[[j]] <- df
+    
+    
+  }
+  
+  #write the list 'site' as a 1st-order item in centralization.list
+  centralization.list[[i]] <- tmp
+  
+}
+
+#name the 12 1st order elements of nets_list as their sites
+names(centralization.list) <- names(cmr_list)
+
+#rename the sublist items for each grid
+for(i in 1:length(centralization.list)){
+  names(centralization.list[[i]]) <- c("may", "june", "july", "aug", "sept", "oct")
+}
+
+
+
+
+### this is all still working 3.15.22 - trying to get each list of 1 element per site/month to be a df
+    ## so asema has a df with month, centralizastion score and 6 rows
+
+# for(i in 1:length(centralization.list)){
+#   
+#   #12 sites
+#   print(i)
+#   
+#   for(j in 1:6){
+#     
+#     df <- as.data.frame(do.call(rbind, centralization.list[[i]][[j]]))
+# 
+# 
+# 
+# 
+# 
+# #loop across all sites and collapse the items per occasion into one df for the site
+# for(i in 1:length(centralization.list)){
+#   
+#   #for all 12 sites
+#   summary <- do.call("rbind", centralization.list[[i]])
+#   centralization.list[[i]] <- summary
+# }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ########################################################################################################
 ####################### here is some trial code for some network permutations ##########################
 #######################################################################################################
 
+###### following code was commented out 3.4.22 since it was trial code for running permutations on a single network
+###### see below for code to do this in a loop
 
-### subset the net_mets_summary down to just network level metrics so I can permute nets from it
-
-net_mets_perm <- net_mets_summary %>% 
-  distinct(site, occ, .keep_all = TRUE) %>%
-  select(-tag, -deg, -betw, -n.clust)
-
-# g <- erdos.renyi.game(n=22, p.or.m=40, type = "gnm", directed=FALSE, loops=FALSE)
-#g is an igraph object
-# plot.igraph(g)
-
-#define the conditions
-nperm = 100
-
-#make a list to store the output
-out <- list()
-rep <- seq(from=1, to=nperm)
-clust <- vector(mode="integer", length=nperm)
-mod <- vector(mode="integer", length=nperm)
-#out[[1]] is a df with three columns: rep, clust, mod
-out[[1]] <- data.frame(rep, clust, mod)
-
-for(i in 1:nperm){
-  
-  #generate an erdos-renyi graph with n nodes and p.or.m edges
-  g <- erdos.renyi.game(n=46, p.or.m=235, type = "gnm", directed=FALSE, loops=FALSE)
-  
-  #global clustering
-  out[[1]][i,2] <- igraph::transitivity(g, type="global")
-  #network level modularity
-  eb <- edge.betweenness.community(g)
-  # eb
-  # length(eb) #number of clusters
-  out[[1]][i,3] <- modularity(eb) #modularity of the network
-  
-} 
-
-#write output to a df
-out.df <- do.call(rbind.data.frame, out)
-
-#pull observed clustering for given month, site
-obs <- net_mets_perm$clust.net[net_mets_perm$site=="vaarinkorpi" & net_mets_perm$occ=="sept"]
-#plot permutation distribution of clustering values vs observed clustering
-out.df %>% ggplot(aes(x=clust)) +
-  geom_density(fill="dodgerblue", alpha=0.5) +
-  geom_vline(xintercept=obs, size=1.5, color="red")
-
-#pull observed network modularity for given month, site
-obs <- net_mets_perm$mod[net_mets_perm$site=="vaarinkorpi" & net_mets_perm$occ=="sept"]
-#plot permutation distribution of modularity values vs observed modularity
-out.df %>% ggplot(aes(x=mod)) +
-  geom_density(fill="dodgerblue", alpha=0.5) +
-  geom_vline(xintercept=obs, size=1.5, color="red")
-
-##### calculating a z-score
-
-mu <- mean(out.df$clust)
-sd <- sd(out.df$clust)
-obs <- net_mets_perm$clust.net[net_mets_perm$site=="vaarinkorpi" & net_mets_perm$occ=="sept"]
-
-(obs-mu)/sd
+# ### subset the net_mets_summary down to just network level metrics so I can permute nets from it
+# 
+# net_mets_perm <- net_mets_summary %>% 
+#   distinct(site, occ, .keep_all = TRUE) %>%
+#   select(-tag, -deg, -betw, -n.clust)
+# 
+# # g <- erdos.renyi.game(n=22, p.or.m=40, type = "gnm", directed=FALSE, loops=FALSE)
+# #g is an igraph object
+# # plot.igraph(g)
+# 
+# #define the conditions
+# nperm = 100
+# 
+# #make a list to store the output
+# out <- list()
+# rep <- seq(from=1, to=nperm)
+# clust <- vector(mode="integer", length=nperm)
+# mod <- vector(mode="integer", length=nperm)
+# #out[[1]] is a df with three columns: rep, clust, mod
+# out[[1]] <- data.frame(rep, clust, mod)
+# 
+# for(i in 1:nperm){
+#   
+#   #generate an erdos-renyi graph with n nodes and p.or.m edges
+#   g <- erdos.renyi.game(n=46, p.or.m=235, type = "gnm", directed=FALSE, loops=FALSE)
+#   
+#   #global clustering
+#   out[[1]][i,2] <- igraph::transitivity(g, type="global")
+#   #network level modularity
+#   eb <- edge.betweenness.community(g)
+#   # eb
+#   # length(eb) #number of clusters
+#   out[[1]][i,3] <- modularity(eb) #modularity of the network
+#   
+# } 
+# 
+# #write output to a df
+# out.df <- do.call(rbind.data.frame, out)
+# 
+# #pull observed clustering for given month, site
+# obs <- net_mets_perm$clust.net[net_mets_perm$site=="vaarinkorpi" & net_mets_perm$occ=="sept"]
+# #plot permutation distribution of clustering values vs observed clustering
+# out.df %>% ggplot(aes(x=clust)) +
+#   geom_density(fill="dodgerblue", alpha=0.5) +
+#   geom_vline(xintercept=obs, size=1.5, color="red")
+# 
+# #pull observed network modularity for given month, site
+# obs <- net_mets_perm$mod[net_mets_perm$site=="vaarinkorpi" & net_mets_perm$occ=="sept"]
+# #plot permutation distribution of modularity values vs observed modularity
+# out.df %>% ggplot(aes(x=mod)) +
+#   geom_density(fill="dodgerblue", alpha=0.5) +
+#   geom_vline(xintercept=obs, size=1.5, color="red")
+# 
+# ##### calculating a z-score
+# 
+# mu <- mean(out.df$clust)
+# sd <- sd(out.df$clust)
+# obs <- net_mets_perm$clust.net[net_mets_perm$site=="vaarinkorpi" & net_mets_perm$occ=="sept"]
+# 
+# (obs-mu)/sd
 
 #######################################################################################################
 ######################################### end trial code ###############################################
@@ -397,88 +496,246 @@ obs <- net_mets_perm$clust.net[net_mets_perm$site=="vaarinkorpi" & net_mets_perm
 
 
 
-## 2.28.22 NEW! trial code to get ^^ running in a loop ###
+### 2.28.22 NEW! code to get ^^ running in a loop ###
+
+#################################### erdos renyi permutations #########################################
 
 ### subset the net_mets_summary down to just network level metrics so I can permute nets from it
 
 net_mets_perm <- net_mets_summary %>% 
-  distinct(site, occ, .keep_all = TRUE) %>%
-  select(-tag, -deg, -betw, -n.clust)
+  distinct(site, month, .keep_all = TRUE) %>%
+  select(-tag, -deg, -norm.betw, -n.clust)
 
-#permutations won't work if edgect = 0 - remove any entries with no edges in that net
-net_mets_perm <- net_mets_perm %>% filter(edgect != 0)
+# #permutations won't work if edgect = 0 - remove any entries with no edges in that net
+# net_mets_perm <- net_mets_perm %>% filter(n.edge != 0)
+# 
+# 
+# #define the conditions
+# nperm = 100
+# 
+# #make a list to store the output
+#   #doesn't make sense to do network density because perm and obs 
+#       #will have same density since it's nodes and edges ;)
+# clust <- vector(mode="integer", length=nperm)
+# mod <- vector(mode="integer", length=nperm)
+# #out is a df with three columns: rep, clust, mod
+# out <- data.frame(clust, mod)
+# 
+# for(j in 1:nrow(net_mets_perm)){
+#   
+#   print(j)
+#   
+#   nodes <- net_mets_perm$n.node[j]
+#   edges <- net_mets_perm$n.edge[j]
+#   
+#   for(i in 1:nperm){
+#     
+#     #generate an erdos-renyi graph with n nodes and p.or.m edges
+#     g <- erdos.renyi.game(n = nodes, p.or.m = edges, type = "gnm", directed=FALSE, loops=FALSE)
+#     
+#     #global clustering
+#     out$clust[i] <- igraph::transitivity(g, type="global")
+# 
+#     #network level modularity
+#     eb <- edge.betweenness.community(g)
+#     # eb
+#     # length(eb) #number of clusters
+#     out$mod[i] <- modularity(eb) #modularity of the network
+#     
+#   }
+#   
+#   #zscore for network clustering
+#   obs <- net_mets_perm$clust.net[j]
+#   mu <- mean(out$clust)
+#   sd <- sd(out$clust)
+#   net_mets_perm$z.clust[j] = (obs-mu)/sd
+# 
+#   #zscore for network modularity
+#   obs <- net_mets_perm$mod[j]
+#   mu <- mean(out$mod)
+#   sd <- sd(out$mod)
+#   net_mets_perm$z.mod[j] = (obs-mu)/sd
+#    
+#   
+# }
+
+############################ end erdos renyi permutations ###############################
+
+############### just some plots to visualize network permutation things #################
+ 
+net_mets_perm %>% ggplot(aes(x=month, y=z.clust, fill=trt)) + 
+  geom_boxplot() +
+  labs(x="occasion", y="network level clustering z score", 
+       title="clustering z score by treatment") +
+  geom_hline(yintercept=2, linetype="dashed")
+
+net_mets_perm %>% ggplot(aes(x=month, y=z.clust)) + 
+  geom_point(aes(color=trt))
+
+net_mets_perm %>% ggplot(aes(x=month, y=z.clust, color=trt)) +
+  geom_boxplot(alpha=0.5) +
+  geom_point(position = position_jitterdodge(), width=0.1) +
+  scale_color_brewer(palette="Dark2") +
+  geom_hline(yintercept=0, linetype="solid")  +
+  geom_hline(yintercept=2, linetype="dashed")
+
+net_mets_perm %>% ggplot(aes(x=month, y=z.clust)) + 
+  geom_jitter(aes(color=trt), size=2, width=0.1) +
+  scale_color_brewer(palette="Dark2") +
+  geom_hline(yintercept=0, linetype="dashed")
+
+
+
+net_mets_perm %>% ggplot(aes(x=month, y=z.mod, fill=trt)) + 
+  geom_boxplot() +
+  labs(x="occasion", y="network level modularity z score", 
+       title="modularity z score by treatment") +
+  geom_hline(yintercept=0, linetype="solid")  +
+  geom_hline(yintercept=2, linetype="dashed")
+
+# net_mets_perm %>% ggplot(aes(x=month, y=z.mod)) + 
+#   geom_boxplot(aes(fill=trt), alpha=0.35) +
+#   geom_jitter(aes(color=trt), size=2) +
+#   scale_color_brewer(palette="Dark2") +
+#   geom_hline(yintercept=0, linetype="dashed")
+
+net_mets_perm %>% ggplot(aes(x=month, y=z.mod, color=trt)) +
+  geom_boxplot(alpha=0.5) +
+  geom_point(position = position_jitterdodge(), width=0.1) +
+  scale_color_brewer(palette="Dark2") +
+  geom_hline(yintercept=0, linetype="solid") +
+  geom_hline(yintercept=2, linetype="dashed")
+
+net_mets_perm %>% ggplot(aes(x=month, y=z.mod)) + 
+  geom_jitter(aes(color=trt), size=2, width=0.1) +
+  scale_color_brewer(palette="Dark2") +
+  geom_hline(yintercept=0, linetype="dashed")
+
+##################################################end visualizing#################################################################
+
+
+
+
+
+
+
+### another round of permutations - this time by degree distribution i.e. "configuration model" ######
+
+
+
+# ### 3.14.22 what I really need are the degree distributions for each site as their own thing, in the same order as net_mets_perm
+# 
+# deg.dist.list <- list()
+# 
+# for(i in 1:length(net_mets_list)){
+#   #for each site
+#   site <- list()
+#   for(j in 1:length(net_mets_list[[i]])){
+#     #for every month
+#     month.degs <- net_mets_list[[i]][[j]]$deg
+#     site[[j]] <- month.degs
+#   }
+# deg.dist.list[[i]] <- site
+# }
+# 
+# #name the 12 1st order elements as their sites
+# names(deg.dist.list) <- names(cmr_list)
+# 
+# #rename the sublist items (months) for each site
+# #accounting for the fact that some sites have 5 months of data and others have 6
+# for(i in 1:length(deg.dist.list)){
+#   ifelse( length(deg.dist.list[[i]]) == 6, names(deg.dist.list[[i]]) <- c("may", "june", "july", "aug", "sept", "oct"), 
+#           names(deg.dist.list[[i]]) <- c("june", "july", "aug", "sept", "oct") )
+# }
+
+#### nah, I didn't actually need that ^^ 3.15.22
+
+
 
 
 #define the conditions
 nperm = 100
 
-#make a list to store the output
-netdens <- vector(mode="integer", length=nperm)
+#make a df to store the output for a single net
+# dens <- vector(mode="integer", length=nperm)
 clust <- vector(mode="integer", length=nperm)
 mod <- vector(mode="integer", length=nperm)
-#out is a df with three columns: rep, clust, mod
-out <- data.frame(netdens, clust, mod)
+#out is a df with three columns: dens, clust, mod
+out <- data.frame(clust, mod) #removed dens because it was being fussy
 
-for(j in 1:nrow(net_mets_perm)){
-  
-  print(j)
-  
-  nodes <- net_mets_perm$netsize[j]
-  edges <- net_mets_perm$edgect[j]
-  
-  for(i in 1:nperm){
-    
-    #generate an erdos-renyi graph with n nodes and p.or.m edges
-    g <- erdos.renyi.game(n = nodes, p.or.m = edges, type = "gnm", directed=FALSE, loops=FALSE)
-    
-    # #network density
-    # out$netdens[i] <- igraph::edge_density(g, loops=FALSE)
-    
-    #global clustering
-    out$clust[i] <- igraph::transitivity(g, type="global")
 
-    #network level modularity
-    eb <- edge.betweenness.community(g)
-    # eb
-    # length(eb) #number of clusters
-    out$mod[i] <- modularity(eb) #modularity of the network
+#calculate z scores for modularity and clustering based on configuration model as null 
+for(i in 1:length(net_mets_list)){
+  
+  #12 sites
+  print(i)
+  
+  for(j in 1:length(net_mets_list[[i]])){
     
+    #5 or 6 months per site
+    print(j)
+    
+    for(k in 1:nperm){
+      
+      #generate a random graph with same degree distribution
+      g <- sample_degseq(out.deg=net_mets_list[[i]][[j]]$deg, method="simple.no.multiple")
+      
+      # #network density
+      # out$dens[k] <- igraph::edge_density(g, loops=FALSE)
+      
+      #global clustering
+      out$clust[k] <- igraph::transitivity(g, type="global")
+      
+      #network level modularity
+      eb <- edge.betweenness.community(g)
+      # eb
+      # length(eb) #number of clusters
+      out$mod[k] <- modularity(eb) #modularity of the network
+      
+      
+    }
+    
+    #the number of rows (voles) in a given site/month table of network metrics
+    ids <- net_mets_list[[i]][[j]]$tag
+    
+    ############### network density doesn't work ...because there's no variation in density across permutations?
+    # #zscore for network density
+    # obs <- unique(net_mets_list[[i]][[j]]$netdens)
+    # mu <- mean(out$dens)
+    # sd <- sd(out$dens)
+    # net_mets_list[[i]][[j]]$z.dens <- rep((obs-mu)/sd, length(ids))
+    
+    #zscore for network clustering
+    obs <- unique(net_mets_list[[i]][[j]]$clust.net)
+    mu <- mean(out$clust)
+    sd <- sd(out$clust)
+    net_mets_list[[i]][[j]]$z.clust <- rep((obs-mu)/sd, length(ids))
+    
+    #zscore for network modularity
+    obs <- unique(net_mets_list[[i]][[j]]$mod)
+    mu <- mean(out$mod)
+    sd <- sd(out$mod)
+    net_mets_list[[i]][[j]]$z.mod <- rep((obs-mu)/sd, length(ids))
+  
+    ######### I need a way to note if these networks are unique or the same as others permuted
+     
   }
   
-  # #zscore for network density
-  # obs <- net_mets_perm$netdens[j]
-  # mu <- mean(out$netdens)
-  # sd <- sd(out$netdens)
-  # net_mets_perm$z.netdens[j] = (obs-mu)/sd
-  
-  #zscore for network clustering
-  obs <- net_mets_perm$clust.net[j]
-  mu <- mean(out$clust)
-  sd <- sd(out$clust)
-  net_mets_perm$z.clust[j] = (obs-mu)/sd
-
-  #zscore for network modularity
-  obs <- net_mets_perm$mod[j]
-  mu <- mean(out$mod)
-  sd <- sd(out$mod)
-  net_mets_perm$z.mod[j] = (obs-mu)/sd
-   
   
 }
 
 
- 
+########## giving this a whirl ^^ 15 march 2022 #########
+## how to:
+##    run the code at the top through making net_mets_list then STOP, do not turn list to df
+##    then run the permtuation code above to add z scores to net_mets_list
+##    then run the code to take net_mets_list list to df net_mets_summary
+##    to simplify, then run the net_mets_perm code to subset down to just one entry per site/month
+##    then run the plots from before!
 
 
 
 
-
-
-
-
-
-
-###################################################################################################################
 
 
 
@@ -565,7 +822,7 @@ igraph_list <- list()
 for(i in 1:length(nets_list)){
   print(i)
   igraph_list[[i]] <- cmr_igraph(nets_list[[i]], type="social")
-}
+} 
 
 #name the 12 1st order elements of igraph_list as their sites
 names(igraph_list) <- names(cmr_list)
@@ -668,7 +925,6 @@ for(i in 1:length(degreefreq_list)){
 ################## ABOUT degreefreq_list ####################
 # a list of 12 items (1 per site), with 5-6 sub-items each (1 per occasion)
 # under each site/occasion, is a df of degree count and frequency of occurrence
-
 
 
 ########compress degreefreq_list down to a df
