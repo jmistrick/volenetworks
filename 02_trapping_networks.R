@@ -17,6 +17,9 @@ rm(list = ls())
 fulltrap <- readRDS(file = "fulltrap_12.30.21.rds")
 ## NOTE ## as of 11.18.21 version, all DP, DT, or S animals are still in the fulltrap dataset
 
+########### as of 3.21.22 - the final issue has been dealt with in terms of mistaken identities 
+############## NEED TO:  UPDATE FULLTRAP #######
+
 ##################################################################################################
 ######################################### CMRnet analysis #########################################
 ##################################################################################################
@@ -344,7 +347,7 @@ for(i in 1:length(nets_list)){
       ##tmp is a list with three elements:
         ##the centrality score for each node, the graph centrality, and the theoretical max centrality
     
-    tmp[[j]] <- tmp[[j]][-c(1,3)]
+    tmp[[j]] <- as.data.frame(do.call(rbind, tmp[[j]][-c(1,3)]))
     
     
     # df <- tmp[[j]][-c(1,3)] 
@@ -360,8 +363,9 @@ for(i in 1:length(nets_list)){
   }
   
   #write the list 'site' as a 1st-order item in centralization.list
-  centralization.list[[i]] <- tmp
-  
+  centralization.list[[i]] <- as.data.frame(do.call(rbind, tmp))
+  rownames(centralization.list[[i]]) <- c("may", "june", "july", "aug", "sept", "oct")
+
 }
 
 #name the 12 1st order elements of nets_list as their sites
@@ -376,28 +380,26 @@ for(i in 1:length(centralization.list)){
 
 
 ### this is all still working 3.15.22 - trying to get each list of 1 element per site/month to be a df
-    ## so asema has a df with month, centralizastion score and 6 rows
+    ## so asema has a df with month, centralization score and 6 rows
 
-# for(i in 1:length(centralization.list)){
-#   
-#   #12 sites
-#   print(i)
-#   
-#   for(j in 1:6){
-#     
-#     df <- as.data.frame(do.call(rbind, centralization.list[[i]][[j]]))
-# 
-# 
-# 
-# 
-# 
-# #loop across all sites and collapse the items per occasion into one df for the site
-# for(i in 1:length(centralization.list)){
-#   
-#   #for all 12 sites
-#   summary <- do.call("rbind", centralization.list[[i]])
-#   centralization.list[[i]] <- summary
-# }
+for(i in 1:length(centralization.list)){
+
+  #12 sites
+  print(i)
+  
+  df <- as.data.frame(do.call(rbind, centralization.list[[i]][[j]]))
+
+}
+
+
+
+#loop across all sites and collapse the items per occasion into one df for the site
+for(i in 1:length(centralization.list)){
+
+  #for all 12 sites
+  summary <- do.call("rbind", centralization.list[[i]])
+  centralization.list[[i]] <- summary
+}
 
 
 
@@ -505,6 +507,7 @@ for(i in 1:length(centralization.list)){
 net_mets_perm <- net_mets_summary %>% 
   distinct(site, month, .keep_all = TRUE) %>%
   select(-tag, -deg, -norm.betw, -n.clust)
+#this has one entry per site / month with the observed network-level metric
 
 # #permutations won't work if edgect = 0 - remove any entries with no edges in that net
 # net_mets_perm <- net_mets_perm %>% filter(n.edge != 0)
@@ -563,35 +566,37 @@ net_mets_perm <- net_mets_summary %>%
 
 ############### just some plots to visualize network permutation things #################
  
-net_mets_perm %>% ggplot(aes(x=month, y=z.clust, fill=trt)) + 
+net_mets_perm %>% ggplot(aes(x=month, y=z.clust, fill=trt)) +
   geom_boxplot() +
-  labs(x="occasion", y="network level clustering z score", 
+  labs(x="month", y="network level clustering z score",
        title="clustering z score by treatment") +
   geom_hline(yintercept=2, linetype="dashed")
-
-net_mets_perm %>% ggplot(aes(x=month, y=z.clust)) + 
-  geom_point(aes(color=trt))
+# 
+# net_mets_perm %>% ggplot(aes(x=month, y=z.clust)) + 
+#   geom_point(aes(color=trt))
 
 net_mets_perm %>% ggplot(aes(x=month, y=z.clust, color=trt)) +
   geom_boxplot(alpha=0.5) +
   geom_point(position = position_jitterdodge(), width=0.1) +
   scale_color_brewer(palette="Dark2") +
   geom_hline(yintercept=0, linetype="solid")  +
-  geom_hline(yintercept=2, linetype="dashed")
+  geom_hline(yintercept=2, linetype="dashed") + 
+  labs(x="month", y="network level clustering z score", color="treatment", 
+       title="clustering z score by treatment")
 
-net_mets_perm %>% ggplot(aes(x=month, y=z.clust)) + 
-  geom_jitter(aes(color=trt), size=2, width=0.1) +
-  scale_color_brewer(palette="Dark2") +
-  geom_hline(yintercept=0, linetype="dashed")
+# net_mets_perm %>% ggplot(aes(x=month, y=z.clust)) + 
+#   geom_jitter(aes(color=trt), size=2, width=0.1) +
+#   scale_color_brewer(palette="Dark2") +
+#   geom_hline(yintercept=0, linetype="dashed")
 
 
 
 net_mets_perm %>% ggplot(aes(x=month, y=z.mod, fill=trt)) + 
   geom_boxplot() +
-  labs(x="occasion", y="network level modularity z score", 
-       title="modularity z score by treatment") +
   geom_hline(yintercept=0, linetype="solid")  +
-  geom_hline(yintercept=2, linetype="dashed")
+  geom_hline(yintercept=2, linetype="dashed") + 
+  labs(x="month", y="network level modularity z score", fill="treatment", 
+       title="modularity z score by treatment")
 
 # net_mets_perm %>% ggplot(aes(x=month, y=z.mod)) + 
 #   geom_boxplot(aes(fill=trt), alpha=0.35) +
@@ -604,12 +609,14 @@ net_mets_perm %>% ggplot(aes(x=month, y=z.mod, color=trt)) +
   geom_point(position = position_jitterdodge(), width=0.1) +
   scale_color_brewer(palette="Dark2") +
   geom_hline(yintercept=0, linetype="solid") +
-  geom_hline(yintercept=2, linetype="dashed")
+  geom_hline(yintercept=2, linetype="dashed") + 
+  labs(x="month", y="network level modularity z score", color="treatment", 
+       title="modularity z score by treatment")
 
-net_mets_perm %>% ggplot(aes(x=month, y=z.mod)) + 
-  geom_jitter(aes(color=trt), size=2, width=0.1) +
-  scale_color_brewer(palette="Dark2") +
-  geom_hline(yintercept=0, linetype="dashed")
+# net_mets_perm %>% ggplot(aes(x=month, y=z.mod)) + 
+#   geom_jitter(aes(color=trt), size=2, width=0.1) +
+#   scale_color_brewer(palette="Dark2") +
+#   geom_hline(yintercept=0, linetype="dashed")
 
 ##################################################end visualizing#################################################################
 
@@ -738,6 +745,112 @@ for(i in 1:length(net_mets_list)){
 
 
 
+## working 3.22.22 ### ANOVAs!
+
+#took out months with lacking data to do a preliminary analysis, it worked
+data <- net_mets_perm %>% filter(month!="may", month!="june", month!="july")
+
+#next, try it with missing data and do Kruskal-Wallis (skip classic ANOVA)
+data <- net_mets_perm
+
+data$site <- as.factor(data$site)
+data$trt <- as.factor(data$trt)
+data$food_trt <- as.factor(data$food_trt)
+data$helm_trt <- as.factor(data$helm_trt)
+
+data %>% group_by(trt) %>%
+  summarise(count=n(),
+            mean = mean(z.mod, na.rm=TRUE),
+            sd = sd(z.mod, na.rm=TRUE))
+
+library("ggpubr")
+ggboxplot(data, x = "trt", y = "z.mod", 
+          color = "trt",
+          ylab = "Modularity z-score", xlab = "Treatment")
+
+ggline(data, x = "trt", y = "z.mod",
+       add = c("mean_se", "jitter"),
+       ylab = "Modularity z-score", xlab = "Treatment")
+
+
+mod <- aov(z.mod ~ trt, data=data)
+mod
+
+##oof, let's check them assumptions
+    #data are normally distributed and the variance across groups are homogeneous
+
+#plot residuals vs. fitted - for homogeneity of variance
+  #looking for outliers (several)
+  #but the red line fits the 0 pretty well
+  #however, there is some fanning
+plot(mod, 1)
+
+#or use the Levene's test in car package - less sensitive to departures from normal dist
+library(car)
+leveneTest(z.mod ~ trt, data=data)
+
+#check the output to see if p-value is less than the significance level of 0.05. 
+  #IF pvalue is NOT significant: This means that there is no evidence to suggest that the 
+    #variance across groups is statistically significantly different. 
+    #We can assume the homogeneity of variances in the different treatment groups.
+  ## IF pvalue is significant, this suggests variances are not the same across groups 
+
+
+#classical ANOVA has a strict assumption of equal variance for all groups
+    # Welch one-way test DOES NOT require equal variance
+    # Welch test is for normally distributed data that violates assumption of homogeneity of variance
+
+#ANOVA with no assumption of equal variances
+oneway.test(z.mod ~ trt, data = data)
+
+#pairwise t-tests with no assumption of equal variances
+pairwise.t.test(data$z.mod, data$trt,
+                p.adjust.method = "BH", pool.sd = FALSE)
+########### NOT SURE WHAT THE p.adjust.method means CHECK THIS >> ?p.adjust
+
+#check normality
+plot(mod, 2) #if the points fall mostly along the line (ignoring outliers) - you're good
+#the Skapiro-Wilk test can also test normality from the residuals of the ANOVA
+residuals <- residuals(mod)
+shapiro.test(x=residuals) #as long as the pvalue is large, you're good
+
+
+###### Kruskal-Wallis rank-sum test is a non-parametric alternative to ANOVA
+  # non-parametric meaning that it doesn't assume your data come from a specific distribution 
+    #(ie they don't have to be normally distributed)
+  #commonly used if you have 2 or more levels - for only 2 levels, use Mann-Whitney
+  # ? also does not assume equal variance // but another source said it was unstable when variance was not equal
+
+#Kruskal-Wallis rank-sum test
+kruskal.test(z.mod ~ trt, data=data)
+
+#if result is significant, a common post-hoc test is the Dunn test - this again allows for pvalue adjustments to
+    # "control the familywise error rate or the false discovery rate"
+    # Zar 2010 states that Dunn test is appropriate for groups with unequal numbers of observations
+  #Dunn test is a post-hoc non-parametric test but can be VERY conservative
+
+library(FSA) #package for dunnTest() function
+dunnTest(z.mod ~ trt, data=data, method="bh")
+
+
+#means coding -- see each month as own parameter
+test <- lm(z.mod ~  (month -1) + food_trt + helm_trt + (food_trt*helm_trt), data = net_mets_summary)
+summary(test)
+#months june, aug, sept, oct are significant
+#food_trtsupplement is significant
+
+test <- lm(z.clust ~ month + food_trt + helm_trt, data = net_mets_summary)
+summary(test)
+#reference level is june, control food, control worms
+#monthjuly, agu, sept, oct are significant
+#food treatsupp is too
+
+
+library(lme4)
+
+test <- lmer(z.mod ~ (month-1) + food_trt + helm_trt + (food_trt*helm_trt) + (1|site), data = net_mets_summary)
+summary(test)
+## i have no idea wtf I'm looking at or for when it comes to this output
 
 
 
