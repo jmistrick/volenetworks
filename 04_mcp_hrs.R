@@ -11,7 +11,7 @@ library(adehabitatHR)
 rm(list = ls())
 
 #load the fulltrap dataset (make sure it's the most recent version)
-fulltrap <- readRDS(file = "fulltrap_11.18.21.rds")
+fulltrap <- readRDS(file = "fulltrap_12.30.21.rds")
 
 
 ################################ new things 12.1.21  ####################################
@@ -45,7 +45,7 @@ mcp_list <- split(mcp_trap, f = mcp_trap$site)
 
 
 
-GRID <- mcp_list$helmipollo
+GRID <- mcp_list$asema
 
 
 #################   NEXT :: Get this into a loop so we can create one for each grid  ################################
@@ -72,6 +72,8 @@ coordinates(merge) <- sppt
 #create MCPs for our new dataset "merge" by individual animal ID
 cp <- mcp(merge[,1], percent=100) #(95% is the default)
 ## The size of the bounding polygon
+#get the MCP polygons output - HR size
+#area expressed in hectares if map projection was UTM
 as.data.frame(cp)
 ## Plot the home ranges
 plot(cp)
@@ -87,27 +89,84 @@ plot(cp, col = alpha(1:10, 0.5), add = TRUE)
 plot(merge, add=TRUE)
 
 
+#count of how many polygons are in the spatialpolygonsdf
+length(cp@polygons)
 
 
 
 
 
 
+################ NEW! in 2022 -- 3.29.22 -- measuring HR overlap ##########
+## still in a single site ###
+
+# library(amt) #this is a package John Fieberg wrote, has function hr_overlap() which might be useful?
+#https://cran.r-project.org/web/packages/amt/vignettes/p2_hr.html
 
 
 
 
 
 
+### code from SamHillman - plot each critter on their own
+library(sf)
+library(ggplot2)
+
+#rather pretty - plot to see each animal in its own space
+st_as_sf(cp) %>% 
+  ggplot(., aes(fill = id)) +
+  geom_sf(alpha = 0.5) +
+  scale_fill_discrete(name = "Animal id") +
+  facet_wrap(~id) +
+  theme_bw() +
+  theme(legend.position="none")
+
+
+newcp <- st_as_sf(cp)
+
+st_intersection(newcp) #creates geometry of the shared portion of x and y
+### but ^^ this kind of a mess because it sees all the overlaps (eg between 3 polygons at once)
+    ## what I really need to do is pull each polygon separately 
+    ## and then test the overlap between each possible pairing (ugh)
 
 
 
+thing1 <- newcp %>% filter(id=="226056")
+thing2 <- newcp %>% filter(id=="226091")
+
+st_intersection(thing1, thing2) #these two overlap and I get 'POLYGON'
+
+#this reports the size of that overlap
+st_area(st_intersection(thing1, thing2))
+
+thing3 <- newcp %>% filter(id=="219868")
+thing4 <- newcp %>% filter(id=="226023")
+
+st_intersection(thing3, thing4) #these two intersect at a point, it says 'POINT'
+
+st_area(st_intersection(thing3, thing4)) #these two intersect at a point and I still get 0 for area of overlap - GOOD
+
+#however, with both of those, I still need to extract the geometry of the overlap to get an area of overlap
+  #the areas reported are the areas of the HRs for those given animals
+
+st_intersection(thing3, thing1) #these two do not overlap and I get nothing
+
+#size of overlap
+st_area(st_intersection(thing1, thing4))
 
 
+## percent overlap
+st_area(st_intersection(thing1, thing2))/st_area(thing1)
+st_area(st_intersection(thing1, thing2))/st_area(thing2)
+
+st_area(st_intersection(thing1, thing4))/st_area(thing1)
+st_area(st_intersection(thing1, thing4))/st_area(thing4)
 
 
-
-
+## 3.29.22 -- Coooooool - so I can find a way to get the percent overlaps, it's just going to be a cucumbersome process
+  ## to do this for each pairing
+  ## probably the easiest would be a loop per site:
+  ## first row with all rows - delete self/self, second with all rows, delete self/self etc.
 
 
 
