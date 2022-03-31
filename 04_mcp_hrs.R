@@ -14,7 +14,7 @@ rm(list = ls())
 fulltrap <- readRDS(file = "fulltrap_12.30.21.rds")
 
 
-################################ new things 12.1.21  ####################################
+################################  prep code  ####################################
 
 #clean fulltrap for use in mcp analysis
 mcp_trap <- fulltrap %>%
@@ -40,11 +40,12 @@ mcp_trap <- mcp_trap %>%
 #split() fulltrap into ... A LIST! by site
 mcp_list <- split(mcp_trap, f = mcp_trap$site)
 
-###########################################################################################################
+###############################################  end prep code   ################################################
 
 
 
-#### looping through all 12 cites to create a separate spatialpolygonsdf for each site ####
+######### Loop to Create SpatialPointsDF for each site - polygons for each resident vole in 2021 #############
+### results are: one list of 12 spdf objects, one list of 12 dfs with polygon areas, .png file for each site ###
 
 library(scales) #used for pretty plots in the loop
 library(Hmisc) #has capitalize() function
@@ -109,11 +110,13 @@ for(i in 1:length(mcp_list)){
 names(sitespdf_list) <- names(mcp_list)
 names(HRarea_list) <- names(mcp_list)
 
+## this has created two lists and created png files for each site
+  #first list is basically the 'cp' file for each site - it's the full spatialpointsdf of all polygons
+  #second list is the cp@data file that gives ID of each animal and the area of their HR
 
 
 
-
-## make HRarea_list into df
+### for later analysis - make HRarea_list into df
 HRarea_summary <- do.call(rbind.data.frame, HRarea_list)
 
 #clean up the df
@@ -122,6 +125,12 @@ HRarea_summary <- HRarea_summary %>%
   separate(name, c("site", NA)) %>% #separate the site part from the index and get rid of the index
   mutate(site = as.factor(site)) #make site a factor
 
+#read in a csv of the grid treatments
+grid_trts <- read.csv(here("grid_trts.csv"))
+#combine food_trt and helm_trt into single 'trt' column
+grid_trts <- grid_trts %>% 
+  unite(trt, food_trt, helm_trt, sep = "_", remove = FALSE) #keep the original food_trt and helm_trt columns
+
 #join the grid_trts to HRarea_summary
 HRarea_summary <- HRarea_summary %>% 
   left_join(y=grid_trts, by = "site")
@@ -129,96 +138,11 @@ HRarea_summary <- HRarea_summary %>%
 
 
 
-
-
-
-
-
-
-
-
-
-
-#################   NEXT :: Get this into a loop so we can create one for each grid  ################################
-############# oooooo and can we see all the grids side by side? I want this shit on my wall #########################
-############################################ DONE March 31 2022 #####################################################
-
-# GRID <- mcp_list$radio
-# 
-# #Create Spatial Points for all relocations and assign IDs to each location
-# 
-# data.xy = GRID[c("easting","northing")]
-# #Creates class Spatial Points for all locations
-# xysp <- SpatialPoints(data.xy)
-# proj4string(xysp) <- CRS("+proj=utm +zone=35 +units=m +no_defs +ellps=GRS80")
-# 
-# #Creates a Spatial Data Frame from Spatial Points
-# sppt <- data.frame(xysp)
-# #Creates a data frame of ID
-# idsp <- data.frame(GRID$tag)
-# #Merges ID and Date into the same spatial data frame
-# merge <- data.frame(idsp)
-# #Adds ID and Date data frame with locations data frame
-# coordinates(merge) <- sppt
-# #head(merge)
-# 
-# 
-# #create MCPs for our new dataset "merge" by individual animal ID
-# cp <- mcp(merge[,1], percent=100) #(95% is the default)
-# ## to get area of the bounding polygon for each MCP (ie 'HR' size)
-#   #area expressed in hectares if map projection was UTM
-# mcpdata <- as.data.frame(cp)
-# # ## Plot the home ranges
-# # plot(cp)
-# # ## ... And the relocations
-# # plot(merge, add=TRUE)
-# 
-# 
-# # Plot the home ranges
-# library(scales) # Helps make polygons partly transparent using the alpha argument below
-# plot(cp, col = cp@data$id, pch = 16)
-# plot(cp, col = alpha(1:10, 0.5), add = TRUE)
-# #add crosshairs for each recapture location
-# plot(merge, add=TRUE)
-
-################ all of the above is now in the loop, this can probably be deleted eventually  #########################
-
-
-#count of how many polygons are in the spatialpolygonsdf
-length(cp@polygons)
-
-
-
-
-
-
-
-
-
-
-
-### code from SamHillman - plot each critter on their own
-library(sf)
-library(ggplot2)
-
-#rather pretty - plot to see each animal in its own space
-st_as_sf(cp) %>% 
-  ggplot(., aes(fill = id)) +
-  geom_sf(alpha = 0.5) +
-  scale_fill_discrete(name = "Animal id") +
-  facet_wrap(~id) +
-  theme_bw() +
-  theme(legend.position="none")
-
-
-
-
-
-####### % overlapping for all the sites in a loop ##############
+####################### in a loop for all 12 sites in 2021 ###########################
+####### Calculate area of overlap & % overlap (how much of each vole's HR overlaps with another's) ###########
 
 
 pct_overlap_list <- list()
-
 
 for(i in 1:length(sitespdf_list)){
   
@@ -228,6 +152,7 @@ for(i in 1:length(sitespdf_list)){
   
   newcp <- st_as_sfc(sitespdf_list[[i]])
   
+  #calculate amount of overlap between polygons (in hectares)
   l <- lapply( newcp, function(x) {lapply(newcp, function(y) st_intersection(x,y) %>% st_area() ) })
   
   mat <- matrix(unlist(l), ncol = length(newcp), byrow = TRUE)
@@ -240,8 +165,9 @@ for(i in 1:length(sitespdf_list)){
   df <- tibble::rownames_to_column(df, "focal") #row names become column
   df <- df %>% pivot_longer(!focal, names_to="neighbor", values_to="area_overlap")
   df <- df %>% filter(area_overlap > 0) #remove 0 and NA values
-  # df
+  # df #is a df version of the matrix, shows area of overlap in hectares
 
+  #calculate percent overlap (a directed measure) between polygons
   l2 <- lapply( newcp, function(x) {lapply(newcp, function(y) st_intersection( x, y ) %>% st_area() / st_area(x)  ) })
   
   mat2 <- matrix(unlist(l2), ncol = length(newcp), byrow = TRUE)
@@ -254,18 +180,18 @@ for(i in 1:length(sitespdf_list)){
   df2 <- tibble::rownames_to_column(df2, "focal") #row names become column
   df2 <- df2 %>% pivot_longer(!focal, names_to="neighbor", values_to="pct.overlap")
   df2 <- df2 %>% filter(pct.overlap > 0) #remove 0 and NA values
-  # df2
+  # df2 #is a df version of the matrix, shows percent overlap
   
-  df_full <- left_join(df, df2)
+  df_full <- left_join(df, df2) #combine area of overlap and percent overlap into one df
   # df_full
   
-  pct_overlap_list[[i]] <- df_full
+  pct_overlap_list[[i]] <- df_full #and write that df for a given site as a list item
   
 }
 
 #name the 12 1st order elements as their sites
 names(pct_overlap_list) <- names(mcp_list)
-
+#this is a list of 12 sites, each item has a df matrix of the amt and percentage overlap between residents
 
 ## make pct_overlap_list into freiggein huge df
 pct_overlap_summary <- do.call(rbind.data.frame, pct_overlap_list)
@@ -276,23 +202,21 @@ pct_overlap_summary <- pct_overlap_summary %>%
   separate(name, c("site", NA)) %>% #separate the site part from the index and get rid of the index
   mutate(site = as.factor(site)) #make site a factor
 
-#read in a csv of the grid treatments
-grid_trts <- read.csv(here("grid_trts.csv"))
-#combine food_trt and helm_trt into single 'trt' column
-grid_trts <- grid_trts %>% 
-  unite(trt, food_trt, helm_trt, sep = "_", remove = FALSE) #keep the original food_trt and helm_trt columns
-
-#join the grid_trts to net_mets_summary
+#join the grid_trts to pct_overlap_summary
 pct_overlap_summary <- pct_overlap_summary %>% 
   left_join(y=grid_trts, by = "site")
 
 ######## NICE - this now has the % overlap and area of overlap for all voles that did overlap in their HR
-### HOWEVER - we've now lost any data on any individuals that did not overlap
+### HOWEVER - we've now lost any data on any individuals that did not overlap which we'll need to do % overlapping
 
 
 
 
-## pulling from code above where I made cp@data into a big df for all sites
+## hence this next bit of code:
+
+################## Calculate percent overlapping (how many of the resident voles have any HR overlap) ############
+
+## pulling from code above where I made cp@data into a big df for all sites (ie the HRarea_summary df)
 #summarise count of 'resident' voles per site
 n.HRs <- HRarea_summary %>% 
   group_by(site) %>% 
@@ -305,19 +229,24 @@ n.overlaps <- pct_overlap_summary %>% group_by(site) %>%
   count() %>%
   rename(n.overlapping = n)
 
-pct_overlapping_summary <- left_join(n.HRs, n.overlaps)
-#replace NA with 0 for n.overlapping at Kuoppa (didn't have a row in joined df)
+pct_overlapping_summary <- left_join(n.HRs, n.overlaps) #join the two summaries
+
+#replace NA with 0 for n.overlapping at Kuoppa 
+  #(there were no overlapping voles there so it didn't have a row in n.overlaps so it got NA in 'pct_ovlpping_summary')
 pct_overlapping_summary <- pct_overlapping_summary %>% replace(is.na(.), 0)
+#add a column for percent overlapping (how many voles have a HR that overlaps with another)
 pct_overlapping_summary <- pct_overlapping_summary %>% mutate(pct.overlapping = n.overlapping/n)
 
-#join the grid_trts to net_mets_summary
+#join the grid_trts to pct_overlapping_summary
 pct_overlapping_summary <- pct_overlapping_summary %>% 
   left_join(y=grid_trts, by = "site")
 
+##################################################################################################################
+##########################################   end percent overlap/lapping  ########################################
+##################################################################################################################
 
 
-
-### Plot some trends - area of overlap, percent overlap, percent overlapping
+############### Plot some trends - area of overlap, percent overlap, percent overlapping  ########################
 
 HRarea_summary %>% ggplot(aes(x=trt, y=area, fill=trt)) +
   geom_boxplot(show.legend = FALSE) +
@@ -355,53 +284,28 @@ pct_overlapping_summary %>% ggplot(aes(x=trt, y=pct.overlapping, fill=trt)) +
 
 
 
+############### more to do: (as of 31 March 2022)
 
-############ for just one site at a time -- now done in a loop above #################
 
-## trying to get overlap between polys for a single site
-#https://stackoverflow.com/questions/54234895/calculate-area-overlap-for-pairs-of-polygons-in-matrix-format-in-r
-
-
-# newcp <- st_as_sfc(cp)
-# 
-# l <- lapply( newcp, function(x) { 
-#   lapply(newcp, function(y) st_intersection( x, y ) %>% st_area() ) 
-#   })
-# 
-# mat <- matrix(unlist(l), ncol = length(newcp), byrow = TRUE)
-# diag(mat) <- NA #set the diagonal to NA so I don't get confused later
-# colnames(mat) <- cp@data$id
-# rownames(mat) <- cp@data$id
-# mat #shows area of overlap in hectares (because UTM)
-# 
-# df <- as.data.frame(mat) #convert matrix to df
-# df <- tibble::rownames_to_column(df, "focal") #row names become column
-# df <- df %>% pivot_longer(!focal, names_to="neighbor", values_to="area_overlap")
-# df <- df %>% filter(area_overlap > 0) #remove 0 and NA values
-# df
-# 
-# l2 <- lapply( newcp, function(x) {
-#   lapply(newcp, function(y) st_intersection( x, y ) %>% st_area()  / st_area(x)  ) 
-#   })
-# 
-# mat2 <- matrix(unlist(l2), ncol = length(newcp), byrow = TRUE)
-# diag(mat2) <- NA #set the diagonal to NA so I don't get confused later
-# rownames(mat2) <- cp@data$id
-# colnames(mat2) <- cp@data$id
-# mat2 #shows percent overlap: how much of rowID overlaps with columnID
-# 
-# df2 <- as.data.frame(mat2) #convert matrix to df
-# df2 <- tibble::rownames_to_column(df2, "focal") #row names become column
-# df2 <- df2 %>% pivot_longer(!focal, names_to="neighbor", values_to="pct_overlap")
-# df2 <- df2 %>% filter(pct_overlap > 0) #remove 0 and NA values
-# df2
-# 
-# df_full <- left_join(df, df2)
-# df_full
+############# oooooo and can we see all the grids side by side? I want this shit on my wall #########################
+### the loop above saves each plot as a .png file - can we keep them all in R and do a lil parmfrow thing? ####
 
 
+############## 3.31.22 this code should be built into a loop too for funsies ###################
+### code from SamHillman - plot each critter on their own
+library(sf)
+library(ggplot2)
 
+#rather pretty - plot to see each animal in its own space
+st_as_sf(cp) %>% 
+  ggplot(., aes(fill = id)) +
+  geom_sf(alpha = 0.5) +
+  scale_fill_discrete(name = "Animal id") +
+  facet_wrap(~id) +
+  theme_bw() +
+  theme(legend.position="none")
 
+#################################################################################################
 
 
 
@@ -415,58 +319,11 @@ pct_overlapping_summary %>% ggplot(aes(x=trt, y=pct.overlapping, fill=trt)) +
 
 
 
-#### this was learning from 3.29.22 - I believe this is no longer needed given the lapply (3.31.22)
 
-################ NEW! in 2022 -- 3.29.22 -- measuring HR overlap ##########
-## still in a single site ###
 
-# library(amt) #this is a package John Fieberg wrote, has function hr_overlap() which might be useful?
-#https://cran.r-project.org/web/packages/amt/vignettes/p2_hr.html
 
 
 
-# st_intersection(newcp) #creates geometry of the shared portion of x and y
-# ### but ^^ this kind of a mess because it sees all the overlaps (eg between 3 polygons at once)
-#     ## what I really need to do is pull each polygon separately 
-#     ## and then test the overlap between each possible pairing (ugh)
-# 
-# 
-# 
-# thing1 <- newcp %>% filter(id=="226056")
-# thing2 <- newcp %>% filter(id=="226091")
-# 
-# st_intersection(thing1, thing2) #these two overlap and I get 'POLYGON'
-# 
-# #this reports the size of that overlap
-# st_area(st_intersection(thing1, thing2))
-# 
-# thing3 <- newcp %>% filter(id=="219868")
-# thing4 <- newcp %>% filter(id=="226023")
-# 
-# st_intersection(thing3, thing4) #these two intersect at a point, it says 'POINT'
-# 
-# st_area(st_intersection(thing3, thing4)) #these two intersect at a point and I still get 0 for area of overlap - GOOD
-# 
-# #however, with both of those, I still need to extract the geometry of the overlap to get an area of overlap
-#   #the areas reported are the areas of the HRs for those given animals
-# 
-# st_intersection(thing3, thing1) #these two do not overlap and I get nothing
-# 
-# #size of overlap
-# st_area(st_intersection(thing1, thing4))
-# 
-# 
-# ## percent overlap
-# st_area(st_intersection(thing1, thing2))/st_area(thing1)
-# st_area(st_intersection(thing1, thing2))/st_area(thing2)
-# 
-# st_area(st_intersection(thing1, thing4))/st_area(thing1)
-# st_area(st_intersection(thing1, thing4))/st_area(thing4)
-# # 
-# ## 3.29.22 -- Coooooool - so I can find a way to get the percent overlaps, it's just going to be a cucumbersome process
-#   ## to do this for each pairing
-#   ## probably the easiest would be a loop per site:
-#   ## first row with all rows - delete self/self, second with all rows, delete self/self etc.
 
 
 
@@ -474,38 +331,8 @@ pct_overlapping_summary %>% ggplot(aes(x=trt, y=pct.overlapping, fill=trt)) +
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#count of how many polygons are in the spatialpolygonsdf
+length(cp@polygons)
 
 
 
