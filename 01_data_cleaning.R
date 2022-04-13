@@ -13,7 +13,7 @@ rm(list = ls())
 ###############################   ENTRY & CLEANING VOLE CAPTURE DATA   ##################################
 
 #load data
-voledata <- read.csv(here("vole_capture_data_12.30.21.csv"))
+voledata <- read.csv(here("vole_capture_data_12.30.21_SEXCORRECTED.csv"))
 
 #clean names
 voledata <- voledata %>%
@@ -119,7 +119,7 @@ voledata <-
   relocate(date, .after = year) %>%
   relocate(session, .after = occasion) %>%
   relocate(date_time, .after = date) %>%
-  select(-time)
+  dplyr::select(-time)
 
 # str(voledata)
 ######################################################### END ##################################################################
@@ -175,7 +175,7 @@ voledata <-
   #move that new column right after the original letter column
   relocate(new_x, .after = x) %>%
   #remove that original letter column
-  select(-x) %>%
+  dplyr::select(-x) %>%
   #rename the new number x column
   rename(x = new_x)
 
@@ -192,14 +192,14 @@ voledata <-
   mutate(y_new = ifelse((x %% 2) == 0, ((voledata$y)*2), (((voledata$y)*2)-1))) %>%
   relocate(y_new, .after = y) %>%
   #remove the old y column and rename the new one
-  select(-y) %>%
+  dplyr::select(-y) %>%
   rename(y = y_new)
 ######################################################### END ##################################################################
 
 
 #remove un-needed columns from datatable - make a smaller version for easier networks
 trap <- voledata %>%
-  select(-id_as_number, -year, -date, -ow, -ticks, -ear_ed, -saliva_sr, -smear_bs, 
+  dplyr::select(-id_as_number, -year, -date, -ow, -ticks, -ear_ed, -saliva_sr, -smear_bs, 
          -bloodspin_bc, -bloodrna_br, -fecalegg_fe, -fecalrna_fr, -deworm,
          -samp_id, -handler, -notes)
 
@@ -209,8 +209,21 @@ trap <- voledata %>%
 #############################  LOAD AND CLEAN WEEK RECAP DATA   ###############################################
 
 #load the data
-wr_data <- read.csv(here("week_recap_data_12.30.21.csv"))
+wr_data <- read.csv(here("week_recap_data_12.30.21_SEXCORRECTED.csv"))
 
+#several columns (sex, per, nip, preg, test, fate, handler) have "" or "not noted" --> change these to NA
+wr_data$sex[wr_data$sex == "not noted"] <- NA
+wr_data$sex[wr_data$sex == ""] <- NA
+wr_data$per[wr_data$per == "not noted"] <- NA
+wr_data$per[wr_data$per == ""] <- NA
+wr_data$nip[wr_data$nip == "not noted"] <- NA
+wr_data$nip[wr_data$nip == ""] <- NA
+wr_data$preg[wr_data$preg == "not noted"] <- NA
+wr_data$preg[wr_data$preg == ""] <- NA
+wr_data$test[wr_data$test == "not noted"] <- NA
+wr_data$test[wr_data$test == ""] <- NA
+wr_data$fate[wr_data$fate == ""] <- NA
+wr_data$handler[wr_data$handler == ""] <- NA
 
 #clean names
 wr_data <- wr_data %>%
@@ -252,7 +265,6 @@ wr_data <- wr_data %>%
   # filter(!fate == "DT")
 
 
-
 #check for spelling errors, extra groups, weird data
 # unique(wr_data$year)
 # unique(wr_data$occasion)
@@ -266,6 +278,7 @@ wr_data <- wr_data %>%
 # unique(wr_data$preg)
 # unique(wr_data$test)
 # unique(wr_data$fate)
+
 
 
 #########################################################################################################
@@ -290,7 +303,7 @@ wr_data <-
   relocate(date, .after = year) %>%
   relocate(session, .after = occasion) %>%
   relocate(date_time, .after = date) %>%
-  select(-time)
+  dplyr::select(-time)
 
 # str(wr_data)
 
@@ -318,7 +331,7 @@ wr_data <-
   #move that new column right after the original letter column
   relocate(new_x, .after = x) %>%
   #remove that original letter column
-  select(-x) %>%
+  dplyr::select(-x) %>%
   #rename the new number x column
   rename(x = new_x)
 
@@ -334,12 +347,12 @@ wr_data <-
   mutate(y_new = ifelse((x %% 2) == 0, ((wr_data$y)*2), (((wr_data$y)*2)-1))) %>%
   relocate(y_new, .after = y) %>%
   #remove the old y column and rename the new one
-  select(-y) %>%
+  dplyr::select(-y) %>%
   rename(y = y_new)
 
 #remove un-needed columns from datatable - make a smaller version for easier networks
 recap <- wr_data %>%
-  select(-year, -date, -handler, -notes)
+  dplyr::select(-year, -date, -handler, -notes)
 
 
 
@@ -351,6 +364,7 @@ recap <- wr_data %>%
 # compare_df_cols(trap, recap)
 
 fulltrap <- bind_rows(trap, recap)
+
 
 # str(fulltrap)
 
@@ -433,6 +447,58 @@ check <- check %>% mutate(diff=unique-count) %>% filter(diff != 0)
 ##################################################################################################################################################################
 ################################################## end WORK ZONE end WORK ZONE  end WORK ZONE end WORK ZONE ######################################################
 ##################################################################################################################################################################
+
+
+# #remove un-needed columns from datatable - make a smaller version for easier networks
+# trap2 <- voledata %>%
+#   dplyr::select(-id_as_number, -year, -date, -ow, -ticks, -ear_ed, -saliva_sr, -smear_bs, 
+#                 -bloodspin_bc, -bloodrna_br, -fecalegg_fe, -fecalrna_fr, -deworm,
+#                 -samp_id, -notes)
+# 
+# #remove un-needed columns from datatable - make a smaller version for easier networks
+# recap2 <- wr_data %>%
+#   dplyr::select(-year, -date, -notes)
+# 
+# 
+# #combining trap and recap dataframes
+# fulltrap2 <- bind_rows(trap2, recap2)
+# 
+# #RECAP column: give a 1 if the capture is the first occurrence of that tag, else 0
+# fulltrap2 <- fulltrap2 %>%
+#   unite(occ.sess, occasion, session, sep = ".", remove = FALSE) %>% #make a new occ.sess column so I can do things in order
+#   group_by(tag) %>%
+#   mutate(firstcap = ifelse(occ.sess == min(occ.sess), 1, 0)) %>%
+#   relocate(firstcap, .after=tag)
+
+
+
+############################## THESE NEED TO BE RESOLVED - PROBABLY IN THE RAW DATA ##############################
+
+## NEW! 4.12.22
+
+#check to make sure everyone only has one sex
+fulltrap$sex <- as.character(fulltrap$sex)
+check <- fulltrap %>% group_by(tag) %>%
+  summarise(n = unique(sex)) %>%
+  filter(!is.na(n))
+#save the tag IDs of animals with multiple sexes
+duplist <- as.vector(check$tag[duplicated(check$tag)])
+#how many?
+length(duplist) #23 voles
+sexswaps <- fulltrap %>% 
+  filter(tag %in% duplist) %>% 
+  arrange(tag, occ.sess)
+
+#write as csv to share
+# write.csv(sexswaps, here("confirm_sex.csv"), row.names=FALSE)
+
+######################################################
+
+
+
+
+
+
 
 
 
