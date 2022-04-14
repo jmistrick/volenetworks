@@ -498,6 +498,37 @@ sexswaps <- fulltrap %>%
 
 
 
+#create a measure of time known alive (also first cap, last capture)
+fulltrap <- fulltrap %>% 
+  group_by(tag) %>%
+  arrange(date_time) %>%
+  mutate(first_seen = min(date_time),
+         last_seen = max(date_time)) %>%
+  mutate(time_known_alive = as.duration(first_seen %--% last_seen) / ddays(1) )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
