@@ -35,7 +35,7 @@ mcp_trap <- mcp_trap %>%
     (x %% 2) == 0, ((y-1)*10) + 6766143, ((y-1)*10) + 6766143)) %>%
   relocate(northing, .after = y) %>%
   dplyr::select(-x, -y)
-
+ 
 
 #### also, it would be nice to have useful individual-level data for each of our residents
 
@@ -64,23 +64,48 @@ mcp_trap <- mcp_trap %>%
     #this means avg/mass and head, no breeding status
 mcp_trap <- mcp_trap %>%
   group_by(tag) %>%
-  arrange(occ.sess) %>%
+  arrange(tag, occ.sess) %>%
   mutate(avg_mass = mean(mass, na.rm=TRUE),
          avg_head = mean(head, na.rm=TRUE)) %>%
   unite(trt, food_trt, helm_trt, sep = "_", remove = FALSE) %>%
-  dplyr::select(!c(head, mass, fate, date_time, session, occasion)) %>%
-  dplyr::select(!c(per, nip, preg, test)) %>% #dropping all the breeding status for now
-  relocate(avg_mass, .after=sex) %>%
-  relocate(avg_head, .after=avg_mass) %>%
-  ungroup()
+  dplyr::select(!c(fate, date_time, session, occasion)) %>%
+  relocate(avg_mass, .after=mass) %>%
+  relocate(avg_head, .after=head) %>%
+  mutate(status = "res")
 
-#mcp_trap now includes: 
-#occ.sess (first occ.sess we caught the animal)
-#avg_head, avg_mass
+#mcp_trap now includes: one row for each time the animal was trapped
+#occ.sess 
+#avg_head, avg_mass - and just head, mass for each capture
 #cap_freq (number of times captured)
-#sex - only M/F (could fuss around with breeding status later)
+#sex & all breeding status stuff ####### PLAY WITH THIS LATER? ######
 
-#pull out just sex and tag
+################# WORKING HERE 4.14.22 #################
+
+#this code will first make a column (breeder) of "breeder"/"nonbreeder" based on 1 for nip/preg or test
+#NAs persist
+#then it will make a new column based on breeder column where if ever the animal was breeder, it gets "active"
+#use NA.rm in this to make sure NAs are ignored and get replaced with the right tag
+#and then remove the unneeded columns (breeder, perf, nip, preg, test)
+#### IF YOU WANT TO LOOK BY TIME, ADD THESE BACK IN #####
+mcp_trap <- mcp_trap %>% mutate(breeder = case_when( nip=="1" | preg == "1" ~ "breeder",
+                                                   test == "1" ~ "breeder",
+                                                   nip=="0" & preg == "0" ~ "nonbreeder",
+                                                   test == "0" ~ "nonbreeder")) %>%
+  relocate(breeder, .after=sex) %>% 
+  group_by(tag) %>%
+  mutate(repro = ifelse(any(breeder == "breeder", na.rm = TRUE), "active", "inactive")) %>%
+  relocate(repro, .after = breeder) %>%
+  dplyr::select(!c(breeder, per, nip, preg, test))
+  
+
+
+######### WORKING HERE - THEN NEED TO PULL THIS COLUMN, 
+  ## IF EVER BREEDER, use that as vole-level data for summary 'traits' df
+
+  
+  
+
+#pull out tag, sex
 mcp_sex <- mcp_trap %>% 
   filter(firstcap == "1") %>%
   dplyr::select(c(tag, sex))
@@ -88,7 +113,7 @@ mcp_sex <- mcp_trap %>%
 #pull out vole-level other traits
 mcp_traits <- mcp_trap %>% 
   filter(firstcap == "1") %>%
-  dplyr::select(c(tag, avg_head, avg_mass, cap_freq))
+  dplyr::select(c(occ.sess, tag, repro, avg_head, avg_mass, cap_freq, status))
 
 #remove sex from mcp_trap (had sex with M,F,or NA)
 mcp_trap <- mcp_trap %>%
@@ -316,15 +341,17 @@ levels(pct_overlap_summary$f_n_sex) <- c("F_F", "mixed", "mixed", "M_M")
 n.HRs <- HRarea_summary %>% 
   group_by(site) %>% 
   summarise(unique(tag)) %>% 
-  count()
+  count() %>%
+  ungroup()
 
 #summarise number of focal voles from pct_overlap_summary (ie number per site with overlaps)
 n.overlaps <- pct_overlap_summary %>% group_by(site) %>% 
   summarise(unique(focal)) %>% 
   count() %>%
-  rename(n.overlapping = n)
+  rename(n.overlapping = n) %>%
+  ungroup()
 
-pct_overlapping_summary <- left_join(n.HRs, n.overlaps) #join the two summaries
+pct_overlapping_summary <- left_join(n.HRs, n.overlaps, by="site") #join the two summaries
 
 #replace NA with 0 for n.overlapping at Kuoppa 
   #(there were no overlapping voles there so it didn't have a row in n.overlaps so it got NA in 'pct_ovlpping_summary')
@@ -349,53 +376,115 @@ pct_overlapping_summary <- pct_overlapping_summary %>%
 
 ############### REMOVE THE DROP.NA WHEN WE NO LONGER HAVE NA for SEX ############
 
-pct_overlap_summary %>% 
-  drop_na() %>%
-  ggplot(aes(x=f_n_sex, y=area_overlap, fill=f_n_sex)) +
-  geom_boxplot(show.legend = TRUE) +
-  labs(x="treatment", y="HR overlap area (hectares)",
-       title="HR overlap area by sex")
-#a little less F-F overlap than M-F or M-M overlap?
+
+HRarea_summary %>% ggplot(aes(x=trt, y=area, fill=trt)) +
+  geom_boxplot(show.legend = FALSE) +
+  labs(x="Treatment", y="Capture Area (hectares)",
+       title="Capture Area by Treatment")
+#HR area is pretty similar between treatments
 
 HRarea_summary %>% 
   drop_na(sex) %>%
   ggplot(aes(x=trt, y=area, fill=sex)) +
   geom_boxplot(show.legend = TRUE) +
-  labs(x="treatment", y="HR area (hectares)",
-       title="HR area by sex, treatment")
+  scale_fill_manual(values = c("F" = "#DF173B",
+                               "M" = "#62B5D9")) +
+  labs(x="Treatment", y="Capture Area (hectares)",
+       title="Capture Area by Sex, Treatment", fill="Sex")
 #females ish have smaller HRs
 
-HRarea_summary %>% ggplot(aes(x=trt, y=area, fill=trt)) +
-  geom_boxplot(show.legend = FALSE) +
-  labs(x="treatment", y="HR area (hectares)",
-       title="HR area by treatment")
-#HR area is pretty similar between treatments
+HRarea_summary %>% 
+  drop_na(sex) %>%
+  ggplot(aes(x=sex, y=area, fill=sex)) +
+  geom_boxplot(show.legend = TRUE) +
+  labs(x="sex", y="HR area (hectares)",
+       title="HR area by sex")
+#this may not be meaningful/useful since we combine across treatments
 
-pct_overlap_summary %>% ggplot(aes(x=trt, y=pct.overlap, fill=trt)) +
+
+
+pct_overlap_summary %>% 
+  ggplot(aes(x=trt, y=pct.overlap, fill=trt)) +
+  geom_boxplot(show.legend = FALSE) +
+  labs(x="Treatment", y="Percent Overlap bewteen Focal and Neighbor",
+       title="Percent Overlap by Treatment")
+#the percent overlap (how much any single vole overlaps with any other vole) is also pretty similar
+
+pct_overlap_summary %>% 
+  drop_na() %>%
+  ggplot(aes(x=trt, y=pct.overlap, fill=f_n_sex)) +
+  scale_fill_manual(values = c("F_F" = "#DF173B",
+                               "mixed" = "#DDCC77",
+                               "M_M" = "#62B5D9")) +
+  geom_boxplot(show.legend = TRUE) +
+  labs(x="Treatment", y="Percent Overlap bewteen Focal and Neighbor",
+       title="Percent Overlap by Sex Pairing, Treatment", fill = "Focal-Neigbor Sex")
+
+
+
+
+pct_overlapping_summary %>% ggplot(aes(x=trt, y=pct.overlapping, fill=trt)) +
+  geom_boxplot(show.legend=FALSE) +
+  labs(x="Treatment", y="Percent Overlapping",
+       title="Percent of Voles with Overlapping Capture Areas by Treatment")
+#HOWEVER - the percent overlapping (how many of the voles have an overlapping HR) 
+    #is different between food-added and not
+
+
+
+
+
+
+
+pct_overlap_summary %>% 
+  ggplot(aes(x=trt, y=area_overlap, fill=trt)) +
   geom_boxplot(show.legend = FALSE) +
   labs(x="treatment", y="percent overlap",
        title="percent overlap by treatment")
 #the percent overlap (how much any single vole overlaps with any other vole) is also pretty similar
 
-pct_overlapping_summary %>% ggplot(aes(x=trt, y=pct.overlapping, fill=trt)) +
-  geom_boxplot(show.legend=FALSE) +
-  labs(x="treatment", y="percent overlapping",
-       title="percent overlapping by treatment")
-#HOWEVER - the percent overlapping (how many of the voles have an overlapping HR) 
-    #is different between food-added and not
+
+pct_overlap_summary %>% 
+  drop_na() %>%
+  ggplot(aes(x=trt, y=area_overlap, fill=f_n_sex)) +
+  scale_fill_manual(values = c("F_F" = "#DF173B",
+                               "mixed" = "#DDCC77",
+                               "M_M" = "#62B5D9")) +
+  geom_boxplot(show.legend = TRUE) +
+  labs(x="Treatment", y="CA overlap area (hectares)",
+       title="Capture Area Overlap by Sex Pairing",
+       fill="Focal-Neighbor Sex")
+
+pct_overlap_summary %>% 
+  drop_na() %>%
+  ggplot(aes(x=f_n_sex, y=area_overlap, fill=f_n_sex)) +
+  scale_fill_manual(values = c("F_F" = "#B10A28", 
+                               "mixed" = "#8C6BD0", 
+                               "M_M" = "#00A5F1")) +
+  geom_boxplot(show.legend = TRUE) +
+  labs(x="sexes of overlappers", y="HR overlap area (hectares)",
+       title="HR overlap area by sex, treatment")
+#a little less F-F overlap than M-F or M-M overlap?
+#again, this might be suspect since it's combining across treatments
+
+
 
 
 
 #this is interesting
 HRarea_summary %>% 
   drop_na() %>% 
-  ggplot(aes(x=avg_mass, y=area, color=sex)) + 
+  ggplot(aes(x=avg_mass, y=area, color=sex)) +
+  scale_color_manual(values = c("F" = "#DF173B",
+                               "M" = "#62B5D9")) +
   geom_point() + 
   geom_smooth(method=lm, 
-              formula = y ~ poly(x,2),
+              formula = y ~ x,
               se=TRUE) +
-  labs(title="HR area by avg mass for males and females")
+  labs(title="Capture Area by Average Mass, Sex")
 
+
+## just a few models to look at HR area based on female avg mass
 femaleHR <- HRarea_summary %>%
   filter(sex == "F")
 maleHR <- HRarea_summary %>%
@@ -405,13 +494,13 @@ fHR_mod <- lm(area ~ avg_mass, data=femaleHR)
 summary(fHR_mod)
 fHR_modpoly <- lm(area ~ poly(avg_mass, 2), data=femaleHR)
 summary(fHR_modpoly)
-AIC(fHR_mod, fHR_modpoly)
+AIC(fHR_mod, fHR_modpoly) #polynomial fit is better for females
 
 mHR_mod <- lm(area ~ avg_mass, data=maleHR)
 summary(mHR_mod)
 mHR_modpoly <- lm(area ~ poly(avg_mass, 2), data=maleHR)
 summary(mHR_modpoly)
-AIC(mHR_mod, mHR_modpoly)
+AIC(mHR_mod, mHR_modpoly) #linear fit is better for males
 
 
 
@@ -434,9 +523,18 @@ HRarea_summary %>%
 
 
 
-#################### CURRENTLY SET UP TO DO HR OVERLAP by SEX #########################
+#################### CURRENTLY SET UP TO DO % HR OVERLAP by SEX #########################
 
-mod <- aov(area_overlap ~ f_n_sex, data=pct_overlap_summary)
+
+
+#load the data you want
+dat <- fulltrap2
+category <- fulltrap2$sex_status
+response <- fulltrap2$avg_head
+category <- as.factor(category)
+
+
+mod <- aov(response ~ category, data=dat)
 mod
 
 ##oof, let's check them assumptions
@@ -450,7 +548,7 @@ plot(mod, 1)
 
 #or use the Levene's test in car package - less sensitive to departures from normal dist
 library(car)
-leveneTest(area_overlap ~ f_n_sex, data=pct_overlap_summary)
+leveneTest(response ~ category, data=dat)
 
 #check the output to see if p-value is less than the significance level of 0.05. 
 #IF pvalue is NOT significant: This means that there is no evidence to suggest that the 
@@ -464,10 +562,10 @@ leveneTest(area_overlap ~ f_n_sex, data=pct_overlap_summary)
 # Welch test is for normally distributed data that violates assumption of homogeneity of variance
 
 #ANOVA with no assumption of equal variances
-oneway.test(area_overlap ~ f_n_sex, data=pct_overlap_summary)
+oneway.test(response ~ category, data=dat)
 
 #pairwise t-tests with no assumption of equal variances
-pairwise.t.test(pct_overlap_summary$area_overlap, pct_overlap_summary$f_n_sex,
+pairwise.t.test(response, category,
                 p.adjust.method = "BH", pool.sd = FALSE)
 ########### NOT SURE WHAT THE p.adjust.method means CHECK THIS >> ?p.adjust
 
@@ -485,7 +583,7 @@ shapiro.test(x=residuals) #as long as the pvalue is large, you're good
 # ? also does not assume equal variance // but another source said it was unstable when variance was not equal
 
 #Kruskal-Wallis rank-sum test
-kruskal.test(area_overlap ~ f_n_sex, data=pct_overlap_summary)
+kruskal.test(response ~ category, data=dat)
 
 #if result is significant, a common post-hoc test is the Dunn test - this again allows for pvalue adjustments to
 # "control the familywise error rate or the false discovery rate"
@@ -493,13 +591,19 @@ kruskal.test(area_overlap ~ f_n_sex, data=pct_overlap_summary)
 #Dunn test is a post-hoc non-parametric test but can be VERY conservative
 
 library(FSA) #package for dunnTest() function
-dunnTest(area_overlap ~ f_n_sex, data=pct_overlap_summary, method="bh")
+dunnTest(response ~ category, data=dat, method="bh")
 
 
 #########################################################################################################################
 
 #HR overlap by sex -- homogeneity of variance and normality are both violated - ran Kruskal-Wallis
   # HR overlap of F-F vs mixed vs M-M are all very different
+
+
+
+
+
+
 
 
 
@@ -567,6 +671,102 @@ mcp_trap %>% ggplot(aes(x=trt, y=cap_freq, fill=sex)) +
   geom_boxplot(show.legend=TRUE) +
   labs(x="treatment", y="capture frequency",
        title="capture frequency by sex, treatment")
+
+
+
+
+
+
+
+
+
+
+
+
+#how many individuals did we tag
+fulltrap %>%
+  group_by(tag) %>%
+  summarise(n = length(tag)) %>%
+  nrow()
+#772
+
+#how many animals were recaptured at least 5 times
+fulltrap %>%
+  group_by(tag) %>%
+  summarise(n = length(tag)) %>%
+  filter(n >= 5) %>%
+  nrow()
+#123
+
+#percentage that are 'resident'
+123/772
+
+
+#subset fulltrap for nonresidents - captured less than 5 times
+nonres <- fulltrap %>%
+  group_by(site, tag) %>%
+  mutate(cap_freq = n()) %>% #create column for capture frequency (# times seen)
+  filter(cap_freq <= 4) #filter for at least 5 captures
+
+#get avg_head, avg_mass for all nonres, just one entry per animal
+nonres <- nonres %>%
+  group_by(tag) %>%
+  arrange(occ.sess) %>%
+  mutate(avg_mass = mean(mass, na.rm=TRUE),
+         avg_head = mean(head, na.rm=TRUE)) %>%
+  filter(firstcap == "1") %>%
+  unite(trt, food_trt, helm_trt, sep = "_", remove = FALSE) %>%
+  dplyr::select(!c(head, mass, fate, date_time, session, occasion, trap, x, y)) %>%
+  dplyr::select(!c(per, nip, preg, test)) %>% #dropping all the breeding status for now
+  relocate(avg_mass, .after=sex) %>%
+  relocate(avg_head, .after=avg_mass) %>%
+  mutate(status = "nonres") %>%
+  ungroup()
+
+#separate nonresident females
+nonresF <- nonres %>%
+  filter(sex == "F")
+#separate nonresident males
+nonresM <- nonres %>% 
+  filter(sex == "M")
+
+mean(nonresF$avg_head)
+#12.79
+mean(nonresM$avg_head, na.rm=TRUE)
+#12.97
+mean(maleHR$avg_head)
+#13.06
+mean(femaleHR$avg_head)
+#13.10
+
+mean(nonresF$avg_mass)
+#15.99
+mean(nonresM$avg_mass, na.rm=TRUE)
+#16.09
+mean(maleHR$avg_mass)
+#16.78
+mean(femaleHR$avg_mass)
+#19.21
+
+
+fulltrap2 <- bind_rows(mcp_trap, nonres) %>%
+  dplyr::select(!c(trap, easting, northing)) %>%
+  filter(firstcap == "1") %>%
+  unite(sex_status, sex, status, sep = "_", remove = FALSE)
+
+
+fulltrap2 %>% drop_na() %>%
+  ggplot(aes(x=sex, y=avg_mass, color=status)) +
+  geom_boxplot() +
+  labs(title = "Average Mass by Sex, Resident status")
+#### the only trouble with this is that avg_mass will even out pregnancy the more times we catch you
+
+fulltrap2 %>% drop_na() %>%
+  ggplot(aes(x=sex, y=avg_head, color=status)) +
+  geom_boxplot() +
+  labs(title = "Average Head Width by Sex, Resident Status")
+
+
 
 
 
