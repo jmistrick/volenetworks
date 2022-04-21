@@ -745,7 +745,7 @@ for(i in 1:length(net_mets_list)){
 
 
 
-## working 3.22.22 ### ANOVAs!
+## working 3.22.22 ### NEW! ANOVAs!
 
 #took out months with lacking data to do a preliminary analysis, it worked
 data <- net_mets_perm %>% filter(month!="may", month!="june", month!="july")
@@ -833,6 +833,8 @@ library(FSA) #package for dunnTest() function
 dunnTest(z.mod ~ trt, data=data, method="bh")
 
 
+############################## really preliminary and mostly just me fucking around #####################
+
 #means coding -- see each month as own parameter
 test <- lm(z.mod ~  (month -1) + food_trt + helm_trt + (food_trt*helm_trt), data = net_mets_summary)
 summary(test)
@@ -852,7 +854,7 @@ test <- lmer(z.mod ~ (month-1) + food_trt + helm_trt + (food_trt*helm_trt) + (1|
 summary(test)
 ## i have no idea wtf I'm looking at or for when it comes to this output
 
-
+############################################ end fucking around ########################################
 
 
 
@@ -1002,16 +1004,19 @@ for(i in 1:length(igraph_list)) {
 ####################################################################################################################
 
 
+
 #create dfs of the frequency of degree counts for each site/occasion - to be used for degree distribution histograms
 
 # Create list to store results
 degreefreq_list <- list()
+degree_list <- list()
 
 # Calculate network metrics to use
 for(i in 1:length(net_mets_list)){
 
   print(i)
   site <- list()
+  site.deg <- list()
 
   for(j in 1:length(net_mets_list[[i]])){
     #each occasion under a site
@@ -1022,18 +1027,28 @@ for(i in 1:length(net_mets_list)){
 
     site[[j]] <- degree.df #write df for each occasion as a separate item under 1st order site
 
+    site.deg[[j]] <- data.frame(degree)
+
   }
   degreefreq_list[[i]] <- site
+  degree_list[[i]] <- site.deg
 }
 
 #name the 12 1st order elements of nets_list as the sites
 names(degreefreq_list) <- names(cmr_list)
+names(degree_list) <- names(cmr_list)
 
 #rename the sublist items (months) for each site
 for(i in 1:length(degreefreq_list)){
   ifelse( length(degreefreq_list[[i]]) == 6, names(degreefreq_list[[i]]) <- c("may", "june", "july", "aug", "sept", "oct"), 
           names(degreefreq_list[[i]]) <- c("june", "july", "aug", "sept", "oct") )
   }
+
+for(i in 1:length(degree_list)){
+  ifelse( length(degree_list[[i]]) == 6, names(degree_list[[i]]) <- c("may", "june", "july", "aug", "sept", "oct"), 
+          names(degree_list[[i]]) <- c("june", "july", "aug", "sept", "oct") )
+}
+
 
 ################## ABOUT degreefreq_list ####################
 # a list of 12 items (1 per site), with 5-6 sub-items each (1 per occasion)
@@ -1076,6 +1091,135 @@ degreefreq_summary <- degreefreq_summary %>%
   separate(name, c("site", NA)) %>% #separate the site part from the index and get rid of the index
   mutate(site = as.factor(site)) #make site a factor
 degreefreq_summary <- degreefreq_summary %>% clean_names()
+
+#add grid treatments
+degreefreq_summary <- degreefreq_summary %>%
+  left_join(grid_trts, by="site") %>%
+  relocate(c(trt, food_trt, helm_trt), .after="site")
+
+
+#############
+#repeat for degree_list
+
+#make a list to store things
+degree_list_summary <- list()
+
+#loop across all sites and collapse the dfs per occasion into one df for the site
+for(i in 1:length(degree_list)){
+  
+  #for all 12 sites
+  summary <- do.call("rbind", degree_list[[i]])
+  
+  #the occasion is in the row name, make this a column
+  #row names are the sites, make that a column 
+  #separate the site part from the index and get rid of the index
+  summary <- summary %>% rownames_to_column("name") %>% separate(name, c("occ", NA)) %>% mutate(occ = as.factor(occ))
+  
+  degree_list_summary[[i]] <- summary
+  
+}
+
+#name the 12 1st order elements as their sites
+names(degree_list_summary) <- names(cmr_list)
+
+## make degreefreq_list_summary into freiggein huge df
+degree_summary <- do.call(rbind.data.frame, degree_list_summary)
+
+#clean up the df
+degree_summary <- degree_summary %>% 
+  rownames_to_column("name") %>% #row names are the sites, make that a column
+  separate(name, c("site", NA)) #separate the site part from the index and get rid of the index
+  
+degree_summary <- degree_summary %>% clean_names()
+
+#add grid treatments
+degree_summary <- degree_summary %>%
+  left_join(grid_trts, by="site") %>%
+  relocate(c(trt, food_trt, helm_trt), .after="site") %>%
+  mutate(site = as.factor(site)) %>%
+  mutate(trt = as.factor(trt))
+
+
+
+
+########################### messing around 4/21/22 #########################################
+################ degree distribution by site, month, treatment #############################
+
+#degree distribution per site (group by trt) facet by month
+degree_summary %>% mutate(occ = fct_relevel(occ, "may", "june", "july", "aug", "sept", "oct")) %>%
+  ggplot(aes(x=trt, y=degree, group=site, fill=trt)) + 
+  geom_violin() + 
+  facet_wrap(~occ)
+
+#degree distribution per site across time, facet by treatment
+degree_summary %>% mutate(occ = fct_relevel(occ, "may", "june", "july", "aug", "sept", "oct")) %>%
+  ggplot(aes(x=occ, y=degree, fill=site)) + 
+  geom_violin() + 
+  facet_wrap(~trt)
+
+# EXAMPLE: degree distribution per site in August, color by trt
+degree_summary %>% filter(occ == "aug") %>%
+  ggplot(aes(x=site, y=degree, fill = trt)) +
+  geom_violin()
+
+
+
+#compare distribution on degree across treaments, per month ##FUN TRENDS!
+degree_summary %>% mutate(occ = fct_relevel(occ, "may", "june", "july", "aug", "sept", "oct")) %>%
+  ggplot(aes(x=trt, y=degree, fill=trt)) + 
+  geom_violin() + 
+  facet_wrap(~occ)
+
+
+# degree_summary$site <- recode_factor(degree_summary$site,
+#                                      asema = "1",
+#                                      helmipollo = "2",
+#                                      hevonen = "3",
+#                                      janakkala = "4",
+#                                      ketunpesa = "5",
+#                                      kiirastuli = "6",
+#                                      kuoppa = "7",
+#                                      mustikka = "8",
+#                                      puro = "9",
+#                                      radio = "10",
+#                                      talo = "11",
+#                                      vaarinkorpi = "12")
+# degree_summary$site <- as.numeric(degree_summary$site)
+
+data <- degree_summary %>%
+  filter(occ == "oct")
+
+kruskal.test(degree ~ trt, data = data)
+
+# library(FSA) #package for dunnTest() function
+#https://rcompanion.org/handbook/F_08.html
+dunnTest(degree ~ trt, data=data, method="bh") 
+PT <-dunnTest(degree ~ trt, data=data, method="bh")$res
+    #pvalue adjusts for multiple comparison, so as to not increase possibility of type-I error
+#to instead see the compact letter display
+# library(rcompanion)
+cldList(P.unadj ~ Comparison, data=PT, threshold = 0.05)
+
+#this will give you the groups, but maybe gives slightly different answers than above ?
+# library(agricolae)
+# kruskal(data$degree, data$trt, group = TRUE, p.adj = "BH")$statistics
+# kruskal(data$degree, data$trt, group = TRUE, p.adj = "BH")$groups
+
+
+
+
+ # degree ~ trt (per month)
+# may: p=0.3131
+# june: p < 0.05 [c/c different from all others, others are similar]
+# july: p=0.05011 (eh maybe c/deworm|supp/c and supp/c|supp/dworm are different? p.unadj)
+# aug: p=0.05584 (eh maybe c/dworm|supp/dworm are different? p.unadj)
+# sept: p < 0.05 [c/c different from all others, c/dworm diff from all others...
+    # ...supp grids are diff from control, but not each other]
+#oct: p < 0.05 [control grids same, supp grids diff from control, supp grids the same]
+
+################################ end 4/21/22 #####################################
+
+
 
 
 
