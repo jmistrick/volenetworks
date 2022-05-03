@@ -20,6 +20,69 @@ fulltrap <- readRDS(file = "fulltrap_12.30.21.rds")
 ########### as of 3.21.22 - the final issue has been dealt with in terms of mistaken identities 
 ############## NEED TO:  UPDATE FULLTRAP #######
 
+
+
+#subset fulltrap for useful individual-level traits for later covariates 
+#add a 'breeder' column to replace all the per,nip,preg,test nonsense
+#add 'month' column with occasion month as a word (not a number)
+fulltrap_traits <- fulltrap %>% mutate(breeder = case_when(nip=="1" | preg == "1" ~ "breeder",
+                                                     test == "1" ~ "breeder",
+                                                     nip=="0" & preg == "0" ~ "nonbreeder",
+                                                     test == "0" ~ "nonbreeder")) %>%
+  relocate(breeder, .after=sex) %>% 
+  dplyr::select(!c(per, nip, preg, test)) %>% #remove extra repro columns
+  dplyr::select(!c(date_time, trap, x, y, fate)) %>% #remove non-trait data
+  mutate(month = case_when(occasion == "1" ~ "may",
+                           occasion == "2" ~ "june",
+                           occasion == "3" ~ "july",
+                           occasion == "4" ~ "aug",
+                           occasion == "5" ~ "sept",
+                           occasion == "6" ~ "oct",)) %>% #create month column
+  relocate(month, .after = session)
+
+# fulltrap_traits %>% group_by(tag, occasion) %>% slice(1) %>% nrow() #there should be 1183 unique tag, occasion entries
+
+#a whole bunch of shit to get just one entry per tag, occasion (target number of entries is 1183)
+#separate occasions 1-5 from 6 
+  #may-september, we always collected data on the first capture (so slice for first session), not true in october
+
+#these are the animals caught may-sept, slice for the first entry for a given occasion
+part_a <- fulltrap_traits %>% filter(occasion != "6") %>% 
+  group_by(tag, occasion) %>% arrange(occasion, session, .by_group = TRUE) %>%
+  slice(1) #keep the first session we captured (should be the entry we recorded sex, head, mass)
+
+#these are the animals caught only once in october - we keep these entries no matter what
+part_c <- fulltrap_traits %>% filter(occasion == "6") %>% 
+  group_by(tag, occasion) %>% arrange(occasion, session, .by_group = TRUE) %>%
+  filter(n()==1)
+
+#these are the animals caught multiple times in october and their subsequent entries are proper WR entries 
+#remove the WR entries (no sex, breeding, mass, head)
+part_d <- fulltrap_traits %>% filter(occasion == "6") %>% 
+  group_by(tag, occasion) %>% arrange(occasion, session, .by_group = TRUE) %>%
+  filter(n()>1) %>%
+  filter(!(is.na(sex) & is.na(breeder) & is.na(mass) & is.na(head))) %>% #this gets rid of a few, but not all the doubles
+  filter(n()==1)
+
+#these are the animals caught multiple times in october - keep the entry that has the most data 
+  # (which may not be the first session captured)
+part_b <- fulltrap_traits %>% filter(occasion == "6") %>% 
+  group_by(tag, occasion) %>% arrange(occasion, session, .by_group = TRUE) %>%
+  filter(n()>1) %>%
+  filter(!(is.na(sex) & is.na(breeder) & is.na(mass))) %>% #this gets rid of a few, but not all the doubles
+  filter(n()>1) %>%
+  filter(!(is.na(sex) & is.na(breeder))) %>% #this deals with all but one animal that has two entries
+  slice(1) #keep the first entry to deal with animal with two entries
+
+
+#write these four back to fulltrap_traits
+fulltrap_traits <- bind_rows(part_a, part_b, part_c, part_d) %>% 
+  ungroup() %>%
+  dplyr::select(!c(occasion, session))
+
+######### fulltrap_traits *should* be one entry per unique tag/occasion combo with relevant data ###################
+
+
 ##################################################################################################
 ######################################### CMRnet analysis #########################################
 ##################################################################################################
@@ -1022,12 +1085,16 @@ for(i in 1:length(net_mets_list)){
     #each occasion under a site
 
     degree <- net_mets_list[[i]][[j]]$deg
+    tag <- net_mets_list[[i]][[j]]$tag
     degree.df <- data.frame(table(degree=factor(degree, levels=seq(0, max(degree), by=1))))
+    ########### WORKING WORKING WORKING ################
+    ##### trying to add tag into degree_list (it's in degfreq rn which I need to change) so I have a way later
+    #### to connect the voles back to their degree
     degree.df$degree <- as.numeric(as.character(degree.df$degree))
 
     site[[j]] <- degree.df #write df for each occasion as a separate item under 1st order site
 
-    site.deg[[j]] <- data.frame(degree)
+    site.deg[[j]] <- data.frame(tag, degree)
 
   }
   degreefreq_list[[i]] <- site
@@ -1139,7 +1206,12 @@ degree_summary <- degree_summary %>%
   mutate(site = as.factor(site)) %>%
   mutate(trt = as.factor(trt))
 
-
+#overwrite degree_summary to include vole-level traits
+degree_summary <- left_join(degree_summary, fulltrap_traits, by=c('tag'='tag', 'occ'='month')) %>% 
+  dplyr::select(!c(site.y, food_trt.y, helm_trt.y)) %>%
+  rename(site = site.x,
+         food_trt = food_trt.x,
+         helm_trt = helm_trt.x)
 
 
 ########################### messing around 4/21/22 #########################################
@@ -1164,11 +1236,51 @@ degree_summary %>% filter(occ == "aug") %>%
 
 
 
-#compare distribution on degree across treaments, per month ##FUN TRENDS!
+#compare distribution on degree across treatments, per month ##FUN TRENDS!
 degree_summary %>% mutate(occ = fct_relevel(occ, "may", "june", "july", "aug", "sept", "oct")) %>%
   ggplot(aes(x=trt, y=degree, fill=trt)) + 
   geom_violin() + 
   facet_wrap(~occ)
+
+degree_summary %>% 
+  drop_na(sex) %>%
+  mutate(occ = fct_relevel(occ, "may", "june", "july", "aug", "sept", "oct")) %>%
+  ggplot(aes(x=trt, y=degree, fill=sex)) + 
+  geom_violin() + 
+  facet_wrap(~occ)
+
+
+
+######## new 5.3.22 - adding in sex to degree distribution
+
+degree_summary %>% 
+  drop_na(sex) %>%
+  mutate(occ = fct_relevel(occ, "may", "june", "july", "aug", "sept", "oct")) %>%
+  ggplot(aes(x=occ, y=degree, fill = sex)) +
+  geom_violin() +
+  facet_wrap(~trt)
+
+degree_summary %>% 
+  drop_na(sex) %>%
+  mutate(occ = fct_relevel(occ, "may", "june", "july", "aug", "sept", "oct")) %>%
+  ggplot(aes(x=occ, y=degree, fill = sex)) +
+  geom_boxplot() +
+  facet_wrap(~trt)
+
+degree_summary %>% 
+  drop_na(sex) %>%
+  mutate(occ = fct_relevel(occ, "may", "june", "july", "aug", "sept", "oct")) %>%
+  ggplot(aes(x=trt, y=degree, fill = sex)) +
+  geom_violin() +
+  facet_wrap(~occ)
+
+degree_summary %>% 
+  drop_na(sex) %>%
+  mutate(occ = fct_relevel(occ, "may", "june", "july", "aug", "sept", "oct")) %>%
+  ggplot(aes(x=trt, y=degree, fill = sex)) +
+  geom_boxplot() +
+  facet_wrap(~occ)
+
 
 
 # degree_summary$site <- recode_factor(degree_summary$site,
