@@ -13,7 +13,8 @@ rm(list = ls())
 ###############################   ENTRY & CLEANING VOLE CAPTURE DATA   ##################################
 
 #load data
-voledata <- read.csv(here("vole_capture_data_12.30.21_SEXCORRECTED.csv"))
+voledata <- read.csv(here("vole_capture_data_06.01.22.csv")) 
+#june 1 2022 version is the most up-to-date - has corrected tag IDs and ambiguous sexes resolved
 
 #clean names
 voledata <- voledata %>%
@@ -59,7 +60,7 @@ voledata <- voledata %>%
   filter(!session == "0") %>%
   filter(!is.na(session))
 
-####################################### how to incorporate animals found dead NOT during an occasion? ######################################
+########## THE ABOVE CODE removes all animals that have missing data or were found dead NOT during a trapping occasion ##################
 # voledata %>% filter(is.na(trap))
 # #219825 - euthanized 9.1.21 during field course (caught off the grid)
 # #219917 - euthanized 9.1.21 during field course (caught off the grid)
@@ -69,7 +70,7 @@ voledata <- voledata %>%
 # #they aren't technically session 4 captures, though so I don't know what I'd do with them if I left them in
 # voledata %>% filter(is.na(session)) #these animals were found DT when supplementing
 
-########## RIGHT NOW, all of the DP, DT, and S animals (except those that were part of ^ above) are still in the dataset ###################
+########## RIGHT NOW, all of the DP, DT, and S animals (except those that were part of ^ above) are still in the dataset ################
 # #remove animals euthanized for terminal sampling
 # filter(!fate == "S")
 # #remove animals DP or DT
@@ -94,7 +95,7 @@ voledata <- voledata %>%
 # range(voledata$mass, na.rm = TRUE)
 # range(voledata$ticks, na.rm = TRUE)
 
-
+#in case you need it:
 # #basically a find and replace command
 # voledata$column[voledata$column == "findthis"] <- "replacewiththis"
 
@@ -120,27 +121,26 @@ voledata <-
   relocate(session, .after = occasion) %>%
   relocate(date_time, .after = date) %>%
   dplyr::select(-time)
-
-# str(voledata)
-######################################################### END ##################################################################
+######################################################### END ############################################################
 
 
 
-# find out if any of the DP or DT or S animals were ones we'd caught before
+###################### find out if any of the DP or DT or S animals were ones we'd caught before ####################
 # dead <- voledata %>%
 #   filter(!fate == "R") %>%
 #   summarise(tag)
 # 
 # dead.v <- as.vector(dead$tag)
-# length(dead.v) #22 individuals are DT or DP
+# length(dead.v) #57 individuals are DT or DP
 # 
 # dead.df <- voledata %>% filter(tag %in% dead.v)
-# nrow(dead.df) #76 entries for those animals
+# nrow(dead.df) #71 entries for those animals
+############# DON'T KNOW WHY THE ABOVE CODE IS USEFUL OR IF I NEED IT 6.1.22 ####################
 
-
-#check the number of animals at each grid in may (lowest month)
-# voledata %>%
-#   filter(occasion == "1")
+#check the number of animals at each grid in may (lowest month by population numbers)
+# voledata %>% group_by(site) %>%
+#   filter(occasion == "1") %>%
+#   summarise(n_distinct(tag))
 #igraph gets annoyed and won't convert nets to igraph objects if there is only 1 animal in the grid... 
     # and therefore no adj matrix
 #get rid of the one critter at janakkala and kuoppa in May because they make trouble in the networks
@@ -154,11 +154,9 @@ voledata <- voledata %>%
 ################################ convert trap number to a grid coordinate ####################################
 voledata<- 
   voledata %>%
-  separate(trap, into = c("x", "y"), sep = "(?<=[A-Z])(?=[0-9])", remove=FALSE)
-
-#recode each letter as a number
-voledata <- 
-  voledata %>%
+  #separate trap ID (letter/number) into column of the letter (x) and number (y)
+  separate(trap, into = c("x", "y"), sep = "(?<=[A-Z])(?=[0-9])", remove=FALSE) %>%
+  #recode each letter as a number
   #this makes a new column with the letter turned into its corresponding number
   mutate(new_x = case_when(
     x == "A" ~ 1,
@@ -177,17 +175,10 @@ voledata <-
   #remove that original letter column
   dplyr::select(-x) %>%
   #rename the new number x column
-  rename(x = new_x)
-
-#make sure y and x are both numeric, not characters
-voledata <- voledata %>%
-  mutate(x = as.numeric(x), y = as.numeric(y))
-
-# str(voledata)
-
-#adjust the trap number so it corresponds to a grid number
-voledata <-
-  voledata %>%
+  rename(x = new_x) %>%
+  #make sure y and x are both numeric, not characters
+  mutate(x = as.numeric(x), y = as.numeric(y)) %>%
+  #adjust the trap number (y) so it corresponds to a grid number
   #if remainder of x/2 is 0 (if x is even), multiply y by 2 - if else multiply by 2 then subtract 1
   mutate(y_new = ifelse((x %% 2) == 0, ((voledata$y)*2), (((voledata$y)*2)-1))) %>%
   relocate(y_new, .after = y) %>%
@@ -209,7 +200,8 @@ trap <- voledata %>%
 #############################  LOAD AND CLEAN WEEK RECAP DATA   ###############################################
 
 #load the data
-wr_data <- read.csv(here("week_recap_data_12.30.21_SEXCORRECTED.csv"))
+wr_data <- read.csv(here("week_recap_data_06.01.22.csv"))
+#june 1 2022 version is the most up-to-date, occ 5 and 6 have been checked and sexes corrected
 
 #several columns (sex, per, nip, preg, test, fate, handler) have "" or "not noted" --> change these to NA
 wr_data$sex[wr_data$sex == "not noted"] <- NA
@@ -256,15 +248,6 @@ wr_data <- wr_data %>%
 # wr_data %>% filter(is.na(session)) #no missing sessions
 # wr_data %>% filter(is.na(date)) #no missing dates
 
-
-############ DEAD ANIMALS ARE STILL IN THE DATASET ###################
-  # #remove animals euthanized for terminal sampling
-  # filter(!fate == "S") %>%
-  # #remove animals DP or DT
-  # filter(!fate == "DP") %>%
-  # filter(!fate == "DT")
-
-
 #check for spelling errors, extra groups, weird data
 # unique(wr_data$year)
 # unique(wr_data$occasion)
@@ -279,11 +262,16 @@ wr_data <- wr_data %>%
 # unique(wr_data$test)
 # unique(wr_data$fate)
 
+############ DEAD ANIMALS ARE STILL IN THE DATASET ###################
+# #remove animals euthanized for terminal sampling
+# filter(!fate == "S") %>%
+# #remove animals DP or DT
+# filter(!fate == "DP") %>%
+# filter(!fate == "DT")
 
 
-#########################################################################################################
 
-#create a time column to replace session (for CMRnet)
+################################ create a time column to replace session (for CMRnet) ##################################
 wr_data <-
   wr_data %>%
   mutate(time = case_when(
@@ -304,17 +292,15 @@ wr_data <-
   relocate(session, .after = occasion) %>%
   relocate(date_time, .after = date) %>%
   dplyr::select(-time)
+######################################################### END ############################################################
 
-# str(wr_data)
 
-#convert trap number to a grid coordinate
+
+################################ convert trap number to a grid coordinate ####################################
 wr_data<- 
   wr_data %>%
-  separate(trap, into = c("x", "y"), sep = "(?<=[A-Z])(?=[0-9])", remove=FALSE)
-
-#recode each letter as a number
-wr_data <- 
-  wr_data %>%
+  separate(trap, into = c("x", "y"), sep = "(?<=[A-Z])(?=[0-9])", remove=FALSE) %>%
+  #recode each letter as a number
   #this makes a new column with the letter turned into its corresponding number
   mutate(new_x = case_when(
     x == "A" ~ 1,
@@ -333,71 +319,32 @@ wr_data <-
   #remove that original letter column
   dplyr::select(-x) %>%
   #rename the new number x column
-  rename(x = new_x)
-
-#make sure y and x are both numeric, not characters
-wr_data <- wr_data %>%
-  mutate(x = as.numeric(x), y = as.numeric(y))
-# str(wr_data)
-
-#adjust the trap number so it corresponds to a grid number
-wr_data <-
-  wr_data %>%
+  rename(x = new_x) %>%
+  #make sure y and x are both numeric, not characters
+  mutate(x = as.numeric(x), y = as.numeric(y))%>%
+  #adjust the trap number (y) so it corresponds to a grid number
   #if remainder of x/2 is 0 (if x is even), multiply y by 2 - if else multiply by 2 then subtract 1
   mutate(y_new = ifelse((x %% 2) == 0, ((wr_data$y)*2), (((wr_data$y)*2)-1))) %>%
   relocate(y_new, .after = y) %>%
   #remove the old y column and rename the new one
   dplyr::select(-y) %>%
   rename(y = y_new)
+######################################################### END ############################################################
 
-#remove un-needed columns from datatable - make a smaller version for easier networks
+
+#remove un-needed columns from data table - make a smaller version for easier networks
 recap <- wr_data %>%
   dplyr::select(-year, -date, -handler, -notes)
 
 
 
-#################################################################################
-
-#combining trap and recap dataframes
+#############################  COMBINE AND CLEAN FULLTRAP DATA   ###############################################
 
 #compare columns and their classes
 # compare_df_cols(trap, recap)
 
+#combining trap and recap dataframes
 fulltrap <- bind_rows(trap, recap)
-
-
-# str(fulltrap)
-
-
-
-
-##################################################################################################################################################################
-##############################   WORK ZONE   WORK ZONE   WORK ZONE  WORK ZONE WORK ZONE ##########################################
-##################################################################################################################################################################
-
-
-#####there are also a number of animals that were on the vole processing sheet twice because they were 
-## captured, weighed, and released due to time issues (mostly occasion 6)
-### I need to find these animals and make sure they only have 0 or 1 for the first occasion they were seen, 
-## not both if they have two processing entries
-
-
-# ## working prelim version (no longer needed)
-# #find the first occurrence of each tag ID
-# first <- fulltrap %>%
-#   unite(occ.sess, occasion, session, sep = ".", remove = FALSE) %>%
-#   group_by(tag) %>%
-#   filter(occ.sess == min(occ.sess)) %>%
-#   slice(1) %>% #takes the first occurrence if there is a tie
-#   ungroup()
-# 
-# #making sure it's working
-# notfirst <- fulltrap %>%
-#   unite(occ.sess, occasion, session, sep = ".", remove = FALSE) %>%
-#   group_by(tag) %>%
-#   filter(occ.sess != min(occ.sess)) %>%
-#   ungroup()
-# #12.2.21 - something is still weird because 1 animal is missing between first and notfirst but all have occ and sess
 
 #RECAP column: give a 1 if the capture is the first occurrence of that tag, else 0
 fulltrap <- fulltrap %>%
@@ -405,136 +352,15 @@ fulltrap <- fulltrap %>%
   group_by(tag) %>%
   mutate(firstcap = ifelse(occ.sess == min(occ.sess), 1, 0)) %>%
   relocate(firstcap, .after=tag)
-### this will record all the WRs as 0 as well
+#this will record all the WRs as 0 as well
 
-## BUT THINGS ARE STILL WRONG FOR ANY ANIMAL CAPTURED ON 2 GRIDS
-
-
-
-################# do a check to see how many unique grids animals are on #####################
-fulltrap %>%
-  group_by(tag) %>%
-  summarise(site_unique = n_distinct(site)) %>%
-  filter(site_unique > 1) %>%
-  ungroup()
-
-## the two animals here are 219742 and 219958
-
-############ WORKING as of 12.30.21 there are still 2 animals with records at two sites
-###############################################################################################
-
-
-## check to make sure animals don't have more entries than unique occ.sess combos
-check <- fulltrap %>% group_by(tag) %>% summarise(count = length(occ.sess), unique = n_distinct(occ.sess))
-
-check <- check %>% mutate(diff=unique-count) %>% filter(diff != 0)
-#### STILL NEED TO DEAL WITH THIS ##### 219765 is on this list - something is still wrong there (12.30.21)
-
-
-#############################################################################################
-
-######  STILL NEED TO DO THIS  ############animals that are questinonable enough to remove
-
-#capture of 219941 at janakkala occ3sess3 - can't confirm PIT tag #
-#animals 219875 capped once at both mustikka and kiirastuli - don't know who they actually are
-
-###############################################################################################
-
-
-
-
-
-##################################################################################################################################################################
-################################################## end WORK ZONE end WORK ZONE  end WORK ZONE end WORK ZONE ######################################################
-##################################################################################################################################################################
-
-
-# #remove un-needed columns from datatable - make a smaller version for easier networks
-# trap2 <- voledata %>%
-#   dplyr::select(-id_as_number, -year, -date, -ow, -ticks, -ear_ed, -saliva_sr, -smear_bs, 
-#                 -bloodspin_bc, -bloodrna_br, -fecalegg_fe, -fecalrna_fr, -deworm,
-#                 -samp_id, -notes)
-# 
-# #remove un-needed columns from datatable - make a smaller version for easier networks
-# recap2 <- wr_data %>%
-#   dplyr::select(-year, -date, -notes)
-# 
-# 
-# #combining trap and recap dataframes
-# fulltrap2 <- bind_rows(trap2, recap2)
-# 
-# #RECAP column: give a 1 if the capture is the first occurrence of that tag, else 0
-# fulltrap2 <- fulltrap2 %>%
-#   unite(occ.sess, occasion, session, sep = ".", remove = FALSE) %>% #make a new occ.sess column so I can do things in order
-#   group_by(tag) %>%
-#   mutate(firstcap = ifelse(occ.sess == min(occ.sess), 1, 0)) %>%
-#   relocate(firstcap, .after=tag)
-
-
-
-############################## THESE NEED TO BE RESOLVED - PROBABLY IN THE RAW DATA ##############################
-
-## NEW! 4.12.22
-
-#check to make sure everyone only has one sex
-fulltrap$sex <- as.character(fulltrap$sex)
-check <- fulltrap %>% group_by(tag) %>%
-  summarise(n = unique(sex)) %>%
-  filter(!is.na(n))
-#save the tag IDs of animals with multiple sexes
-duplist <- as.vector(check$tag[duplicated(check$tag)])
-#how many?
-length(duplist) #23 voles
-sexswaps <- fulltrap %>% 
-  filter(tag %in% duplist) %>% 
-  arrange(tag, occ.sess)
-
-#write as csv to share
-# write.csv(sexswaps, here("confirm_sex.csv"), row.names=FALSE)
-
-######################################################
-
-
-
-
-
-#create a measure of time known alive (also first cap, last capture)
+#create a measure of TIME KNOWN ALIVE (also date of first cap, last capture)
 fulltrap <- fulltrap %>% 
   group_by(tag) %>%
   arrange(date_time) %>%
   mutate(first_seen = min(date_time),
          last_seen = max(date_time)) %>%
-  mutate(time_known_alive = as.duration(first_seen %--% last_seen) / ddays(1) )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  mutate(days_known_alive = as.duration(first_seen %--% last_seen) / ddays(1) )
 
 
 ###############################################################################################
@@ -542,16 +368,16 @@ fulltrap <- fulltrap %>%
 #save fulltrap so I can pull it for other scripts
 
 # Save fulltrap to a rdata file
-saveRDS(fulltrap, file = here("fulltrap_12.30.21.rds"))
+saveRDS(fulltrap, file = here("fulltrap_06.01.22.rds"))
 
 # Restore fulltrap from the rdata file
-# fulltrap <- readRDS(file = "fulltrap_12.30.21.rds")
+# fulltrap <- readRDS(file = "fulltrap_06.01.22.rds")
 
 
 
 ##I can also write this to a csv for posterity
-write.csv(fulltrap, here("fulltrap_12.30.21.csv"), row.names=FALSE)
-# fulltrap <- read.csv(here("fulltrap_12.30.21.csv"))
+write.csv(fulltrap, here("fulltrap_06.01.22.csv"), row.names=FALSE)
+# fulltrap <- read.csv(here("fulltrap_06.01.22.csv"))
 
 #HOWEVER, R to csv will change POSIX dates back to characters - this code would avoid that
 # (haven't bothered with this, but it's here in case I want it)
@@ -562,7 +388,64 @@ write.csv(fulltrap, here("fulltrap_12.30.21.csv"), row.names=FALSE)
 # df2 <- read.csv("test.csv") %>% mutate(time=ymd_hms(time))
 
 
+#################### END ########################
 
 
+########################################################################
+############# Extra stuff, just for reference and posterity ############
+########################################################################
+
+######### A few checks on the full data set to make sure everything is happy #########
+
+#there are also a number of animals that were on the vole processing sheet twice because they were 
+  #captured, weighed, and released due to time issues (mostly occasion 6)
+  #I need to find these animals and make sure they only have 0 or 1 for the first occasion they were seen,  
+  #not both if they have two processing entries
+
+#this is why I created the 'firstcap' column like above
+
+#confirm that firstcap is doing what we want...
+# first <- fulltrap %>% filter(firstcap == "1")
+# notfirst <- fulltrap %>% filter(firstcap == "0")
+# nrow(first) + nrow(notfirst)
+#06.01.22 -- yes, this is good, first + notfirst = fulltrap
+
+#NOTE: a few animals were processed TWICE in a single occasion - make sure things are working properly for them:
+## 226170 was processed twice in July because his PIT tag was recorded incorrectly (so he wasn't on the WR list)
+## 226087 was processed twice in August - did half and she was giving birth? stopped, recapped her the next sess and finished
+#06.01.22 - YES - this is working correctly
 
 
+#make sure there isn't any weird fuckery with animals on multiple grids or with multiple entries per occ.sess
+
+######## check to see how many unique grids animals are on ########
+# fulltrap %>%
+#   group_by(tag) %>%
+#   summarise(site_unique = n_distinct(site)) %>%
+#   filter(site_unique > 1) %>%
+#   ungroup()
+#if this is 0, you're good
+
+######## check to make sure animals don't have more entries than unique occ.sess combos ########
+# check <- fulltrap %>% group_by(tag) %>% summarise(count = length(occ.sess), unique = n_distinct(occ.sess))
+# check <- check %>% mutate(diff=unique-count) %>% filter(diff != 0)
+#if this is 0, you're good
+
+
+######## check to make sure everyone only has one sex #########
+######## these issues were checked and then resolved in the raw data #######
+# fulltrap$sex <- as.character(fulltrap$sex)
+# check <- fulltrap %>% group_by(tag) %>%
+#   summarise(n = unique(sex)) %>%
+#   filter(!is.na(n))
+#save the tag IDs of animals with multiple sexes
+# duplist <- as.vector(check$tag[duplicated(check$tag)])
+#how many?
+# length(duplist) #0 voles!
+# sexswaps <- fulltrap %>% 
+#   filter(tag %in% duplist) %>% 
+#   arrange(tag, occ.sess)
+#write as csv to share
+# write.csv(sexswaps, here("confirm_sex.csv"), row.names=FALSE)
+
+############################################### END CHECKING for FUCKERY #######################################################
