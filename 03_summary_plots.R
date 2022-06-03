@@ -10,16 +10,129 @@ library(lubridate)
 rm(list = ls())
 
 #read in the fulltrap data
-fulltrap <- readRDS(file = "fulltrap_12.30.21.rds") 
+fulltrap <- readRDS(file = "fulltrap_06.02.22.rds") 
 
 
 ################################################################################################
 
+
+### something to add, think about 6.2.22 - lab meeting
+### how does recapture rate vary by population density?
+
+
+
+
+### new 6.3.22 because I don't feel like scrolling to the bottom
+
+####### WHO ARE THE SINGLE CAPTURES? ########
+
+#mass of animals caught once
+fulltrap %>%
+  filter(n_cap == "1") %>%
+  drop_na(sex) %>%
+  ggplot(aes(x=sex, y=mass, fill=trt)) + 
+  geom_boxplot() +
+  facet_wrap(~occasion)
+#animals caught once are on the smaller side (avg mass is 15g) - size is pretty consistent across time, trt, sex
+
+#mass of animals caught once
+fulltrap %>%
+  filter(n_cap=="1") %>%
+  drop_na(sex) %>%
+  ggplot(aes(x=mass, color=sex, fill=sex)) +
+  geom_histogram(position="identity", alpha=0.5, binwidth = 0.5) +
+  facet_wrap(~occasion)
+
+#head of animals caught once
+fulltrap %>%
+  filter(n_cap == "1") %>%
+  drop_na(sex) %>%
+  ggplot(aes(x=sex, y=head, fill=trt)) + 
+  geom_boxplot() +
+  facet_wrap(~occasion)
+#animals caught once are on the smaller side (avg head is 13mm)
+
+#head of animals caught once
+fulltrap %>%
+  filter(n_cap=="1") %>%
+  drop_na(sex) %>%
+  ggplot(aes(x=head, color=sex, fill=sex)) +
+  geom_histogram(position="identity", alpha=0.5, binwidth = 0.1) +
+  facet_wrap(~occasion)
+
+#count of sex of animals caught once
+fulltrap %>%
+  filter(n_cap=="1") %>%
+  drop_na(sex) %>%
+  ggplot(aes(x=trt, fill=sex)) +
+  geom_bar(position=position_dodge(width=.9)) +
+  facet_wrap(~occasion)
+
+#############################################
+
+
+#### likelihood of recapture
+
+####linear model - number of recaptures
+recap.lnmod <- lm(n_cap ~ sex + trt + days_known_alive, data=fulltrap)
+summary(recap.lnmod)
+### NEED TO DO SOME MODEL FITTING FOR SURE
+#but... in this model
+#sex doesn't matter (but females have more recaptures than males)
+#unfed grids have similar numbers of recaptures
+#fed grid has negative effect on number of recaptures (ie - there are more single caps on fed grids ?)
+#effect of fed_deworm seems to be more than fed_control -- even more 1-and-dones on fed_deworm grids
+#days known alive has an effect (pvalue is V small but effect is too)
+
+####logistic regression - recapped or not
+recap.logmod <- glm(recapped ~ trt, family=binomial(link='logit'), data=fulltrap)
+summary(recap.logmod)
+exp(coef(recap.logmod))
+#animals on unfed grids are equally likely to be single caps (deworm treatment doesn't affect)
+#animals on fed grids are more likely to be single caps than animals on unfed grids
+#animals on fed_ctrl grids are 0.5x as likely to be recapped (compared to unfed_ctrl) p=0.0000839
+#animals on fed_deworm grids are 0.63x as likely to be recapped (compared to unfed_ctrl) p=0.0083
+
+recap.logmod <- glm(recapped ~ sex, family=binomial(link='logit'), data=fulltrap)
+summary(recap.logmod)
+#sex does not affect likelihood of recapture
+
+#mass might not be great since recapped animals have multiple masses and singlecaps only have one
+#some sort of avg mass / median mass?
+recap.logmod <- glm(recapped ~ mass, family=binomial(link='logit'), data=fulltrap)
+summary(recap.logmod)
+exp(coef(recap.logmod))
+#heavier animals are more likely to be recapped
+#for every 1g you increase in mass, you are 1.08x more likely to be recapped
+
+## you can't use 'days_known_alive' or 'n_cap' because the predictor is able to perfectly separate the response
+
+
+############################
+
+#body mass of news by time, grid trt, and sex
+fulltrap %>%
+  filter(firstcap=="1") %>%
+  drop_na(sex) %>%
+  ggplot(aes(x=trt, y=mass, fill=sex)) +
+  geom_boxplot() +
+  facet_wrap(~occasion)
+#animals in May are all large (over 20g) and there's limited variation (overwintered)
+#june has a little more variation, but still averaging around 20g
+#july has LOTS of variation, avg more like 17-18g
+#august has less variation (more like june) - avg around 14g
+#sept has little variation, avg is about 12-13g
+#oct has very little variation (more like may), avg is about 15g
+
+
+
+#################################################end new things 6.3.22###################################################
+
 n_distinct(fulltrap$tag)
-#772 PIT tags
+#771 PIT tags
 
 nrow(fulltrap)
-#2088 capture entries
+#2086 capture entries
 
 #how many animals were recaptured
 fulltrap %>%
@@ -27,7 +140,7 @@ fulltrap %>%
   summarise(n = length(tag)) %>%
   filter(n > 1) %>%
   nrow()
-#458 animals were captured at least twice (59.3%)
+#456 animals were captured at least twice (59.2%)
 
 #summarise number of recaps per tag
 #average number of captures per individual, sd
@@ -35,7 +148,7 @@ fulltrap %>%
   group_by(tag) %>%
   summarise(n = length(tag)) %>%
   summarise(mean = mean(n), sd = sd(n))
-#mean: 2.70   sd: 2.30
+#mean: 2.71   sd: 2.30
 
 #what if we take out everyone that was only captured once
 #average number of captures for RECAPTURED animals, sd
@@ -44,7 +157,7 @@ fulltrap %>%
   summarise(n = length(tag)) %>%
   filter(n > 1) %>%
   summarise(mean = mean(n), sd = sd(n))
-#mean: 3.87   sd:2.36
+#mean: 3.88   sd:2.36
 
 fulltrap <- fulltrap %>% ungroup()
 
@@ -57,11 +170,11 @@ total.capbygrid <- fulltrap %>%
 
 #range, mean, sd of capture by grid
 range(total.capbygrid$captures)
-#73, 271
+#72, 271
 mean(total.capbygrid$captures)
-#174
+#173.8
 sd(total.capbygrid$captures)
-#64.834
+#65.017
 
 #summarize number of individual animals per grid in 2021
 total.indivbygrid <- fulltrap %>%
@@ -70,21 +183,19 @@ total.indivbygrid <- fulltrap %>%
 
 #range, mean, sd of individual by grid
 range(total.indivbygrid$individuals)
-#24, 109
+#23, 110
 mean(total.indivbygrid$individuals)
-#64.5
+#64.25
 sd(total.indivbygrid$individuals)
-#28.047
+#28.152
 
 #join these together
 total.gridsummary <- total.capbygrid %>%
   left_join(y = total.indivbygrid, by = "site")
 
 #just to check
-sum(total.gridsummary$captures) #2088 - yes, this is the number of rows in fulltrap
-sum(total.gridsummary$individuals) #774 is not the same as 772 which is the number of unique PIT tags, 2 repeats
-############################# STILL NEEDS TO BE FIXED ^^ ###################################
-
+sum(total.gridsummary$captures) #2086 - yes, this is the number of rows in fulltrap
+sum(total.gridsummary$individuals) #771 - yes, this the number of individuals in fulltrap
 
 #summarize number of captures per grid per occ
 capbygrid <- fulltrap %>%
@@ -252,7 +363,7 @@ gridsummary %>% ggplot(aes(x=occasion, y=news, fill=trt)) +
 
 #unique number of animals
 length(unique(fulltrap$tag))
-#772 individual voles
+#771 individual voles
 
 # number of sightings of each animal
 freq <- fulltrap %>%
@@ -264,12 +375,12 @@ freq <- fulltrap %>%
 freq %>%
   filter(n >= 2) %>%
   nrow()
-#458 have been caught at least twice (~60%)
+#456 have been caught at least twice (~60%)
 
 freq %>%
   filter(n >= 3) %>%
   nrow()
-#292 have been caught at least 3 times (38%)
+#293 have been caught at least 3 times (38%)
 
 freq %>% 
   filter (n >= 4) %>%
@@ -279,22 +390,22 @@ freq %>%
 freq %>%
   filter (n >= 5) %>%
   nrow()
-#123 at least 5 times
+#123 at least 5 times (16%)
 
 freq %>%
   filter (n >= 6) %>%
   nrow()
-#84 animals!! caught at least 6 times
+#84 animals!! caught at least 6 times (10.8%)
 
 freq %>%
   filter (n >= 7) %>%
   nrow()
-#54 caught at least 7 times
+#54 caught at least 7 times (7%)
 
 freq %>%
   filter (n >= 10) %>%
   nrow()
-#17 animals caught at least 10 times!!!!
+#17 animals caught at least 10 times!!!! (2.2%)
 
 #most frequently captured?
 max(freq$n)
